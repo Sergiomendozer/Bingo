@@ -22,7 +22,7 @@ class lab(App):
     pass
 
 
-if __name__ == '__main__':
-    # game = Game()
-    # game.run()
-    Bingo.run()
+# if __name__ == '__main__':
+#     # game = Game()
+#  game.run()
+# # Bingo.run
