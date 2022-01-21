@@ -2,9 +2,9 @@ from tkinter import *
 root = Tk()
 root.geometry("1000x600")
 ## make the layout 
-#myLabel1 = Label(root, text = "1").grid(row=0, column=0)
-myLabel1 = Label(root, text = "1")
-myLabel2 = Label(root, text = "2")
+
+myLabel1 = Label(root, text = "Random number picked")
+myLabel2 = Label(root, text = "all random numbers picked list")
 myLabel3 = Label(root, text = "3")
 myLabel4 = Label(root, text = "4")
 myLabel5 = Label(root, text = "5")
