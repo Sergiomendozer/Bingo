@@ -1,6 +1,6 @@
 from tkinter import *
 root = Tk()
-root.geometry("500x500")
+root.geometry("1000x600")
 ## make the layout 
 #myLabel1 = Label(root, text = "1").grid(row=0, column=0)
 myLabel1 = Label(root, text = "1")
