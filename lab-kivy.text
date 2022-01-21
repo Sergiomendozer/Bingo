@@ -1,16 +1,6 @@
 #Stack Layout:
 #size_hint: .2,.2 = width , height
 
-# random numbers display
-# User and Computer player/bot
-# Bingo display
-#row
-# main buttons
-
-### delete labels
-
-        #background_normal: ''
-       # color: 0,0,0,1, #text color
         #background_color:(255/255,152/255,0,1)
 
 <StackLayout>:
