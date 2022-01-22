@@ -17,12 +17,12 @@ root.geometry("1015x600")
 
 #ROW 2
 your_card_Label = Label(root, text = "Your card",bg = "#1DED41", font =("Helvetica", 10), padx = 50)
-#Bots_card_Label = Label(root, text = "Bots card", bg = "#1DED41", font =("Helvetica", 10), padx = 50)
+Bots_card_Label = Label(root, text = "Bots card", bg = "#1DED41", font =("Helvetica", 10), padx = 50)
 
 
 #ROW 2 positions
 your_card_Label.grid(row=2, column = 1, columnspan = 5, sticky="nsew")
-#Bots_card_Label.grid(row=1,  column = 1,sticky="nsew")
+Bots_card_Label.grid(row=2,  column = 6,columnspan = 5, sticky="nsew")
 
 #Player's BINGO
 B_bingo = Label(root, text = "B", bg = "#00CCFF", font =("Helvetica", 20), padx = 40)
