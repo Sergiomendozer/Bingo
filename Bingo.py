@@ -6,11 +6,11 @@ root.geometry("1000x600")
 #column is left to right
 
 #ROW 1
-Next_draw_Label = Label(root, text = "Next draw in: 5s") # add time
-Random_number_picked_label = Label(root, text = "Random number picked", bg = "#1DED41", font =("Helvetica", 20))
+Next_draw_Label = Label(root, text = "Next draw in: 5s", padx = 20) # add time
+Random_number_picked_label = Label(root, text = "Random number picked", bg = "#1DED41", font =("Helvetica", 20), padx = 40)
 #list_of_drawn_numbers_label = Label(root, text = "all random numbers picked list", bg = "#B900FF", font =("Helvetica", 30))
-# Next_draw_Label.grid(row=0, column=0, sticky="nsew")
-# Random_number_picked_label .grid(row=0, column=1, sticky="nsew")
+Next_draw_Label.grid(row=0, column=0, sticky="nsew")
+Random_number_picked_label .grid(row=0, column=1, sticky="nsew")
 #list_of_drawn_numbers_label.grid(row=0, column=2, sticky="nsew")
 #Random_number_picked_label.place(x=0, y=0)
 # Grid.rowconfigure(root, 0, weight = 2)
