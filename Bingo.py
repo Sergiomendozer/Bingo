@@ -16,8 +16,8 @@ root.geometry("1015x600")
 # list_of_drawn_numbers_label.grid(row=1, column=3, columnspan = 6,sticky="nsew")
 
 #ROW 2
-your_card_Label = Label(root, text = "Your card",bg = "#1DED41", font =("Helvetica", 10), padx = 50)
-Bots_card_Label = Label(root, text = "Bots card", bg = "#1DED41", font =("Helvetica", 10), padx = 50)
+your_card_Label = Label(root, text = "Your card",bg = "#C91A3A", font =("Helvetica", 10), padx = 50)
+Bots_card_Label = Label(root, text = "Bots card", bg = "#1E9E23", font =("Helvetica", 10), padx = 50)
 
 
 #ROW 2 positions
