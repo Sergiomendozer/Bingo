@@ -28,18 +28,31 @@ your_card_Label = Label(root, text = "Your card",bg = "#1DED41", font =("Helveti
 your_card_Label.grid(row=2, column = 1, columnspan = 3, sticky="nsew")
 #Bots_card_Label.grid(row=1,  column = 1,sticky="nsew")
 
-#ROW Player's BINGO
+#Player's BINGO
 B_bingo = Label(root, text = "B", bg = "#00CCFF", font =("Helvetica", 20), padx = 15)
 I_bingo = Label(root, text = "I", bg = "#FF0000", font =("Helvetica", 20), padx = 15)
 N_bingo = Label(root, text = "N", bg = "#E2DF00", font =("Helvetica", 20), padx = 15)
 G_bingo = Label(root, text = "G", bg = "#F96815", font =("Helvetica", 20), padx = 15)
 O_bingo = Label(root, text = "O", bg = "#00FF33", font =("Helvetica", 20), padx = 15)
-#ROW BINGO positions
+#Player's BINGO positions
 B_bingo.grid(row=3, column = 1, sticky="nsew")
 I_bingo.grid(row=3, column = 2, sticky="nsew")
 N_bingo.grid(row=3, column = 3, sticky="nsew")
 G_bingo.grid(row=3, column = 4, sticky="nsew")
 O_bingo.grid(row=3, column = 5, sticky="nsew")
+
+#Bots's BINGO
+B_bingo = Label(root, text = "B", bg = "#00CCFF", font =("Helvetica", 20), padx = 15)
+I_bingo = Label(root, text = "I", bg = "#FF0000", font =("Helvetica", 20), padx = 15)
+N_bingo = Label(root, text = "N", bg = "#E2DF00", font =("Helvetica", 20), padx = 15)
+G_bingo = Label(root, text = "G", bg = "#F96815", font =("Helvetica", 20), padx = 15)
+O_bingo = Label(root, text = "O", bg = "#00FF33", font =("Helvetica", 20), padx = 15)
+#Bots's BINGO positions
+B_bingo.grid(row=3, column = 6, sticky="nsew")
+I_bingo.grid(row=3, column = 7, sticky="nsew")
+N_bingo.grid(row=3, column = 8, sticky="nsew")
+G_bingo.grid(row=3, column = 9, sticky="nsew")
+O_bingo.grid(row=3, column = 10, sticky="nsew")
 
 
 root.mainloop()
