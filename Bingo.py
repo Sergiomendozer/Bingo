@@ -7,7 +7,6 @@ root.geometry("1015x570")
 #column is left to right
 
 drawn_bingo_number = random_bingo_number()
-###### grab function from other file test out again
 #ROW 1
 Next_draw_Label = Label(root, text = "Next draw in: 5s", padx = 5, pady = 45, font =("Helvetica", 17)) # add time
 Random_number_picked_label = Label(root, text = drawn_bingo_number, bg = "#1DED41", font =("Helvetica", 40), padx = 5,pady = 45, )
