@@ -1,16 +1,16 @@
 from tkinter import *
-from bingo_numbers import random_bingo_number
+from drawing_numbers import random_bingo_number
 root = Tk()
 root.geometry("1015x570")
 ## make the layout 
 #row is up and down
 #column is left to right
 
-chosen_bingo_number = random_bingo_number()
+drawn_bingo_number = random_bingo_number()
 ###### grab function from other file test out again
 #ROW 1
 Next_draw_Label = Label(root, text = "Next draw in: 5s", padx = 5, pady = 45, font =("Helvetica", 17)) # add time
-Random_number_picked_label = Label(root, text = chosen_bingo_number, bg = "#1DED41", font =("Helvetica", 40), padx = 5,pady = 45, )
+Random_number_picked_label = Label(root, text = drawn_bingo_number, bg = "#1DED41", font =("Helvetica", 40), padx = 5,pady = 45, )
 list_of_drawn_numbers_label = Label(root, text = "all random numbers picked list", bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
 
 #ROW 1 positions
