@@ -8,9 +8,9 @@ root.geometry("1015x600")
 
 ###### grab function from other file test out again
 #ROW 1
-Next_draw_Label = Label(root, text = "Next draw in: 5s", padx = 5, pady = 15, font =("Helvetica", 17)) # add time
-Random_number_picked_label = Label(root, text = "N-75", bg = "#1DED41", font =("Helvetica", 20), padx = 5,pady = 15, )
-list_of_drawn_numbers_label = Label(root, text = "all random numbers picked list", bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 15, )
+Next_draw_Label = Label(root, text = "Next draw in: 5s", padx = 5, pady = 45, font =("Helvetica", 17)) # add time
+Random_number_picked_label = Label(root, text = "N-75", bg = "#1DED41", font =("Helvetica", 40), padx = 5,pady = 45, )
+list_of_drawn_numbers_label = Label(root, text = "all random numbers picked list", bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
 
 #ROW 1 positions
 Next_draw_Label.grid(row=1, column=1, columnspan = 2, sticky="nsew")
@@ -18,8 +18,8 @@ Random_number_picked_label .grid(row=1, column=3,columnspan = 2, sticky="nsew")
 list_of_drawn_numbers_label.grid(row=1, column=5, columnspan = 6, sticky="nsew")
 
 #ROW 2
-your_card_Label = Label(root, text = "Your card",bg = "#FF4646", font =("Helvetica", 10), padx = 50)
-Bots_card_Label = Label(root, text = "Bots card", bg = "#96FF50", font =("Helvetica", 10), padx = 50)
+your_card_Label = Label(root, text = "Your card",bg = "#FF4646", font =("Helvetica", 15), padx = 50)
+Bots_card_Label = Label(root, text = "Bots card", bg = "#96FF50", font =("Helvetica", 15), padx = 50)
 
 
 #ROW 2 positions
