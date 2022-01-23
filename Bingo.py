@@ -14,7 +14,7 @@ list_of_drawn_numbers_label = Label(root, text = "all random numbers picked list
 
 #ROW 1 positions
 Next_draw_Label.grid(row=1, column=1, columnspan = 2, sticky="nsew")
-Random_number_picked_label .grid(row=1, column=3,columnspan = 2, sticky="nsew")
+Random_number_picked_label.grid(row=1, column=3,columnspan = 2, sticky="nsew")
 list_of_drawn_numbers_label.grid(row=1, column=5, columnspan = 6, sticky="nsew")
 
 #ROW 2
