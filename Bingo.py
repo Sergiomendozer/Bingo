@@ -1,6 +1,6 @@
 from tkinter import *
 root = Tk() # change tk to bingo
-root.geometry("1015x600")
+root.geometry("1015x570")
 ## make the layout 
 #row is up and down
 #column is left to right
