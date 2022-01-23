@@ -183,11 +183,11 @@ G_bingo.grid(row=8, column = 9, sticky="nsew")
 O_bingo.grid(row=8, column = 10, sticky="nsew")
 
 #last row
-Bingo_button = Button(root, text = "BINGO!", bg = "#00CCFF", font =("Helvetica", 25))
-blank = Label(root, bg = "#00CCFF")
-New_card = Button(root, text = "New Card", bg = "#00CCFF", font =("Helvetica", 20))
-New_game = Button(root, text = "New Game", bg = "#00CCFF", font =("Helvetica", 20))
-pause_play = Button(root, text = "pause/play", bg = "#00CCFF", font =("Helvetica", 20))
+Bingo_button = Button(root, text = "BINGO!", bg = "#B900FF", font =("Helvetica", 25))
+blank = Label(root, bg = "#737373")
+New_card = Button(root, text = "New Card", bg = "#29EFD1", font =("Helvetica", 20))
+New_game = Button(root, text = "New Game", bg = "#FF4646", font =("Helvetica", 20))
+pause_play = Button(root, text = "Pause/Play", bg = "#96FF50", font =("Helvetica", 20))
 
 #last row positions # columnspan = 5
 Bingo_button.grid(row=9, column = 1, columnspan = 3, sticky="nsew")
