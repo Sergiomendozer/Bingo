@@ -1,6 +1,6 @@
 from tkinter import *
-from test import random_bingo_number
-root = Tk() # change tk to bingo
+from bingo_numbers import random_bingo_number
+root = Tk()
 root.geometry("1015x570")
 ## make the layout 
 #row is up and down

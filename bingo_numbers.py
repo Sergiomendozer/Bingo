@@ -1,17 +1,12 @@
 import random
-END = '\033[0m'
+# B = 1 - 15
+# I = 16 - 30
+# N = 31 - 45
+# G = 46 - 60
+# O = 61 - 75
 
-# Regular Colors
-Black="\033[0;30m"        # Black
-Red="\033[0;31m"          # Red
-Green="\033[0;32m"        # Green
-Yellow="\033[0;33m"       # Yellow
-Blue="\033[0;34m"         # Blue
-Purple="\033[0;35m"       # Purple
-Cyan="\033[0;36m"         # Cyan
-White="\033[0;37m"        # White
 def random_bingo_number():
-    bingo_numbers = [Green + "B-15" +END, Blue + "B-11" + END, Red + "B-12" + END]
+    bingo_numbers = ["B-15","B-11", "B-12"]
     chosen_bingo_number = random.choice(bingo_numbers)
     print (chosen_bingo_number)
     return (chosen_bingo_number)
