@@ -48,13 +48,14 @@ resized_O_ball = ImageTk.PhotoImage(resized_O)
 #ROW 1
 Next_draw_Label = Label(root, text = "Next draw in: 5s", padx = 5, pady = 45, font =("Helvetica", 17)) # add time
 #Random_number_picked_label = Label(root, text = drawn_bingo_number, bg = "#1DED41", font =("Helvetica", 40), padx = 5,pady = 45, )
-#Random_number_picked_label =Label(root, image = resized_b_ball)
+Random_number_picked_label =Label(root,text = drawn_bingo_number, font =("Helvetica", 24), bg = "#FFFFFF")
 list_of_drawn_numbers_label = Label(root, text = "all random numbers picked list", bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
 
 #ROW 1 positions
 Next_draw_Label.grid(row=1, column=1, columnspan = 2, sticky="nsew")
 bingo_ball.grid(row=1, column=3,columnspan = 2, sticky="nsew") # chaneg to bingo_ball
 #Random_number_picked_label.grid(row=1, column=3,columnspan = 2, sticky="nsew") # place
+Random_number_picked_label.place(x = 260, y =55) #280
 list_of_drawn_numbers_label.grid(row=1, column=5, columnspan = 6, sticky="nsew")
 
 #ROW 2
