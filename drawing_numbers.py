@@ -9,8 +9,8 @@ def random_bingo_number(bingo_numbers):
     #takes out drawing number from the list
     take_out_of_list = bingo_numbers.index(drawn_bingo_number)
     bingo_numbers.pop(take_out_of_list)
-    #print (bingo_numbers) ### for testing
-    #print (drawn_bingo_number)
+    # print (bingo_numbers) ### for testing
+    # print (drawn_bingo_number)
     return (drawn_bingo_number)
     time.sleep(2)
     random_bingo_number(bingo_numbers)
