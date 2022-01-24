@@ -15,35 +15,35 @@ original_b_ball = Image.open("B-Bingo-ball.png") #call image b4 resize
 #resizing image
 resized_b = original_b_ball.resize((200,150), Image.ANTIALIAS) # resize(sides, height)
 resized_b_ball = ImageTk.PhotoImage(resized_b)
-Random_number_picked_label =Label(root, image = resized_b_ball)
+bingo_ball =Label(root, image = resized_b_ball)
 
 ## I BINGO ball
 original_I_ball = Image.open("I-Bingo-ball.png") #call image b4 resize
 #resizing image
 resized_I = original_I_ball.resize((200,150), Image.ANTIALIAS) # resize(sides, height)
 resized_I_ball = ImageTk.PhotoImage(resized_I)
-# Random_number_picked_label =Label(root, image = resized_I_ball)
+# bingo_ball =Label(root, image = resized_I_ball)
 
 ##N BINGO ball
 original_N_ball = Image.open("N-Bingo-ball.png") #call image b4 resize
 #resizing image
 resized_N = original_N_ball.resize((200,150), Image.ANTIALIAS) # resize(sides, height)
 resized_N_ball = ImageTk.PhotoImage(resized_N)
-# Random_number_picked_label =Label(root, image = resized_N_ball)
+# bingo_ball =Label(root, image = resized_N_ball)
 
 ##G BINGO ball
 original_G_ball = Image.open("G-Bingo-ball.png") #call image b4 resize
 #resizing image
 resized_G = original_G_ball.resize((200,150), Image.ANTIALIAS) # resize(sides, height)
 resized_G_ball = ImageTk.PhotoImage(resized_G)
-# Random_number_picked_label =Label(root, image = resized_G_ball)
+# bingo_ball =Label(root, image = resized_G_ball)
 
 ##O BINGO ball
 original_O_ball = Image.open("O-Bingo-ball.png") #call image b4 resize
 #resizing image
 resized_O = original_O_ball.resize((200,150), Image.ANTIALIAS) # resize(sides, height)
 resized_O_ball = ImageTk.PhotoImage(resized_O)
-#Random_number_picked_label =Label(root, image = resized_O_ball)
+# bingo_ball=Label(root, image = resized_O_ball)
 
 #ROW 1
 Next_draw_Label = Label(root, text = "Next draw in: 5s", padx = 5, pady = 45, font =("Helvetica", 17)) # add time
@@ -53,8 +53,8 @@ list_of_drawn_numbers_label = Label(root, text = "all random numbers picked list
 
 #ROW 1 positions
 Next_draw_Label.grid(row=1, column=1, columnspan = 2, sticky="nsew")
-Random_number_picked_label.grid(row=1, column=3,columnspan = 2, sticky="nsew") # chaneg to bingo_ball
-Random_number_picked_label.grid(row=1, column=3,columnspan = 2, sticky="nsew") # place
+bingo_ball.grid(row=1, column=3,columnspan = 2, sticky="nsew") # chaneg to bingo_ball
+#Random_number_picked_label.grid(row=1, column=3,columnspan = 2, sticky="nsew") # place
 list_of_drawn_numbers_label.grid(row=1, column=5, columnspan = 6, sticky="nsew")
 
 #ROW 2
