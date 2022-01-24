@@ -11,11 +11,9 @@ def countdown(s):
         timer = str(timer)
         timer = timer + "s"
         # Prints the time left on the timer
-        print(timer[-2:], end="\r")
- 
+        print(timer[-2:], end="\r") #end prints in same line
         # Delays the program one second
         time.sleep(1)
- 
         # Reduces total time by one second
         s -= 1
     countdown(int(7))
