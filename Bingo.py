@@ -60,19 +60,31 @@ Random_number_picked_label.place(x = 260, y =55)
 bingo_numbers = ["B 1","B 2","B 3","B 4","B 4","B 5","B 7", "B 8","B 9","B 10","B 11","B 12","B 13","B 14","B 15","I 16","I 17","I 18","I 19","I 20","I 21","I 22","I 23","I 24","I 25","I 26","I 27","I 28","I 29","I 30","N 31","N 32","N 33","N 34","N 35","N 36","N 37","N 38","N 39","N 40","N 41","N 42","N 42","N 44","N 45","G 46","G 47","G 48","G 49","G 50","G 51","G 52","G 53","G 54","G 55","G 56","G 57","G 58","G 59","G 60","O 61","O 62","O 63","O 64","O 65","O 66","O 67","O 68","O 69","O 70","O 71","O 72","O 73","O 74","O 75"]
 update_drawn_ball(bingo_numbers)
 
+### timer for next ball
+def update_timer_countdown(n):
+    if n != "0":
+        n= int(n)
+        n -= 1
+        n = str(n)
+        timer.config(text = "Next draw in:" + n+  "s", padx = 5, pady = 45, font =("Helvetica", 17))
+        return timer.after(1000,update_timer_countdown, n)
+    else:
+        return update_timer_countdown(6)
+
+
+timer = Label(root, text = "Next draw in:" + "s", padx = 5, pady = 45, font =("Helvetica", 17))
+timer.grid(row=1, column=1, columnspan = 2, sticky="nsew")
+update_timer_countdown(6)
 
 #ROW 1
 #Next_draw_Label = Label(root, text = countdown(int(7)), padx = 5, pady = 45, font =("Helvetica", 17))
-Next_draw_Label = Label(root, text = "Next draw in:" + "s", padx = 5, pady = 45, font =("Helvetica", 17)) # add time
-#Random_number_picked_label = Label(root, text = drawn_bingo_number, bg = "#1DED41", font =("Helvetica", 40), padx = 5,pady = 45, )
-# Random_number_picked_label =Label(root,text = drawn_bingo_number, font =("Helvetica", 24), bg = "#FFFFFF")
+#timer = Label(root, text = "Next draw in:" + "s", padx = 5, pady = 45, font =("Helvetica", 17)) # add time
+
 list_of_drawn_numbers_label = Label(root, text = "all random numbers picked list", bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
 
 #ROW 1 positions
-Next_draw_Label.grid(row=1, column=1, columnspan = 2, sticky="nsew")
+# timer.grid(row=1, column=1, columnspan = 2, sticky="nsew")
 bingo_ball.grid(row=1, column=3,columnspan = 2, sticky="nsew") # chaneg to bingo_ball
-#Random_number_picked_label.grid(row=1, column=3,columnspan = 2, sticky="nsew") # place
-# Random_number_picked_label.place(x = 260, y =55) #280
 list_of_drawn_numbers_label.grid(row=1, column=5, columnspan = 6, sticky="nsew")
 
 #ROW 2
