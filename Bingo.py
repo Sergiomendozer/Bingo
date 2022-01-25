@@ -47,14 +47,18 @@ resized_O = original_O_ball.resize((200,150), Image.ANTIALIAS) # resize(sides, h
 resized_O_ball = ImageTk.PhotoImage(resized_O)
 # bingo_ball=Label(root, image = resized_O_ball)
 
-# def update_append_bingo_numbers():
+def update_append_bingo_numbers():
+    list_of_drawn_numbers_label.config(text = all_random_numbers_picked_list, bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
 
+list_of_drawn_numbers_label = Label(root, text = all_random_numbers_picked_list, bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
+list_of_drawn_numbers_label.grid(row=1, column=5, columnspan = 6, sticky="nsew")
 # drawing ball update label
 def update_drawn_ball(bingo_numbers):
     (drawn_bingo_number,bingo_numbers) = random_bingo_number(bingo_numbers)
     all_random_numbers_picked_list.append(drawn_bingo_number)
     #call function to update all_random_numbers_picked_list
-    print(all_random_numbers_picked_list) ##### to delete
+    update_append_bingo_numbers()
+    # print(all_random_numbers_picked_list) ##### to delete
     Random_number_picked_label.config(text = drawn_bingo_number, font =("Helvetica", 24), bg = "#FFFFFF")
     return Random_number_picked_label.after(5000,update_drawn_ball, bingo_numbers) #.after(parent, ms, function = None, *args)
 
@@ -81,12 +85,12 @@ timer.grid(row=1, column=1, columnspan = 2, sticky="nsew")
 update_timer_countdown(6)
 
 #ROW 1
-list_of_drawn_numbers_label = Label(root, text = all_random_numbers_picked_list, bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
-
+# list_of_drawn_numbers_label = Label(root, text = all_random_numbers_picked_list, bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
+# list_of_drawn_numbers_label = Label(root, text = all_random_numbers_picked_list, bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
+# list_of_drawn_numbers_label.grid(row=1, column=5, columnspan = 6, sticky="nsew")
 #ROW 1 positions
-# timer.grid(row=1, column=1, columnspan = 2, sticky="nsew")
 bingo_ball.grid(row=1, column=3,columnspan = 2, sticky="nsew") # chaneg to bingo_ball
-list_of_drawn_numbers_label.grid(row=1, column=5, columnspan = 6, sticky="nsew")
+# list_of_drawn_numbers_label.grid(row=1, column=5, columnspan = 6, sticky="nsew")
 
 #ROW 2
 your_card_Label = Label(root, text = "Your card",bg = "#FF4646", font =("Helvetica", 15), padx = 50)
