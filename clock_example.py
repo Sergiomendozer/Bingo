@@ -4,3 +4,5 @@ import time
 root = Tk()
 root.title("update Label")
 root.geometry("600x400")
+
+def clock():
