@@ -62,7 +62,7 @@ update_drawn_ball(bingo_numbers)
 
 ### timer for next ball
 def update_timer_countdown(n):
-    if n != "0":
+    if n != "1":
         n= int(n)
         n -= 1
         n = str(n)
