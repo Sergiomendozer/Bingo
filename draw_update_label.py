@@ -6,12 +6,12 @@ root.title("update Label")
 root.geometry("600x400")
 
 
-def update(bingo_numbers):
+def update(bingo_numbers): #update draw####### rename variables
     (drawn_bingo_number,bingo_numbers) = random_bingo_number(bingo_numbers)
     bingo_number = list(bingo_numbers)
     print(bingo_numbers)
     label_1.config(text= drawn_bingo_number,font =("Helvetica", 100), padx = 100, pady=100)
-    label_1.after(5000,update, bingo_numbers)
+    return label_1.after(5000,update, bingo_numbers)
     #.after(parent, ms, function = None, *args)
 
 
