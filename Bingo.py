@@ -10,7 +10,7 @@ root = Tk()
 root.title("BINGO")
 root.geometry("1015x570")
 
-
+all_random_numbers_picked_list =[]
 # BINGO balls:
 ##B BINGO ball
 original_b_ball = Image.open("B-Bingo-ball.png") #call image b4 resize
@@ -47,10 +47,14 @@ resized_O = original_O_ball.resize((200,150), Image.ANTIALIAS) # resize(sides, h
 resized_O_ball = ImageTk.PhotoImage(resized_O)
 # bingo_ball=Label(root, image = resized_O_ball)
 
+# def update_append_bingo_numbers():
+
 # drawing ball update label
 def update_drawn_ball(bingo_numbers):
     (drawn_bingo_number,bingo_numbers) = random_bingo_number(bingo_numbers)
-    bingo_number = list(bingo_numbers)
+    all_random_numbers_picked_list.append(drawn_bingo_number)
+    #call function to update all_random_numbers_picked_list
+    print(all_random_numbers_picked_list) ##### to delete
     Random_number_picked_label.config(text = drawn_bingo_number, font =("Helvetica", 24), bg = "#FFFFFF")
     return Random_number_picked_label.after(5000,update_drawn_ball, bingo_numbers) #.after(parent, ms, function = None, *args)
 
@@ -77,10 +81,7 @@ timer.grid(row=1, column=1, columnspan = 2, sticky="nsew")
 update_timer_countdown(6)
 
 #ROW 1
-#Next_draw_Label = Label(root, text = countdown(int(7)), padx = 5, pady = 45, font =("Helvetica", 17))
-#timer = Label(root, text = "Next draw in:" + "s", padx = 5, pady = 45, font =("Helvetica", 17)) # add time
-
-list_of_drawn_numbers_label = Label(root, text = "all random numbers picked list", bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
+list_of_drawn_numbers_label = Label(root, text = all_random_numbers_picked_list, bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
 
 #ROW 1 positions
 # timer.grid(row=1, column=1, columnspan = 2, sticky="nsew")
