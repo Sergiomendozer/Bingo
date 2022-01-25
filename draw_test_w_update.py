@@ -6,8 +6,10 @@ root.geometry("600x400")
 
 def update(bingo_numbers):
     (drawn_bingo_number,bingo_numbers) = random_bingo_number(bingo_numbers)
-    label_1.config(text=drawn_bingo_number,font =("Helvetica", 100), padx = 100, pady=100)
-    #label_1.after(3000, update)
+    bingo_number = list(bingo_numbers)
+    print(bingo_numbers)
+    label_1.config(text= drawn_bingo_number,font =("Helvetica", 100), padx = 100, pady=100)
+    label_1.after(3000, update(bingo_numbers)) #list index out of range???
 
 
 label_1 = Label(root, text = "",font =("Helvetica", 100), padx = 100, pady=100)
