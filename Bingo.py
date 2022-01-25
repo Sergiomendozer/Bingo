@@ -16,55 +16,39 @@ original_B_ball = Image.open("B-Bingo-ball.png") #call image b4 resize
 #resizing image
 resized_B = original_B_ball.resize((200,150), Image.ANTIALIAS) # resize(sides, height)
 resized_B_ball = ImageTk.PhotoImage(resized_B)
-# bingo_ball =Label(root, image = resized_b_ball)
-
 ## I BINGO ball
 original_I_ball = Image.open("I-Bingo-ball.png") #call image b4 resize
-#resizing image
 resized_I = original_I_ball.resize((200,150), Image.ANTIALIAS) # resize(sides, height)
 resized_I_ball = ImageTk.PhotoImage(resized_I)
-# bingo_ball =Label(root, image = resized_I_ball)
-
 ##N BINGO ball
 original_N_ball = Image.open("N-Bingo-ball.png") #call image b4 resize
-#resizing image
 resized_N = original_N_ball.resize((200,150), Image.ANTIALIAS) # resize(sides, height)
 resized_N_ball = ImageTk.PhotoImage(resized_N)
-# bingo_ball =Label(root, image = resized_N_ball)
-
 ##G BINGO ball
 original_G_ball = Image.open("G-Bingo-ball.png") #call image b4 resize
-#resizing image
 resized_G = original_G_ball.resize((200,150), Image.ANTIALIAS) # resize(sides, height)
 resized_G_ball = ImageTk.PhotoImage(resized_G)
-# bingo_ball =Label(root, image = resized_G_ball)
-
 ##O BINGO ball
 original_O_ball = Image.open("O-Bingo-ball.png") #call image b4 resize
-#resizing image
 resized_O = original_O_ball.resize((200,150), Image.ANTIALIAS) # resize(sides, height)
 resized_O_ball = ImageTk.PhotoImage(resized_O)
-# bingo_ball=Label(root, image = resized_O_ball)
 
+
+#ROW 1
 bingo_ball =Label(root, image = resized_O_ball)
 def bingo_ball_color(drawn_bingo_number):
     if drawn_bingo_number[0] == "B":
-        print ("B")
         bingo_ball.config(image = resized_B_ball)
     elif drawn_bingo_number[0] == "I":
-        print ("I")
         bingo_ball.config(image = resized_I_ball)
     elif drawn_bingo_number[0] == "N":
-        print ("N")
         bingo_ball.config(image = resized_N_ball)
     elif drawn_bingo_number[0] == "G":
-        print ("G")
         bingo_ball.config(image = resized_G_ball)
     elif drawn_bingo_number[0] == "O":
-        print ("O")
         bingo_ball.config(image = resized_O_ball)
 
-    # .config(
+bingo_ball.grid(row=1, column=3,columnspan = 2, sticky="nsew") 
 
 # drawing ball update label
 def update_drawn_ball(all_random_numbers_picked_list,bingo_numbers):
@@ -114,11 +98,6 @@ def update_timer_countdown(n):
 timer = Label(root, text = "Next draw in:" + "s", padx = 5, pady = 45, font =("Helvetica", 17))
 timer.grid(row=1, column=1, columnspan = 2, sticky="nsew")
 update_timer_countdown(6)
-
-#ROW 1
-#ROW 1 positions
-bingo_ball.grid(row=1, column=3,columnspan = 2, sticky="nsew") # chaneg to bingo_ball
-# list_of_drawn_numbers_label.grid(row=1, column=5, columnspan = 6, sticky="nsew")
 
 #ROW 2
 your_card_Label = Label(root, text = "Your card",bg = "#FF4646", font =("Helvetica", 15), padx = 50)
