@@ -5,23 +5,14 @@ root = Tk()
 root.title("update Label")
 root.geometry("600x400")
 
-# def update_2(bingo_numbers):
-#     time.sleep(5)
-#     (drawn_bingo_number,bingo_numbers) = random_bingo_number(bingo_numbers)
-#     bingo_number = list(bingo_numbers)
-#     print(bingo_numbers)
-#     label_1.config(text= drawn_bingo_number,font =("Helvetica", 100), padx = 100, pady=100)
-#     label_1.pack()
 
 def update(bingo_numbers):
     (drawn_bingo_number,bingo_numbers) = random_bingo_number(bingo_numbers)
     bingo_number = list(bingo_numbers)
     print(bingo_numbers)
     label_1.config(text= drawn_bingo_number,font =("Helvetica", 100), padx = 100, pady=100)
-    # call(bingo_numbers)
-    # time.sleep(5)
-    label_1.after(99999999999999999999999999999999999999999999999999999999999999999999999999999999999999, update(bingo_numbers)) #list index out of range???
-
+    label_1.after(5000,update, bingo_numbers)
+    #.after(parent, ms, function = None, *args)
 
 
 label_1 = Label(root, text = "",font =("Helvetica", 100), padx = 100, pady=100)
