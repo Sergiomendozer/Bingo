@@ -379,14 +379,24 @@ N_bingo.grid(row=8, column=8, sticky="nsew")
 G_bingo.grid(row=8, column=9, sticky="nsew")
 O_bingo.grid(row=8, column=10, sticky="nsew")
 
+### Buttons functions
+### NEW function
+
+
+def click_row_1_B():
+    B_bingo_row_1.config(bg="#B900FF")
+
+
 # BINGO row 1
-B_bingo = Button(root, text="B1", bg="#00CCFF", font=("Helvetica", 20))
+B_bingo_row_1 = Button(
+    root, text="B1", bg="#00CCFF", font=("Helvetica", 20), command=click_row_1_B
+)
 I_bingo = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
 N_bingo = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
 G_bingo = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
 O_bingo = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
 # BINGO row 1 positions
-B_bingo.grid(row=9, column=1, sticky="nsew")
+B_bingo_row_1.grid(row=9, column=1, sticky="nsew")
 I_bingo.grid(row=9, column=2, sticky="nsew")
 N_bingo.grid(row=9, column=3, sticky="nsew")
 G_bingo.grid(row=9, column=4, sticky="nsew")
