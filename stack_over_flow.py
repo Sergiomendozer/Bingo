@@ -7,6 +7,8 @@ def click_row_1_B():
     B_bingo_row_1.config(bg="#B900FF")
 
 
+## if clicked twice :B_bingo_row_1.config(bg="#B900FF")
+
 B_bingo_row_1 = Button(
     root, text="B1", bg="#00CCFF", font=("Helvetica", 20), command=click_row_1_B
 )
