@@ -274,182 +274,182 @@ Bots_card_Label = Label(
 your_card_Label.grid(row=7, column=1, columnspan=5, sticky="nsew")
 Bots_card_Label.grid(row=7, column=6, columnspan=5, sticky="nsew")
 
-# #Player's BINGO
-# B_bingo = Label(root, text = "B", bg = "#00CCFF", font =("Helvetica", 20), padx = 40)
-# I_bingo = Label(root, text = "I", bg = "#FF0000", font =("Helvetica", 20), padx = 40)
-# N_bingo = Label(root, text = "N", bg = "#E2DF00", font =("Helvetica", 20), padx = 40)
-# G_bingo = Label(root, text = "G", bg = "#F96815", font =("Helvetica", 20), padx = 40)
-# O_bingo = Label(root, text = "O", bg = "#00FF33", font =("Helvetica", 20), padx = 40)
-# #Player's BINGO positions
-# B_bingo.grid(row=3, column = 1, sticky="nsew")
-# I_bingo.grid(row=3, column = 2, sticky="nsew")
-# N_bingo.grid(row=3, column = 3, sticky="nsew")
-# G_bingo.grid(row=3, column = 4, sticky="nsew")
-# O_bingo.grid(row=3, column = 5, sticky="nsew")
+# Player's BINGO
+B_bingo = Label(root, text="B", bg="#00CCFF", font=("Helvetica", 20), padx=40)
+I_bingo = Label(root, text="I", bg="#FF0000", font=("Helvetica", 20), padx=40)
+N_bingo = Label(root, text="N", bg="#E2DF00", font=("Helvetica", 20), padx=40)
+G_bingo = Label(root, text="G", bg="#F96815", font=("Helvetica", 20), padx=40)
+O_bingo = Label(root, text="O", bg="#00FF33", font=("Helvetica", 20), padx=40)
+# Player's BINGO positions
+B_bingo.grid(row=8, column=1, sticky="nsew")
+I_bingo.grid(row=8, column=2, sticky="nsew")
+N_bingo.grid(row=8, column=3, sticky="nsew")
+G_bingo.grid(row=8, column=4, sticky="nsew")
+O_bingo.grid(row=8, column=5, sticky="nsew")
 
-# #Bots's BINGO
-# B_bingo = Label(root, text = "B", bg = "#00CCFF", font =("Helvetica", 20), padx = 40)
-# I_bingo = Label(root, text = "I", bg = "#FF0000", font =("Helvetica", 20), padx = 40)
-# N_bingo = Label(root, text = "N", bg = "#E2DF00", font =("Helvetica", 20), padx = 40)
-# G_bingo = Label(root, text = "G", bg = "#F96815", font =("Helvetica", 20), padx = 40)
-# O_bingo = Label(root, text = "O", bg = "#00FF33", font =("Helvetica", 20), padx = 40)
-# #Bots's BINGO positions
-# B_bingo.grid(row=3, column = 6, sticky="nsew")
-# I_bingo.grid(row=3, column = 7, sticky="nsew")
-# N_bingo.grid(row=3, column = 8, sticky="nsew")
-# G_bingo.grid(row=3, column = 9, sticky="nsew")
-# O_bingo.grid(row=3, column = 10, sticky="nsew")
+# Bots's BINGO
+B_bingo = Label(root, text="B", bg="#00CCFF", font=("Helvetica", 20), padx=40)
+I_bingo = Label(root, text="I", bg="#FF0000", font=("Helvetica", 20), padx=40)
+N_bingo = Label(root, text="N", bg="#E2DF00", font=("Helvetica", 20), padx=40)
+G_bingo = Label(root, text="G", bg="#F96815", font=("Helvetica", 20), padx=40)
+O_bingo = Label(root, text="O", bg="#00FF33", font=("Helvetica", 20), padx=40)
+# Bots's BINGO positions
+B_bingo.grid(row=8, column=6, sticky="nsew")
+I_bingo.grid(row=8, column=7, sticky="nsew")
+N_bingo.grid(row=8, column=8, sticky="nsew")
+G_bingo.grid(row=8, column=9, sticky="nsew")
+O_bingo.grid(row=8, column=10, sticky="nsew")
 
-# #BINGO row 1
-# B_bingo = Button(root, text = "B1", bg = "#00CCFF", font =("Helvetica", 20))
-# I_bingo = Button(root, text = "I", bg = "#FF0000", font =("Helvetica", 20))
-# N_bingo = Button(root, text = "N", bg = "#E2DF00", font =("Helvetica", 20))
-# G_bingo = Button(root, text = "G", bg = "#F96815", font =("Helvetica", 20))
-# O_bingo = Button(root, text = "O", bg = "#00FF33", font =("Helvetica", 20))
-# #BINGO row 1 positions
-# B_bingo.grid(row=4, column = 1, sticky="nsew")
-# I_bingo.grid(row=4, column = 2, sticky="nsew")
-# N_bingo.grid(row=4, column = 3, sticky="nsew")
-# G_bingo.grid(row=4, column = 4, sticky="nsew")
-# O_bingo.grid(row=4, column = 5, sticky="nsew")
+# BINGO row 1
+B_bingo = Button(root, text="B1", bg="#00CCFF", font=("Helvetica", 20))
+I_bingo = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
+N_bingo = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
+G_bingo = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
+O_bingo = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+# BINGO row 1 positions
+B_bingo.grid(row=9, column=1, sticky="nsew")
+I_bingo.grid(row=9, column=2, sticky="nsew")
+N_bingo.grid(row=9, column=3, sticky="nsew")
+G_bingo.grid(row=9, column=4, sticky="nsew")
+O_bingo.grid(row=9, column=5, sticky="nsew")
 
-# #Bots's BINGO row 1
-# B_bingo = Button(root, text = "B", bg = "#00CCFF", font =("Helvetica", 20))
-# I_bingo = Button(root, text = "I", bg = "#FF0000", font =("Helvetica", 20))
-# N_bingo = Button(root, text = "N", bg = "#E2DF00", font =("Helvetica", 20))
-# G_bingo = Button(root, text = "G", bg = "#F96815", font =("Helvetica", 20))
-# O_bingo = Button(root, text = "O", bg = "#00FF33", font =("Helvetica", 20))
-# #Bots's BINGO row 1 positions
-# B_bingo.grid(row=4, column = 6, sticky="nsew")
-# I_bingo.grid(row=4, column = 7, sticky="nsew")
-# N_bingo.grid(row=4, column = 8, sticky="nsew")
-# G_bingo.grid(row=4, column = 9, sticky="nsew")
-# O_bingo.grid(row=4, column = 10, sticky="nsew")
+# Bots's BINGO row 1
+B_bingo = Button(root, text="B", bg="#00CCFF", font=("Helvetica", 20))
+I_bingo = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
+N_bingo = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
+G_bingo = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
+O_bingo = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+# Bots's BINGO row 1 positions
+B_bingo.grid(row=9, column=6, sticky="nsew")
+I_bingo.grid(row=9, column=7, sticky="nsew")
+N_bingo.grid(row=9, column=8, sticky="nsew")
+G_bingo.grid(row=9, column=9, sticky="nsew")
+O_bingo.grid(row=9, column=10, sticky="nsew")
 
-# #BINGO row 2
-# B_bingo = Button(root, text = "B2", bg = "#00CCFF", font =("Helvetica", 20))
-# I_bingo = Button(root, text = "I", bg = "#FF0000", font =("Helvetica", 20))
-# N_bingo = Button(root, text = "N", bg = "#E2DF00", font =("Helvetica", 20))
-# G_bingo = Button(root, text = "G", bg = "#F96815", font =("Helvetica", 20))
-# O_bingo = Button(root, text = "O", bg = "#00FF33", font =("Helvetica", 20))
-# #BINGO row 2 positions
-# B_bingo.grid(row=5, column = 1, sticky="nsew")
-# I_bingo.grid(row=5, column = 2, sticky="nsew")
-# N_bingo.grid(row=5, column = 3, sticky="nsew")
-# G_bingo.grid(row=5, column = 4, sticky="nsew")
-# O_bingo.grid(row=5, column = 5, sticky="nsew")
+# BINGO row 2
+B_bingo = Button(root, text="B2", bg="#00CCFF", font=("Helvetica", 20))
+I_bingo = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
+N_bingo = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
+G_bingo = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
+O_bingo = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+# BINGO row 2 positions
+B_bingo.grid(row=10, column=1, sticky="nsew")
+I_bingo.grid(row=10, column=2, sticky="nsew")
+N_bingo.grid(row=10, column=3, sticky="nsew")
+G_bingo.grid(row=10, column=4, sticky="nsew")
+O_bingo.grid(row=10, column=5, sticky="nsew")
 
-# #Bots's BINGO row 2
-# B_bingo = Button(root, text = "B", bg = "#00CCFF", font =("Helvetica", 20))
-# I_bingo = Button(root, text = "I", bg = "#FF0000", font =("Helvetica", 20))
-# N_bingo = Button(root, text = "N", bg = "#E2DF00", font =("Helvetica", 20))
-# G_bingo = Button(root, text = "G", bg = "#F96815", font =("Helvetica", 20))
-# O_bingo = Button(root, text = "O", bg = "#00FF33", font =("Helvetica", 20))
-# #Bots's BINGO row 2 positions
-# B_bingo.grid(row=5, column = 6, sticky="nsew")
-# I_bingo.grid(row=5, column = 7, sticky="nsew")
-# N_bingo.grid(row=5, column = 8, sticky="nsew")
-# G_bingo.grid(row=5, column = 9, sticky="nsew")
-# O_bingo.grid(row=5, column = 10, sticky="nsew")
+# Bots's BINGO row 2
+B_bingo = Button(root, text="B", bg="#00CCFF", font=("Helvetica", 20))
+I_bingo = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
+N_bingo = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
+G_bingo = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
+O_bingo = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+# Bots's BINGO row 2 positions
+B_bingo.grid(row=10, column=6, sticky="nsew")
+I_bingo.grid(row=10, column=7, sticky="nsew")
+N_bingo.grid(row=10, column=8, sticky="nsew")
+G_bingo.grid(row=10, column=9, sticky="nsew")
+O_bingo.grid(row=10, column=10, sticky="nsew")
 
 
-# #STAR image formant
-# #call image b4 resize
-# original_star = Image.open("STAR.png")
-# #resizing image
-# resized = original_star.resize((95,52), Image.ANTIALIAS) # resize(sides, height)
-# star = ImageTk.PhotoImage(resized)
+# STAR image formant
+# call image b4 resize
+original_star = Image.open("STAR.png")
+# resizing image
+resized = original_star.resize((95, 52), Image.ANTIALIAS)  # resize(sides, height)
+star = ImageTk.PhotoImage(resized)
 
-# #BINGO row 3
-# B_bingo = Button(root, text = "B3", bg = "#00CCFF", font =("Helvetica", 20))
-# I_bingo = Button(root, text = "I", bg = "#FF0000", font =("Helvetica", 20))
-# N_bingo = Label(root, image = star) #FREE SPACE
-# G_bingo = Button(root, text = "G", bg = "#F96815", font =("Helvetica", 20))
-# O_bingo = Button(root, text = "O", bg = "#00FF33", font =("Helvetica", 20))
-# #BINGO row 3 positions
-# B_bingo.grid(row=6, column = 1, sticky="nsew")
-# I_bingo.grid(row=6, column = 2, sticky="nsew")
-# N_bingo.grid(row=6, column = 3, sticky="nsew")
-# G_bingo.grid(row=6, column = 4, sticky="nsew")
-# O_bingo.grid(row=6, column = 5, sticky="nsew")
+# BINGO row 3
+B_bingo = Button(root, text="B3", bg="#00CCFF", font=("Helvetica", 20))
+I_bingo = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
+N_bingo = Label(root, image=star)  # FREE SPACE
+G_bingo = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
+O_bingo = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+# BINGO row 3 positions
+B_bingo.grid(row=11, column=1, sticky="nsew")
+I_bingo.grid(row=11, column=2, sticky="nsew")
+N_bingo.grid(row=11, column=3, sticky="nsew")
+G_bingo.grid(row=11, column=4, sticky="nsew")
+O_bingo.grid(row=11, column=5, sticky="nsew")
 
-# #Bots's BINGO row 3
-# B_bingo = Button(root, text = "B", bg = "#00CCFF", font =("Helvetica", 20))
-# I_bingo = Button(root, text = "I", bg = "#FF0000", font =("Helvetica", 20))
-# N_bingo = Label(root, image = star) #FREE SPACE
-# G_bingo = Button(root, text = "G", bg = "#F96815", font =("Helvetica", 20))
-# O_bingo = Button(root, text = "O", bg = "#00FF33", font =("Helvetica", 20))
-# #Bots's BINGO row 3 positions
-# B_bingo.grid(row=6, column = 6, sticky="nsew")
-# I_bingo.grid(row=6, column = 7, sticky="nsew")
-# N_bingo.grid(row=6, column = 8, sticky="nsew")
-# G_bingo.grid(row=6, column = 9, sticky="nsew")
-# O_bingo.grid(row=6, column = 10, sticky="nsew")
+# Bots's BINGO row 3
+B_bingo = Button(root, text="B", bg="#00CCFF", font=("Helvetica", 20))
+I_bingo = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
+N_bingo = Label(root, image=star)  # FREE SPACE
+G_bingo = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
+O_bingo = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+# Bots's BINGO row 3 positions
+B_bingo.grid(row=11, column=6, sticky="nsew")
+I_bingo.grid(row=11, column=7, sticky="nsew")
+N_bingo.grid(row=11, column=8, sticky="nsew")
+G_bingo.grid(row=11, column=9, sticky="nsew")
+O_bingo.grid(row=11, column=10, sticky="nsew")
 
-# #BINGO row 4
-# B_bingo = Button(root, text = "B4", bg = "#00CCFF", font =("Helvetica", 20))
-# I_bingo = Button(root, text = "I", bg = "#FF0000", font =("Helvetica", 20))
-# N_bingo = Button(root, text = "N", bg = "#E2DF00", font =("Helvetica", 20))
-# G_bingo = Button(root, text = "G", bg = "#F96815", font =("Helvetica", 20))
-# O_bingo = Button(root, text = "O", bg = "#00FF33", font =("Helvetica", 20))
-# #BINGO row 4 positions
-# B_bingo.grid(row=7, column = 1, sticky="nsew")
-# I_bingo.grid(row=7, column = 2, sticky="nsew")
-# N_bingo.grid(row=7, column = 3, sticky="nsew")
-# G_bingo.grid(row=7, column = 4, sticky="nsew")
-# O_bingo.grid(row=7, column = 5, sticky="nsew")
+# BINGO row 4
+B_bingo = Button(root, text="B4", bg="#00CCFF", font=("Helvetica", 20))
+I_bingo = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
+N_bingo = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
+G_bingo = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
+O_bingo = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+# BINGO row 4 positions
+B_bingo.grid(row=12, column=1, sticky="nsew")
+I_bingo.grid(row=12, column=2, sticky="nsew")
+N_bingo.grid(row=12, column=3, sticky="nsew")
+G_bingo.grid(row=12, column=4, sticky="nsew")
+O_bingo.grid(row=12, column=5, sticky="nsew")
 
-# #Bots's BINGO row 4
-# B_bingo = Button(root, text = "B", bg = "#00CCFF", font =("Helvetica", 20))
-# I_bingo = Button(root, text = "I", bg = "#FF0000", font =("Helvetica", 20))
-# N_bingo = Button(root, text = "N", bg = "#E2DF00", font =("Helvetica", 20))
-# G_bingo = Button(root, text = "G", bg = "#F96815", font =("Helvetica", 20))
-# O_bingo = Button(root, text = "O", bg = "#00FF33", font =("Helvetica", 20))
-# #Bots's BINGO row 4 positions
-# B_bingo.grid(row=7, column = 6, sticky="nsew")
-# I_bingo.grid(row=7, column = 7, sticky="nsew")
-# N_bingo.grid(row=7, column = 8, sticky="nsew")
-# G_bingo.grid(row=7, column = 9, sticky="nsew")
-# O_bingo.grid(row=7, column = 10, sticky="nsew")
+# Bots's BINGO row 4
+B_bingo = Button(root, text="B", bg="#00CCFF", font=("Helvetica", 20))
+I_bingo = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
+N_bingo = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
+G_bingo = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
+O_bingo = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+# Bots's BINGO row 4 positions
+B_bingo.grid(row=12, column=6, sticky="nsew")
+I_bingo.grid(row=12, column=7, sticky="nsew")
+N_bingo.grid(row=12, column=8, sticky="nsew")
+G_bingo.grid(row=12, column=9, sticky="nsew")
+O_bingo.grid(row=12, column=10, sticky="nsew")
 
-# #BINGO row 5
-# B_bingo = Button(root, text = "B5", bg = "#00CCFF", font =("Helvetica", 20))
-# I_bingo = Button(root, text = "I", bg = "#FF0000", font =("Helvetica", 20))
-# N_bingo = Button(root, text = "N", bg = "#E2DF00", font =("Helvetica", 20))
-# G_bingo = Button(root, text = "G", bg = "#F96815", font =("Helvetica", 20))
-# O_bingo = Button(root, text = "O", bg = "#00FF33", font =("Helvetica", 20))
-# #BINGO row 5 positions
-# B_bingo.grid(row=8, column = 1, sticky="nsew")
-# I_bingo.grid(row=8, column = 2, sticky="nsew")
-# N_bingo.grid(row=8, column = 3, sticky="nsew")
-# G_bingo.grid(row=8, column = 4, sticky="nsew")
-# O_bingo.grid(row=8, column = 5, sticky="nsew")
+# BINGO row 5
+B_bingo = Button(root, text="B5", bg="#00CCFF", font=("Helvetica", 20))
+I_bingo = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
+N_bingo = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
+G_bingo = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
+O_bingo = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+# BINGO row 5 positions
+B_bingo.grid(row=13, column=1, sticky="nsew")
+I_bingo.grid(row=13, column=2, sticky="nsew")
+N_bingo.grid(row=13, column=3, sticky="nsew")
+G_bingo.grid(row=13, column=4, sticky="nsew")
+O_bingo.grid(row=13, column=5, sticky="nsew")
 
-# #Bots's BINGO row 5
-# B_bingo = Button(root, text = "B", bg = "#00CCFF", font =("Helvetica", 20))
-# I_bingo = Button(root, text = "I", bg = "#FF0000", font =("Helvetica", 20))
-# N_bingo = Button(root, text = "N", bg = "#E2DF00", font =("Helvetica", 20))
-# G_bingo = Button(root, text = "G", bg = "#F96815", font =("Helvetica", 20))
-# O_bingo = Button(root, text = "O", bg = "#00FF33", font =("Helvetica", 20))
-# #Bots's BINGO row 5 positions
-# B_bingo.grid(row=8, column = 6, sticky="nsew")
-# I_bingo.grid(row=8, column = 7, sticky="nsew")
-# N_bingo.grid(row=8, column = 8, sticky="nsew")
-# G_bingo.grid(row=8, column = 9, sticky="nsew")
-# O_bingo.grid(row=8, column = 10, sticky="nsew")
+# Bots's BINGO row 5
+B_bingo = Button(root, text="B", bg="#00CCFF", font=("Helvetica", 20))
+I_bingo = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
+N_bingo = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
+G_bingo = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
+O_bingo = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+# Bots's BINGO row 5 positions
+B_bingo.grid(row=13, column=6, sticky="nsew")
+I_bingo.grid(row=13, column=7, sticky="nsew")
+N_bingo.grid(row=13, column=8, sticky="nsew")
+G_bingo.grid(row=13, column=9, sticky="nsew")
+O_bingo.grid(row=13, column=10, sticky="nsew")
 
-# #last row
-# Bingo_button = Button(root, text = "BINGO!", bg = "#B900FF", font =("Helvetica", 25))
-# blank = Label(root, bg = "#737373")
-# New_card = Button(root, text = "New Card", bg = "#29EFD1", font =("Helvetica", 20))
-# New_game = Button(root, text = "New Game", bg = "#FF4646", font =("Helvetica", 20))
-# pause_play = Button(root, text = "Pause/Play", bg = "#96FF50", font =("Helvetica", 20))
+# last row
+Bingo_button = Button(root, text="BINGO!", bg="#B900FF", font=("Helvetica", 25))
+blank = Label(root, bg="#737373")
+New_card = Button(root, text="New Card", bg="#29EFD1", font=("Helvetica", 20))
+New_game = Button(root, text="New Game", bg="#FF4646", font=("Helvetica", 20))
+pause_play = Button(root, text="Pause/Play", bg="#96FF50", font=("Helvetica", 20))
 
-# #last row positions # columnspan = 5
-# Bingo_button.grid(row=9, column = 1, columnspan = 3, sticky="nsew")
-# blank.grid(row=9, column = 4, columnspan = 1, sticky="nsew")
-# New_card.grid(row=9, column = 5, columnspan = 2,sticky="nsew")
-# New_game.grid(row=9, column = 7, columnspan = 2,sticky="nsew")
-# pause_play.grid(row=9, column = 9, columnspan = 2,sticky="nsew")
+# last row positions # columnspan = 5
+Bingo_button.grid(row=14, column=1, columnspan=3, sticky="nsew")
+blank.grid(row=14, column=4, columnspan=1, sticky="nsew")
+New_card.grid(row=14, column=5, columnspan=2, sticky="nsew")
+New_game.grid(row=14, column=7, columnspan=2, sticky="nsew")
+pause_play.grid(row=14, column=9, columnspan=2, sticky="nsew")
 
 root.mainloop()
