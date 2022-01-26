@@ -52,7 +52,7 @@ bingo_ball = Label(root, image=resized_O_ball)
 def bingo_ball_color(drawn_bingo_number):
     if drawn_bingo_number.startswith("B"):
         bingo_ball.config(image=resized_B_ball)
-        B_list_drawn_str = "BBB"
+        B_list_drawn_str = " " + drawn_bingo_number[2:]
         B_list_drawn.config(
             text=B_list_drawn_str,
             bg="#00CCFF",
@@ -62,7 +62,7 @@ def bingo_ball_color(drawn_bingo_number):
         )
     elif drawn_bingo_number.startswith("I"):
         bingo_ball.config(image=resized_I_ball)
-        I_list_drawn_str = "IIII"
+        I_list_drawn_str = " " + drawn_bingo_number[2:]
         I_list_drawn.config(
             text=I_list_drawn_str,
             bg="#FF0000",
@@ -73,7 +73,7 @@ def bingo_ball_color(drawn_bingo_number):
 
     elif drawn_bingo_number.startswith("N"):
         bingo_ball.config(image=resized_N_ball)
-        N_list_drawn_str = "NNN"
+        N_list_drawn_str = " " + drawn_bingo_number[2:]
         N_list_drawn.config(
             text=N_list_drawn_str,
             bg="#E2DF00",
@@ -84,7 +84,7 @@ def bingo_ball_color(drawn_bingo_number):
 
     elif drawn_bingo_number.startswith("G"):
         bingo_ball.config(image=resized_G_ball)
-        G_list_drawn_str = "GGG"
+        G_list_drawn_str = " " + drawn_bingo_number[2:]
         G_list_drawn.config(
             text=G_list_drawn_str,
             bg="#F96815",
@@ -95,10 +95,10 @@ def bingo_ball_color(drawn_bingo_number):
 
     elif drawn_bingo_number.startswith("O"):
         bingo_ball.config(image=resized_O_ball)
-        O_list_drawn_str = "O"
+        O_list_drawn_str = " " + drawn_bingo_number[2:]
         O_list_drawn.config(
             text=O_list_drawn_str,
-            bg="#00CCFF",
+            bg="#00FF33",
             font=("Helvetica", 15),
             padx=2,
             pady=4,
