@@ -39,15 +39,15 @@ bingo_ball = Label(root, image=resized_O_ball)
 
 
 def bingo_ball_color(drawn_bingo_number):
-    if drawn_bingo_number[0] == "B":
+    if drawn_bingo_number.startswith("B"):
         bingo_ball.config(image=resized_B_ball)
-    elif drawn_bingo_number[0] == "I":
+    elif drawn_bingo_number.startswith("I"):
         bingo_ball.config(image=resized_I_ball)
-    elif drawn_bingo_number[0] == "N":
+    elif drawn_bingo_number.startswith("N"):
         bingo_ball.config(image=resized_N_ball)
-    elif drawn_bingo_number[0] == "G":
+    elif drawn_bingo_number.startswith("G"):
         bingo_ball.config(image=resized_G_ball)
-    elif drawn_bingo_number[0] == "O":
+    elif drawn_bingo_number.startswith("O"):
         bingo_ball.config(image=resized_O_ball)
 
 
@@ -106,12 +106,14 @@ def update_drawn_ball(all_random_numbers_picked_list, bingo_numbers):
         )  # .after(parent, ms, function = None, *args)
 
 
+### list pf all Drawn numbers
+all_drawn_numbers = ""
 # list_of_drawn_numbers_label = Label(root, text = "", bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
 # list_of_drawn_numbers_label.grid(row=1, column=5, columnspan = 6, sticky="nsew")
-B_list_drawn_str = " "
+B_list_drawn_str = "B: 13ajsfhklghdgisdgifodh"
 B_list_drawn = Label(
     root,
-    text="",
+    text=B_list_drawn_str,
     bg="#00CCFF",
     font=("Helvetica", 15),
     padx=2,
