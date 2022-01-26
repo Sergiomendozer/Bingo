@@ -115,7 +115,7 @@ B_list_drawn = Label(
     bg="#00CCFF",
     font=("Helvetica", 15),
     padx=2,
-    pady=45,
+    pady=4,
 )
 B_list_drawn.grid(row=1, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
@@ -125,7 +125,7 @@ I_list_drawn = Label(
     bg="#FF0000",
     font=("Helvetica", 15),
     padx=2,
-    pady=45,
+    pady=4,
 )
 I_list_drawn.grid(row=2, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
@@ -135,7 +135,7 @@ N_list_drawn = Label(
     bg="#E2DF00",
     font=("Helvetica", 15),
     padx=2,
-    pady=45,
+    pady=4,
 )
 N_list_drawn.grid(row=3, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
@@ -152,12 +152,12 @@ G_list_drawn.grid(row=4, column=5, columnspan=6, rowspan=1, sticky="nsew")
 O_list_drawn = Label(
     root,
     text="",
-    bg="#F96815",
+    bg="#00FF33",
     font=("Helvetica", 15),
     padx=2,
-    pady=45,
+    pady=4,
 )
-O_list_drawn.grid(row=6, column=5, columnspan=6, rowspan=1, sticky="nsew")
+O_list_drawn.grid(row=5, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
 Random_number_picked_label = Label(
     root, text=" fff  ", font=("Helvetica", 24), bg="#FFFFFF"
@@ -271,8 +271,8 @@ Bots_card_Label = Label(
 
 
 # ROW 2 positions
-your_card_Label.grid(row=6, column=1, columnspan=5, sticky="nsew")
-Bots_card_Label.grid(row=6, column=6, columnspan=5, sticky="nsew")
+your_card_Label.grid(row=7, column=1, columnspan=5, sticky="nsew")
+Bots_card_Label.grid(row=7, column=6, columnspan=5, sticky="nsew")
 
 # #Player's BINGO
 # B_bingo = Label(root, text = "B", bg = "#00CCFF", font =("Helvetica", 20), padx = 40)
