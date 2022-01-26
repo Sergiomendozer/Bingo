@@ -8,7 +8,7 @@ import datetime
 
 root = Tk()
 root.title("BINGO")
-root.geometry("1015x570")
+root.geometry("1015x590")
 
 # BINGO balls:
 ##B BINGO ball
@@ -51,7 +51,7 @@ def bingo_ball_color(drawn_bingo_number):
         bingo_ball.config(image=resized_O_ball)
 
 
-bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=5, sticky="nsew")
+bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 
 # drawing ball update label
 def update_drawn_ball(all_random_numbers_picked_list, bingo_numbers):
@@ -162,7 +162,7 @@ O_list_drawn.grid(row=5, column=5, columnspan=6, rowspan=1, sticky="nsew")
 Random_number_picked_label = Label(
     root, text=" fff  ", font=("Helvetica", 24), bg="#FFFFFF"
 )
-Random_number_picked_label.place(x=259, y=53)
+Random_number_picked_label.place(x=259, y=63)
 bingo_numbers = [
     "B 1",
     "B 2",
