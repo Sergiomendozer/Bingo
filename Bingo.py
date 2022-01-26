@@ -381,16 +381,28 @@ O_bingo_bot.grid(row=8, column=10, sticky="nsew")
 
 ### Buttons functions
 ### NEW function
+# def click_row_1_B():
+#     B_bingo_row_1.config(bg="#B900FF")
 
 
-def click_row_1_B():
+def click_row_1_B(event):
     B_bingo_row_1.config(bg="#B900FF")
 
 
+def double_click_row_1_B(event):
+    B_bingo_row_1.config(bg="#00CCFF")
+
+
+# B_bingo_row_1 = Button(root, text="B1", bg="#00CCFF", font=("Helvetica", 20))
+# B_bingo_row_1.grid(row=9, column=1, sticky="nsew")
+
+# binds function to that button
+# B_bingo_row_1.bind("<Double-Button-1>", double_click_row_1_B)
+# B_bingo_row_1.bind("<Button-1>", click_row_1_B)
+
+
 # BINGO row 1
-B_bingo_row_1 = Button(
-    root, text="B1", bg="#00CCFF", font=("Helvetica", 20), command=click_row_1_B
-)
+B_bingo_row_1 = Button(root, text="B1", bg="#00CCFF", font=("Helvetica", 20))
 I_bingo_row_1 = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
 N_bingo_row_1 = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
 G_bingo_row_1 = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
@@ -401,6 +413,10 @@ I_bingo_row_1.grid(row=9, column=2, sticky="nsew")
 N_bingo_row_1.grid(row=9, column=3, sticky="nsew")
 G_bingo_row_1.grid(row=9, column=4, sticky="nsew")
 O_bingo_row_1.grid(row=9, column=5, sticky="nsew")
+
+# set command on button
+B_bingo_row_1.bind("<Double-Button-1>", double_click_row_1_B)
+B_bingo_row_1.bind("<Button-1>", click_row_1_B)
 
 # Bots's BINGO row 1
 B_bingo_row_1_bot = Button(root, text="B", bg="#00CCFF", font=("Helvetica", 20))
