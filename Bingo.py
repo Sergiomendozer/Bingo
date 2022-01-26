@@ -56,7 +56,13 @@ def bingo_ball_color(
             padx=2,
             pady=4,
         )
-        # add return
+        return (
+            B_list_drawn_str,
+            I_list_drawn_str,
+            N_list_drawn_str,
+            G_list_drawn_str,
+            O_list_drawn_str,
+        )
     elif drawn_bingo_number.startswith("I"):
         bingo_ball.config(image=resized_I_ball)
         I_list_drawn_str = I_list_drawn_str + " " + drawn_bingo_number[2:]
@@ -66,6 +72,13 @@ def bingo_ball_color(
             font=("Helvetica", 15),
             padx=2,
             pady=4,
+        )
+        return (
+            B_list_drawn_str,
+            I_list_drawn_str,
+            N_list_drawn_str,
+            G_list_drawn_str,
+            O_list_drawn_str,
         )
 
     elif drawn_bingo_number.startswith("N"):
@@ -78,6 +91,13 @@ def bingo_ball_color(
             padx=2,
             pady=4,
         )
+        return (
+            B_list_drawn_str,
+            I_list_drawn_str,
+            N_list_drawn_str,
+            G_list_drawn_str,
+            O_list_drawn_str,
+        )
 
     elif drawn_bingo_number.startswith("G"):
         bingo_ball.config(image=resized_G_ball)
@@ -89,7 +109,13 @@ def bingo_ball_color(
             padx=2,
             pady=4,
         )
-
+        return (
+            B_list_drawn_str,
+            I_list_drawn_str,
+            N_list_drawn_str,
+            G_list_drawn_str,
+            O_list_drawn_str,
+        )
     elif drawn_bingo_number.startswith("O"):
         bingo_ball.config(image=resized_O_ball)
         O_list_drawn_str = O_list_drawn_str + " " + drawn_bingo_number[2:]
@@ -99,6 +125,13 @@ def bingo_ball_color(
             font=("Helvetica", 15),
             padx=2,
             pady=4,
+        )
+        return (
+            B_list_drawn_str,
+            I_list_drawn_str,
+            N_list_drawn_str,
+            G_list_drawn_str,
+            O_list_drawn_str,
         )
 
 
@@ -117,7 +150,13 @@ def update_drawn_ball(
     Random_number_picked_label.config(
         text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
     )
-    bingo_ball_color(
+    (
+        B_list_drawn_str,
+        I_list_drawn_str,
+        N_list_drawn_str,
+        G_list_drawn_str,
+        O_list_drawn_str,
+    ) = bingo_ball_color(
         drawn_bingo_number,
         B_list_drawn_str,
         I_list_drawn_str,
