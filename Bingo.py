@@ -37,16 +37,38 @@ resized_O_ball = ImageTk.PhotoImage(resized_O)
 # ROW 1
 bingo_ball = Label(root, image=resized_O_ball)
 
+# def add_drawn_ball_number_to_B_display_():
+# B_list_drawn_str = "B:"
+# B_list_drawn = Label(
+#     root,
+#     text=B_list_drawn_str,
+#     bg="#00CCFF",
+#     font=("Helvetica", 15),
+#     padx=2,
+#     pady=4,
+# )
+
 
 def bingo_ball_color(drawn_bingo_number):
     if drawn_bingo_number.startswith("B"):
         bingo_ball.config(image=resized_B_ball)
+        B_list_drawn_str = "called"
+        B_list_drawn.config(
+            text=B_list_drawn_str,
+            bg="#00CCFF",
+            font=("Helvetica", 15),
+            padx=2,
+            pady=4,
+        )
     elif drawn_bingo_number.startswith("I"):
         bingo_ball.config(image=resized_I_ball)
+
     elif drawn_bingo_number.startswith("N"):
         bingo_ball.config(image=resized_N_ball)
+
     elif drawn_bingo_number.startswith("G"):
         bingo_ball.config(image=resized_G_ball)
+
     elif drawn_bingo_number.startswith("O"):
         bingo_ball.config(image=resized_O_ball)
 
@@ -55,62 +77,24 @@ bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 
 # drawing ball update label
 def update_drawn_ball(all_random_numbers_picked_list, bingo_numbers):
-    if (
-        len(all_random_numbers_picked_list) == 52
-        or len(all_random_numbers_picked_list) == 53
-        or len(all_random_numbers_picked_list) == 54
-        or len(all_random_numbers_picked_list) == 55
-    ):
-        (drawn_bingo_number, bingo_numbers) = random_bingo_number(bingo_numbers)
-        all_random_numbers_picked_list = (
-            all_random_numbers_picked_list + " \n" + drawn_bingo_number
-        )
-        # list_of_drawn_numbers_label.config(text = all_random_numbers_picked_list, bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
-        Random_number_picked_label.config(
-            text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
-        )
-        bingo_ball_color(drawn_bingo_number)
-        return Random_number_picked_label.after(
-            5000, update_drawn_ball, all_random_numbers_picked_list, bingo_numbers
-        )  # .after(parent, ms, function = None, *args)
-    elif (
-        len(all_random_numbers_picked_list) == 104
-        or len(all_random_numbers_picked_list) == 105
-        or len(all_random_numbers_picked_list) == 106
-        or len(all_random_numbers_picked_list) == 107
-    ):
-        (drawn_bingo_number, bingo_numbers) = random_bingo_number(bingo_numbers)
-        all_random_numbers_picked_list = (
-            all_random_numbers_picked_list + " \n" + drawn_bingo_number
-        )
-        # list_of_drawn_numbers_label.config(text = all_random_numbers_picked_list, bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
-        Random_number_picked_label.config(
-            text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
-        )
-        bingo_ball_color(drawn_bingo_number)
-        return Random_number_picked_label.after(
-            5000, update_drawn_ball, all_random_numbers_picked_list, bingo_numbers
-        )  # .after(parent, ms, function = None, *args)
-    else:
-        (drawn_bingo_number, bingo_numbers) = random_bingo_number(bingo_numbers)
-        all_random_numbers_picked_list = (
-            all_random_numbers_picked_list + " " + drawn_bingo_number
-        )
-        # list_of_drawn_numbers_label.config(text = all_random_numbers_picked_list, bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
-        Random_number_picked_label.config(
-            text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
-        )
-        bingo_ball_color(drawn_bingo_number)
-        return Random_number_picked_label.after(
-            5000, update_drawn_ball, all_random_numbers_picked_list, bingo_numbers
-        )  # .after(parent, ms, function = None, *args)
+    (drawn_bingo_number, bingo_numbers) = random_bingo_number(bingo_numbers)
+    # all_random_numbers_picked_list = ( #### delete
+    #     all_random_numbers_picked_list + " " + drawn_bingo_number)
+    # list_of_drawn_numbers_label.config(text = all_random_numbers_picked_list, bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
+    #### delete###
+    Random_number_picked_label.config(
+        text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
+    )
+    bingo_ball_color(drawn_bingo_number)
+    return Random_number_picked_label.after(
+        5000, update_drawn_ball, all_random_numbers_picked_list, bingo_numbers
+    )  # .after(parent, ms, function = None, *args)
 
 
-### list pf all Drawn numbers
-all_drawn_numbers = ""
-# list_of_drawn_numbers_label = Label(root, text = "", bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )
-# list_of_drawn_numbers_label.grid(row=1, column=5, columnspan = 6, sticky="nsew")
-B_list_drawn_str = "B: 13ajsfhklghdgisdgifodh"
+### list pf all Drawn numbers###
+# list_of_drawn_numbers_label = Label(root, text = "", bg = "#B900FF", font =("Helvetica", 15),padx = 5, pady = 45, )###########
+# list_of_drawn_numbers_label.grid(row=1, column=5, columnspan = 6, sticky="nsew") #############
+B_list_drawn_str = "B:"
 B_list_drawn = Label(
     root,
     text=B_list_drawn_str,
@@ -121,9 +105,10 @@ B_list_drawn = Label(
 )
 B_list_drawn.grid(row=1, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
+I_list_drawn_str = "I:"
 I_list_drawn = Label(
     root,
-    text="",
+    text=I_list_drawn_str,
     bg="#FF0000",
     font=("Helvetica", 15),
     padx=2,
@@ -131,9 +116,10 @@ I_list_drawn = Label(
 )
 I_list_drawn.grid(row=2, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
+N_list_drawn_str = "N:"
 N_list_drawn = Label(
     root,
-    text="",
+    text=N_list_drawn_str,
     bg="#E2DF00",
     font=("Helvetica", 15),
     padx=2,
@@ -141,9 +127,10 @@ N_list_drawn = Label(
 )
 N_list_drawn.grid(row=3, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
+G_list_drawn_str = "G:"
 G_list_drawn = Label(
     root,
-    text="",
+    text=G_list_drawn_str,
     bg="#F96815",
     font=("Helvetica", 15),
     padx=2,
@@ -151,9 +138,10 @@ G_list_drawn = Label(
 )
 G_list_drawn.grid(row=4, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
+O_list_drawn_str = "O:"
 O_list_drawn = Label(
     root,
-    text="",
+    text=O_list_drawn_str,
     bg="#00FF33",
     font=("Helvetica", 15),
     padx=2,
