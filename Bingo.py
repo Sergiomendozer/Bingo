@@ -624,7 +624,7 @@ def click_row_5_O():
 click_row_5_O.click = 0
 click_row_5_O.colors = ["#00FF33", "#B900ff"]
 
-# Player card maker: 
+# Player card maker:
 # player card maker for B row:
 def draw_B_numbers_row_5(numbers_for_B_list_out_4):
     row_5_B_number = random.choice(numbers_for_B_list_out_4)
@@ -659,8 +659,7 @@ def draw_B_numbers_row_2(numbers_for_B_list_out_1):
     numbers_for_B_list_out_1.pop(take_out_of_list_B)
     numbers_for_B_list_out_2 = numbers_for_B_list_out_1
     return row_2_B_number, numbers_for_B_list_out_2
-###NEW
-# player card maker for I row:
+
 
 def draw_B_numbers_row_1():
     numbers_for_B_list = [
@@ -701,6 +700,344 @@ row_4_B_number, numbers_for_B_list_out_4 = draw_B_numbers_row_4(
     numbers_for_B_list_out_3
 )
 row_5_B_number = draw_B_numbers_row_5(numbers_for_B_list_out_4)
+
+# player card maker for I row:
+def draw_I_numbers_row_5(numbers_for_I_list_out_4):
+    row_5_I_number = random.choice(numbers_for_I_list_out_4)
+    # takes out drawing number from the list
+    take_out_of_list_I = numbers_for_I_list_out_1.index(row_5_I_number)
+    numbers_for_I_list_out_4.pop(take_out_of_list_I)
+    print("5th: " + row_5_I_number)  ### delete
+    print(numbers_for_I_list_out_4)  ### delete
+    return row_5_I_number
+
+
+def draw_I_numbers_row_4(numbers_for_I_list_out_3):
+    row_4_I_number = random.choice(numbers_for_I_list_out_3)
+    # takes out drawing number from the list
+    take_out_of_list_I = numbers_for_I_list_out_1.index(row_4_I_number)
+    numbers_for_I_list_out_3.pop(take_out_of_list_I)
+    print("4th: " + row_4_I_number)  ### delete
+    print(numbers_for_I_list_out_3)  ### delete
+    numbers_for_I_list_out_4 = numbers_for_I_list_out_3
+    return row_4_I_number, numbers_for_I_list_out_3
+
+
+def draw_I_numbers_row_3(numbers_for_I_list_out_2):
+    row_3_I_number = random.choice(numbers_for_I_list_out_2)
+    # takes out drawing number from the list
+    take_out_of_list_I = numbers_for_I_list_out_2.index(row_3_I_number)
+    numbers_for_I_list_out_2.pop(take_out_of_list_I)
+    print("3rd: " + row_3_I_number)  ### delete
+    print(numbers_for_I_list_out_1)  ### delete
+    numbers_for_I_list_out_3 = numbers_for_I_list_out_2
+    return row_3_I_number, numbers_for_I_list_out_3
+
+
+def draw_I_numbers_row_2(numbers_for_I_list_out_1):
+    row_2_I_number = random.choice(numbers_for_I_list_out_1)
+    # takes out drawing number from the list
+    take_out_of_list_I = numbers_for_I_list_out_1.index(row_2_I_number)
+    numbers_for_I_list_out_1.pop(take_out_of_list_I)
+    print("2nd: " + row_2_I_number)  ### delete
+    print(numbers_for_I_list_out_1)  ### delete
+    numbers_for_I_list_out_2 = numbers_for_I_list_out_1
+    return row_2_I_number, numbers_for_I_list_out_2
+
+
+def draw_I_numbers_row_1():
+    numbers_for_I_list = [
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+    ]
+    row_1_I_number = random.choice(numbers_for_I_list)
+    # takes out drawing number from the list
+    take_out_of_list_I = numbers_for_I_list.index(row_1_I_number)
+    numbers_for_I_list.pop(take_out_of_list_I)
+    print("1st: " + row_1_I_number)  ### delete
+    print(numbers_for_I_list)  ### delete
+    numbers_for_I_list_out_1 = numbers_for_I_list
+    return row_1_I_number, numbers_for_I_list_out_1
+
+
+row_1_I_number, numbers_for_I_list_out_1 = draw_I_numbers_row_1()
+row_2_I_number, numbers_for_I_list_out_2 = draw_I_numbers_row_2(
+    numbers_for_I_list_out_1
+)
+row_3_I_number, numbers_for_I_list_out_3 = draw_I_numbers_row_3(
+    numbers_for_I_list_out_2
+)
+row_4_I_number, numbers_for_I_list_out_4 = draw_I_numbers_row_4(
+    numbers_for_I_list_out_3
+)
+row_5_I_number = draw_I_numbers_row_5(numbers_for_I_list_out_4)
+# player card maker for N row:
+def draw_N_numbers_row_5(numbers_for_N_list_out_4):
+    row_5_N_number = random.choice(numbers_for_N_list_out_4)
+    # takes out drawing number from the list
+    take_out_of_list_N = numbers_for_N_list_out_1.index(row_5_N_number)
+    numbers_for_N_list_out_4.pop(take_out_of_list_N)
+    print("5th: " + row_5_N_number)  ### delete
+    print(numbers_for_N_list_out_4)  ### delete
+    return row_5_N_number
+
+
+def draw_N_numbers_row_4(numbers_for_N_list_out_3):
+    row_4_N_number = random.choice(numbers_for_N_list_out_3)
+    # takes out drawing number from the list
+    take_out_of_list_N = numbers_for_N_list_out_1.index(row_4_N_number)
+    numbers_for_N_list_out_3.pop(take_out_of_list_N)
+    print("4th: " + row_4_N_number)  ### delete
+    print(numbers_for_N_list_out_3)  ### delete
+    numbers_for_I_list_out_4 = numbers_for_N_list_out_3
+    return row_4_N_number, numbers_for_N_list_out_3
+
+
+def draw_N_numbers_row_3(numbers_for_N_list_out_2):
+    row_3_N_number = random.choice(numbers_for_N_list_out_2)
+    # takes out drawing number from the list
+    take_out_of_list_N = numbers_for_N_list_out_2.index(row_3_N_number)
+    numbers_for_N_list_out_2.pop(take_out_of_list_N)
+    print("3rd: " + row_3_N_number)  ### delete
+    print(numbers_for_N_list_out_1)  ### delete
+    numbers_for_N_list_out_3 = numbers_for_N_list_out_2
+    return row_3_N_number, numbers_for_N_list_out_3
+
+
+def draw_N_numbers_row_2(numbers_for_N_list_out_1):
+    row_2_N_number = random.choice(numbers_for_N_list_out_1)
+    # takes out drawing number from the list
+    take_out_of_list_I = numbers_for_N_list_out_1.index(row_2_N_number)
+    numbers_for_N_list_out_1.pop(take_out_of_list_I)
+    print("2nd: " + row_2_N_number)  ### delete
+    print(numbers_for_N_list_out_1)  ### delete
+    numbers_for_N_list_out_2 = numbers_for_N_list_out_1
+    return row_2_N_number, numbers_for_N_list_out_2
+
+
+def draw_N_numbers_row_1():
+    numbers_for_N_list = [
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+    ]
+    row_1_N_number = random.choice(numbers_for_N_list)
+    # takes out drawing number from the list
+    take_out_of_list_I = numbers_for_N_list.index(row_1_N_number)
+    numbers_for_N_list.pop(take_out_of_list_I)
+    print("1st: " + row_1_N_number)  ### delete
+    print(numbers_for_N_list)  ### delete
+    numbers_for_I_list_out_1 = numbers_for_N_list
+    return row_1_N_number, numbers_for_I_list_out_1
+
+
+row_1_N_number, numbers_for_N_list_out_1 = draw_N_numbers_row_1()
+row_2_N_number, numbers_for_N_list_out_2 = draw_N_numbers_row_2(
+    numbers_for_N_list_out_1
+)
+row_3_N_number, numbers_for_N_list_out_3 = draw_N_numbers_row_3(
+    numbers_for_N_list_out_2  ###star positions so useless row_3_N_number ###
+)
+row_4_N_number, numbers_for_N_list_out_4 = draw_N_numbers_row_4(
+    numbers_for_N_list_out_3
+)
+row_5_N_number = draw_N_numbers_row_5(numbers_for_N_list_out_4)
+
+# player card maker for G row:
+def draw_G_numbers_row_5(numbers_for_G_list_out_4):
+    row_5_G_number = random.choice(numbers_for_G_list_out_4)
+    # takes out drawing number from the list
+    take_out_of_list_G = numbers_for_G_list_out_1.index(row_5_G_number)
+    numbers_for_G_list_out_4.pop(take_out_of_list_G)
+    print("5th: " + row_5_G_number)  ### delete
+    print(numbers_for_G_list_out_4)  ### delete
+    return row_5_G_number
+
+
+def draw_G_numbers_row_4(numbers_for_G_list_out_3):
+    row_4_G_number = random.choice(numbers_for_G_list_out_3)
+    # takes out drawing number from the list
+    take_out_of_list_G = numbers_for_G_list_out_1.index(row_4_G_number)
+    numbers_for_G_list_out_3.pop(take_out_of_list_G)
+    print("4th: " + row_4_G_number)  ### delete
+    print(numbers_for_G_list_out_3)  ### delete
+    numbers_for_G_list_out_4 = numbers_for_G_list_out_3
+    return row_4_G_number, numbers_for_G_list_out_3
+
+
+def draw_G_numbers_row_3(numbers_for_G_list_out_2):
+    row_3_G_number = random.choice(numbers_for_G_list_out_2)
+    # takes out drawing number from the list
+    take_out_of_list_G = numbers_for_G_list_out_2.index(row_3_G_number)
+    numbers_for_G_list_out_2.pop(take_out_of_list_G)
+    print("3rd: " + row_3_G_number)  ### delete
+    print(numbers_for_G_list_out_1)  ### delete
+    numbers_for_G_list_out_3 = numbers_for_G_list_out_2
+    return row_3_G_number, numbers_for_G_list_out_3
+
+
+def draw_G_numbers_row_2(numbers_for_G_list_out_1):
+    row_2_G_number = random.choice(numbers_for_G_list_out_1)
+    # takes out drawing number from the list
+    take_out_of_list_G = numbers_for_G_list_out_1.index(row_2_G_number)
+    numbers_for_G_list_out_1.pop(take_out_of_list_G)
+    print("2nd: " + row_2_G_number)  ### delete
+    print(numbers_for_G_list_out_1)  ### delete
+    numbers_for_G_list_out_2 = numbers_for_G_list_out_1
+    return row_2_G_number, numbers_for_G_list_out_2
+
+
+def draw_G_numbers_row_1():
+    numbers_for_G_list = [
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+    ]
+    row_1_G_number = random.choice(numbers_for_G_list)
+    # takes out drawing number from the list
+    take_out_of_list_I = numbers_for_G_list.index(row_1_G_number)
+    numbers_for_G_list.pop(take_out_of_list_I)
+    print("1st: " + row_1_G_number)  ### delete
+    print(numbers_for_G_list)  ### delete
+    numbers_for_I_list_out_1 = numbers_for_G_list
+    return row_1_G_number, numbers_for_I_list_out_1
+
+
+row_1_G_number, numbers_for_G_list_out_1 = draw_G_numbers_row_1()
+row_2_G_number, numbers_for_G_list_out_2 = draw_G_numbers_row_2(
+    numbers_for_G_list_out_1
+)
+row_3_G_number, numbers_for_G_list_out_3 = draw_G_numbers_row_3(
+    numbers_for_G_list_out_2
+)
+row_4_G_number, numbers_for_G_list_out_4 = draw_G_numbers_row_4(
+    numbers_for_G_list_out_3
+)
+row_5_G_number = draw_G_numbers_row_5(numbers_for_G_list_out_4)
+
+###NEW
+# player card maker for O row:
+def draw_O_numbers_row_5(numbers_for_O_list_out_4):
+    row_5_O_number = random.choice(numbers_for_O_list_out_4)
+    # takes out drawing number from the list
+    take_out_of_list_O = numbers_for_O_list_out_1.index(row_5_O_number)
+    numbers_for_O_list_out_4.pop(take_out_of_list_O)
+    print("5th: " + row_5_O_number)  ### delete
+    print(numbers_for_O_list_out_4)  ### delete
+    return row_5_O_number
+
+
+def draw_O_numbers_row_4(numbers_for_O_list_out_3):
+    row_4_O_number = random.choice(numbers_for_O_list_out_3)
+    # takes out drawing number from the list
+    take_out_of_list_O = numbers_for_O_list_out_1.index(row_4_O_number)
+    numbers_for_O_list_out_3.pop(take_out_of_list_O)
+    print("4th: " + row_4_O_number)  ### delete
+    print(numbers_for_O_list_out_3)  ### delete
+    numbers_for_O_list_out_4 = numbers_for_O_list_out_3
+    return row_4_O_number, numbers_for_O_list_out_3
+
+
+def draw_O_numbers_row_3(numbers_for_O_list_out_2):
+    row_3_O_number = random.choice(numbers_for_O_list_out_2)
+    # takes out drawing number from the list
+    take_out_of_list_O = numbers_for_O_list_out_2.index(row_3_O_number)
+    numbers_for_O_list_out_2.pop(take_out_of_list_O)
+    print("3rd: " + row_3_O_number)  ### delete
+    print(numbers_for_O_list_out_1)  ### delete
+    numbers_for_O_list_out_3 = numbers_for_O_list_out_2
+    return row_3_O_number, numbers_for_O_list_out_3
+
+
+def draw_O_numbers_row_2(numbers_for_O_list_out_1):
+    row_2_O_number = random.choice(numbers_for_O_list_out_1)
+    # takes out drawing number from the list
+    take_out_of_list_O = numbers_for_O_list_out_1.index(row_2_O_number)
+    numbers_for_O_list_out_1.pop(take_out_of_list_O)
+    print("2nd: " + row_2_O_number)  ### delete
+    print(numbers_for_O_list_out_1)  ### delete
+    numbers_for_O_list_out_2 = numbers_for_O_list_out_1
+    return row_2_O_number, numbers_for_O_list_out_2
+
+
+def draw_O_numbers_row_1():
+    numbers_for_O_list = [
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "66",
+        "67",
+        "68",
+        "69",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+    ]
+    row_1_O_number = random.choice(numbers_for_O_list)
+    # takes out drawing number from the list
+    take_out_of_list_O = numbers_for_O_list.index(row_1_O_number)
+    numbers_for_O_list.pop(take_out_of_list_O)
+    print("1st: " + row_1_O_number)  ### delete
+    print(numbers_for_O_list)  ### delete
+    numbers_for_O_list_out_1 = numbers_for_O_list
+    return row_1_O_number, numbers_for_O_list_out_1
+
+
+row_1_O_number, numbers_for_O_list_out_1 = draw_O_numbers_row_1()
+row_2_O_number, numbers_for_O_list_out_2 = draw_O_numbers_row_2(
+    numbers_for_O_list_out_1
+)
+row_3_O_number, numbers_for_O_list_out_3 = draw_O_numbers_row_3(
+    numbers_for_O_list_out_2
+)
+row_4_O_number, numbers_for_O_list_out_4 = draw_O_numbers_row_4(
+    numbers_for_O_list_out_3
+)
+row_5_O_number = draw_O_numbers_row_5(numbers_for_O_list_out_4)
+
+
 # BINGO row 1
 B_bingo_row_1 = Button(
     root,
@@ -711,28 +1048,28 @@ B_bingo_row_1 = Button(
 )
 I_bingo_row_1 = Button(
     root,
-    text="I",
+    text=row_1_I_number,
     bg=click_row_1_I.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_1_I,
 )
 N_bingo_row_1 = Button(
     root,
-    text="N",
+    text=row_1_N_number,
     bg=click_row_1_N.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_1_N,
 )
 G_bingo_row_1 = Button(
     root,
-    text="G",
+    text=row_1_N_number,
     bg=click_row_1_G.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_1_G,
 )
 O_bingo_row_1 = Button(
     root,
-    text="O",
+    text=row_1_N_number,
     bg=click_row_1_O.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_1_O,
@@ -766,28 +1103,28 @@ B_bingo_row_2 = Button(
 )
 I_bingo_row_2 = Button(
     root,
-    text="I",
+    text=row_2_I_number,
     bg=click_row_2_I.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_2_I,
 )
 N_bingo_row_2 = Button(
     root,
-    text="N",
+    text=row_2_N_number,
     bg=click_row_2_N.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_2_N,
 )
 G_bingo_row_2 = Button(
     root,
-    text="G",
+    text=row_2_G_number,
     bg=click_row_2_G.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_2_G,
 )
 O_bingo_row_2 = Button(
     root,
-    text="O",
+    text=row_2_O_number,
     bg=click_row_2_O.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_2_O,
@@ -830,7 +1167,7 @@ B_bingo_row_3 = Button(
 )
 I_bingo_row_3 = Button(
     root,
-    text="I",
+    text=row_3_I_number,
     bg=click_row_3_I.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_3_I,
@@ -839,14 +1176,14 @@ N_bingo = Label(root, image=star)  # FREE SPACE
 
 G_bingo_row_3 = Button(
     root,
-    text="G",
+    text=row_3_G_number,
     bg=click_row_3_G.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_3_G,
 )
 O_bingo_row_3 = Button(
     root,
-    text="O",
+    text=row_3_O_number,
     bg=click_row_3_O.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_3_O,
@@ -882,28 +1219,28 @@ B_bingo_row_4 = Button(
 )
 I_bingo_row_4 = Button(
     root,
-    text="I",
+    text=row_4_I_number,
     bg=click_row_4_I.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_4_I,
 )
 N_bingo_row_4 = Button(
     root,
-    text="N",
+    text=row_4_N_number,
     bg=click_row_4_N.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_4_N,
 )
 G_bingo_row_4 = Button(
     root,
-    text="G",
+    text=row_4_G_number,
     bg=click_row_4_G.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_4_G,
 )
 O_bingo_row_4 = Button(
     root,
-    text="O",
+    text=row_4_O_number,
     bg=click_row_4_O.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_4_O,
@@ -939,28 +1276,28 @@ B_bingo_row_5 = Button(
 )
 I_bingo_row_5 = Button(
     root,
-    text="I",
+    text=row_5_I_number,
     bg=click_row_5_I.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_5_I,
 )
 N_bingo_row_5 = Button(
     root,
-    text="N",
+    text=row_5_N_number,
     bg=click_row_5_N.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_5_N,
 )
 G_bingo_row_5 = Button(
     root,
-    text="G",
+    text=row_5_G_number,
     bg=click_row_5_G.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_5_G,
 )
 O_bingo_row_5 = Button(
     root,
-    text="O",
+    text=row_5_O_number,
     bg=click_row_5_O.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_5_O,
