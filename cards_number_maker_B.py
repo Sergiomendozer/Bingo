@@ -1,6 +1,26 @@
 import random
 
 
+def draw_B_numbers_row_3(numbers_for_B_list):
+    row_3_B_number = random.choice(numbers_for_B_list)
+    # takes out drawing number from the list
+    take_out_of_list_B = numbers_for_B_list.index(row_3_B_number)
+    numbers_for_B_list.pop(take_out_of_list_B)
+    print("third: " + row_3_B_number)  ### for testing
+    print(numbers_for_B_list)  ### for tetsing
+    return row_3_B_number
+
+
+def draw_B_numbers_row_3(numbers_for_B_list):
+    row_3_B_number = random.choice(numbers_for_B_list)
+    # takes out drawing number from the list
+    take_out_of_list_B = numbers_for_B_list.index(row_3_B_number)
+    numbers_for_B_list.pop(take_out_of_list_B)
+    print("third: " + row_3_B_number)  ### for testing
+    print(numbers_for_B_list)  ### for tetsing
+    return row_3_B_number
+
+
 def draw_B_numbers_row_2(numbers_for_B_list):
     row_2_B_number = random.choice(numbers_for_B_list)
     # takes out drawing number from the list
@@ -8,6 +28,7 @@ def draw_B_numbers_row_2(numbers_for_B_list):
     numbers_for_B_list.pop(take_out_of_list_B)
     print("second: " + row_2_B_number)  ### for testing
     print(numbers_for_B_list)  ### for tetsing
+    draw_B_numbers_row_3(numbers_for_B_list)
     return row_2_B_number
 
 
@@ -35,7 +56,7 @@ def draw_B_numbers_row_1():
     numbers_for_B_list.pop(take_out_of_list_B)
     print("first: " + row_1_B_number)  ### for testing
     print(numbers_for_B_list)  ### for tetsing
-    # draw_B_numbers_row_2(numbers_for_B_list)
+    draw_B_numbers_row_2(numbers_for_B_list)
     return row_1_B_number
 
 

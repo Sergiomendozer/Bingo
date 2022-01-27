@@ -625,6 +625,14 @@ click_row_5_O.click = 0
 click_row_5_O.colors = ["#00FF33", "#B900ff"]
 
 # #Player card maker: ###NEW
+def draw_B_numbers_row_2(numbers_for_B_list_out_1):
+    row_2_B_number = random.choice(numbers_for_B_list_out_1)
+    # takes out drawing number from the list
+    take_out_of_list_B = numbers_for_B_list_out_1.index(row_2_B_number)
+    numbers_for_B_list_out_1.pop(take_out_of_list_B)
+    # numbers_for_B_list_out_2 = numbers_for_B_list_out_1
+    # draw_B_numbers_row_3(numbers_for_B_list)
+    return row_2_B_number
 
 
 def draw_B_numbers_row_1():
@@ -651,11 +659,13 @@ def draw_B_numbers_row_1():
     numbers_for_B_list.pop(take_out_of_list_B)
     print("first: " + row_1_B_number)  ### for testing
     print(numbers_for_B_list)  ### for tetsing
-    # draw_B_numbers_row_2(numbers_for_B_list)
-    return row_1_B_number
+    row_2_B_number = draw_B_numbers_row_2(numbers_for_B_list)
+    numbers_for_B_list_out_1 = numbers_for_B_list
+    return row_1_B_number, numbers_for_B_list_out_1
 
 
-row_1_B_number = draw_B_numbers_row_1()
+row_1_B_number, numbers_for_B_list_out_1 = draw_B_numbers_row_1()
+row_2_B_number = draw_B_numbers_row_2(numbers_for_B_list_out_1)
 # BINGO row 1
 B_bingo_row_1 = Button(
     root,
@@ -714,7 +724,7 @@ O_bingo_row_1_bot.grid(row=9, column=10, sticky="nsew")
 
 B_bingo_row_2 = Button(
     root,
-    text="B1",
+    text=row_2_B_number,
     bg=click_row_2_B.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_2_B,
