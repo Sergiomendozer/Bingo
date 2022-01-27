@@ -1,7 +1,7 @@
 from tkinter import *
 from drawing_numbers import random_bingo_number
 from PIL import ImageTk, Image
-
+import random
 from threading import Timer
 import time
 import datetime
@@ -624,11 +624,42 @@ def click_row_5_O():
 click_row_5_O.click = 0
 click_row_5_O.colors = ["#00FF33", "#B900ff"]
 
-#####
+# #Player card maker: ###NEW
+
+
+def draw_B_numbers_row_1():
+    numbers_for_B_list = [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+    ]
+    row_1_B_number = random.choice(numbers_for_B_list)
+    # takes out drawing number from the list
+    take_out_of_list_B = numbers_for_B_list.index(row_1_B_number)
+    numbers_for_B_list.pop(take_out_of_list_B)
+    print("first: " + row_1_B_number)  ### for testing
+    print(numbers_for_B_list)  ### for tetsing
+    # draw_B_numbers_row_2(numbers_for_B_list)
+    return row_1_B_number
+
+
+row_1_B_number = draw_B_numbers_row_1()
 # BINGO row 1
 B_bingo_row_1 = Button(
     root,
-    text="B1",
+    text=row_1_B_number,
     bg=click_row_1_B.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_1_B,
@@ -922,5 +953,6 @@ blank.grid(row=14, column=4, columnspan=1, sticky="nsew")
 New_card.grid(row=14, column=5, columnspan=2, sticky="nsew")
 New_game.grid(row=14, column=7, columnspan=2, sticky="nsew")
 pause_play.grid(row=14, column=9, columnspan=2, sticky="nsew")
+
 
 root.mainloop()
