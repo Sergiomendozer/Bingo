@@ -322,7 +322,7 @@ update_drawn_ball(
     O_list_drawn_str,
 )
 
-### timer for next ball
+# timer for next ball
 def update_timer_countdown(n):
     if n != "1":
         n = int(n)
@@ -379,7 +379,7 @@ N_bingo.grid(row=8, column=8, sticky="nsew")
 G_bingo.grid(row=8, column=9, sticky="nsew")
 O_bingo_bot.grid(row=8, column=10, sticky="nsew")
 
-### Buttons Clicks all
+# Buttons Clicks all
 def click_row_1_B():
     # increase the click count
     click_row_1_B.click += 1
@@ -1062,14 +1062,14 @@ N_bingo_row_1 = Button(
 )
 G_bingo_row_1 = Button(
     root,
-    text=row_1_N_number,
+    text=row_1_G_number,
     bg=click_row_1_G.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_1_G,
 )
 O_bingo_row_1 = Button(
     root,
-    text=row_1_N_number,
+    text=row_1_O_number,
     bg=click_row_1_O.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_1_O,
