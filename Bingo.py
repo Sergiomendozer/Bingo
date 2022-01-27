@@ -433,6 +433,148 @@ def click_row_1_O():
 
 click_row_1_O.click = 0
 click_row_1_O.colors = ["#00FF33", "#B900ff"]
+
+
+def click_row_2_B():
+    click_row_2_B.click += 1
+    colorLen = len(click_row_2_B.colors)
+    B_bingo_row_2.config(bg=click_row_2_B.colors[click_row_2_B.click % colorLen])
+
+
+click_row_2_B.click = 0
+click_row_2_B.colors = ["#00ccff", "#B900ff"]
+
+
+def click_row_2_I():
+    click_row_2_I.click += 1
+    colorLen = len(click_row_2_B.colors)
+    I_bingo_row_2.config(bg=click_row_2_I.colors[click_row_2_I.click % colorLen])
+
+
+click_row_2_I.click = 0
+click_row_2_I.colors = ["#FF0000", "#B900ff"]
+
+
+def click_row_2_N():
+    click_row_2_N.click += 1
+    colorLen = len(click_row_2_N.colors)
+    N_bingo_row_2.config(bg=click_row_2_N.colors[click_row_2_N.click % colorLen])
+
+
+click_row_2_N.click = 0
+click_row_2_N.colors = ["#E2DF00", "#B900ff"]
+
+
+def click_row_2_G():
+    click_row_2_G.click += 1
+    colorLen = len(click_row_2_G.colors)
+    G_bingo_row_2.config(bg=click_row_2_G.colors[click_row_2_G.click % colorLen])
+
+
+click_row_2_G.click = 0
+click_row_2_G.colors = ["#F96815", "#B900ff"]
+
+
+def click_row_2_O():
+    click_row_2_O.click += 1
+    colorLen = len(click_row_2_O.colors)
+    O_bingo_row_2.config(bg=click_row_2_O.colors[click_row_2_O.click % colorLen])
+
+
+click_row_2_O.click = 0
+click_row_2_O.colors = ["#00FF33", "#B900ff"]
+
+
+def click_row_3_B():
+    click_row_3_B.click += 1
+    colorLen = len(click_row_3_B.colors)
+    B_bingo_row_3.config(bg=click_row_3_B.colors[click_row_3_B.click % colorLen])
+
+
+click_row_3_B.click = 0
+click_row_3_B.colors = ["#00ccff", "#B900ff"]
+
+
+def click_row_3_I():
+    click_row_3_I.click += 1
+    colorLen = len(click_row_3_B.colors)
+    I_bingo_row_3.config(bg=click_row_3_I.colors[click_row_3_I.click % colorLen])
+
+
+click_row_3_I.click = 0
+click_row_3_I.colors = ["#FF0000", "#B900ff"]
+
+
+def click_row_3_G():
+    click_row_3_G.click += 1
+    colorLen = len(click_row_3_G.colors)
+    G_bingo_row_3.config(bg=click_row_3_G.colors[click_row_3_G.click % colorLen])
+
+
+click_row_3_G.click = 0
+click_row_3_G.colors = ["#F96815", "#B900ff"]
+
+
+def click_row_3_O():
+    click_row_3_O.click += 1
+    colorLen = len(click_row_3_O.colors)
+    O_bingo_row_3.config(bg=click_row_3_O.colors[click_row_3_O.click % colorLen])
+
+
+click_row_3_O.click = 0
+click_row_3_O.colors = ["#00FF33", "#B900ff"]
+
+
+def click_row_4_B():
+    click_row_4_B.click += 1
+    colorLen = len(click_row_4_B.colors)
+    B_bingo_row_4.config(bg=click_row_4_B.colors[click_row_4_B.click % colorLen])
+
+
+click_row_4_B.click = 0
+click_row_4_B.colors = ["#00ccff", "#B900ff"]
+
+
+def click_row_4_I():
+    click_row_4_I.click += 1
+    colorLen = len(click_row_4_B.colors)
+    I_bingo_row_4.config(bg=click_row_4_I.colors[click_row_4_I.click % colorLen])
+
+
+click_row_4_I.click = 0
+click_row_4_I.colors = ["#FF0000", "#B900ff"]
+
+
+def click_row_4_N():
+    click_row_4_N.click += 1
+    colorLen = len(click_row_4_N.colors)
+    N_bingo_row_4.config(bg=click_row_4_N.colors[click_row_4_N.click % colorLen])
+
+
+click_row_4_N.click = 0
+click_row_4_N.colors = ["#E2DF00", "#B900ff"]
+
+
+def click_row_4_G():
+    click_row_4_G.click += 1
+    colorLen = len(click_row_4_G.colors)
+    G_bingo_row_4.config(bg=click_row_4_G.colors[click_row_4_G.click % colorLen])
+
+
+click_row_4_G.click = 0
+click_row_4_G.colors = ["#F96815", "#B900ff"]
+
+
+def click_row_4_O():
+    click_row_4_O.click += 1
+    colorLen = len(click_row_4_O.colors)
+    O_bingo_row_4.config(bg=click_row_4_O.colors[click_row_4_O.click % colorLen])
+
+
+click_row_4_O.click = 0
+click_row_4_O.colors = ["#00FF33", "#B900ff"]
+
+#####
 # BINGO row 1
 B_bingo_row_1 = Button(
     root,
@@ -489,12 +631,42 @@ N_bingo_row_1_bot.grid(row=9, column=8, sticky="nsew")
 G_bingo_row_1_bot.grid(row=9, column=9, sticky="nsew")
 O_bingo_row_1_bot.grid(row=9, column=10, sticky="nsew")
 
-# BINGO row 2
-B_bingo_row_2 = Button(root, text="B2", bg="#00CCFF", font=("Helvetica", 20))
-I_bingo_row_2 = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
-N_bingo_row_2 = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
-G_bingo_row_2 = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
-O_bingo_row_2 = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+B_bingo_row_2 = Button(
+    root,
+    text="B1",
+    bg=click_row_2_B.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_2_B,
+)
+I_bingo_row_2 = Button(
+    root,
+    text="I",
+    bg=click_row_2_I.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_2_I,
+)
+N_bingo_row_2 = Button(
+    root,
+    text="N",
+    bg=click_row_2_N.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_2_N,
+)
+G_bingo_row_2 = Button(
+    root,
+    text="G",
+    bg=click_row_2_G.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_2_G,
+)
+O_bingo_row_2 = Button(
+    root,
+    text="O",
+    bg=click_row_2_O.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_2_O,
+)
+
 # BINGO row 2 positions
 B_bingo_row_2.grid(row=10, column=1, sticky="nsew")
 I_bingo_row_2.grid(row=10, column=2, sticky="nsew")
@@ -523,12 +695,37 @@ original_star = Image.open("STAR.png")
 resized = original_star.resize((95, 52), Image.ANTIALIAS)  # resize(sides, height)
 star = ImageTk.PhotoImage(resized)
 
-# BINGO row 3
-B_bingo_row_3 = Button(root, text="B3", bg="#00CCFF", font=("Helvetica", 20))
-I_bingo_row_3 = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
+B_bingo_row_3 = Button(
+    root,
+    text="B1",
+    bg=click_row_3_B.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_3_B,
+)
+I_bingo_row_3 = Button(
+    root,
+    text="I",
+    bg=click_row_3_I.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_3_I,
+)
 N_bingo = Label(root, image=star)  # FREE SPACE
-G_bingo_row_3 = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
-O_bingo_row_3 = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+
+G_bingo_row_3 = Button(
+    root,
+    text="G",
+    bg=click_row_3_G.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_3_G,
+)
+O_bingo_row_3 = Button(
+    root,
+    text="O",
+    bg=click_row_3_O.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_3_O,
+)
+
 # BINGO row 3 positions
 B_bingo_row_3.grid(row=11, column=1, sticky="nsew")
 I_bingo_row_3.grid(row=11, column=2, sticky="nsew")
@@ -550,11 +747,47 @@ G_bingo_row_3_bot.grid(row=11, column=9, sticky="nsew")
 O_bingo_row_3_bot.grid(row=11, column=10, sticky="nsew")
 
 # BINGO row 4
-B_bingo_row_4 = Button(root, text="B4", bg="#00CCFF", font=("Helvetica", 20))
-I_bingo_row_4 = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
-N_bingo_row_4 = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
-G_bingo_row_4 = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
-O_bingo_row_4 = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+B_bingo_row_4 = Button(
+    root,
+    text="B1",
+    bg=click_row_4_B.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_4_B,
+)
+I_bingo_row_4 = Button(
+    root,
+    text="I",
+    bg=click_row_4_I.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_4_I,
+)
+N_bingo_row_4 = Button(
+    root,
+    text="N",
+    bg=click_row_4_N.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_4_N,
+)
+G_bingo_row_4 = Button(
+    root,
+    text="G",
+    bg=click_row_4_G.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_4_G,
+)
+O_bingo_row_4 = Button(
+    root,
+    text="O",
+    bg=click_row_4_O.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_4_O,
+)
+
+# B_bingo_row_4 = Button(root, text="B4", bg="#00CCFF", font=("Helvetica", 20))
+# I_bingo_row_4 = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
+# N_bingo_row_4 = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
+# G_bingo_row_4 = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
+# O_bingo_row_4 = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
 # BINGO row 4 positions
 B_bingo_row_4.grid(row=12, column=1, sticky="nsew")
 I_bingo_row_4.grid(row=12, column=2, sticky="nsew")
