@@ -379,10 +379,7 @@ N_bingo.grid(row=8, column=8, sticky="nsew")
 G_bingo.grid(row=8, column=9, sticky="nsew")
 O_bingo_bot.grid(row=8, column=10, sticky="nsew")
 
-### Buttons functions
-### NEW function
-
-
+### Buttons Clicks all
 def click_row_1_B():
     # increase the click count
     click_row_1_B.click += 1
@@ -396,21 +393,47 @@ def click_row_1_B():
 # colors will be cycled in order with each click, wrapping around
 click_row_1_B.click = 0
 click_row_1_B.colors = ["#00ccff", "#B900ff"]
-# def click_row_1_B(event):
-#     B_bingo_row_1.config(bg="#B900FF")
 
 
-# def double_click_row_1_B(event):
-#     B_bingo_row_1.config(bg="#00CCFF")
+def click_row_1_I():
+    click_row_1_I.click += 1
+    colorLen = len(click_row_1_B.colors)
+    I_bingo_row_1.config(bg=click_row_1_I.colors[click_row_1_I.click % colorLen])
 
 
-# binds function to that button
-# B_bingo_row_1.bind("<Double-Button-1>", double_click_row_1_B)
-# B_bingo_row_1.bind("<Button-1>", click_row_1_B)
+click_row_1_I.click = 0
+click_row_1_I.colors = ["#FF0000", "#B900ff"]
 
 
+def click_row_1_N():
+    click_row_1_N.click += 1
+    colorLen = len(click_row_1_N.colors)
+    N_bingo_row_1.config(bg=click_row_1_N.colors[click_row_1_N.click % colorLen])
+
+
+click_row_1_N.click = 0
+click_row_1_N.colors = ["#E2DF00", "#B900ff"]
+
+
+def click_row_1_G():
+    click_row_1_G.click += 1
+    colorLen = len(click_row_1_G.colors)
+    G_bingo_row_1.config(bg=click_row_1_G.colors[click_row_1_G.click % colorLen])
+
+
+click_row_1_G.click = 0
+click_row_1_G.colors = ["#F96815", "#B900ff"]
+
+
+def click_row_1_O():
+    click_row_1_O.click += 1
+    colorLen = len(click_row_1_O.colors)
+    O_bingo_row_1.config(bg=click_row_1_O.colors[click_row_1_O.click % colorLen])
+
+
+click_row_1_O.click = 0
+click_row_1_O.colors = ["#00FF33", "#B900ff"]
 # BINGO row 1
-# B_bingo_row_1 = Button(root, text="B1", bg="#00CCFF", font=("Helvetica", 20))
 B_bingo_row_1 = Button(
     root,
     text="B1",
@@ -418,20 +441,40 @@ B_bingo_row_1 = Button(
     font=("Helvetica", 20),
     command=click_row_1_B,
 )
-I_bingo_row_1 = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
-N_bingo_row_1 = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
-G_bingo_row_1 = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
-O_bingo_row_1 = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
+I_bingo_row_1 = Button(
+    root,
+    text="I",
+    bg=click_row_1_I.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_1_I,
+)
+N_bingo_row_1 = Button(
+    root,
+    text="N",
+    bg=click_row_1_N.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_1_N,
+)
+G_bingo_row_1 = Button(
+    root,
+    text="G",
+    bg=click_row_1_G.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_1_G,
+)
+O_bingo_row_1 = Button(
+    root,
+    text="O",
+    bg=click_row_1_O.colors[0],  # 1st col to start
+    font=("Helvetica", 20),
+    command=click_row_1_O,
+)
 # BINGO row 1 positions
 B_bingo_row_1.grid(row=9, column=1, sticky="nsew")
 I_bingo_row_1.grid(row=9, column=2, sticky="nsew")
 N_bingo_row_1.grid(row=9, column=3, sticky="nsew")
 G_bingo_row_1.grid(row=9, column=4, sticky="nsew")
 O_bingo_row_1.grid(row=9, column=5, sticky="nsew")
-
-# set command on button
-# B_bingo_row_1.bind("<Double-Button-1>", double_click_row_1_B)
-# B_bingo_row_1.bind("<Button-1>", click_row_1_B)
 
 # Bots's BINGO row 1
 B_bingo_row_1_bot = Button(root, text="B", bg="#00CCFF", font=("Helvetica", 20))
