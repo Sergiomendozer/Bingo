@@ -381,10 +381,6 @@ O_bingo_bot.grid(row=8, column=10, sticky="nsew")
 
 ### Buttons functions
 ### NEW function
-# def click_row_1_B():
-#     B_bingo_row_1.config(bg="#B900FF")
-
-
 def click_row_1_B(event):
     B_bingo_row_1.config(bg="#B900FF")
 
