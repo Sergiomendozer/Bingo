@@ -625,14 +625,42 @@ click_row_5_O.click = 0
 click_row_5_O.colors = ["#00FF33", "#B900ff"]
 
 # #Player card maker: ###NEW
+# player card maker for B row:
+
+
+def draw_B_numbers_row_5(numbers_for_B_list_out_4):
+    row_5_B_number = random.choice(numbers_for_B_list_out_4)
+    # takes out drawing number from the list
+    take_out_of_list_B = numbers_for_B_list_out_1.index(row_5_B_number)
+    numbers_for_B_list_out_1.pop(take_out_of_list_B)
+    return row_5_B_number
+
+
+def draw_B_numbers_row_4(numbers_for_B_list_out_3):
+    row_4_B_number = random.choice(numbers_for_B_list_out_3)
+    # takes out drawing number from the list
+    take_out_of_list_B = numbers_for_B_list_out_1.index(row_4_B_number)
+    numbers_for_B_list_out_1.pop(take_out_of_list_B)
+    numbers_for_B_list_out_4 = numbers_for_B_list_out_3
+    return row_4_B_number, numbers_for_B_list_out_4
+
+
+def draw_B_numbers_row_3(numbers_for_B_list_out_2):
+    row_3_B_number = random.choice(numbers_for_B_list_out_2)
+    # takes out drawing number from the list
+    take_out_of_list_B = numbers_for_B_list_out_1.index(row_3_B_number)
+    numbers_for_B_list_out_1.pop(take_out_of_list_B)
+    numbers_for_B_list_out_3 = numbers_for_B_list_out_2
+    return row_3_B_number, numbers_for_B_list_out_3
+
+
 def draw_B_numbers_row_2(numbers_for_B_list_out_1):
     row_2_B_number = random.choice(numbers_for_B_list_out_1)
     # takes out drawing number from the list
     take_out_of_list_B = numbers_for_B_list_out_1.index(row_2_B_number)
     numbers_for_B_list_out_1.pop(take_out_of_list_B)
-    # numbers_for_B_list_out_2 = numbers_for_B_list_out_1
-    # draw_B_numbers_row_3(numbers_for_B_list)
-    return row_2_B_number
+    numbers_for_B_list_out_2 = numbers_for_B_list_out_1
+    return row_2_B_number, numbers_for_B_list_out_2
 
 
 def draw_B_numbers_row_1():
@@ -657,15 +685,23 @@ def draw_B_numbers_row_1():
     # takes out drawing number from the list
     take_out_of_list_B = numbers_for_B_list.index(row_1_B_number)
     numbers_for_B_list.pop(take_out_of_list_B)
-    print("first: " + row_1_B_number)  ### for testing
-    print(numbers_for_B_list)  ### for tetsing
-    row_2_B_number = draw_B_numbers_row_2(numbers_for_B_list)  #### needed???
+    print("1st: " + row_1_B_number)  ### delete
+    print(numbers_for_B_list)  ### delete
     numbers_for_B_list_out_1 = numbers_for_B_list
     return row_1_B_number, numbers_for_B_list_out_1
 
 
 row_1_B_number, numbers_for_B_list_out_1 = draw_B_numbers_row_1()
-row_2_B_number = draw_B_numbers_row_2(numbers_for_B_list_out_1)
+row_2_B_number, numbers_for_B_list_out_2 = draw_B_numbers_row_2(
+    numbers_for_B_list_out_1
+)
+row_3_B_number, numbers_for_B_list_out_3 = draw_B_numbers_row_3(
+    numbers_for_B_list_out_2
+)
+row_4_B_number, numbers_for_B_list_out_4 = draw_B_numbers_row_4(
+    numbers_for_B_list_out_3
+)
+row_5_B_number = draw_B_numbers_row_5(numbers_for_B_list_out_4)
 # BINGO row 1
 B_bingo_row_1 = Button(
     root,
@@ -788,7 +824,7 @@ star = ImageTk.PhotoImage(resized)
 
 B_bingo_row_3 = Button(
     root,
-    text="B1",
+    text=row_3_B_number,
     bg=click_row_3_B.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_3_B,
@@ -840,7 +876,7 @@ O_bingo_row_3_bot.grid(row=11, column=10, sticky="nsew")
 # BINGO row 4
 B_bingo_row_4 = Button(
     root,
-    text="B1",
+    text=row_4_B_number,
     bg=click_row_4_B.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_4_B,
@@ -897,7 +933,7 @@ O_bingo_row_4_bot.grid(row=12, column=10, sticky="nsew")
 # BINGO row 5
 B_bingo_row_5 = Button(
     root,
-    text="B1",
+    text=row_5_B_number,
     bg=click_row_5_B.colors[0],  # 1st col to start
     font=("Helvetica", 20),
     command=click_row_5_B,
