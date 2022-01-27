@@ -624,10 +624,8 @@ def click_row_5_O():
 click_row_5_O.click = 0
 click_row_5_O.colors = ["#00FF33", "#B900ff"]
 
-# #Player card maker: ###NEW
+# Player card maker: 
 # player card maker for B row:
-
-
 def draw_B_numbers_row_5(numbers_for_B_list_out_4):
     row_5_B_number = random.choice(numbers_for_B_list_out_4)
     # takes out drawing number from the list
@@ -661,7 +659,8 @@ def draw_B_numbers_row_2(numbers_for_B_list_out_1):
     numbers_for_B_list_out_1.pop(take_out_of_list_B)
     numbers_for_B_list_out_2 = numbers_for_B_list_out_1
     return row_2_B_number, numbers_for_B_list_out_2
-
+###NEW
+# player card maker for I row:
 
 def draw_B_numbers_row_1():
     numbers_for_B_list = [
