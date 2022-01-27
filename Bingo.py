@@ -659,7 +659,7 @@ def draw_B_numbers_row_1():
     numbers_for_B_list.pop(take_out_of_list_B)
     print("first: " + row_1_B_number)  ### for testing
     print(numbers_for_B_list)  ### for tetsing
-    row_2_B_number = draw_B_numbers_row_2(numbers_for_B_list)
+    row_2_B_number = draw_B_numbers_row_2(numbers_for_B_list)  #### needed???
     numbers_for_B_list_out_1 = numbers_for_B_list
     return row_1_B_number, numbers_for_B_list_out_1
 
