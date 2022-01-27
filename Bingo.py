@@ -889,11 +889,6 @@ O_bingo_row_5 = Button(
     font=("Helvetica", 20),
     command=click_row_5_O,
 )
-# B_bingo_row_5 = Button(root, text="B5", bg="#00CCFF", font=("Helvetica", 20))
-# I_bingo_row_5 = Button(root, text="I", bg="#FF0000", font=("Helvetica", 20))
-# N_bingo_row_5 = Button(root, text="N", bg="#E2DF00", font=("Helvetica", 20))
-# G_bingo_row_5 = Button(root, text="G", bg="#F96815", font=("Helvetica", 20))
-# O_bingo_row_5 = Button(root, text="O", bg="#00FF33", font=("Helvetica", 20))
 # BINGO row 5 positions
 B_bingo_row_5.grid(row=13, column=1, sticky="nsew")
 I_bingo_row_5.grid(row=13, column=2, sticky="nsew")

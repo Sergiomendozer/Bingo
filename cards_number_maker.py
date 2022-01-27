@@ -1,109 +1,106 @@
 import random
 
+# def test_print(p1, p2):
+#     p1 = str(p1)
+#     p2 = str(p2)
+#     print(p1 + " " + p2)
 
-def test_print(p1, p2):
-    p1 = str(p1)
-    p2 = str(p2)
-    print(p1 + " " + p2)
 
-
-def draw_B_numbers():
+def draw_B_numbers_row():
     numbers_for_B_list = [
-        "B 1",
-        "B 2",
-        "B 3",
-        "B 4",
-        "B 4",
-        "B 4",
-        "B 5",
-        "B 7",
-        "B 8",
-        "B 9",
-        "B 10",
-        "B 11",
-        "B 12",
-        "B 13",
-        "B 14",
-        "B 15",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
     ]
     row_1_B_number = random.choice(numbers_for_B_list)
     # takes out drawing number from the list
     take_out_of_list_B = numbers_for_B_list.index(row_1_B_number)
     numbers_for_B_list.pop(take_out_of_list_B)
-    print(row_1_B_number)
-    print(numbers_for_B_list)
+    print("first: " + row_1_B_number)  ### for testing
+    print(numbers_for_B_list)  ### for tetsing
     return (row_1_B_number, numbers_for_B_list)
 
 
-# draw_B_numbers()
-(p1, p2) = draw_B_numbers()
-test_print(p1, p2)
+draw_B_numbers_row()
+
 
 numbers_for_I_list = [
-    "I 16",
-    "I 17",
-    "I 18",
-    "I 19",
-    "I 20",
-    "I 21",
-    "I 22",
-    "I 23",
-    "I 24",
-    "I 25",
-    "I 26",
-    "I 27",
-    "I 28",
-    "I 29",
-    "I 30",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
 ]
 numbers_for_N_list = [
-    "N 31",
-    "N 32",
-    "N 33",
-    "N 34",
-    "N 35",
-    "N 36",
-    "N 37",
-    "N 38",
-    "N 39",
-    "N 40",
-    "N 41",
-    "N 42",
-    "N 42",
-    "N 44",
-    "N 45",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
 ]
 numbers_for_G_list = [
-    "G 46",
-    "G 47",
-    "G 48",
-    "G 49",
-    "G 50",
-    "G 51",
-    "G 52",
-    "G 53",
-    "G 54",
-    "G 55",
-    "G 56",
-    "G 57",
-    "G 58",
-    "G 59",
-    "G 60",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50",
+    "51",
+    "52",
+    "53",
+    "54",
+    "55",
+    "56",
+    "57",
+    "58",
+    "59",
+    "60",
 ]
 numbers_for_O_list = [
-    "O 61",
-    "O 62",
-    "O 63",
-    "O 64",
-    "O 65",
-    "O 66",
-    "O 67",
-    "O 68",
-    "O 69",
-    "O 70",
-    "O 72",
-    "O 72",
-    "O 73",
-    "O 74",
-    "O 75",
+    "61",
+    "62",
+    "63",
+    "64",
+    "65",
+    "66",
+    "67",
+    "68",
+    "69",
+    "70",
+    "72",
+    "72",
+    "73",
+    "74",
+    "75",
 ]
