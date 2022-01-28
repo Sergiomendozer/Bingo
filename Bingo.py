@@ -45,7 +45,19 @@ resized_O_ball = ImageTk.PhotoImage(resized_O)
 # ROW 1
 bingo_ball = Label(root, image=resized_O_ball)
 
+### NEW
+def sort_string(string):
+    sorted_list = []
+    now_str_is_a_list = string.split()
+    for e in now_str_is_a_list:
+        e = int(e)
+        sorted_list.append(e)
+        sorted_list.sort()
+        string = " ".join([str(element) for element in sorted_list])
+    return string
 
+
+###NEW
 def bingo_ball_color(
     drawn_bingo_number,
     B_list_drawn_str,
@@ -55,10 +67,12 @@ def bingo_ball_color(
     O_list_drawn_str,
 ):
     if drawn_bingo_number.startswith("B"):
+        B_list_drawn_list = []
         bingo_ball.config(image=resized_B_ball)
         B_list_drawn_str = B_list_drawn_str + " " + drawn_bingo_number[2:]
+        B_list_drawn_str = sort_string(B_list_drawn_str)
         B_list_drawn.config(
-            text=B_list_drawn_str,
+            text="B:" + B_list_drawn_str,
             bg="#00CCFF",
             font=("Helvetica", 15),
             padx=2,
@@ -184,10 +198,10 @@ def update_drawn_ball(
     )  # .after(parent, ms, function = None, *args)
 
 
-B_list_drawn_str = "B:"
+B_list_drawn_str = ""
 B_list_drawn = Label(
     root,
-    text=B_list_drawn_str,
+    text="B:" + B_list_drawn_str,
     bg="#00CCFF",
     font=("Helvetica", 15),
     padx=2,

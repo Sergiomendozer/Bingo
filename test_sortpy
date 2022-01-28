@@ -1,35 +1,15 @@
-# x = [i for i in range(16, 31)]  # 100 zero's
-# print(x)
-
-bingo_numbers = []
-bingo_numbers_int = [i for i in range(1, 76)]
-for e in bingo_numbers_int:
-    if e <= 15:
-        b_string = "B "
-        e = str(e)
-        b_string = b_string + e
-        bingo_numbers.append(b_string)
-    elif e <= 30:
-        I_string = "I "
-        e = str(e)
-        I_string = I_string + e
-        bingo_numbers.append(I_string)
-    elif e <= 45:
-        N_string = "N "
-        e = str(e)
-        N_string = N_string + e
-        bingo_numbers.append(N_string)
-    elif e <= 60:
-        G_string = "G "
-        e = str(e)
-        G_string = G_string + e
-        bingo_numbers.append(G_string)
-    elif e <= 75:
-        O_string = "O "
-        e = str(e)
-        O_string = O_string + e
-        bingo_numbers.append(O_string)
+B_list_drawn_list = []
+B_list_drawn_str = "1 5 3"
+B_list_drawn_str = B_list_drawn_str.split()
+for e in B_list_drawn_str:
+    e = int(e)
+    B_list_drawn_list.append(e)
+    B_list_drawn_list.sort()
+    B_list_drawn_str = " ".join([str(element) for element in B_list_drawn_list])
 
 
-# print(bingo_numbers_int)
-print(bingo_numbers)
+print(B_list_drawn_str)
+print(B_list_drawn_list)
+
+# = ' '.join([str(element) for element in lines])
+# print (lines)
