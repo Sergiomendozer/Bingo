@@ -670,23 +670,11 @@ def draw_B_numbers_row_2(numbers_for_B_list_out_1):
 
 
 def draw_B_numbers_row_1():
-    numbers_for_B_list = [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-    ]
+    numbers_for_B_list = []
+    numbers_for_B_list_int = [i for i in range(1, 16)]
+    for e in numbers_for_B_list_int:
+        e = str(e)
+        numbers_for_B_list.append(e)
     row_1_B_number = random.choice(numbers_for_B_list)
     # takes out drawing number from the list
     take_out_of_list_B = numbers_for_B_list.index(row_1_B_number)
@@ -754,23 +742,11 @@ def draw_I_numbers_row_2(numbers_for_I_list_out_1):
 
 
 def draw_I_numbers_row_1():
-    numbers_for_I_list = [
-        "16",
-        "17",
-        "18",
-        "19",
-        "20",
-        "21",
-        "22",
-        "23",
-        "24",
-        "25",
-        "26",
-        "27",
-        "28",
-        "29",
-        "30",
-    ]
+    numbers_for_I_list = []
+    numbers_for_I_list_int = [i for i in range(16, 31)]
+    for e in numbers_for_I_list_int:
+        e = str(e)
+        numbers_for_I_list.append(e)
     row_1_I_number = random.choice(numbers_for_I_list)
     # takes out drawing number from the list
     take_out_of_list_I = numbers_for_I_list.index(row_1_I_number)
@@ -837,23 +813,11 @@ def draw_N_numbers_row_2(numbers_for_N_list_out_1):
 
 
 def draw_N_numbers_row_1():
-    numbers_for_N_list = [
-        "31",
-        "32",
-        "33",
-        "34",
-        "35",
-        "36",
-        "37",
-        "38",
-        "39",
-        "40",
-        "41",
-        "42",
-        "43",
-        "44",
-        "45",
-    ]
+    numbers_for_N_list = []
+    numbers_for_N_list_int = [i for i in range(31, 46)]
+    for e in numbers_for_N_list_int:
+        e = str(e)
+        numbers_for_N_list.append(e)
     row_1_N_number = random.choice(numbers_for_N_list)
     # takes out drawing number from the list
     take_out_of_list_I = numbers_for_N_list.index(row_1_N_number)
@@ -921,23 +885,11 @@ def draw_G_numbers_row_2(numbers_for_G_list_out_1):
 
 
 def draw_G_numbers_row_1():
-    numbers_for_G_list = [
-        "46",
-        "47",
-        "48",
-        "49",
-        "50",
-        "51",
-        "52",
-        "53",
-        "54",
-        "55",
-        "56",
-        "57",
-        "58",
-        "59",
-        "60",
-    ]
+    numbers_for_G_list = []
+    numbers_for_G_list_int = [i for i in range(46, 61)]
+    for e in numbers_for_G_list_int:
+        e = str(e)
+        numbers_for_G_list.append(e)
     row_1_G_number = random.choice(numbers_for_G_list)
     # takes out drawing number from the list
     take_out_of_list_I = numbers_for_G_list.index(row_1_G_number)
@@ -960,7 +912,6 @@ row_4_G_number, numbers_for_G_list_out_4 = draw_G_numbers_row_4(
 )
 row_5_G_number = draw_G_numbers_row_5(numbers_for_G_list_out_4)
 
-###NEW
 # player card maker for O row:
 def draw_O_numbers_row_5(numbers_for_O_list_out_4):
     row_5_O_number = random.choice(numbers_for_O_list_out_4)
@@ -1006,23 +957,11 @@ def draw_O_numbers_row_2(numbers_for_O_list_out_1):
 
 
 def draw_O_numbers_row_1():
-    numbers_for_O_list = [
-        "61",
-        "62",
-        "63",
-        "64",
-        "65",
-        "66",
-        "67",
-        "68",
-        "69",
-        "70",
-        "71",
-        "72",
-        "73",
-        "74",
-        "75",
-    ]
+    numbers_for_O_list = []
+    numbers_for_O_list_int = [i for i in range(61, 76)]
+    for e in numbers_for_O_list_int:
+        e = str(e)
+        numbers_for_O_list.append(e)
     row_1_O_number = random.choice(numbers_for_O_list)
     # takes out drawing number from the list
     take_out_of_list_O = numbers_for_O_list.index(row_1_O_number)
