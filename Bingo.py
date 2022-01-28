@@ -9,6 +9,14 @@ import datetime
 root = Tk()
 root.title("BINGO")
 root.geometry("1015x590")
+# Center window
+app_width = 1015
+app_height = 590
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+x_coordinate = (screen_width / 2) - (app_width / 2)
+y_coordinate = (screen_height / 2) - (app_height / 2)
+root.geometry(f"{app_width}x{app_height}+{int(x_coordinate)}+{int(y_coordinate)}")
 
 # BINGO balls:
 ##B BINGO ball
