@@ -603,12 +603,15 @@ def click_row_5_O():
 click_row_5_O.click = 0
 click_row_5_O.colors = ["#00FF33", "#B900ff"]
 
+# command buttons 4 bot ### new
+
+
 # Player card maker:
 # player card maker for B row:
 def draw_B_numbers_row_5(numbers_for_B_list_out_4):
     row_5_B_number = random.choice(numbers_for_B_list_out_4)
     # takes out drawing number from the list
-    take_out_of_list_B = numbers_for_B_list_out_1.index(row_5_B_number)
+    take_out_of_list_B = numbers_for_B_list_out_4.index(row_5_B_number)
     numbers_for_B_list_out_1.pop(take_out_of_list_B)
     return row_5_B_number
 
@@ -913,6 +916,7 @@ row_4_O_number, numbers_for_O_list_out_4 = draw_O_numbers_row_4(
 )
 row_5_O_number = draw_O_numbers_row_5(numbers_for_O_list_out_4)
 
+# Bingo bot card maker
 
 # BINGO row 1
 B_bingo_row_1 = Button(
