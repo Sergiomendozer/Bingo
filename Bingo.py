@@ -45,7 +45,7 @@ resized_O_ball = ImageTk.PhotoImage(resized_O)
 # ROW 1
 bingo_ball = Label(root, image=resized_O_ball)
 
-### NEW
+### sorts list for B:, I:, N:, G:, O:, in ascending order
 def sort_string(string):
     sorted_list = []
     now_str_is_a_list = string.split()
@@ -57,7 +57,6 @@ def sort_string(string):
     return string
 
 
-###NEW
 def bingo_ball_color(
     drawn_bingo_number,
     B_list_drawn_str,
@@ -72,7 +71,7 @@ def bingo_ball_color(
         B_list_drawn_str = B_list_drawn_str + " " + drawn_bingo_number[2:]
         B_list_drawn_str = sort_string(B_list_drawn_str)
         B_list_drawn.config(
-            text="B:" + B_list_drawn_str,
+            text="B: " + B_list_drawn_str,
             bg="#00CCFF",
             font=("Helvetica", 15),
             padx=2,
@@ -88,8 +87,9 @@ def bingo_ball_color(
     elif drawn_bingo_number.startswith("I"):
         bingo_ball.config(image=resized_I_ball)
         I_list_drawn_str = I_list_drawn_str + " " + drawn_bingo_number[2:]
+        I_list_drawn_str = sort_string(I_list_drawn_str)
         I_list_drawn.config(
-            text=I_list_drawn_str,
+            text="I: " + I_list_drawn_str,
             bg="#FF0000",
             font=("Helvetica", 15),
             padx=2,
@@ -106,8 +106,9 @@ def bingo_ball_color(
     elif drawn_bingo_number.startswith("N"):
         bingo_ball.config(image=resized_N_ball)
         N_list_drawn_str = N_list_drawn_str + " " + drawn_bingo_number[2:]
+        N_list_drawn_str = sort_string(N_list_drawn_str)
         N_list_drawn.config(
-            text=N_list_drawn_str,
+            text="N: " + N_list_drawn_str,
             bg="#E2DF00",
             font=("Helvetica", 15),
             padx=2,
@@ -124,8 +125,9 @@ def bingo_ball_color(
     elif drawn_bingo_number.startswith("G"):
         bingo_ball.config(image=resized_G_ball)
         G_list_drawn_str = G_list_drawn_str + " " + drawn_bingo_number[2:]
+        G_list_drawn_str = sort_string(G_list_drawn_str)
         G_list_drawn.config(
-            text=G_list_drawn_str,
+            text="G: " + G_list_drawn_str,
             bg="#F96815",
             font=("Helvetica", 15),
             padx=2,
@@ -141,8 +143,9 @@ def bingo_ball_color(
     elif drawn_bingo_number.startswith("O"):
         bingo_ball.config(image=resized_O_ball)
         O_list_drawn_str = O_list_drawn_str + " " + drawn_bingo_number[2:]
+        O_list_drawn_str = sort_string(O_list_drawn_str)
         O_list_drawn.config(
-            text=O_list_drawn_str,
+            text="O: " + O_list_drawn_str,
             bg="#00FF33",
             font=("Helvetica", 15),
             padx=2,
@@ -209,10 +212,10 @@ B_list_drawn = Label(
 )
 B_list_drawn.grid(row=1, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
-I_list_drawn_str = "I:"
+I_list_drawn_str = ""
 I_list_drawn = Label(
     root,
-    text=I_list_drawn_str,
+    text="I:" + I_list_drawn_str,
     bg="#FF0000",
     font=("Helvetica", 15),
     padx=2,
@@ -220,10 +223,10 @@ I_list_drawn = Label(
 )
 I_list_drawn.grid(row=2, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
-N_list_drawn_str = "N:"
+N_list_drawn_str = ""
 N_list_drawn = Label(
     root,
-    text=N_list_drawn_str,
+    text="N:" + N_list_drawn_str,
     bg="#E2DF00",
     font=("Helvetica", 15),
     padx=2,
@@ -231,10 +234,10 @@ N_list_drawn = Label(
 )
 N_list_drawn.grid(row=3, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
-G_list_drawn_str = "G:"
+G_list_drawn_str = ""
 G_list_drawn = Label(
     root,
-    text=G_list_drawn_str,
+    text="G:" + G_list_drawn_str,
     bg="#F96815",
     font=("Helvetica", 15),
     padx=2,
@@ -242,10 +245,10 @@ G_list_drawn = Label(
 )
 G_list_drawn.grid(row=4, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
-O_list_drawn_str = "O:"
+O_list_drawn_str = ""
 O_list_drawn = Label(
     root,
-    text=O_list_drawn_str,
+    text="O:" + O_list_drawn_str,
     bg="#00FF33",
     font=("Helvetica", 15),
     padx=2,
