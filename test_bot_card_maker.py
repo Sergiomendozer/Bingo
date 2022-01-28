@@ -1,14 +1,14 @@
 import random
 
 
-def draw_B_numbers_row_2(numbers_for_B_list_out_1):
-    row_2_B_number = random.choice(numbers_for_B_list_out_1)
+def bot_draw_B_numbers_row_2(bot_numbers_for_B_list_out_1):
+    bot_row_2_B_number = random.choice(bot_numbers_for_B_list_out_1)
     # takes out drawing number from the list
-    take_out_of_list_B = numbers_for_B_list_out_1.index(row_2_B_number)
-    numbers_for_B_list_out_1.pop(take_out_of_list_B)
-    numbers_for_B_list_out_2 = numbers_for_B_list_out_1
-    print(row_2_B_number, numbers_for_B_list_out_2)  ### delete
-    return row_2_B_number, numbers_for_B_list_out_2
+    bot_take_out_of_list_B = bot_numbers_for_B_list_out_1.index(bot_row_2_B_number)
+    bot_numbers_for_B_list_out_1.pop(bot_take_out_of_list_B)
+    bot_numbers_for_B_list_out_2 = bot_numbers_for_B_list_out_1
+    print(bot_row_2_B_number, bot_numbers_for_B_list_out_2)  ### delete
+    return bot_row_2_B_number, bot_numbers_for_B_list_out_2
 
 
 def bot_draw_B_numbers_row_1():
@@ -27,7 +27,7 @@ def bot_draw_B_numbers_row_1():
 
 
 bot_row_1_B_number, bot_numbers_for_B_list_out_1 = bot_draw_B_numbers_row_1()
-row_2_B_number, numbers_for_B_list_out_2 = draw_B_numbers_row_2(
+bot_row_2_B_number, bot_numbers_for_B_list_out_2 = bot_draw_B_numbers_row_2(
     bot_numbers_for_B_list_out_1
 )
 # row_3_B_number, numbers_for_B_list_out_3 = draw_B_numbers_row_3(
