@@ -925,15 +925,15 @@ def draw_B_numbers_row_5(numbers_for_B_list_out_4):
     row_5_B_number = random.choice(numbers_for_B_list_out_4)
     # takes out drawing number from the list
     take_out_of_list_B = numbers_for_B_list_out_4.index(row_5_B_number)
-    numbers_for_B_list_out_1.pop(take_out_of_list_B)
+    numbers_for_B_list_out_4.pop(take_out_of_list_B)
     return row_5_B_number
 
 
 def draw_B_numbers_row_4(numbers_for_B_list_out_3):
     row_4_B_number = random.choice(numbers_for_B_list_out_3)
     # takes out drawing number from the list
-    take_out_of_list_B = numbers_for_B_list_out_1.index(row_4_B_number)
-    numbers_for_B_list_out_1.pop(take_out_of_list_B)
+    take_out_of_list_B = numbers_for_B_list_out_3.index(row_4_B_number)
+    numbers_for_B_list_out_3.pop(take_out_of_list_B)
     numbers_for_B_list_out_4 = numbers_for_B_list_out_3
     return row_4_B_number, numbers_for_B_list_out_4
 
@@ -941,8 +941,8 @@ def draw_B_numbers_row_4(numbers_for_B_list_out_3):
 def draw_B_numbers_row_3(numbers_for_B_list_out_2):
     row_3_B_number = random.choice(numbers_for_B_list_out_2)
     # takes out drawing number from the list
-    take_out_of_list_B = numbers_for_B_list_out_1.index(row_3_B_number)
-    numbers_for_B_list_out_1.pop(take_out_of_list_B)
+    take_out_of_list_B = numbers_for_B_list_out_2.index(row_3_B_number)
+    numbers_for_B_list_out_2.pop(take_out_of_list_B)
     numbers_for_B_list_out_3 = numbers_for_B_list_out_2
     return row_3_B_number, numbers_for_B_list_out_3
 
@@ -1581,7 +1581,6 @@ def click_BINGO():
 def make_a_new_player_card():
     New_card.config(text="NEW called", bg="#FF0000", font=("Helvetica", 20))
     # calls function for row B maker
-    draw_B_numbers_row_1()
     row_1_B_number, numbers_for_B_list_out_1 = draw_B_numbers_row_1()
     row_2_B_number, numbers_for_B_list_out_2 = draw_B_numbers_row_2(
         numbers_for_B_list_out_1
@@ -1593,23 +1592,27 @@ def make_a_new_player_card():
         numbers_for_B_list_out_3
     )
     row_5_B_number = draw_B_numbers_row_5(numbers_for_B_list_out_4)
-    # calls function for row I maker
-    bot_row_1_I_number, bot_numbers_for_I_list_out_1 = bot_draw_I_numbers_row_1()
-    bot_row_2_I_number, bot_numbers_for_I_list_out_2 = bot_draw_I_numbers_row_2(
-        bot_numbers_for_I_list_out_1
-    )
-    bot_row_3_I_number, bot_numbers_for_I_list_out_3 = bot_draw_I_numbers_row_3(
-        bot_numbers_for_I_list_out_2
-    )
-    bot_row_4_I_number, bot_numbers_for_I_list_out_4 = bot_draw_I_numbers_row_4(
-        bot_numbers_for_I_list_out_3
-    )
-    bot_row_5_I_number = bot_draw_I_numbers_row_5(bot_numbers_for_I_list_out_4)
-    # calls function for row N maker
 
-    # calls function for row G maker
+    # # calls function for row I maker
+    # row_1_I_number, numbers_for_I_list_out_1 = draw_I_numbers_row_1()
+    # row_2_I_number, numbers_for_I_list_out_2 = draw_I_numbers_row_2(
+    #     numbers_for_I_list_out_1
+    # )
+    # row_3_I_number, numbers_for_I_list_out_3 = draw_I_numbers_row_3(
+    #     numbers_for_I_list_out_2
+    # )
+    # row_4_I_number, numbers_for_I_list_out_4 = draw_I_numbers_row_4(
+    #     numbers_for_I_list_out_3
+    # )
+    # row_5_I_number = draw_I_numbers_row_5(numbers_for_I_list_out_4)
+    # # calls function for row N maker
+    # draw_N_numbers_row_1()
 
-    # calls function for row O maker
+    # # calls function for row G maker
+    # draw_G_numbers_row_1()
+
+    # # calls function for row O maker
+    # draw_O_numbers_row_1()
 
 
 def make_a_new_bot_card():
