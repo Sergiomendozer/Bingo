@@ -1586,6 +1586,12 @@ def draw_B_numbers_row_5(numbers_for_B_list_out_4):
     # takes out drawing number from the list
     take_out_of_list_B = numbers_for_B_list_out_4.index(row_5_B_number)
     numbers_for_B_list_out_4.pop(take_out_of_list_B)
+    B_bingo_row_5.configure(
+        text=row_5_B_number,
+        bg=click_row_5_B.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_5_B,
+    )
     return row_5_B_number
 
 
@@ -1595,6 +1601,12 @@ def draw_B_numbers_row_4(numbers_for_B_list_out_3):
     take_out_of_list_B = numbers_for_B_list_out_3.index(row_4_B_number)
     numbers_for_B_list_out_3.pop(take_out_of_list_B)
     numbers_for_B_list_out_4 = numbers_for_B_list_out_3
+    B_bingo_row_4.configure(
+        text=row_4_B_number,
+        bg=click_row_4_B.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_4_B,
+    )
     return draw_B_numbers_row_5(numbers_for_B_list_out_4)
 
 
@@ -1604,6 +1616,12 @@ def draw_B_numbers_row_3(numbers_for_B_list_out_2):
     take_out_of_list_B = numbers_for_B_list_out_2.index(row_3_B_number)
     numbers_for_B_list_out_2.pop(take_out_of_list_B)
     numbers_for_B_list_out_3 = numbers_for_B_list_out_2
+    B_bingo_row_3.configure(
+        text=row_3_B_number,
+        bg=click_row_3_B.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_3_B,
+    )
     return draw_B_numbers_row_4(numbers_for_B_list_out_3)
 
 
@@ -1613,6 +1631,12 @@ def draw_B_numbers_row_2(numbers_for_B_list_out_1):
     take_out_of_list_B = numbers_for_B_list_out_1.index(row_2_B_number)
     numbers_for_B_list_out_1.pop(take_out_of_list_B)
     numbers_for_B_list_out_2 = numbers_for_B_list_out_1
+    B_bingo_row_2.configure(
+        text=row_2_B_number,
+        bg=click_row_2_B.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_2_B,
+    )
     return draw_B_numbers_row_3(numbers_for_B_list_out_2)
 
 
