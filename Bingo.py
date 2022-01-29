@@ -1564,10 +1564,16 @@ G_bingo_row_5_bot.grid(row=13, column=9, sticky="nsew")
 O_bingo_row_5_bot.grid(row=13, column=10, sticky="nsew")
 
 # function for BINGO_button:
+def reset_bingo_button():
+    Bingo_button.config(
+        text="BINGO!", bg="#B900FF", command=click_BINGO, font=("Helvetica", 25)
+    )
+
+
 def click_BINGO():
     Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
-    # time.sleep(10)
-    # text="NO BINGO!!!",
+    return Bingo_button.after(3000, reset_bingo_button)
+    # time.sleep(4)
     # Bingo_button.config(text="BINGO!", bg="#B900FF", font=("Helvetica", 25))
 
 
