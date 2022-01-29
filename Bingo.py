@@ -988,7 +988,7 @@ row_5_B_number = draw_B_numbers_row_5(numbers_for_B_list_out_4)
 def draw_I_numbers_row_5(numbers_for_I_list_out_4):
     row_5_I_number = random.choice(numbers_for_I_list_out_4)
     # takes out drawing number from the list
-    take_out_of_list_I = numbers_for_I_list_out_1.index(row_5_I_number)
+    take_out_of_list_I = numbers_for_I_list_out_4.index(row_5_I_number)
     numbers_for_I_list_out_4.pop(take_out_of_list_I)
     return row_5_I_number
 
@@ -1592,27 +1592,43 @@ def make_a_new_player_card():
         numbers_for_B_list_out_3
     )
     row_5_B_number = draw_B_numbers_row_5(numbers_for_B_list_out_4)
+    # update .configure
+    # .config( ### here
+    B_bingo_row_1.configure(
+        text=row_1_B_number,
+        bg=click_row_1_B.colors[0],  # 1st col to start
+        font=("Helvetica", 20),
+        command=click_row_1_B,
+    )
 
-    # # calls function for row I maker
-    # row_1_I_number, numbers_for_I_list_out_1 = draw_I_numbers_row_1()
-    # row_2_I_number, numbers_for_I_list_out_2 = draw_I_numbers_row_2(
-    #     numbers_for_I_list_out_1
-    # )
-    # row_3_I_number, numbers_for_I_list_out_3 = draw_I_numbers_row_3(
-    #     numbers_for_I_list_out_2
-    # )
-    # row_4_I_number, numbers_for_I_list_out_4 = draw_I_numbers_row_4(
-    #     numbers_for_I_list_out_3
-    # )
-    # row_5_I_number = draw_I_numbers_row_5(numbers_for_I_list_out_4)
-    # # calls function for row N maker
-    # draw_N_numbers_row_1()
 
-    # # calls function for row G maker
-    # draw_G_numbers_row_1()
-
-    # # calls function for row O maker
-    # draw_O_numbers_row_1()
+# I_bingo_row_1 = Button(
+#     root,
+#     text=row_1_I_number,
+#     bg=click_row_1_I.colors[0],  # 1st col to start
+#     font=("Helvetica", 20),
+#     command=click_row_1_I,
+# )
+# N_bingo_row_1 = Button(
+#     root,
+#     text=row_1_N_number,
+#     bg=click_row_1_N.colors[0],  # 1st col to start
+#     font=("Helvetica", 20),
+#     command=click_row_1_N,
+# )
+# G_bingo_row_1 = Button(
+#     root,
+#     text=row_1_G_number,
+#     bg=click_row_1_G.colors[0],  # 1st col to start
+#     font=("Helvetica", 20),
+#     command=click_row_1_G,
+# )
+# O_bingo_row_1 = Button(
+#     root,
+#     text=row_1_O_number,
+#     bg=click_row_1_O.colors[0],  # 1st col to start
+#     font=("Helvetica", 20),
+#     command=click_row_1_O,
 
 
 def make_a_new_bot_card():
