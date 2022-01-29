@@ -610,7 +610,6 @@ def bot_draw_B_numbers_row_5(bot_numbers_for_B_list_out_4):
     # takes out drawing number from the list
     bot_take_out_of_list_B = bot_numbers_for_B_list_out_4.index(bot_row_5_B_number)
     bot_numbers_for_B_list_out_4.pop(bot_take_out_of_list_B)
-    print(bot_row_5_B_number)  ### delete
     return bot_row_5_B_number
 
 
@@ -620,7 +619,6 @@ def bot_draw_B_numbers_row_4(bot_numbers_for_B_list_out_3):
     bot_take_out_of_list_B = bot_numbers_for_B_list_out_3.index(bot_row_4_B_number)
     bot_numbers_for_B_list_out_3.pop(bot_take_out_of_list_B)
     bot_numbers_for_B_list_out_4 = bot_numbers_for_B_list_out_3
-    print(bot_row_4_B_number, bot_numbers_for_B_list_out_4)  ### delete
     return bot_row_4_B_number, bot_numbers_for_B_list_out_4
 
 
@@ -630,7 +628,6 @@ def bot_draw_B_numbers_row_3(bot_numbers_for_B_list_out_2):
     bot_take_out_of_list_B = bot_numbers_for_B_list_out_2.index(bot_row_3_B_number)
     bot_numbers_for_B_list_out_2.pop(bot_take_out_of_list_B)
     bot_numbers_for_B_list_out_3 = bot_numbers_for_B_list_out_2
-    print(bot_row_3_B_number, bot_numbers_for_B_list_out_3)  ### delete
     return bot_row_3_B_number, bot_numbers_for_B_list_out_3
 
 
@@ -640,7 +637,6 @@ def bot_draw_B_numbers_row_2(bot_numbers_for_B_list_out_1):
     bot_take_out_of_list_B = bot_numbers_for_B_list_out_1.index(bot_row_2_B_number)
     bot_numbers_for_B_list_out_1.pop(bot_take_out_of_list_B)
     bot_numbers_for_B_list_out_2 = bot_numbers_for_B_list_out_1
-    print(bot_row_2_B_number, bot_numbers_for_B_list_out_2)  ### delete
     return bot_row_2_B_number, bot_numbers_for_B_list_out_2
 
 
@@ -655,7 +651,6 @@ def bot_draw_B_numbers_row_1():
     take_out_of_list_B = bot_numbers_for_B_list.index(bot_row_1_B_number)
     bot_numbers_for_B_list.pop(take_out_of_list_B)
     bot_numbers_for_B_list_out_1 = bot_numbers_for_B_list
-    print(bot_row_1_B_number, bot_numbers_for_B_list_out_1)  ### delete
     return bot_row_1_B_number, bot_numbers_for_B_list_out_1
 
 
@@ -677,7 +672,6 @@ def bot_draw_I_numbers_row_5(bot_numbers_for_I_list_out_4):
     # takes out drawing number from the list
     bot_take_out_of_list_I = bot_numbers_for_I_list_out_4.index(bot_row_5_I_number)
     bot_numbers_for_I_list_out_4.pop(bot_take_out_of_list_I)
-    print(bot_row_5_I_number)  ### delete
     return bot_row_5_I_number
 
 
@@ -687,7 +681,6 @@ def bot_draw_I_numbers_row_4(bot_numbers_for_I_list_out_3):
     bot_take_out_of_list_I = bot_numbers_for_I_list_out_3.index(bot_row_4_I_number)
     bot_numbers_for_I_list_out_3.pop(bot_take_out_of_list_I)
     bot_numbers_for_I_list_out_4 = bot_numbers_for_I_list_out_3
-    print(bot_row_4_I_number, bot_numbers_for_I_list_out_4)  ### delete
     return bot_row_4_I_number, bot_numbers_for_I_list_out_4
 
 
@@ -697,7 +690,6 @@ def bot_draw_I_numbers_row_3(bot_numbers_for_I_list_out_2):
     bot_take_out_of_list_I = bot_numbers_for_I_list_out_2.index(bot_row_3_I_number)
     bot_numbers_for_I_list_out_2.pop(bot_take_out_of_list_I)
     bot_numbers_for_I_list_out_3 = bot_numbers_for_I_list_out_2
-    print(bot_row_3_I_number, bot_numbers_for_I_list_out_3)  ### delete
     return bot_row_3_I_number, bot_numbers_for_I_list_out_3
 
 
@@ -707,7 +699,6 @@ def bot_draw_I_numbers_row_2(bot_numbers_for_I_list_out_1):
     bot_take_out_of_list_I = bot_numbers_for_I_list_out_1.index(bot_row_2_I_number)
     bot_numbers_for_I_list_out_1.pop(bot_take_out_of_list_I)
     bot_numbers_for_I_list_out_2 = bot_numbers_for_I_list_out_1
-    print(bot_row_2_I_number, bot_numbers_for_I_list_out_2)  ### delete
     return bot_row_2_I_number, bot_numbers_for_I_list_out_2
 
 
@@ -722,7 +713,6 @@ def bot_draw_I_numbers_row_1():
     take_out_of_list_I = bot_numbers_for_I_list.index(bot_row_1_I_number)
     bot_numbers_for_I_list.pop(take_out_of_list_I)
     bot_numbers_for_I_list_out_1 = bot_numbers_for_I_list
-    print(bot_row_1_I_number, bot_numbers_for_I_list_out_1)  ### delete
     return bot_row_1_I_number, bot_numbers_for_I_list_out_1
 
 
@@ -744,7 +734,6 @@ def bot_draw_N_numbers_row_5(bot_numbers_for_N_list_out_4):
     # takes out drawing number from the list
     bot_take_out_of_list_N = bot_numbers_for_N_list_out_4.index(bot_row_5_N_number)
     bot_numbers_for_N_list_out_4.pop(bot_take_out_of_list_N)
-    print(bot_row_5_N_number)  ### delete
     return bot_row_5_N_number
 
 
@@ -754,7 +743,6 @@ def bot_draw_N_numbers_row_4(bot_numbers_for_N_list_out_3):
     bot_take_out_of_list_N = bot_numbers_for_N_list_out_3.index(bot_row_4_N_number)
     bot_numbers_for_N_list_out_3.pop(bot_take_out_of_list_N)
     bot_numbers_for_N_list_out_4 = bot_numbers_for_N_list_out_3
-    print(bot_row_4_N_number, bot_numbers_for_N_list_out_4)  ### delete
     return bot_row_4_N_number, bot_numbers_for_N_list_out_4
 
 
@@ -764,7 +752,6 @@ def bot_draw_N_numbers_row_3(bot_numbers_for_N_list_out_2):
     bot_take_out_of_list_N = bot_numbers_for_N_list_out_2.index(bot_row_3_N_number)
     bot_numbers_for_N_list_out_2.pop(bot_take_out_of_list_N)
     bot_numbers_for_N_list_out_3 = bot_numbers_for_N_list_out_2
-    print(bot_row_3_N_number, bot_numbers_for_N_list_out_3)  ### delete
     return bot_row_3_N_number, bot_numbers_for_N_list_out_3
 
 
@@ -774,7 +761,6 @@ def bot_draw_N_numbers_row_2(bot_numbers_for_N_list_out_1):
     bot_take_out_of_list_N = bot_numbers_for_N_list_out_1.index(bot_row_2_N_number)
     bot_numbers_for_N_list_out_1.pop(bot_take_out_of_list_N)
     bot_numbers_for_N_list_out_2 = bot_numbers_for_N_list_out_1
-    print(bot_row_2_N_number, bot_numbers_for_N_list_out_2)  ### delete
     return bot_row_2_N_number, bot_numbers_for_N_list_out_2
 
 
@@ -789,7 +775,6 @@ def bot_draw_N_numbers_row_1():
     take_out_of_list_N = bot_numbers_for_N_list.index(bot_row_1_N_number)
     bot_numbers_for_N_list.pop(take_out_of_list_N)
     bot_numbers_for_N_list_out_1 = bot_numbers_for_N_list
-    print(bot_row_1_N_number, bot_numbers_for_N_list_out_1)  ### delete
     return bot_row_1_N_number, bot_numbers_for_N_list_out_1
 
 
@@ -811,7 +796,6 @@ def bot_draw_G_numbers_row_5(bot_numbers_for_G_list_out_4):
     # takes out drawing number from the list
     bot_take_out_of_list_G = bot_numbers_for_G_list_out_4.index(bot_row_5_G_number)
     bot_numbers_for_G_list_out_4.pop(bot_take_out_of_list_G)
-    print(bot_row_5_G_number)  ### delete
     return bot_row_5_G_number
 
 
@@ -821,7 +805,6 @@ def bot_draw_G_numbers_row_4(bot_numbers_for_G_list_out_3):
     bot_take_out_of_list_G = bot_numbers_for_G_list_out_3.index(bot_row_4_G_number)
     bot_numbers_for_G_list_out_3.pop(bot_take_out_of_list_G)
     bot_numbers_for_G_list_out_4 = bot_numbers_for_G_list_out_3
-    print(bot_row_4_G_number, bot_numbers_for_G_list_out_4)  ### delete
     return bot_row_4_G_number, bot_numbers_for_G_list_out_4
 
 
@@ -831,7 +814,6 @@ def bot_draw_G_numbers_row_3(bot_numbers_for_G_list_out_2):
     bot_take_out_of_list_G = bot_numbers_for_G_list_out_2.index(bot_row_3_G_number)
     bot_numbers_for_G_list_out_2.pop(bot_take_out_of_list_G)
     bot_numbers_for_G_list_out_3 = bot_numbers_for_G_list_out_2
-    print(bot_row_3_G_number, bot_numbers_for_G_list_out_3)  ### delete
     return bot_row_3_G_number, bot_numbers_for_G_list_out_3
 
 
@@ -841,7 +823,6 @@ def bot_draw_G_numbers_row_2(bot_numbers_for_G_list_out_1):
     bot_take_out_of_list_G = bot_numbers_for_G_list_out_1.index(bot_row_2_G_number)
     bot_numbers_for_G_list_out_1.pop(bot_take_out_of_list_G)
     bot_numbers_for_G_list_out_2 = bot_numbers_for_G_list_out_1
-    print(bot_row_2_G_number, bot_numbers_for_G_list_out_2)  ### delete
     return bot_row_2_G_number, bot_numbers_for_G_list_out_2
 
 
@@ -856,7 +837,6 @@ def bot_draw_G_numbers_row_1():
     take_out_of_list_G = bot_numbers_for_G_list.index(bot_row_1_G_number)
     bot_numbers_for_G_list.pop(take_out_of_list_G)
     bot_numbers_for_G_list_out_1 = bot_numbers_for_G_list
-    print(bot_row_1_G_number, bot_numbers_for_G_list_out_1)  ### delete
     return bot_row_1_G_number, bot_numbers_for_G_list_out_1
 
 
@@ -878,7 +858,6 @@ def bot_draw_O_numbers_row_5(bot_numbers_for_O_list_out_4):
     # takes out drawing number from the list
     bot_take_out_of_list_O = bot_numbers_for_O_list_out_4.index(bot_row_5_O_number)
     bot_numbers_for_O_list_out_4.pop(bot_take_out_of_list_O)
-    print(bot_row_5_O_number)  ### delete
     return bot_row_5_O_number
 
 
@@ -888,7 +867,6 @@ def bot_draw_O_numbers_row_4(bot_numbers_for_O_list_out_3):
     bot_take_out_of_list_O = bot_numbers_for_O_list_out_3.index(bot_row_4_O_number)
     bot_numbers_for_O_list_out_3.pop(bot_take_out_of_list_O)
     bot_numbers_for_O_list_out_4 = bot_numbers_for_O_list_out_3
-    print(bot_row_4_O_number, bot_numbers_for_O_list_out_4)  ### delete
     return bot_row_4_O_number, bot_numbers_for_O_list_out_4
 
 
@@ -898,7 +876,6 @@ def bot_draw_O_numbers_row_3(bot_numbers_for_O_list_out_2):
     bot_take_out_of_list_O = bot_numbers_for_O_list_out_2.index(bot_row_3_O_number)
     bot_numbers_for_O_list_out_2.pop(bot_take_out_of_list_O)
     bot_numbers_for_O_list_out_3 = bot_numbers_for_O_list_out_2
-    print(bot_row_3_O_number, bot_numbers_for_O_list_out_3)  ### delete
     return bot_row_3_O_number, bot_numbers_for_O_list_out_3
 
 
@@ -908,7 +885,6 @@ def bot_draw_O_numbers_row_2(bot_numbers_for_O_list_out_1):
     bot_take_out_of_list_O = bot_numbers_for_O_list_out_1.index(bot_row_2_O_number)
     bot_numbers_for_O_list_out_1.pop(bot_take_out_of_list_O)
     bot_numbers_for_O_list_out_2 = bot_numbers_for_O_list_out_1
-    print(bot_row_2_O_number, bot_numbers_for_O_list_out_2)  ### delete
     return bot_row_2_O_number, bot_numbers_for_O_list_out_2
 
 
@@ -923,7 +899,6 @@ def bot_draw_O_numbers_row_1():
     take_out_of_list_O = bot_numbers_for_O_list.index(bot_row_1_O_number)
     bot_numbers_for_O_list.pop(take_out_of_list_O)
     bot_numbers_for_O_list_out_1 = bot_numbers_for_O_list
-    print(bot_row_1_O_number, bot_numbers_for_O_list_out_1)  ### delete
     return bot_row_1_O_number, bot_numbers_for_O_list_out_1
 
 
