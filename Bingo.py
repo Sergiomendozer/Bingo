@@ -607,7 +607,7 @@ def click_row_5_O():
 click_row_5_O.click = 0
 click_row_5_O.colors = ["#00FF33", "#B900ff"]
 
-# command buttons 4 bot ### NEW
+# command buttons 4 bot
 #  Bot card maker for B row:
 def bot_draw_B_numbers_row_5(bot_numbers_for_B_list_out_4):
     bot_row_5_B_number = random.choice(bot_numbers_for_B_list_out_4)
@@ -981,6 +981,8 @@ row_4_B_number, numbers_for_B_list_out_4 = draw_B_numbers_row_4(
     numbers_for_B_list_out_3
 )
 row_5_B_number = draw_B_numbers_row_5(numbers_for_B_list_out_4)
+
+###mark
 
 # player card maker for I row:
 def draw_I_numbers_row_5(numbers_for_I_list_out_4):
@@ -1575,8 +1577,39 @@ def click_BINGO():
     return Bingo_button.after(3000, reset_bingo_button)
 
 
+### NEW
 def make_a_new_player_card():
     New_card.config(text="NEW called", bg="#FF0000", font=("Helvetica", 20))
+    # calls function for row B maker
+    draw_B_numbers_row_1()
+    row_1_B_number, numbers_for_B_list_out_1 = draw_B_numbers_row_1()
+    row_2_B_number, numbers_for_B_list_out_2 = draw_B_numbers_row_2(
+        numbers_for_B_list_out_1
+    )
+    row_3_B_number, numbers_for_B_list_out_3 = draw_B_numbers_row_3(
+        numbers_for_B_list_out_2
+    )
+    row_4_B_number, numbers_for_B_list_out_4 = draw_B_numbers_row_4(
+        numbers_for_B_list_out_3
+    )
+    row_5_B_number = draw_B_numbers_row_5(numbers_for_B_list_out_4)
+    # calls function for row I maker
+    bot_row_1_I_number, bot_numbers_for_I_list_out_1 = bot_draw_I_numbers_row_1()
+    bot_row_2_I_number, bot_numbers_for_I_list_out_2 = bot_draw_I_numbers_row_2(
+        bot_numbers_for_I_list_out_1
+    )
+    bot_row_3_I_number, bot_numbers_for_I_list_out_3 = bot_draw_I_numbers_row_3(
+        bot_numbers_for_I_list_out_2
+    )
+    bot_row_4_I_number, bot_numbers_for_I_list_out_4 = bot_draw_I_numbers_row_4(
+        bot_numbers_for_I_list_out_3
+    )
+    bot_row_5_I_number = bot_draw_I_numbers_row_5(bot_numbers_for_I_list_out_4)
+    # calls function for row N maker
+
+    # calls function for row G maker
+
+    # calls function for row O maker
 
 
 def make_a_new_bot_card():
