@@ -1564,7 +1564,7 @@ G_bingo_row_5_bot.grid(row=13, column=9, sticky="nsew")
 O_bingo_row_5_bot.grid(row=13, column=10, sticky="nsew")
 
 # function for BINGO_button:
-def reset_bingo_button(): # resets to original color
+def reset_bingo_button():  # resets to original color
     Bingo_button.config(
         text="BINGO!", bg="#B900FF", command=click_BINGO, font=("Helvetica", 25)
     )
@@ -1572,31 +1572,53 @@ def reset_bingo_button(): # resets to original color
 
 def click_BINGO():
     Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
-    return Bingo_button.after(3
-    000, reset_bingo_button)
-   
+    return Bingo_button.after(3000, reset_bingo_button)
+
+
 def make_a_new_player_card():
-    pass
+    New_card.config(text="NEW called", bg="#FF0000", font=("Helvetica", 20))
+
 
 def make_a_new_bot_card():
+    # .config(text="new bot", bg="#FF0000", font=("Helvetica", 20))
     pass
 
+
 def make_a_new_game():
-    #call make_a_new_player_card()
-    #call make_a_new_bot_card()
+    New_game.config(text="game new", bg="#FF0000", font=("Helvetica", 20))
+    # call make_a_new_player_card()
+    # call make_a_new_bot_card()
     pass
+
+
 def click_pause_play():
-    #stops timer and stops draws
+    pause_play.config(text="paused!!!", bg="#FF0000", font=("Helvetica", 20))
+    # stops timer and stops draws
     pass
+
 
 # last row
 Bingo_button = Button(
     root, text="BINGO!", bg="#B900FF", command=click_BINGO, font=("Helvetica", 25)
 )
 blank = Label(root, bg="#737373")
-New_card = Button(root, text="New Card", bg="#29EFD1",command=make_a_new_player_card, font=("Helvetica", 20))
-New_game = Button(root, text="New Game", bg="#FF4646",command=make_a_new_game, font=("Helvetica", 20))
-pause_play = Button(root, text="Pause/Play", bg="#96FF50",command=click_pause_play, font=("Helvetica", 20))
+New_card = Button(
+    root,
+    text="New Card",
+    bg="#29EFD1",
+    command=make_a_new_player_card,
+    font=("Helvetica", 20),
+)
+New_game = Button(
+    root, text="New Game", bg="#FF4646", command=make_a_new_game, font=("Helvetica", 20)
+)
+pause_play = Button(
+    root,
+    text="Pause/Play",
+    bg="#96FF50",
+    command=click_pause_play,
+    font=("Helvetica", 20),
+)
 
 # last row positions # columnspan = 5
 Bingo_button.grid(row=14, column=1, columnspan=3, sticky="nsew")
