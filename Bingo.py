@@ -1563,8 +1563,18 @@ N_bingo_row_5_bot.grid(row=13, column=8, sticky="nsew")
 G_bingo_row_5_bot.grid(row=13, column=9, sticky="nsew")
 O_bingo_row_5_bot.grid(row=13, column=10, sticky="nsew")
 
+# function for BINGO_button:
+def click_BINGO():
+    Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
+    # time.sleep(10)
+    # text="NO BINGO!!!",
+    # Bingo_button.config(text="BINGO!", bg="#B900FF", font=("Helvetica", 25))
+
+
 # last row
-Bingo_button = Button(root, text="BINGO!", bg="#B900FF", font=("Helvetica", 25))
+Bingo_button = Button(
+    root, text="BINGO!", bg="#B900FF", command=click_BINGO, font=("Helvetica", 25)
+)
 blank = Label(root, bg="#737373")
 New_card = Button(root, text="New Card", bg="#29EFD1", font=("Helvetica", 20))
 New_game = Button(root, text="New Game", bg="#FF4646", font=("Helvetica", 20))
