@@ -956,31 +956,44 @@ def draw_B_numbers_row_2(numbers_for_B_list_out_1):
     return row_2_B_number, numbers_for_B_list_out_2
 
 
-def draw_B_numbers_row_1():
-    numbers_for_B_list = []
-    numbers_for_B_list_int = [i for i in range(1, 16)]
-    for e in numbers_for_B_list_int:
-        e = str(e)
-        numbers_for_B_list.append(e)
-    row_1_B_number = random.choice(numbers_for_B_list)
-    # takes out drawing number from the list
-    take_out_of_list_B = numbers_for_B_list.index(row_1_B_number)
-    numbers_for_B_list.pop(take_out_of_list_B)
-    numbers_for_B_list_out_1 = numbers_for_B_list
-    return row_1_B_number, numbers_for_B_list_out_1
+# def draw_B_numbers_row_1():
+#     numbers_for_B_list = []
+#     numbers_for_B_list_int = [i for i in range(1, 16)]
+#     for e in numbers_for_B_list_int:
+#         e = str(e)
+#         numbers_for_B_list.append(e)
+#     row_1_B_number = random.choice(numbers_for_B_list)
+#     # takes out drawing number from the list
+#     take_out_of_list_B = numbers_for_B_list.index(row_1_B_number)
+#     numbers_for_B_list.pop(take_out_of_list_B)
+#     numbers_for_B_list_out_1 = numbers_for_B_list
+#     B_bingo_row_1.configure(
+#         text=row_1_B_number,
+#         bg=click_row_1_B.colors[0],
+#         font=("Helvetica", 20),
+#         command=click_row_1_B,
+#     )
+#     return row_1_B_number, numbers_for_B_list_out_1
 
 
-row_1_B_number, numbers_for_B_list_out_1 = draw_B_numbers_row_1()
-row_2_B_number, numbers_for_B_list_out_2 = draw_B_numbers_row_2(
-    numbers_for_B_list_out_1
-)
-row_3_B_number, numbers_for_B_list_out_3 = draw_B_numbers_row_3(
-    numbers_for_B_list_out_2
-)
-row_4_B_number, numbers_for_B_list_out_4 = draw_B_numbers_row_4(
-    numbers_for_B_list_out_3
-)
-row_5_B_number = draw_B_numbers_row_5(numbers_for_B_list_out_4)
+# draw_B_numbers_row_1()
+row_1_B_number = ""
+row_2_B_number = ""
+row_3_B_number = ""
+row_4_B_number = ""
+row_5_B_number = ""
+
+# row_1_B_number, numbers_for_B_list_out_1 = draw_B_numbers_row_1()
+# row_2_B_number, numbers_for_B_list_out_2 = draw_B_numbers_row_2(
+#     numbers_for_B_list_out_1
+# )
+# row_3_B_number, numbers_for_B_list_out_3 = draw_B_numbers_row_3(
+#     numbers_for_B_list_out_2
+# )
+# row_4_B_number, numbers_for_B_list_out_4 = draw_B_numbers_row_4(
+#     numbers_for_B_list_out_3
+# )
+# row_5_B_number = draw_B_numbers_row_5(numbers_for_B_list_out_4)
 
 ###mark
 
@@ -1564,7 +1577,30 @@ I_bingo_row_5_bot.grid(row=13, column=7, sticky="nsew")
 N_bingo_row_5_bot.grid(row=13, column=8, sticky="nsew")
 G_bingo_row_5_bot.grid(row=13, column=9, sticky="nsew")
 O_bingo_row_5_bot.grid(row=13, column=10, sticky="nsew")
+### new
 
+
+def draw_B_numbers_row_1():
+    numbers_for_B_list = []
+    numbers_for_B_list_int = [i for i in range(1, 16)]
+    for e in numbers_for_B_list_int:
+        e = str(e)
+        numbers_for_B_list.append(e)
+    row_1_B_number = random.choice(numbers_for_B_list)
+    # takes out drawing number from the list
+    take_out_of_list_B = numbers_for_B_list.index(row_1_B_number)
+    numbers_for_B_list.pop(take_out_of_list_B)
+    numbers_for_B_list_out_1 = numbers_for_B_list
+    B_bingo_row_1.configure(
+        text=row_1_B_number,
+        bg=click_row_1_B.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_1_B,
+    )
+    return row_1_B_number, numbers_for_B_list_out_1
+
+
+draw_B_numbers_row_1()
 # function for BINGO_button:
 def reset_bingo_button():  # resets to original color
     Bingo_button.config(
@@ -1579,27 +1615,28 @@ def click_BINGO():
 
 ### NEW
 def make_a_new_player_card():
+    # game needs to be paused
     New_card.config(text="NEW called", bg="#FF0000", font=("Helvetica", 20))
     # calls function for row B maker
-    row_1_B_number, numbers_for_B_list_out_1 = draw_B_numbers_row_1()
-    row_2_B_number, numbers_for_B_list_out_2 = draw_B_numbers_row_2(
-        numbers_for_B_list_out_1
-    )
-    row_3_B_number, numbers_for_B_list_out_3 = draw_B_numbers_row_3(
-        numbers_for_B_list_out_2
-    )
-    row_4_B_number, numbers_for_B_list_out_4 = draw_B_numbers_row_4(
-        numbers_for_B_list_out_3
-    )
-    row_5_B_number = draw_B_numbers_row_5(numbers_for_B_list_out_4)
-    # update .configure
-    # .config( ### here
-    B_bingo_row_1.configure(
-        text=row_1_B_number,
-        bg=click_row_1_B.colors[0],  # 1st col to start
-        font=("Helvetica", 20),
-        command=click_row_1_B,
-    )
+    # row_1_B_number, numbers_for_B_list_out_1 = draw_B_numbers_row_1()
+    # row_2_B_number, numbers_for_B_list_out_2 = draw_B_numbers_row_2(
+    #     numbers_for_B_list_out_1
+    # )
+    # row_3_B_number, numbers_for_B_list_out_3 = draw_B_numbers_row_3(
+    #     numbers_for_B_list_out_2
+    # )
+    # row_4_B_number, numbers_for_B_list_out_4 = draw_B_numbers_row_4(
+    #     numbers_for_B_list_out_3
+    # )
+    # row_5_B_number = draw_B_numbers_row_5(numbers_for_B_list_out_4)
+    # # update .configure
+    # # .config( ### here
+    # B_bingo_row_1.configure(
+    #     text=row_1_B_number,
+    #     bg=click_row_1_B.colors[0],  # 1st col to start
+    #     font=("Helvetica", 20),
+    #     command=click_row_1_B,
+    # )
 
 
 # I_bingo_row_1 = Button(
