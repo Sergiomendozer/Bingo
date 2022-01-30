@@ -1,0 +1,496 @@
+#Stack Layout:
+#size_hint: .2,.2 = width , height
+
+        #background_color:(255/255,152/255,0,1)
+
+<StackLayout>:
+# random numbers display
+    Label:
+        text: "N-75"
+        font_size: 60
+        color: 0,0,0,1
+        size_hint: .25,.2
+        canvas.before:
+            Color:
+                rgba: (1, 1, 1,1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius:[9999]
+
+    Label:
+        text: "Random numbers picked in past"
+        size_hint: .75 ,.2
+        canvas.before:
+            Color:
+                rgba: (185/255, 0/255,255/255,1)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius:[30]
+
+#User and Computer player/bot
+    Label:
+        text: "Next number in:"
+        size_hint: .15,.1
+    Label:
+        text: "5s"
+        size_hint: .05,.1
+    Label:
+        text: "Your card"
+        size_hint: .3 ,.1
+        font_size: 50
+        background_color: (18/255,98/255,196/255,1)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+
+    Label:
+        text: "Bot's card"
+        font_size: 50
+        size_hint: .5 ,.1
+        background_color: (19/255,196/255,18/255,1)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+
+
+# Bingo display
+    Label:
+        text: "B"
+        font_size: 50
+        size_hint: .1,.1
+        background_color: (0/255,204/255,255/255,1)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+    Label:
+        text: "I"
+        font_size: 50
+        size_hint: .1 ,.1
+        background_color: (255/255,0/255,0/255,1)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+    Label:
+        text: "N"
+        font_size: 50
+        size_hint: .1,.1
+        background_color: (226/255, 223/255,0/255,1)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+    Label:
+        text: "G"
+        font_size: 50
+        size_hint: .1 ,.1
+        background_color: (249/255, 104/255, 21/255,1)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+    Label:
+        text: "O"
+        font_size: 50
+        size_hint: .1,.1
+        background_color: (0/255, 255/255,51/255,1)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+
+    Label:
+        text: "B"
+        font_size: 50
+        size_hint: .1,.1
+        background_color: (0/255,204/255,255/255,1)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+    Label:
+        text: "I"
+        font_size: 50
+        size_hint: .1 ,.1
+        background_color: (255/255,0/255,0/255,1)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+    Label:
+        text: "N"
+        font_size: 50
+        size_hint: .1,.1
+        background_color: (226/255, 223/255,0/255,1)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+    Button: ###Label:
+        text: "G"
+        font_size: 50
+        size_hint: .1 ,.1
+
+        background_normal: ''
+        background_color: (249/255, 104/255, 21/255,1)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+    Label:
+        text: "O"
+        font_size: 50
+        size_hint: .1,.1
+        background_color: (0/255, 255/255,51/255,1)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+# row 1
+    RoundedButton_B:
+        text: "B1"
+        font_size: 40
+        size_hint: .1,.1
+
+    RoundedButton_I:
+        text: "I1"
+        font_size: 40
+        size_hint: .1,.1
+
+    RoundedButton_N:
+        text: "N1"
+        font_size: 40
+        size_hint: .1,.1
+
+    RoundedButton_G:
+        text: "G1"
+        font_size: 40
+        size_hint: .1 ,.1
+
+    RoundedButton_O:
+        text: "O1"
+        font_size: 40
+        size_hint: .1,.1
+
+
+    RoundedButton_B:
+        text: "B1."
+        font_size: 40
+        size_hint: .1,.1
+
+    RoundedButton_I:
+        text: "I1."
+        font_size: 40
+        size_hint: .1 ,.1
+
+    RoundedButton_N:
+        text: "N1."
+        font_size: 40
+        size_hint: .1,.1
+
+    RoundedButton_G:
+        text: "G1."
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_O:
+        text: "O1."
+        font_size: 40
+        size_hint: .1,.1
+
+# row 2
+    RoundedButton_B:
+        text: "B2"
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_I:
+        text: "I2"
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_N:
+        text: "N2"
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_G:
+        text: "G2"
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_O:
+        text: "O2"
+        font_size: 40
+        size_hint: .1,.1
+
+
+    RoundedButton_B:
+        text: "B2."
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_I:
+        text: "I2."
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_N:
+        text: "N2."
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_G:
+        text: "G2."
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_O:
+        text: "O2."
+        font_size: 40
+        size_hint: .1,.1
+
+# row 3
+    RoundedButton_B:
+        text: "B3"
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_I:
+        text: "I3"
+        font_size: 40
+        size_hint: .1 ,.1
+
+    RoundedLabel_star:
+        text: " Free \nSpace"
+        font_size: 20
+        size_hint: .1,.1
+    RoundedButton_G:
+        text: "G3"
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_O:
+        text: "O3"
+        font_size: 40
+        size_hint: .1,.1
+
+
+    RoundedButton_B:
+        text: "B3."
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_I:
+        text: "I3."
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedLabel_star:
+        text: " Free \nSpace"
+        font_size: 20
+        size_hint: .1,.1
+    RoundedButton_G:
+        text: "G3."
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_O:
+        text: "O3."
+        font_size: 40
+        size_hint: .1,.1
+
+# row 4
+    RoundedButton_B:
+        text: "B4"
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_I:
+        text: "I4"
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_N:
+        text: "N4"
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_G:
+        text: "G4"
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_O:
+        text: "O4"
+        font_size: 40
+        size_hint: .1,.1
+
+
+    RoundedButton_B:
+        text: "B4."
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_I:
+        text: "I4."
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_N:
+        text: "N4."
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_G:
+        text: "G4."
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_O:
+        text: "O4."
+        font_size: 40
+        size_hint: .1,.1
+
+# row 5
+    RoundedButton_B:
+        text: "B5"
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_I:
+        text: "I5"
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_N:
+        text: "N5"
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_G:
+        text: "G5"
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_O:
+        text: "O5"
+        font_size: 40
+        size_hint: .1,.1
+
+
+    RoundedButton_B:
+        text: "B5."
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_I:
+        text: "I5."
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_N:
+        text: "N5."
+        font_size: 40
+        size_hint: .1,.1
+    RoundedButton_G:
+        text: "G5."
+        font_size: 40
+        size_hint: .1 ,.1
+    RoundedButton_O:
+        text: "O5."
+        font_size: 40
+        size_hint: .1,.1
+
+# main buttons
+    Button:
+        text: "New Card"
+        size_hint: .25,.1
+    Button:
+        text: "New game"
+        size_hint: .25 ,.1
+    Button:
+        text: "Start"
+        size_hint: .25,.1
+    Button:
+        text: "Pause/Play"
+        size_hint: .25 ,.1
+
+<RoundedButton_B@Button>
+    background_color: (0,0,0,0)
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: (0/255,204/255,255/255,1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius:[35]
+            #on_press:
+
+<RoundedButton_I@Button>
+    background_color: (0,0,0,0)
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: (255/255,0/255,0/255,1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius:[35]
+            #on_press:
+
+<RoundedButton_N@Button>
+    background_color: (0,0,0,0)
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: (226/255, 223/255,0/255,1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius:[35]
+            #on_press:
+
+<RoundedButton_G@Button>
+    background_color: (0,0,0,0)
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: (249/255, 104/255, 21/255,1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius:[35]
+            #on_press:
+
+<RoundedButton_O@Button>
+    background_color: (0,0,0,0)
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: (0/255, 255/255,51/255,1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius:[35]
+            #on_press:
+<RoundedLabel_star@Label>
+    background_color: (0,0,0,0)
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: (185/255, 0/255,255/255,1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius:[35]
