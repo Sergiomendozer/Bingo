@@ -2649,7 +2649,7 @@ def make_a_new_player_card():
     # game needs to be paused
     New_card.config(text="NEW called", bg="#FF0000", font=("Helvetica", 20))
     # calls function for row B maker
-
+    draw_B_numbers_row_1()
     draw_I_numbers_row_1()
     draw_N_numbers_row_1()
     draw_G_numbers_row_1()
@@ -2706,18 +2706,19 @@ def make_a_new_player_card():
 
 def make_a_new_bot_card():
     # .config(text="new bot", bg="#FF0000", font=("Helvetica", 20))
-    bot_draw_O_numbers_row_1()
-    bot_draw_O_numbers_row_2()
-    bot_draw_O_numbers_row_3()
-    bot_draw_O_numbers_row_4()
-    bot_draw_O_numbers_row_5()
+    bot_draw_B_numbers_row_1()
+    # bot_draw_I_numbers_row_1()
+    # bot_draw_N_numbers_row_1()
+    # bot_draw_G_numbers_row_1()
+    # bot_draw_O_numbers_row_1()
 
 
 def make_a_new_game():
     New_game.config(text="game new", bg="#FF0000", font=("Helvetica", 20))
     # call make_a_new_player_card()
     # call make_a_new_bot_card()
-    pass
+    make_a_new_player_card()
+    make_a_new_bot_card()
 
 
 def click_pause_play():
