@@ -363,6 +363,7 @@ G_bingo.grid(row=8, column=9, sticky="nsew")
 O_bingo_bot.grid(row=8, column=10, sticky="nsew")
 
 # Buttons Clicks all
+# player click buttons
 def click_row_1_B():
     # increase the click count
     click_row_1_B.click += 1
@@ -606,6 +607,11 @@ def click_row_5_O():
 
 click_row_5_O.click = 0
 click_row_5_O.colors = ["#00FF33", "#B900ff"]
+
+# Bot's click buttons
+###make comands
+###here
+
 
 # command buttons 4 bot
 # #  Bot card maker for B row:
@@ -978,7 +984,7 @@ click_row_5_O.colors = ["#00FF33", "#B900ff"]
 
 # draw_B_numbers_row_1()
 # empty string what will change
-#bot strings for cards empty
+# bot strings for cards empty
 bot_row_1_B_number = ""
 bot_row_2_B_number = ""
 bot_row_3_B_number = ""
@@ -1009,7 +1015,7 @@ bot_row_3_O_number = ""
 bot_row_4_O_number = ""
 bot_row_5_O_number = ""
 
-#player strings for cards empty
+# player strings for cards empty
 row_1_B_number = ""
 row_2_B_number = ""
 row_3_B_number = ""
@@ -1038,7 +1044,7 @@ row_1_O_number = ""
 row_2_O_number = ""
 row_3_O_number = ""
 row_4_O_number = ""
-row_5_O_number = 
+row_5_O_number = ""
 
 
 # row_1_B_number, numbers_for_B_list_out_1 = draw_B_numbers_row_1()
@@ -2031,7 +2037,6 @@ def draw_O_numbers_row_1():
     return draw_O_numbers_row_2(numbers_for_O_list_out_1)
 
 
-###MARK
 # Call functions that make player's card
 draw_B_numbers_row_1()
 draw_I_numbers_row_1()
@@ -2039,26 +2044,14 @@ draw_N_numbers_row_1()
 draw_G_numbers_row_1()
 draw_O_numbers_row_1()
 
-# function for BINGO_button:
-def reset_bingo_button():  # resets to original color
-    Bingo_button.config(
-        text="BINGO!", bg="#B900FF", command=click_BINGO, font=("Helvetica", 25)
-    )
-
-
-def click_BINGO():
-    Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
-    return Bingo_button.after(3000, reset_bingo_button)
-
 # Bot card maker:
-# Bot card maker for B row:
-###new
+# Bot card maker for B row: ###mark
 def bot_draw_B_numbers_row_5(bot_numbers_for_B_list_out_4):
     bot_row_5_B_number = random.choice(bot_numbers_for_B_list_out_4)
     # takes out drawing number from the list
     bot_take_out_of_list_B = bot_numbers_for_B_list_out_4.index(bot_row_5_B_number)
     bot_numbers_for_B_list_out_4.pop(bot_take_out_of_list_B)
-    return bot_row_5_B_number
+    return bot_row_5_B_number  ###delete
 
 
 def bot_draw_B_numbers_row_4(bot_numbers_for_B_list_out_3):
@@ -2067,7 +2060,7 @@ def bot_draw_B_numbers_row_4(bot_numbers_for_B_list_out_3):
     bot_take_out_of_list_B = bot_numbers_for_B_list_out_3.index(bot_row_4_B_number)
     bot_numbers_for_B_list_out_3.pop(bot_take_out_of_list_B)
     bot_numbers_for_B_list_out_4 = bot_numbers_for_B_list_out_3
-    return bot_row_4_B_number, bot_numbers_for_B_list_out_4
+    return bot_draw_B_numbers_row_5(bot_numbers_for_B_list_out_4)
 
 
 def bot_draw_B_numbers_row_3(bot_numbers_for_B_list_out_2):
@@ -2076,7 +2069,7 @@ def bot_draw_B_numbers_row_3(bot_numbers_for_B_list_out_2):
     bot_take_out_of_list_B = bot_numbers_for_B_list_out_2.index(bot_row_3_B_number)
     bot_numbers_for_B_list_out_2.pop(bot_take_out_of_list_B)
     bot_numbers_for_B_list_out_3 = bot_numbers_for_B_list_out_2
-    return bot_row_3_B_number, bot_numbers_for_B_list_out_3
+    return bot_draw_B_numbers_row_4(bot_numbers_for_B_list_out_3)
 
 
 def bot_draw_B_numbers_row_2(bot_numbers_for_B_list_out_1):
@@ -2085,7 +2078,7 @@ def bot_draw_B_numbers_row_2(bot_numbers_for_B_list_out_1):
     bot_take_out_of_list_B = bot_numbers_for_B_list_out_1.index(bot_row_2_B_number)
     bot_numbers_for_B_list_out_1.pop(bot_take_out_of_list_B)
     bot_numbers_for_B_list_out_2 = bot_numbers_for_B_list_out_1
-    return bot_row_2_B_number, bot_numbers_for_B_list_out_2
+    return bot_draw_B_numbers_row_3(bot_numbers_for_B_list_out_2)
 
 
 def bot_draw_B_numbers_row_1():
@@ -2099,20 +2092,14 @@ def bot_draw_B_numbers_row_1():
     take_out_of_list_B = bot_numbers_for_B_list.index(bot_row_1_B_number)
     bot_numbers_for_B_list.pop(take_out_of_list_B)
     bot_numbers_for_B_list_out_1 = bot_numbers_for_B_list
-    return bot_row_1_B_number, bot_numbers_for_B_list_out_1
+    B_bingo_row_1_bot.configure(
+        text=bot_row_1_B_number,
+        bg=click_row_1_B.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_1_B,
+    )
+    return bot_draw_B_numbers_row_2(bot_numbers_for_B_list_out_1)
 
-
-bot_row_1_B_number, bot_numbers_for_B_list_out_1 = bot_draw_B_numbers_row_1()
-bot_row_2_B_number, bot_numbers_for_B_list_out_2 = bot_draw_B_numbers_row_2(
-    bot_numbers_for_B_list_out_1
-)
-bot_row_3_B_number, bot_numbers_for_B_list_out_3 = bot_draw_B_numbers_row_3(
-    bot_numbers_for_B_list_out_2
-)
-bot_row_4_B_number, bot_numbers_for_B_list_out_4 = bot_draw_B_numbers_row_4(
-    bot_numbers_for_B_list_out_3
-)
-bot_row_5_B_number = bot_draw_B_numbers_row_5(bot_numbers_for_B_list_out_4)
 
 #  Bot card maker for I row:
 def bot_draw_I_numbers_row_5(bot_numbers_for_I_list_out_4):
@@ -2164,18 +2151,6 @@ def bot_draw_I_numbers_row_1():
     return bot_row_1_I_number, bot_numbers_for_I_list_out_1
 
 
-bot_row_1_I_number, bot_numbers_for_I_list_out_1 = bot_draw_I_numbers_row_1()
-bot_row_2_I_number, bot_numbers_for_I_list_out_2 = bot_draw_I_numbers_row_2(
-    bot_numbers_for_I_list_out_1
-)
-bot_row_3_I_number, bot_numbers_for_I_list_out_3 = bot_draw_I_numbers_row_3(
-    bot_numbers_for_I_list_out_2
-)
-bot_row_4_I_number, bot_numbers_for_I_list_out_4 = bot_draw_I_numbers_row_4(
-    bot_numbers_for_I_list_out_3
-)
-bot_row_5_I_number = bot_draw_I_numbers_row_5(bot_numbers_for_I_list_out_4)
-
 #  Bot card maker for N row:
 def bot_draw_N_numbers_row_5(bot_numbers_for_N_list_out_4):
     bot_row_5_N_number = random.choice(bot_numbers_for_N_list_out_4)
@@ -2225,18 +2200,6 @@ def bot_draw_N_numbers_row_1():
     bot_numbers_for_N_list_out_1 = bot_numbers_for_N_list
     return bot_row_1_N_number, bot_numbers_for_N_list_out_1
 
-
-bot_row_1_N_number, bot_numbers_for_N_list_out_1 = bot_draw_N_numbers_row_1()
-bot_row_2_N_number, bot_numbers_for_N_list_out_2 = bot_draw_N_numbers_row_2(
-    bot_numbers_for_N_list_out_1
-)
-bot_row_3_N_number, bot_numbers_for_N_list_out_3 = bot_draw_N_numbers_row_3(
-    bot_numbers_for_N_list_out_2
-)
-bot_row_4_N_number, bot_numbers_for_N_list_out_4 = bot_draw_N_numbers_row_4(
-    bot_numbers_for_N_list_out_3
-)
-bot_row_5_N_number = bot_draw_N_numbers_row_5(bot_numbers_for_N_list_out_4)
 
 #  Bot card maker for G row:
 def bot_draw_G_numbers_row_5(bot_numbers_for_G_list_out_4):
@@ -2288,18 +2251,6 @@ def bot_draw_G_numbers_row_1():
     return bot_row_1_G_number, bot_numbers_for_G_list_out_1
 
 
-bot_row_1_G_number, bot_numbers_for_G_list_out_1 = bot_draw_G_numbers_row_1()
-bot_row_2_G_number, bot_numbers_for_G_list_out_2 = bot_draw_G_numbers_row_2(
-    bot_numbers_for_G_list_out_1
-)
-bot_row_3_G_number, bot_numbers_for_G_list_out_3 = bot_draw_G_numbers_row_3(
-    bot_numbers_for_G_list_out_2
-)
-bot_row_4_G_number, bot_numbers_for_G_list_out_4 = bot_draw_G_numbers_row_4(
-    bot_numbers_for_G_list_out_3
-)
-bot_row_5_G_number = bot_draw_G_numbers_row_5(bot_numbers_for_G_list_out_4)
-
 # bot card maker row O
 def bot_draw_O_numbers_row_5(bot_numbers_for_O_list_out_4):
     bot_row_5_O_number = random.choice(bot_numbers_for_O_list_out_4)
@@ -2350,17 +2301,335 @@ def bot_draw_O_numbers_row_1():
     return bot_row_1_O_number, bot_numbers_for_O_list_out_1
 
 
-bot_row_1_O_number, bot_numbers_for_O_list_out_1 = bot_draw_O_numbers_row_1()
-bot_row_2_O_number, bot_numbers_for_O_list_out_2 = bot_draw_O_numbers_row_2(
-    bot_numbers_for_O_list_out_1
-)
-bot_row_3_O_number, bot_numbers_for_O_list_out_3 = bot_draw_O_numbers_row_3(
-    bot_numbers_for_O_list_out_2
-)
-bot_row_4_O_number, bot_numbers_for_O_list_out_4 = bot_draw_O_numbers_row_4(
-    bot_numbers_for_O_list_out_3
-)
-bot_row_5_O_number = bot_draw_O_numbers_row_5(bot_numbers_for_O_list_out_4)
+# Call functions that make bot's card
+bot_draw_O_numbers_row_1()
+# bot_draw_O_numbers_row_2()
+# bot_draw_O_numbers_row_3()
+# bot_draw_O_numbers_row_4()
+# bot_draw_O_numbers_row_5()
+
+# function for BINGO_button:
+def reset_bingo_button():  # resets to original color
+    Bingo_button.config(
+        text="BINGO!", bg="#B900FF", command=click_BINGO, font=("Helvetica", 25)
+    )
+
+
+def click_BINGO():
+    Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
+    return Bingo_button.after(3000, reset_bingo_button)
+
+
+# # Bot card maker:
+# # Bot card maker for B row:
+# def bot_draw_B_numbers_row_5(bot_numbers_for_B_list_out_4):
+#     bot_row_5_B_number = random.choice(bot_numbers_for_B_list_out_4)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_B = bot_numbers_for_B_list_out_4.index(bot_row_5_B_number)
+#     bot_numbers_for_B_list_out_4.pop(bot_take_out_of_list_B)
+#     return bot_row_5_B_number
+
+
+# def bot_draw_B_numbers_row_4(bot_numbers_for_B_list_out_3):
+#     bot_row_4_B_number = random.choice(bot_numbers_for_B_list_out_3)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_B = bot_numbers_for_B_list_out_3.index(bot_row_4_B_number)
+#     bot_numbers_for_B_list_out_3.pop(bot_take_out_of_list_B)
+#     bot_numbers_for_B_list_out_4 = bot_numbers_for_B_list_out_3
+#     return bot_row_4_B_number, bot_numbers_for_B_list_out_4
+
+
+# def bot_draw_B_numbers_row_3(bot_numbers_for_B_list_out_2):
+#     bot_row_3_B_number = random.choice(bot_numbers_for_B_list_out_2)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_B = bot_numbers_for_B_list_out_2.index(bot_row_3_B_number)
+#     bot_numbers_for_B_list_out_2.pop(bot_take_out_of_list_B)
+#     bot_numbers_for_B_list_out_3 = bot_numbers_for_B_list_out_2
+#     return bot_row_3_B_number, bot_numbers_for_B_list_out_3
+
+
+# def bot_draw_B_numbers_row_2(bot_numbers_for_B_list_out_1):
+#     bot_row_2_B_number = random.choice(bot_numbers_for_B_list_out_1)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_B = bot_numbers_for_B_list_out_1.index(bot_row_2_B_number)
+#     bot_numbers_for_B_list_out_1.pop(bot_take_out_of_list_B)
+#     bot_numbers_for_B_list_out_2 = bot_numbers_for_B_list_out_1
+#     return bot_row_2_B_number, bot_numbers_for_B_list_out_2
+
+
+# def bot_draw_B_numbers_row_1():
+#     bot_numbers_for_B_list = []
+#     bot_numbers_for_B_list_int = [i for i in range(1, 16)]
+#     for e in bot_numbers_for_B_list_int:
+#         e = str(e)
+#         bot_numbers_for_B_list.append(e)
+#     bot_row_1_B_number = random.choice(bot_numbers_for_B_list)
+#     # takes out drawing number from the list
+#     take_out_of_list_B = bot_numbers_for_B_list.index(bot_row_1_B_number)
+#     bot_numbers_for_B_list.pop(take_out_of_list_B)
+#     bot_numbers_for_B_list_out_1 = bot_numbers_for_B_list
+#     return bot_row_1_B_number, bot_numbers_for_B_list_out_1
+
+
+# bot_row_1_B_number, bot_numbers_for_B_list_out_1 = bot_draw_B_numbers_row_1()
+# bot_row_2_B_number, bot_numbers_for_B_list_out_2 = bot_draw_B_numbers_row_2(
+#     bot_numbers_for_B_list_out_1
+# )
+# bot_row_3_B_number, bot_numbers_for_B_list_out_3 = bot_draw_B_numbers_row_3(
+#     bot_numbers_for_B_list_out_2
+# )
+# bot_row_4_B_number, bot_numbers_for_B_list_out_4 = bot_draw_B_numbers_row_4(
+#     bot_numbers_for_B_list_out_3
+# )
+# bot_row_5_B_number = bot_draw_B_numbers_row_5(bot_numbers_for_B_list_out_4)
+
+# #  Bot card maker for I row:
+# def bot_draw_I_numbers_row_5(bot_numbers_for_I_list_out_4):
+#     bot_row_5_I_number = random.choice(bot_numbers_for_I_list_out_4)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_I = bot_numbers_for_I_list_out_4.index(bot_row_5_I_number)
+#     bot_numbers_for_I_list_out_4.pop(bot_take_out_of_list_I)
+#     return bot_row_5_I_number
+
+
+# def bot_draw_I_numbers_row_4(bot_numbers_for_I_list_out_3):
+#     bot_row_4_I_number = random.choice(bot_numbers_for_I_list_out_3)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_I = bot_numbers_for_I_list_out_3.index(bot_row_4_I_number)
+#     bot_numbers_for_I_list_out_3.pop(bot_take_out_of_list_I)
+#     bot_numbers_for_I_list_out_4 = bot_numbers_for_I_list_out_3
+#     return bot_row_4_I_number, bot_numbers_for_I_list_out_4
+
+
+# def bot_draw_I_numbers_row_3(bot_numbers_for_I_list_out_2):
+#     bot_row_3_I_number = random.choice(bot_numbers_for_I_list_out_2)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_I = bot_numbers_for_I_list_out_2.index(bot_row_3_I_number)
+#     bot_numbers_for_I_list_out_2.pop(bot_take_out_of_list_I)
+#     bot_numbers_for_I_list_out_3 = bot_numbers_for_I_list_out_2
+#     return bot_row_3_I_number, bot_numbers_for_I_list_out_3
+
+
+# def bot_draw_I_numbers_row_2(bot_numbers_for_I_list_out_1):
+#     bot_row_2_I_number = random.choice(bot_numbers_for_I_list_out_1)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_I = bot_numbers_for_I_list_out_1.index(bot_row_2_I_number)
+#     bot_numbers_for_I_list_out_1.pop(bot_take_out_of_list_I)
+#     bot_numbers_for_I_list_out_2 = bot_numbers_for_I_list_out_1
+#     return bot_row_2_I_number, bot_numbers_for_I_list_out_2
+
+
+# def bot_draw_I_numbers_row_1():
+#     bot_numbers_for_I_list = []
+#     bot_numbers_for_I_list_int = [i for i in range(16, 31)]
+#     for e in bot_numbers_for_I_list_int:
+#         e = str(e)
+#         bot_numbers_for_I_list.append(e)
+#     bot_row_1_I_number = random.choice(bot_numbers_for_I_list)
+#     # takes out drawing number from the list
+#     take_out_of_list_I = bot_numbers_for_I_list.index(bot_row_1_I_number)
+#     bot_numbers_for_I_list.pop(take_out_of_list_I)
+#     bot_numbers_for_I_list_out_1 = bot_numbers_for_I_list
+#     return bot_row_1_I_number, bot_numbers_for_I_list_out_1
+
+
+# bot_row_1_I_number, bot_numbers_for_I_list_out_1 = bot_draw_I_numbers_row_1()
+# bot_row_2_I_number, bot_numbers_for_I_list_out_2 = bot_draw_I_numbers_row_2(
+#     bot_numbers_for_I_list_out_1
+# )
+# bot_row_3_I_number, bot_numbers_for_I_list_out_3 = bot_draw_I_numbers_row_3(
+#     bot_numbers_for_I_list_out_2
+# )
+# bot_row_4_I_number, bot_numbers_for_I_list_out_4 = bot_draw_I_numbers_row_4(
+#     bot_numbers_for_I_list_out_3
+# )
+# bot_row_5_I_number = bot_draw_I_numbers_row_5(bot_numbers_for_I_list_out_4)
+
+# #  Bot card maker for N row:
+# def bot_draw_N_numbers_row_5(bot_numbers_for_N_list_out_4):
+#     bot_row_5_N_number = random.choice(bot_numbers_for_N_list_out_4)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_N = bot_numbers_for_N_list_out_4.index(bot_row_5_N_number)
+#     bot_numbers_for_N_list_out_4.pop(bot_take_out_of_list_N)
+#     return bot_row_5_N_number
+
+
+# def bot_draw_N_numbers_row_4(bot_numbers_for_N_list_out_3):
+#     bot_row_4_N_number = random.choice(bot_numbers_for_N_list_out_3)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_N = bot_numbers_for_N_list_out_3.index(bot_row_4_N_number)
+#     bot_numbers_for_N_list_out_3.pop(bot_take_out_of_list_N)
+#     bot_numbers_for_N_list_out_4 = bot_numbers_for_N_list_out_3
+#     return bot_row_4_N_number, bot_numbers_for_N_list_out_4
+
+
+# def bot_draw_N_numbers_row_3(bot_numbers_for_N_list_out_2):
+#     bot_row_3_N_number = random.choice(bot_numbers_for_N_list_out_2)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_N = bot_numbers_for_N_list_out_2.index(bot_row_3_N_number)
+#     bot_numbers_for_N_list_out_2.pop(bot_take_out_of_list_N)
+#     bot_numbers_for_N_list_out_3 = bot_numbers_for_N_list_out_2
+#     return bot_row_3_N_number, bot_numbers_for_N_list_out_3
+
+
+# def bot_draw_N_numbers_row_2(bot_numbers_for_N_list_out_1):
+#     bot_row_2_N_number = random.choice(bot_numbers_for_N_list_out_1)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_N = bot_numbers_for_N_list_out_1.index(bot_row_2_N_number)
+#     bot_numbers_for_N_list_out_1.pop(bot_take_out_of_list_N)
+#     bot_numbers_for_N_list_out_2 = bot_numbers_for_N_list_out_1
+#     return bot_row_2_N_number, bot_numbers_for_N_list_out_2
+
+
+# def bot_draw_N_numbers_row_1():
+#     bot_numbers_for_N_list = []
+#     bot_numbers_for_N_list_int = [i for i in range(31, 46)]
+#     for e in bot_numbers_for_N_list_int:
+#         e = str(e)
+#         bot_numbers_for_N_list.append(e)
+#     bot_row_1_N_number = random.choice(bot_numbers_for_N_list)
+#     # takes out drawing number from the list
+#     take_out_of_list_N = bot_numbers_for_N_list.index(bot_row_1_N_number)
+#     bot_numbers_for_N_list.pop(take_out_of_list_N)
+#     bot_numbers_for_N_list_out_1 = bot_numbers_for_N_list
+#     return bot_row_1_N_number, bot_numbers_for_N_list_out_1
+
+
+# bot_row_1_N_number, bot_numbers_for_N_list_out_1 = bot_draw_N_numbers_row_1()
+# bot_row_2_N_number, bot_numbers_for_N_list_out_2 = bot_draw_N_numbers_row_2(
+#     bot_numbers_for_N_list_out_1
+# )
+# bot_row_3_N_number, bot_numbers_for_N_list_out_3 = bot_draw_N_numbers_row_3(
+#     bot_numbers_for_N_list_out_2
+# )
+# bot_row_4_N_number, bot_numbers_for_N_list_out_4 = bot_draw_N_numbers_row_4(
+#     bot_numbers_for_N_list_out_3
+# )
+# bot_row_5_N_number = bot_draw_N_numbers_row_5(bot_numbers_for_N_list_out_4)
+
+# #  Bot card maker for G row:
+# def bot_draw_G_numbers_row_5(bot_numbers_for_G_list_out_4):
+#     bot_row_5_G_number = random.choice(bot_numbers_for_G_list_out_4)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_G = bot_numbers_for_G_list_out_4.index(bot_row_5_G_number)
+#     bot_numbers_for_G_list_out_4.pop(bot_take_out_of_list_G)
+#     return bot_row_5_G_number
+
+
+# def bot_draw_G_numbers_row_4(bot_numbers_for_G_list_out_3):
+#     bot_row_4_G_number = random.choice(bot_numbers_for_G_list_out_3)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_G = bot_numbers_for_G_list_out_3.index(bot_row_4_G_number)
+#     bot_numbers_for_G_list_out_3.pop(bot_take_out_of_list_G)
+#     bot_numbers_for_G_list_out_4 = bot_numbers_for_G_list_out_3
+#     return bot_row_4_G_number, bot_numbers_for_G_list_out_4
+
+
+# def bot_draw_G_numbers_row_3(bot_numbers_for_G_list_out_2):
+#     bot_row_3_G_number = random.choice(bot_numbers_for_G_list_out_2)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_G = bot_numbers_for_G_list_out_2.index(bot_row_3_G_number)
+#     bot_numbers_for_G_list_out_2.pop(bot_take_out_of_list_G)
+#     bot_numbers_for_G_list_out_3 = bot_numbers_for_G_list_out_2
+#     return bot_row_3_G_number, bot_numbers_for_G_list_out_3
+
+
+# def bot_draw_G_numbers_row_2(bot_numbers_for_G_list_out_1):
+#     bot_row_2_G_number = random.choice(bot_numbers_for_G_list_out_1)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_G = bot_numbers_for_G_list_out_1.index(bot_row_2_G_number)
+#     bot_numbers_for_G_list_out_1.pop(bot_take_out_of_list_G)
+#     bot_numbers_for_G_list_out_2 = bot_numbers_for_G_list_out_1
+#     return bot_row_2_G_number, bot_numbers_for_G_list_out_2
+
+
+# def bot_draw_G_numbers_row_1():
+#     bot_numbers_for_G_list = []
+#     bot_numbers_for_G_list_int = [i for i in range(46, 61)]
+#     for e in bot_numbers_for_G_list_int:
+#         e = str(e)
+#         bot_numbers_for_G_list.append(e)
+#     bot_row_1_G_number = random.choice(bot_numbers_for_G_list)
+#     # takes out drawing number from the list
+#     take_out_of_list_G = bot_numbers_for_G_list.index(bot_row_1_G_number)
+#     bot_numbers_for_G_list.pop(take_out_of_list_G)
+#     bot_numbers_for_G_list_out_1 = bot_numbers_for_G_list
+#     return bot_row_1_G_number, bot_numbers_for_G_list_out_1
+
+
+# bot_row_1_G_number, bot_numbers_for_G_list_out_1 = bot_draw_G_numbers_row_1()
+# bot_row_2_G_number, bot_numbers_for_G_list_out_2 = bot_draw_G_numbers_row_2(
+#     bot_numbers_for_G_list_out_1
+# )
+# bot_row_3_G_number, bot_numbers_for_G_list_out_3 = bot_draw_G_numbers_row_3(
+#     bot_numbers_for_G_list_out_2
+# )
+# bot_row_4_G_number, bot_numbers_for_G_list_out_4 = bot_draw_G_numbers_row_4(
+#     bot_numbers_for_G_list_out_3
+# )
+# bot_row_5_G_number = bot_draw_G_numbers_row_5(bot_numbers_for_G_list_out_4)
+
+# # bot card maker row O
+# def bot_draw_O_numbers_row_5(bot_numbers_for_O_list_out_4):
+#     bot_row_5_O_number = random.choice(bot_numbers_for_O_list_out_4)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_O = bot_numbers_for_O_list_out_4.index(bot_row_5_O_number)
+#     bot_numbers_for_O_list_out_4.pop(bot_take_out_of_list_O)
+#     return bot_row_5_O_number
+
+
+# def bot_draw_O_numbers_row_4(bot_numbers_for_O_list_out_3):
+#     bot_row_4_O_number = random.choice(bot_numbers_for_O_list_out_3)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_O = bot_numbers_for_O_list_out_3.index(bot_row_4_O_number)
+#     bot_numbers_for_O_list_out_3.pop(bot_take_out_of_list_O)
+#     bot_numbers_for_O_list_out_4 = bot_numbers_for_O_list_out_3
+#     return bot_row_4_O_number, bot_numbers_for_O_list_out_4
+
+
+# def bot_draw_O_numbers_row_3(bot_numbers_for_O_list_out_2):
+#     bot_row_3_O_number = random.choice(bot_numbers_for_O_list_out_2)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_O = bot_numbers_for_O_list_out_2.index(bot_row_3_O_number)
+#     bot_numbers_for_O_list_out_2.pop(bot_take_out_of_list_O)
+#     bot_numbers_for_O_list_out_3 = bot_numbers_for_O_list_out_2
+#     return bot_row_3_O_number, bot_numbers_for_O_list_out_3
+
+
+# def bot_draw_O_numbers_row_2(bot_numbers_for_O_list_out_1):
+#     bot_row_2_O_number = random.choice(bot_numbers_for_O_list_out_1)
+#     # takes out drawing number from the list
+#     bot_take_out_of_list_O = bot_numbers_for_O_list_out_1.index(bot_row_2_O_number)
+#     bot_numbers_for_O_list_out_1.pop(bot_take_out_of_list_O)
+#     bot_numbers_for_O_list_out_2 = bot_numbers_for_O_list_out_1
+#     return bot_row_2_O_number, bot_numbers_for_O_list_out_2
+
+
+# def bot_draw_O_numbers_row_1():
+#     bot_numbers_for_O_list = []
+#     bot_numbers_for_O_list_int = [i for i in range(61, 76)]
+#     for e in bot_numbers_for_O_list_int:
+#         e = str(e)
+#         bot_numbers_for_O_list.append(e)
+#     bot_row_1_O_number = random.choice(bot_numbers_for_O_list)
+#     # takes out drawing number from the list
+#     take_out_of_list_O = bot_numbers_for_O_list.index(bot_row_1_O_number)
+#     bot_numbers_for_O_list.pop(take_out_of_list_O)
+#     bot_numbers_for_O_list_out_1 = bot_numbers_for_O_list
+#     return bot_row_1_O_number, bot_numbers_for_O_list_out_1
+
+
+# bot_row_1_O_number, bot_numbers_for_O_list_out_1 = bot_draw_O_numbers_row_1()
+# bot_row_2_O_number, bot_numbers_for_O_list_out_2 = bot_draw_O_numbers_row_2(
+#     bot_numbers_for_O_list_out_1
+# )
+# bot_row_3_O_number, bot_numbers_for_O_list_out_3 = bot_draw_O_numbers_row_3(
+#     bot_numbers_for_O_list_out_2
+# )
+# bot_row_4_O_number, bot_numbers_for_O_list_out_4 = bot_draw_O_numbers_row_4(
+#     bot_numbers_for_O_list_out_3
+# )
+# bot_row_5_O_number = bot_draw_O_numbers_row_5(bot_numbers_for_O_list_out_4)
 
 
 ###NEW
@@ -2368,7 +2637,7 @@ def make_a_new_player_card():
     # game needs to be paused
     New_card.config(text="NEW called", bg="#FF0000", font=("Helvetica", 20))
     # calls function for row B maker
-    draw_B_numbers_row_1()
+
     draw_I_numbers_row_1()
     draw_N_numbers_row_1()
     draw_G_numbers_row_1()
@@ -2380,7 +2649,7 @@ def make_a_new_player_card():
     # row_3_B_number, numbers_for_B_list_out_3 = draw_B_numbers_row_3(
     #     numbers_for_B_list_out_2
     # )
-    # row_4_B_number, numbers_for_B_list_out_4 = draw_B_numbers_row_4(
+    # row_4_B_number, numbers_for_B_list_out_4 = draw_B_numbers_rdraw_B_numbers_row_1()ow_4(
     #     numbers_for_B_list_out_3
     # )
     # row_5_B_number = draw_B_numbers_row_5(numbers_for_B_list_out_4)
@@ -2425,7 +2694,11 @@ def make_a_new_player_card():
 
 def make_a_new_bot_card():
     # .config(text="new bot", bg="#FF0000", font=("Helvetica", 20))
-    pass
+    bot_draw_O_numbers_row_1()
+    bot_draw_O_numbers_row_2()
+    bot_draw_O_numbers_row_3()
+    bot_draw_O_numbers_row_4()
+    bot_draw_O_numbers_row_5()
 
 
 def make_a_new_game():
