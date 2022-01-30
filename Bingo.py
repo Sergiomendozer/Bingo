@@ -1765,159 +1765,246 @@ def draw_I_numbers_row_1():
 
 
 # player card maker for N row:
-# def draw_N_numbers_row_5(numbers_for_N_list_out_4):
-#     row_5_N_number = random.choice(numbers_for_N_list_out_4)
-#     # takes out drawing number from the list
-#     take_out_of_list_N = numbers_for_N_list_out_1.index(row_5_N_number)
-#     numbers_for_N_list_out_4.pop(take_out_of_list_N)
-#     return row_5_N_number
+def draw_N_numbers_row_5(numbers_for_N_list_out_4):
+    row_5_N_number = random.choice(numbers_for_N_list_out_4)
+    # takes out drawing number from the list
+    take_out_of_list_N = numbers_for_N_list_out_4.index(row_5_N_number)
+    numbers_for_N_list_out_4.pop(take_out_of_list_N)
+    N_bingo_row_5.configure(
+        text=row_5_N_number,
+        bg=click_row_5_N.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_5_N,
+    )
+    return row_5_N_number  ###delete
 
 
-# def draw_N_numbers_row_4(numbers_for_N_list_out_3):
-#     row_4_N_number = random.choice(numbers_for_N_list_out_3)
-#     # takes out drawing number from the list
-#     take_out_of_list_N = numbers_for_N_list_out_1.index(row_4_N_number)
-#     numbers_for_N_list_out_3.pop(take_out_of_list_N)
-#     numbers_for_I_list_out_4 = numbers_for_N_list_out_3
-#     return row_4_N_number, numbers_for_N_list_out_3
+def draw_N_numbers_row_4(numbers_for_N_list_out_3):
+    row_4_N_number = random.choice(numbers_for_N_list_out_3)
+    # takes out drawing number from the list
+    take_out_of_list_N = numbers_for_N_list_out_3.index(row_4_N_number)
+    numbers_for_N_list_out_3.pop(take_out_of_list_N)
+    numbers_for_N_list_out_4 = numbers_for_N_list_out_3
+    N_bingo_row_4.configure(
+        text=row_4_N_number,
+        bg=click_row_4_N.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_4_N,
+    )
+    return draw_N_numbers_row_5(numbers_for_N_list_out_4)
 
 
-# def draw_N_numbers_row_3(numbers_for_N_list_out_2):
-#     row_3_N_number = random.choice(numbers_for_N_list_out_2)
-#     # takes out drawing number from the list
-#     take_out_of_list_N = numbers_for_N_list_out_2.index(row_3_N_number)
-#     numbers_for_N_list_out_2.pop(take_out_of_list_N)
-#     numbers_for_N_list_out_3 = numbers_for_N_list_out_2
-#     return row_3_N_number, numbers_for_N_list_out_3
+def draw_N_numbers_row_3(numbers_for_N_list_out_2):
+    row_3_N_number = random.choice(numbers_for_N_list_out_2)
+    # takes out drawing number from the list
+    take_out_of_list_N = numbers_for_N_list_out_2.index(row_3_N_number)
+    numbers_for_N_list_out_2.pop(take_out_of_list_N)
+    numbers_for_N_list_out_3 = numbers_for_N_list_out_2
+    return draw_N_numbers_row_4(numbers_for_N_list_out_3)
 
 
-# def draw_N_numbers_row_2(numbers_for_N_list_out_1):
-#     row_2_N_number = random.choice(numbers_for_N_list_out_1)
-#     # takes out drawing number from the list
-#     take_out_of_list_I = numbers_for_N_list_out_1.index(row_2_N_number)
-#     numbers_for_N_list_out_1.pop(take_out_of_list_I)
-#     numbers_for_N_list_out_2 = numbers_for_N_list_out_1
-#     return row_2_N_number, numbers_for_N_list_out_2
+def draw_N_numbers_row_2(numbers_for_N_list_out_1):
+    row_2_N_number = random.choice(numbers_for_N_list_out_1)
+    # takes out drawing number from the list
+    take_out_of_list_I = numbers_for_N_list_out_1.index(row_2_N_number)
+    numbers_for_N_list_out_1.pop(take_out_of_list_I)
+    numbers_for_N_list_out_2 = numbers_for_N_list_out_1
+    N_bingo_row_2.configure(
+        text=row_2_N_number,
+        bg=click_row_2_N.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_2_N,
+    )
+    return draw_N_numbers_row_3(numbers_for_N_list_out_2)
 
 
-# def draw_N_numbers_row_1():
-#     numbers_for_N_list = []
-#     numbers_for_N_list_int = [i for i in range(31, 46)]
-#     for e in numbers_for_N_list_int:
-#         e = str(e)
-#         numbers_for_N_list.append(e)
-#     row_1_N_number = random.choice(numbers_for_N_list)
-#     # takes out drawing number from the list
-#     take_out_of_list_I = numbers_for_N_list.index(row_1_N_number)
-#     numbers_for_N_list.pop(take_out_of_list_I)
-#     numbers_for_I_list_out_1 = numbers_for_N_list
-#     return row_1_N_number, numbers_for_I_list_out_1
+def draw_N_numbers_row_1():
+    numbers_for_N_list = []
+    numbers_for_N_list_int = [i for i in range(31, 46)]
+    for e in numbers_for_N_list_int:
+        e = str(e)
+        numbers_for_N_list.append(e)
+    row_1_N_number = random.choice(numbers_for_N_list)
+    # takes out drawing number from the list
+    take_out_of_list_I = numbers_for_N_list.index(row_1_N_number)
+    numbers_for_N_list.pop(take_out_of_list_I)
+    numbers_for_N_list_out_1 = numbers_for_N_list
+    N_bingo_row_1.configure(
+        text=row_1_N_number,
+        bg=click_row_1_N.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_1_N,
+    )
+    return draw_N_numbers_row_2(numbers_for_N_list_out_1)
+
 
 # player card maker for G row:
-# def draw_G_numbers_row_5(numbers_for_G_list_out_4):
-#     row_5_G_number = random.choice(numbers_for_G_list_out_4)
-#     # takes out drawing number from the list
-#     take_out_of_list_G = numbers_for_G_list_out_1.index(row_5_G_number)
-#     numbers_for_G_list_out_4.pop(take_out_of_list_G)
-#     return row_5_G_number
+def draw_G_numbers_row_5(numbers_for_G_list_out_4):
+    row_5_G_number = random.choice(numbers_for_G_list_out_4)
+    # takes out drawing number from the list
+    take_out_of_list_G = numbers_for_G_list_out_4.index(row_5_G_number)
+    numbers_for_G_list_out_4.pop(take_out_of_list_G)
+    G_bingo_row_5.configure(
+        text=row_5_G_number,
+        bg=click_row_5_G.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_5_G,
+    )
+    return row_5_G_number  ### delete
 
 
-# def draw_G_numbers_row_4(numbers_for_G_list_out_3):
-#     row_4_G_number = random.choice(numbers_for_G_list_out_3)
-#     # takes out drawing number from the list
-#     take_out_of_list_G = numbers_for_G_list_out_1.index(row_4_G_number)
-#     numbers_for_G_list_out_3.pop(take_out_of_list_G)
-#     numbers_for_G_list_out_4 = numbers_for_G_list_out_3
-#     return row_4_G_number, numbers_for_G_list_out_3
+def draw_G_numbers_row_4(numbers_for_G_list_out_3):
+    row_4_G_number = random.choice(numbers_for_G_list_out_3)
+    # takes out drawing number from the list
+    take_out_of_list_G = numbers_for_G_list_out_3.index(row_4_G_number)
+    numbers_for_G_list_out_3.pop(take_out_of_list_G)
+    numbers_for_G_list_out_4 = numbers_for_G_list_out_3
+    G_bingo_row_4.configure(
+        text=row_4_G_number,
+        bg=click_row_4_G.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_4_G,
+    )
+    return draw_G_numbers_row_5(numbers_for_G_list_out_4)
 
 
-# def draw_G_numbers_row_3(numbers_for_G_list_out_2):
-#     row_3_G_number = random.choice(numbers_for_G_list_out_2)
-#     # takes out drawing number from the list
-#     take_out_of_list_G = numbers_for_G_list_out_2.index(row_3_G_number)
-#     numbers_for_G_list_out_2.pop(take_out_of_list_G)
-#     numbers_for_G_list_out_3 = numbers_for_G_list_out_2
-#     return row_3_G_number, numbers_for_G_list_out_3
+def draw_G_numbers_row_3(numbers_for_G_list_out_2):
+    row_3_G_number = random.choice(numbers_for_G_list_out_2)
+    # takes out drawing number from the list
+    take_out_of_list_G = numbers_for_G_list_out_2.index(row_3_G_number)
+    numbers_for_G_list_out_2.pop(take_out_of_list_G)
+    numbers_for_G_list_out_3 = numbers_for_G_list_out_2
+    G_bingo_row_3.configure(
+        text=row_3_G_number,
+        bg=click_row_3_G.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_3_G,
+    )
+    return draw_G_numbers_row_4(numbers_for_G_list_out_3)
 
 
-# def draw_G_numbers_row_2(numbers_for_G_list_out_1):
-#     row_2_G_number = random.choice(numbers_for_G_list_out_1)
-#     # takes out drawing number from the list
-#     take_out_of_list_G = numbers_for_G_list_out_1.index(row_2_G_number)
-#     numbers_for_G_list_out_1.pop(take_out_of_list_G)
-#     numbers_for_G_list_out_2 = numbers_for_G_list_out_1
-#     return row_2_G_number, numbers_for_G_list_out_2
+def draw_G_numbers_row_2(numbers_for_G_list_out_1):
+    row_2_G_number = random.choice(numbers_for_G_list_out_1)
+    # takes out drawing number from the list
+    take_out_of_list_G = numbers_for_G_list_out_1.index(row_2_G_number)
+    numbers_for_G_list_out_1.pop(take_out_of_list_G)
+    numbers_for_G_list_out_2 = numbers_for_G_list_out_1
+    G_bingo_row_2.configure(
+        text=row_2_G_number,
+        bg=click_row_2_G.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_2_G,
+    )
+    return draw_G_numbers_row_3(numbers_for_G_list_out_2)
 
 
-# def draw_G_numbers_row_1():
-#     numbers_for_G_list = []
-#     numbers_for_G_list_int = [i for i in range(46, 61)]
-#     for e in numbers_for_G_list_int:
-#         e = str(e)
-#         numbers_for_G_list.append(e)
-#     row_1_G_number = random.choice(numbers_for_G_list)
-#     # takes out drawing number from the list
-#     take_out_of_list_I = numbers_for_G_list.index(row_1_G_number)
-#     numbers_for_G_list.pop(take_out_of_list_I)
-#     numbers_for_I_list_out_1 = numbers_for_G_list
-#     return row_1_G_number, numbers_for_I_list_out_1
+def draw_G_numbers_row_1():
+    numbers_for_G_list = []
+    numbers_for_G_list_int = [i for i in range(46, 61)]
+    for e in numbers_for_G_list_int:
+        e = str(e)
+        numbers_for_G_list.append(e)
+    row_1_G_number = random.choice(numbers_for_G_list)
+    # takes out drawing number from the list
+    take_out_of_list_I = numbers_for_G_list.index(row_1_G_number)
+    numbers_for_G_list.pop(take_out_of_list_I)
+    numbers_for_G_list_out_1 = numbers_for_G_list
+    G_bingo_row_1.configure(
+        text=row_1_G_number,
+        bg=click_row_1_G.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_1_G,
+    )
+    return draw_G_numbers_row_2(numbers_for_G_list_out_1)
+
 
 # player card maker for O row:
-# def draw_O_numbers_row_5(numbers_for_O_list_out_4):
-#     row_5_O_number = random.choice(numbers_for_O_list_out_4)
-#     # takes out drawing number from the list
-#     take_out_of_list_O = numbers_for_O_list_out_1.index(row_5_O_number)
-#     numbers_for_O_list_out_4.pop(take_out_of_list_O)
-#     return row_5_O_number
+def draw_O_numbers_row_5(numbers_for_O_list_out_4):
+    row_5_O_number = random.choice(numbers_for_O_list_out_4)
+    # takes out drawing number from the list
+    take_out_of_list_O = numbers_for_O_list_out_4.index(row_5_O_number)
+    numbers_for_O_list_out_4.pop(take_out_of_list_O)
+    O_bingo_row_5.configure(
+        text=row_5_O_number,
+        bg=click_row_5_O.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_5_O,
+    )
+    return row_5_O_number
 
 
-# def draw_O_numbers_row_4(numbers_for_O_list_out_3):
-#     row_4_O_number = random.choice(numbers_for_O_list_out_3)
-#     # takes out drawing number from the list
-#     take_out_of_list_O = numbers_for_O_list_out_1.index(row_4_O_number)
-#     numbers_for_O_list_out_3.pop(take_out_of_list_O)
-#     numbers_for_O_list_out_4 = numbers_for_O_list_out_3
-#     return row_4_O_number, numbers_for_O_list_out_3
+def draw_O_numbers_row_4(numbers_for_O_list_out_3):
+    row_4_O_number = random.choice(numbers_for_O_list_out_3)
+    # takes out drawing number from the list
+    take_out_of_list_O = numbers_for_O_list_out_3.index(row_4_O_number)
+    numbers_for_O_list_out_3.pop(take_out_of_list_O)
+    numbers_for_O_list_out_4 = numbers_for_O_list_out_3
+    O_bingo_row_4.configure(
+        text=row_4_O_number,
+        bg=click_row_4_O.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_4_O,
+    )
+    return draw_O_numbers_row_5(numbers_for_O_list_out_4)
 
 
-# def draw_O_numbers_row_3(numbers_for_O_list_out_2):
-#     row_3_O_number = random.choice(numbers_for_O_list_out_2)
-#     # takes out drawing number from the list
-#     take_out_of_list_O = numbers_for_O_list_out_2.index(row_3_O_number)
-#     numbers_for_O_list_out_2.pop(take_out_of_list_O)
-#     numbers_for_O_list_out_3 = numbers_for_O_list_out_2
-#     return row_3_O_number, numbers_for_O_list_out_3
+def draw_O_numbers_row_3(numbers_for_O_list_out_2):
+    row_3_O_number = random.choice(numbers_for_O_list_out_2)
+    # takes out drawing number from the list
+    take_out_of_list_O = numbers_for_O_list_out_2.index(row_3_O_number)
+    numbers_for_O_list_out_2.pop(take_out_of_list_O)
+    numbers_for_O_list_out_3 = numbers_for_O_list_out_2
+    O_bingo_row_3.configure(
+        text=row_3_O_number,
+        bg=click_row_3_O.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_3_O,
+    )
+    return draw_O_numbers_row_4(numbers_for_O_list_out_3)
 
 
-# def draw_O_numbers_row_2(numbers_for_O_list_out_1):
-#     row_2_O_number = random.choice(numbers_for_O_list_out_1)
-#     # takes out drawing number from the list
-#     take_out_of_list_O = numbers_for_O_list_out_1.index(row_2_O_number)
-#     numbers_for_O_list_out_1.pop(take_out_of_list_O)
-#     numbers_for_O_list_out_2 = numbers_for_O_list_out_1
-#     return row_2_O_number, numbers_for_O_list_out_2
+def draw_O_numbers_row_2(numbers_for_O_list_out_1):
+    row_2_O_number = random.choice(numbers_for_O_list_out_1)
+    # takes out drawing number from the list
+    take_out_of_list_O = numbers_for_O_list_out_1.index(row_2_O_number)
+    numbers_for_O_list_out_1.pop(take_out_of_list_O)
+    numbers_for_O_list_out_2 = numbers_for_O_list_out_1
+    O_bingo_row_2.configure(
+        text=row_2_O_number,
+        bg=click_row_2_O.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_2_O,
+    )
+    return draw_O_numbers_row_3(numbers_for_O_list_out_2)
 
 
-# def draw_O_numbers_row_1():
-#     numbers_for_O_list = []
-#     numbers_for_O_list_int = [i for i in range(61, 76)]
-#     for e in numbers_for_O_list_int:
-#         e = str(e)
-#         numbers_for_O_list.append(e)
-#     row_1_O_number = random.choice(numbers_for_O_list)
-#     # takes out drawing number from the list
-#     take_out_of_list_O = numbers_for_O_list.index(row_1_O_number)
-#     numbers_for_O_list.pop(take_out_of_list_O)
-#     numbers_for_O_list_out_1 = numbers_for_O_list
-#     return row_1_O_number, numbers_for_O_list_out_1
+def draw_O_numbers_row_1():
+    numbers_for_O_list = []
+    numbers_for_O_list_int = [i for i in range(61, 76)]
+    for e in numbers_for_O_list_int:
+        e = str(e)
+        numbers_for_O_list.append(e)
+    row_1_O_number = random.choice(numbers_for_O_list)
+    # takes out drawing number from the list
+    take_out_of_list_O = numbers_for_O_list.index(row_1_O_number)
+    numbers_for_O_list.pop(take_out_of_list_O)
+    numbers_for_O_list_out_1 = numbers_for_O_list
+    O_bingo_row_1.configure(
+        text=row_1_O_number,
+        bg=click_row_1_O.colors[0],
+        font=("Helvetica", 20),
+        command=click_row_1_O,
+    )
+    return draw_O_numbers_row_2(numbers_for_O_list_out_1)
+
 
 ###MARK
 # Call functions that make player's card
 draw_B_numbers_row_1()
 draw_I_numbers_row_1()
-# draw_N_numbers_row_1()
-# draw_G_numbers_row_1()
-# draw_O_numbers_row_1()
+draw_N_numbers_row_1()
+draw_G_numbers_row_1()
+draw_O_numbers_row_1()
 
 # function for BINGO_button:
 def reset_bingo_button():  # resets to original color
@@ -1938,6 +2025,9 @@ def make_a_new_player_card():
     # calls function for row B maker
     draw_B_numbers_row_1()
     draw_I_numbers_row_1()
+    draw_N_numbers_row_1()
+    draw_G_numbers_row_1()
+    draw_O_numbers_row_1()
     # row_1_B_number, numbers_for_B_list_out_1 = draw_B_numbers_row_1()
     # row_2_B_number, numbers_for_B_list_out_2 = draw_B_numbers_row_2(
     #     numbers_for_B_list_out_1
