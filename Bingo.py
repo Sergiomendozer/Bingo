@@ -1787,8 +1787,8 @@ New_card = Button(
 New_game = Button(
     root, text="New Game", bg="#FF4646", command=make_a_new_game, font=("Helvetica", 20)
 )
-pause = Button(root, text="Pause", bg="#96FF50", font=("Helvetica", 20))
-play = Button(root, text="Play", bg="#96FF50", font=("Helvetica", 20))
+pause = Button(root, text="Pause", bg="#FF0000", font=("Helvetica", 20))
+play = Button(root, text="Play", bg="#2AFF00", font=("Helvetica", 20))
 # command=click_pause_play,
 
 # last row positions # columnspan = 5
@@ -1796,7 +1796,7 @@ Bingo_button.grid(row=14, column=1, columnspan=3, sticky="nsew")
 blank.grid(row=14, column=4, columnspan=1, sticky="nsew")
 New_card.grid(row=14, column=5, columnspan=2, sticky="nsew")
 New_game.grid(row=14, column=7, columnspan=2, sticky="nsew")
-pause.grid(row=14, column=9, columnspan=1, sticky="nsew")
-play.grid(row=14, column=10, columnspan=1, sticky="nsew")
+pause.grid(row=14, column=10, columnspan=1, sticky="nsew")
+play.grid(row=14, column=9, columnspan=1, sticky="nsew")
 
 root.mainloop()
