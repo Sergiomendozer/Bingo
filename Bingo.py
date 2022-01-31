@@ -306,11 +306,11 @@ update_drawn_ball(
 )
 
 flag = True
-holder_for_time = 6
+holder_for_time = 5
 # timer for next ball
 def update_timer_countdown(n):  ###mark
     global flag
-    if flag == True and n != "1":
+    if flag == True and n != "0":
         n = str(n)
         timer.config(
             text="Next draw in:" + n + "s",
@@ -321,12 +321,14 @@ def update_timer_countdown(n):  ###mark
         )
         n = int(n)
         n -= 1
+        n = str(n)
         return timer.after(1000, update_timer_countdown, n)
-    elif flag == True and n == "1":
+    elif flag == True and n == "0":
         return update_timer_countdown(6)
     elif flag == False:
         global holder_for_time
         holder_for_time = n
+        print(holder_for_time)
 
 
 timer = Label(
@@ -1788,9 +1790,6 @@ def play():
     global flag
     global holder_for_time
     flag = True
-    holder_for_time = int(holder_for_time) + int(
-        1
-    )  ### may be ness to number does not -1 right away
     update_timer_countdown(holder_for_time)
 
 
