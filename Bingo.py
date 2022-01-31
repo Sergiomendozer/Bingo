@@ -167,6 +167,7 @@ def bingo_ball_color(
 bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 
 # drawing ball update label
+###mark add flag function
 def update_drawn_ball(
     bingo_numbers,
     B_list_drawn_str,
@@ -306,7 +307,7 @@ update_drawn_ball(
 )
 
 flag = True
-holder_for_time = 5
+holder_for_time = 10
 # timer for next ball
 def update_timer_countdown(n):  ###mark
     global flag
@@ -324,7 +325,7 @@ def update_timer_countdown(n):  ###mark
         n = str(n)
         return timer.after(1000, update_timer_countdown, n)
     elif flag == True and n == "0":
-        return update_timer_countdown(6)
+        return update_timer_countdown(5)
     elif flag == False:
         global holder_for_time
         holder_for_time = n
@@ -1789,8 +1790,11 @@ def make_a_new_game():
 def play():
     global flag
     global holder_for_time
-    flag = True
-    update_timer_countdown(holder_for_time)
+    if holder_for_time == 10:
+        return
+    else:
+        flag = True
+        update_timer_countdown(holder_for_time)
 
 
 def pause():
