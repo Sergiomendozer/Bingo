@@ -715,19 +715,19 @@ G_bingo_row_1.grid(row=9, column=4, sticky="nsew")
 O_bingo_row_1.grid(row=9, column=5, sticky="nsew")
 
 # Bots's BINGO row 1
-B_bingo_row_1_bot = Button(
+B_bingo_row_1_bot = Label(
     root, text=bot_row_1_B_number, bg="#00CCFF", font=("Helvetica", 20)
 )
-I_bingo_row_1_bot = Button(
+I_bingo_row_1_bot = Label(
     root, text=bot_row_1_I_number, bg="#FF0000", font=("Helvetica", 20)
 )
-N_bingo_row_1_bot = Button(
+N_bingo_row_1_bot = Label(
     root, text=bot_row_1_N_number, bg="#E2DF00", font=("Helvetica", 20)
 )
-G_bingo_row_1_bot = Button(
+G_bingo_row_1_bot = Label(
     root, text=bot_row_1_G_number, bg="#F96815", font=("Helvetica", 20)
 )
-O_bingo_row_1_bot = Button(
+O_bingo_row_1_bot = Label(
     root, text=bot_row_1_O_number, bg="#00FF33", font=("Helvetica", 20)
 )
 # Bots's BINGO row 1 positions
@@ -781,19 +781,19 @@ G_bingo_row_2.grid(row=10, column=4, sticky="nsew")
 O_bingo_row_2.grid(row=10, column=5, sticky="nsew")
 
 # Bots's BINGO row 2
-B_bingo_row_2_bot = Button(
+B_bingo_row_2_bot = Label(
     root, text=bot_row_2_B_number, bg="#00CCFF", font=("Helvetica", 20)
 )
-I_bingo_row_2_bot = Button(
+I_bingo_row_2_bot = Label(
     root, text=bot_row_2_I_number, bg="#FF0000", font=("Helvetica", 20)
 )
-N_bingo_row_2_bot = Button(
+N_bingo_row_2_bot = Label(
     root, text=bot_row_2_N_number, bg="#E2DF00", font=("Helvetica", 20)
 )
-G_bingo_row_2_bot = Button(
+G_bingo_row_2_bot = Label(
     root, text=bot_row_2_G_number, bg="#F96815", font=("Helvetica", 20)
 )
-O_bingo_row_2_bot = Button(
+O_bingo_row_2_bot = Label(
     root, text=bot_row_2_O_number, bg="#00FF33", font=("Helvetica", 20)
 )
 # Bots's BINGO row 2 positions
@@ -850,17 +850,17 @@ G_bingo_row_3.grid(row=11, column=4, sticky="nsew")
 O_bingo_row_3.grid(row=11, column=5, sticky="nsew")
 
 # Bots's BINGO row 3
-B_bingo_row_3_bot = Button(
+B_bingo_row_3_bot = Label(
     root, text=bot_row_3_B_number, bg="#00CCFF", font=("Helvetica", 20)
 )
-I_bingo_row_3_bot = Button(
+I_bingo_row_3_bot = Label(
     root, text=bot_row_3_I_number, bg="#FF0000", font=("Helvetica", 20)
 )
 N_bingo = Label(root, image=star)  # FREE SPACE
-G_bingo_row_3_bot = Button(
+G_bingo_row_3_bot = Label(
     root, text=bot_row_3_G_number, bg="#F96815", font=("Helvetica", 20)
 )
-O_bingo_row_3_bot = Button(
+O_bingo_row_3_bot = Label(
     root, text=bot_row_3_O_number, bg="#00FF33", font=("Helvetica", 20)
 )
 # Bots's BINGO row 3 positions
@@ -915,19 +915,19 @@ G_bingo_row_4.grid(row=12, column=4, sticky="nsew")
 O_bingo_row_4.grid(row=12, column=5, sticky="nsew")
 
 # Bots's BINGO row 4
-B_bingo_row_4_bot = Button(
+B_bingo_row_4_bot = Label(
     root, text=bot_row_4_B_number, bg="#00CCFF", font=("Helvetica", 20)
 )
-I_bingo_row_4_bot = Button(
+I_bingo_row_4_bot = Label(
     root, text=bot_row_4_I_number, bg="#FF0000", font=("Helvetica", 20)
 )
-N_bingo_row_4_bot = Button(
+N_bingo_row_4_bot = Label(
     root, text=bot_row_4_N_number, bg="#E2DF00", font=("Helvetica", 20)
 )
-G_bingo_row_4_bot = Button(
+G_bingo_row_4_bot = Label(
     root, text=bot_row_4_G_number, bg="#F96815", font=("Helvetica", 20)
 )
-O_bingo_row_4_bot = Button(
+O_bingo_row_4_bot = Label(
     root, text=bot_row_4_O_number, bg="#00FF33", font=("Helvetica", 20)
 )
 # Bots's BINGO row 4 positions
@@ -981,19 +981,19 @@ G_bingo_row_5.grid(row=13, column=4, sticky="nsew")
 O_bingo_row_5.grid(row=13, column=5, sticky="nsew")
 
 # Bots's BINGO row 5
-B_bingo_row_5_bot = Button(
+B_bingo_row_5_bot = Label(
     root, text=bot_row_5_B_number, bg="#00CCFF", font=("Helvetica", 20)
 )
-I_bingo_row_5_bot = Button(
+I_bingo_row_5_bot = Label(
     root, text=bot_row_5_I_number, bg="#FF0000", font=("Helvetica", 20)
 )
-N_bingo_row_5_bot = Button(
+N_bingo_row_5_bot = Label(
     root, text=bot_row_5_N_number, bg="#E2DF00", font=("Helvetica", 20)
 )
-G_bingo_row_5_bot = Button(
+G_bingo_row_5_bot = Label(
     root, text=bot_row_5_G_number, bg="#F96815", font=("Helvetica", 20)
 )
-O_bingo_row_5_bot = Button(
+O_bingo_row_5_bot = Label(
     root, text=bot_row_5_O_number, bg="#00FF33", font=("Helvetica", 20)
 )
 # Bots's BINGO row 5 positions
