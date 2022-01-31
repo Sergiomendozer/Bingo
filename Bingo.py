@@ -1777,7 +1777,8 @@ def make_a_new_game():
 def play():
     global flag
     flag = True
-    update_timer_countdown(6)
+    # holder_for_time =+1 ### may be ness to number does not -1 right away
+    update_timer_countdown(holder_for_time)
 
 
 def pause():

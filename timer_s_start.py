@@ -14,7 +14,7 @@ def countdown():
     if temp >= 0 and not flag:
         root.after(
             1000, countdown
-        )  # This is where the function is called again. Time is in mili-seconds
+        )  # This is where the function is called again. Time is in milseconds
 
 
 def stop_timer():
