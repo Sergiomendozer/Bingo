@@ -311,24 +311,34 @@ holder_for_time = 6
 def update_timer_countdown(n):  ###mark
     global flag
     if flag == True and n != "1":
-        n = int(n)
-        n -= 1
         n = str(n)
         timer.config(
-            text="Next draw in:" + n + "s", padx=5, pady=45, font=("Helvetica", 17)
+            text="Next draw in:" + n + "s",
+            bg="#FFFFFF",
+            padx=5,
+            pady=45,
+            font=("Helvetica", 17),
         )
+        n = int(n)
+        n -= 1
         return timer.after(1000, update_timer_countdown, n)
     elif flag == True and n == "1":
         return update_timer_countdown(6)
     elif flag == False:
         global holder_for_time
         holder_for_time = n
-        print(holder_for_time)  ### tests
 
 
-timer = Label(root, text="Next draw in:" + "s", padx=5, pady=45, font=("Helvetica", 17))
+timer = Label(
+    root,
+    text="Next draw in:" + "s",
+    bg="#FFFFFF",
+    padx=5,
+    pady=45,
+    font=("Helvetica", 17),
+)
 timer.grid(row=1, column=1, columnspan=2, rowspan=5, sticky="nsew")
-update_timer_countdown(6)
+update_timer_countdown(5)
 
 # ROW 2
 your_card_Label = Label(
@@ -1781,7 +1791,6 @@ def play():
     holder_for_time = int(holder_for_time) + int(
         1
     )  ### may be ness to number does not -1 right away
-    print(holder_for_time)
     update_timer_countdown(holder_for_time)
 
 
