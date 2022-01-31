@@ -1767,10 +1767,13 @@ def make_a_new_game():
     make_a_new_bot_card()
 
 
-# def click_pause_play():
+def play():
+    pass
 
 
-###mark
+def pause():
+    pass
+
 
 # last row
 Bingo_button = Button(
@@ -1780,16 +1783,15 @@ blank = Label(root, bg="#737373")
 New_card = Button(
     root,
     text="New Card",
-    bg="#29EFD1",
+    bg="#FFFB00",
     command=make_a_new_player_card,
     font=("Helvetica", 20),
 )
 New_game = Button(
-    root, text="New Game", bg="#FF4646", command=make_a_new_game, font=("Helvetica", 20)
+    root, text="New Game", bg="#29EFD1", command=make_a_new_game, font=("Helvetica", 20)
 )
-pause = Button(root, text="Pause", bg="#FF0000", font=("Helvetica", 20))
-play = Button(root, text="Play", bg="#2AFF00", font=("Helvetica", 20))
-# command=click_pause_play,
+pause = Button(root, text="Pause", bg="#FF0000", font=("Helvetica", 20), command=pause)
+play = Button(root, text="Play", bg="#2AFF00", font=("Helvetica", 20), command=play)
 
 # last row positions # columnspan = 5
 Bingo_button.grid(row=14, column=1, columnspan=3, sticky="nsew")
