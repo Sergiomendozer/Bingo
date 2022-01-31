@@ -323,6 +323,7 @@ def update_timer_countdown(n):  ###mark
     elif flag == False:
         global holder_for_time
         holder_for_time = n
+        print(holder_for_time)  ### tests
 
 
 timer = Label(root, text="Next draw in:" + "s", padx=5, pady=45, font=("Helvetica", 17))
@@ -1776,15 +1777,13 @@ def make_a_new_game():
 def play():
     global flag
     flag = True
-
-    pass
+    update_timer_countdown(6)
 
 
 def pause():
     global flag
     flag = False
     timer.config(text="Game paused", padx=5, pady=45, font=("Helvetica", 17))
-    pass
 
 
 # last row
