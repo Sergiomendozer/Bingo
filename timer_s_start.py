@@ -3,7 +3,7 @@ import tkinter as tk
 root = tk.Tk()
 time_var = tk.StringVar(root, value=10)
 
-flag = False
+flag = True
 
 
 def countdown():
@@ -14,7 +14,7 @@ def countdown():
     if temp >= 0 and not flag:
         root.after(
             1000, countdown
-        )  # This is where the function is called again. Time is in miliseconds
+        )  # This is where the function is called again. Time is in mili-seconds
 
 
 def stop_timer():

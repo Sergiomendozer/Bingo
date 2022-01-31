@@ -306,21 +306,6 @@ update_drawn_ball(
 )
 
 
-def click_pause_play():
-    # increase the click count
-    # time.sleep(86400)
-    # global count_pause_play
-    # count_pause_play += 1
-    # if click_pause_play % 2 == 0:
-    #     global pause
-    #     pause = 86400
-    # else:
-    #     global pause
-    #     pause = 0
-
-
-# count_pause_play = 1
-
 # timer for next ball
 def update_timer_countdown(n):  ###mark
     if n != "1":
@@ -330,14 +315,10 @@ def update_timer_countdown(n):  ###mark
         timer.config(
             text="Next draw in:" + n + "s", padx=5, pady=45, font=("Helvetica", 17)
         )
-        global pause
-        time.sleep(pause)
         return timer.after(1000, update_timer_countdown, n)
     else:
         return update_timer_countdown(6)
 
-
-pause = 0
 
 timer = Label(root, text="Next draw in:" + "s", padx=5, pady=45, font=("Helvetica", 17))
 timer.grid(row=1, column=1, columnspan=2, rowspan=5, sticky="nsew")
@@ -1787,37 +1768,6 @@ def make_a_new_game():
 
 
 # def click_pause_play():
-#     pause_play.config(text="paused!!!", bg="#FF0000", font=("Helvetica", 20))
-#     global pause
-#     pause = 86400
-
-
-# def click_pause_play():
-#     # increase the click count
-#     global count_pause_play
-#     count_pause_play += 1
-#     if click_pause_play % 2 == 0:
-#         global pause
-#         pause = 86400
-#     else:
-#         global pause
-#         pause = 0
-
-
-# count_pause_play = 1
-# click_pause_play.click.int = [86400, 0]
-
-# def click_row_1_B():
-#     # increase the click count
-#     click_row_1_B.click += 1
-#     # lengths of color list
-#     colorLen = len(click_row_1_B.colors)
-#     # set background to "click % colorLen" index in color list
-#     B_bingo_row_1.config(bg=click_row_1_B.colors[click_row_1_B.click % colorLen])
-# # put properties on the function - do it before you use them (avoid NameError)
-# # colors will be cycled in order with each click, wrapping around
-# click_row_1_B.click = 0
-# click_row_1_B.colors = ["#00ccff", "#B900ff"]
 
 
 ###mark
@@ -1837,20 +1787,16 @@ New_card = Button(
 New_game = Button(
     root, text="New Game", bg="#FF4646", command=make_a_new_game, font=("Helvetica", 20)
 )
-pause_play = Button(
-    root,
-    text="Pause/Play",
-    bg="#96FF50",
-    command=click_pause_play,
-    font=("Helvetica", 20),
-)
+pause = Button(root, text="Pause", bg="#96FF50", font=("Helvetica", 20))
+play = Button(root, text="Play", bg="#96FF50", font=("Helvetica", 20))
+# command=click_pause_play,
 
 # last row positions # columnspan = 5
 Bingo_button.grid(row=14, column=1, columnspan=3, sticky="nsew")
 blank.grid(row=14, column=4, columnspan=1, sticky="nsew")
 New_card.grid(row=14, column=5, columnspan=2, sticky="nsew")
 New_game.grid(row=14, column=7, columnspan=2, sticky="nsew")
-pause_play.grid(row=14, column=9, columnspan=2, sticky="nsew")
-
+pause.grid(row=14, column=9, columnspan=1, sticky="nsew")
+play.grid(row=14, column=10, columnspan=1, sticky="nsew")
 
 root.mainloop()
