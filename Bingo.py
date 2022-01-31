@@ -1776,15 +1776,21 @@ def make_a_new_game():
 ###mark
 def play():
     global flag
+    global holder_for_time
     flag = True
-    # holder_for_time =+1 ### may be ness to number does not -1 right away
+    holder_for_time = int(holder_for_time) + int(
+        1
+    )  ### may be ness to number does not -1 right away
+    print(holder_for_time)
     update_timer_countdown(holder_for_time)
 
 
 def pause():
     global flag
     flag = False
-    timer.config(text="Game paused", padx=5, pady=45, font=("Helvetica", 17))
+    timer.config(
+        text="Game paused", bg="#FF0000", padx=5, pady=45, font=("Helvetica", 17)
+    )
 
 
 # last row
