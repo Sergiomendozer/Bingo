@@ -305,7 +305,7 @@ update_drawn_ball(
     O_list_drawn_str,
 )
 
-
+flag = True
 # timer for next ball
 def update_timer_countdown(n):  ###mark
     if n != "1":
@@ -1767,11 +1767,18 @@ def make_a_new_game():
     make_a_new_bot_card()
 
 
+###mark
 def play():
+    global flag
+    flag = True
+
     pass
 
 
 def pause():
+    global flag
+    flag = False
+    timer.config(text="Game paused", padx=5, pady=45, font=("Helvetica", 17))
     pass
 
 
