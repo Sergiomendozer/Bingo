@@ -305,8 +305,24 @@ update_drawn_ball(
     O_list_drawn_str,
 )
 
+
+def click_pause_play():
+    # increase the click count
+    # time.sleep(86400)
+    # global count_pause_play
+    # count_pause_play += 1
+    # if click_pause_play % 2 == 0:
+    #     global pause
+    #     pause = 86400
+    # else:
+    #     global pause
+    #     pause = 0
+
+
+# count_pause_play = 1
+
 # timer for next ball
-def update_timer_countdown(n):
+def update_timer_countdown(n):  ###mark
     if n != "1":
         n = int(n)
         n -= 1
@@ -314,10 +330,14 @@ def update_timer_countdown(n):
         timer.config(
             text="Next draw in:" + n + "s", padx=5, pady=45, font=("Helvetica", 17)
         )
+        global pause
+        time.sleep(pause)
         return timer.after(1000, update_timer_countdown, n)
     else:
         return update_timer_countdown(6)
 
+
+pause = 0
 
 timer = Label(root, text="Next draw in:" + "s", padx=5, pady=45, font=("Helvetica", 17))
 timer.grid(row=1, column=1, columnspan=2, rowspan=5, sticky="nsew")
@@ -1402,7 +1422,7 @@ draw_G_numbers_row_1()
 draw_O_numbers_row_1()
 
 # Bot card maker:
-# Bot card maker for B row: ###mark
+# Bot card maker for B row:
 def bot_draw_B_numbers_row_5(bot_numbers_for_B_list_out_4):
     bot_row_5_B_number = random.choice(bot_numbers_for_B_list_out_4)
     # takes out drawing number from the list
@@ -1766,11 +1786,41 @@ def make_a_new_game():
     make_a_new_bot_card()
 
 
-def click_pause_play():
-    pause_play.config(text="paused!!!", bg="#FF0000", font=("Helvetica", 20))
-    # stops timer and stops draws
-    pass
+# def click_pause_play():
+#     pause_play.config(text="paused!!!", bg="#FF0000", font=("Helvetica", 20))
+#     global pause
+#     pause = 86400
 
+
+# def click_pause_play():
+#     # increase the click count
+#     global count_pause_play
+#     count_pause_play += 1
+#     if click_pause_play % 2 == 0:
+#         global pause
+#         pause = 86400
+#     else:
+#         global pause
+#         pause = 0
+
+
+# count_pause_play = 1
+# click_pause_play.click.int = [86400, 0]
+
+# def click_row_1_B():
+#     # increase the click count
+#     click_row_1_B.click += 1
+#     # lengths of color list
+#     colorLen = len(click_row_1_B.colors)
+#     # set background to "click % colorLen" index in color list
+#     B_bingo_row_1.config(bg=click_row_1_B.colors[click_row_1_B.click % colorLen])
+# # put properties on the function - do it before you use them (avoid NameError)
+# # colors will be cycled in order with each click, wrapping around
+# click_row_1_B.click = 0
+# click_row_1_B.colors = ["#00ccff", "#B900ff"]
+
+
+###mark
 
 # last row
 Bingo_button = Button(
