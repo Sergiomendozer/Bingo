@@ -331,7 +331,7 @@ update_drawn_ball(
 )
 
 # flag = True  # !delete
-holder_for_time = 10
+holder_for_time = 10  # ? change to five permanently
 # timer for next ball
 def update_timer_countdown(n):
     global flag
@@ -1813,13 +1813,15 @@ def make_a_new_game():
 # * highlighted bookmark
 def play():
     global flag, holder_for_time
-    # TODO: both globals together
+    global B_list, I_list, N_list, G_list, O_list
     # TODO: add list/string globals
     if holder_for_time == 10:
         return
     else:
         flag = True
         update_timer_countdown(holder_for_time)
+        update_drawn_ball(B_list, I_list, N_list, G_list, O_list)
+
         # TODO: add function drawn ball
 
 
