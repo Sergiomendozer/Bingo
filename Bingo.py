@@ -1,4 +1,6 @@
 from tkinter import *
+
+from numpy import empty
 from drawing_numbers import random_bingo_number
 from PIL import ImageTk, Image
 import random
@@ -166,6 +168,15 @@ def bingo_ball_color(
 
 bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 
+# Global variables:
+flag = True
+B_list = empty
+I_list = empty
+N_list = empty
+G_list = empty
+O_list = empty
+
+
 # drawing ball update label
 # * highlighted bookmark
 # TODO: add flag
@@ -177,34 +188,46 @@ def update_drawn_ball(
     G_list_drawn_str,
     O_list_drawn_str,
 ):
-    (drawn_bingo_number, bingo_numbers) = random_bingo_number(bingo_numbers)
-    Random_number_picked_label.config(
-        text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
-    )
-    (
-        B_list_drawn_str,
-        I_list_drawn_str,
-        N_list_drawn_str,
-        G_list_drawn_str,
-        O_list_drawn_str,
-    ) = bingo_ball_color(
-        drawn_bingo_number,
-        B_list_drawn_str,
-        I_list_drawn_str,
-        N_list_drawn_str,
-        G_list_drawn_str,
-        O_list_drawn_str,
-    )
-    return Random_number_picked_label.after(
-        5000,
-        update_drawn_ball,
-        bingo_numbers,
-        B_list_drawn_str,
-        I_list_drawn_str,
-        N_list_drawn_str,
-        G_list_drawn_str,
-        O_list_drawn_str,
-    )  # .after(parent, ms, function = None, *args)
+    global flag
+    if flag == True:
+        (drawn_bingo_number, bingo_numbers) = random_bingo_number(bingo_numbers)
+        Random_number_picked_label.config(
+            text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
+        )
+        (
+            B_list_drawn_str,
+            I_list_drawn_str,
+            N_list_drawn_str,
+            G_list_drawn_str,
+            O_list_drawn_str,
+        ) = bingo_ball_color(
+            drawn_bingo_number,
+            B_list_drawn_str,
+            I_list_drawn_str,
+            N_list_drawn_str,
+            G_list_drawn_str,
+            O_list_drawn_str,
+        )
+        return Random_number_picked_label.after(
+            5000,
+            update_drawn_ball,
+            bingo_numbers,
+            B_list_drawn_str,
+            I_list_drawn_str,
+            N_list_drawn_str,
+            G_list_drawn_str,
+            O_list_drawn_str,
+        )  # .after(parent, ms, function = None, *args)
+    else:
+        global B_list, I_list, N_list, G_list, O_list
+        (B_list, I_list, N_list, G_list, O_list) = (
+            B_list_drawn_str,
+            I_list_drawn_str,
+            N_list_drawn_str,
+            G_list_drawn_str,
+            O_list_drawn_str,
+        )
+        return
 
 
 B_list_drawn_str = ""
@@ -307,7 +330,7 @@ update_drawn_ball(
     O_list_drawn_str,
 )
 
-flag = True
+# flag = True  # !delete
 holder_for_time = 10
 # timer for next ball
 def update_timer_countdown(n):
@@ -1787,15 +1810,18 @@ def make_a_new_game():
     make_a_new_bot_card()
 
 
-###mark
+# * highlighted bookmark
 def play():
     global flag
     global holder_for_time
+    # TODO: both globals together
+    # TODO: add list/string globals
     if holder_for_time == 10:
         return
     else:
         flag = True
         update_timer_countdown(holder_for_time)
+        # TODO: add function drawn ball
 
 
 def pause():
