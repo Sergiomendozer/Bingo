@@ -1,5 +1,6 @@
-# TODO: Make bingo function
+#
+# TODO:
 # !delete
-# ? should I change
+# ?
 # @param my param
 # * highlighted bookmark

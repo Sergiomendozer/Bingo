@@ -167,7 +167,8 @@ def bingo_ball_color(
 bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 
 # drawing ball update label
-###mark add flag function
+# * highlighted bookmark
+# TODO: add flag
 def update_drawn_ball(
     bingo_numbers,
     B_list_drawn_str,
@@ -309,7 +310,7 @@ update_drawn_ball(
 flag = True
 holder_for_time = 10
 # timer for next ball
-def update_timer_countdown(n):  ###mark
+def update_timer_countdown(n):
     global flag
     if flag == True and n != "0":
         n = str(n)
@@ -374,13 +375,13 @@ B_bingo = Label(root, text="B", bg="#00CCFF", font=("Helvetica", 20), padx=40)
 I_bingo = Label(root, text="I", bg="#FF0000", font=("Helvetica", 20), padx=40)
 N_bingo = Label(root, text="N", bg="#E2DF00", font=("Helvetica", 20), padx=40)
 G_bingo = Label(root, text="G", bg="#F96815", font=("Helvetica", 20), padx=40)
-O_bingo_bot = Label(root, text="O", bg="#00FF33", font=("Helvetica", 20), padx=40)
+O_bingo = Label(root, text="O", bg="#00FF33", font=("Helvetica", 20), padx=40)
 # Bots's BINGO positions
 B_bingo.grid(row=8, column=6, sticky="nsew")
 I_bingo.grid(row=8, column=7, sticky="nsew")
 N_bingo.grid(row=8, column=8, sticky="nsew")
 G_bingo.grid(row=8, column=9, sticky="nsew")
-O_bingo_bot.grid(row=8, column=10, sticky="nsew")
+O_bingo.grid(row=8, column=10, sticky="nsew")
 
 # Buttons Clicks all
 # player click buttons
@@ -628,7 +629,7 @@ def click_row_5_O():
 click_row_5_O.click = 0
 click_row_5_O.colors = ["#00FF33", "#B900ff"]
 
-
+# Bot strings for cards empty
 bot_row_1_B_number = ""
 bot_row_2_B_number = ""
 bot_row_3_B_number = ""
