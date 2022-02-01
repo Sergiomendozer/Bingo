@@ -218,6 +218,8 @@ def update_drawn_ball(
             G_list_drawn_str,
             O_list_drawn_str,
         )  # .after(parent, ms, function = None, *args)
+        # ? very one sec call another function to check if flag == true
+        # TODO:
     else:
         global B_list, I_list, N_list, G_list, O_list
         (B_list, I_list, N_list, G_list, O_list) = (
@@ -331,7 +333,7 @@ update_drawn_ball(
 )
 
 # flag = True  # !delete
-holder_for_time = 10  # ? change to five permanently
+holder_for_time = 5  # ? change to five permanently
 # timer for next ball
 def update_timer_countdown(n):
     global flag
@@ -351,9 +353,10 @@ def update_timer_countdown(n):
     elif flag == True and n == "0":
         return update_timer_countdown(5)
     elif flag == False:
-        global holder_for_time
-        holder_for_time = n
+        # global holder_for_time
+        # holder_for_time = n
         # print(holder_for_time) # !delete
+        return
 
 
 timer = Label(
@@ -1812,17 +1815,14 @@ def make_a_new_game():
 
 # * highlighted bookmark
 def play():
-    global flag, holder_for_time
-    global B_list, I_list, N_list, G_list, O_list
+    global flag, holder_for_time, B_list, I_list, N_list, G_list, O_list
     # TODO: add list/string globals
-    if holder_for_time == 10:
-        return
-    else:
-        flag = True
-        update_timer_countdown(holder_for_time)
-        update_drawn_ball(B_list, I_list, N_list, G_list, O_list)
-
-        # TODO: add function drawn ball
+    # if holder_for_time == 10:
+    #     return
+    flag = True
+    update_timer_countdown(holder_for_time)
+    update_drawn_ball(B_list, I_list, N_list, G_list, O_list)
+    # TODO: add function drawn ball
 
 
 def pause():
