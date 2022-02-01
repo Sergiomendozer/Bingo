@@ -353,7 +353,7 @@ def update_timer_countdown(n):
     elif flag == False:
         global holder_for_time
         holder_for_time = n
-        print(holder_for_time)
+        # print(holder_for_time) # !delete
 
 
 timer = Label(
@@ -1812,8 +1812,7 @@ def make_a_new_game():
 
 # * highlighted bookmark
 def play():
-    global flag
-    global holder_for_time
+    global flag, holder_for_time
     # TODO: both globals together
     # TODO: add list/string globals
     if holder_for_time == 10:
