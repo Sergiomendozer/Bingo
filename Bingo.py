@@ -170,6 +170,7 @@ bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 
 # Global variables:
 flag = True
+B_numbers = empty
 B_list = empty
 I_list = empty
 N_list = empty
@@ -221,8 +222,9 @@ def update_drawn_ball(
         # ? very one sec call another function to check if flag == true
         # TODO:
     else:
-        global B_list, I_list, N_list, G_list, O_list
-        (B_list, I_list, N_list, G_list, O_list) = (
+        global B_numbers, B_list, I_list, N_list, G_list, O_list
+        (B_numbers, B_list, I_list, N_list, G_list, O_list) = (
+            bingo_numbers,
             B_list_drawn_str,
             I_list_drawn_str,
             N_list_drawn_str,
@@ -1815,13 +1817,13 @@ def make_a_new_game():
 
 # * highlighted bookmark
 def play():
-    global flag, holder_for_time, B_list, I_list, N_list, G_list, O_list
+    global flag, holder_for_time, B_numbers, B_list, I_list, N_list, G_list, O_list
     # TODO: add list/string globals
     # if holder_for_time == 10:
     #     return
     flag = True
     update_timer_countdown(holder_for_time)
-    update_drawn_ball(B_list, I_list, N_list, G_list, O_list)
+    update_drawn_ball(B_numbers, B_list, I_list, N_list, G_list, O_list)
     # TODO: add function drawn ball
 
 

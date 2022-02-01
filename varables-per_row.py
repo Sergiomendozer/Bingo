@@ -1,4 +1,8 @@
-#
+# B_list_drawn_str,
+# I_list_drawn_str,
+# N_list_drawn_str,
+# G_list_drawn_str,
+# O_list_drawn_str,
 # ? do these need to be global for bingo button function
 # player strings for cards empty
 row_1_B_number = ""
