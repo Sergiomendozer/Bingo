@@ -35,7 +35,13 @@ if (
     and B_list_drawn_str.find(row_5_B_number) != -1
 ):
     print("B column pass")
-elif I_list_drawn_str.find(row_1_I_number) != -1:
+elif (
+    I_list_drawn_str.find(row_1_I_number) != -1
+    and I_list_drawn_str.find(row_2_I_number) != -1
+    and I_list_drawn_str.find(row_3_I_number) != -1
+    and I_list_drawn_str.find(row_4_I_number) != -1
+    and I_list_drawn_str.find(row_5_I_number) != -1
+):
     print("I column pass")
 else:
     print("NO BINGO!!!")
