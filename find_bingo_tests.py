@@ -70,6 +70,7 @@ row_4_O_number = str(row_4_O_number)
 row_5_O_number = str(row_5_O_number)
 
 # TODO: do rows B I N G O row 1!!! and through tests!
+# row 1
 B_list_drawn_str = "1"
 I_list_drawn_str = "16"
 N_list_drawn_str = "31"
@@ -85,6 +86,7 @@ row_1_I_number = str(row_1_I_number)
 row_1_N_number = str(row_1_N_number)
 row_1_G_number = str(row_1_G_number)
 row_1_O_number = str(row_1_O_number)
+# row 2
 
 if (
     B_list_drawn_str.find(row_1_B_number) != -1
