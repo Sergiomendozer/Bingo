@@ -137,7 +137,7 @@ row_4_O_number = str(row_4_O_number)
 
 # row 5
 B_list_drawn_str = "1 2 3 4 5"
-I_list_drawn_str = "16 17 18 19 21"  ### add 20 for zero
+I_list_drawn_str = "16 17 18 19 20 21"  ### add 20 for zero
 N_list_drawn_str = "31 32 33 34 35"
 G_list_drawn_str = "46 47 48 49 51"  ### add 50 for zero
 O_list_drawn_str = "61 62 63 64 65"
