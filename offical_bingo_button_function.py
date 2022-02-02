@@ -1,11 +1,16 @@
+####first line
+# TODO6: add configures #Bingo_button.configure(text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 18))
+###Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
+###return Bingo_button.after(3000, reset_bingo_button)
 # TODO3: keepers: of strings, all globals do first b/c then you find in bingo and make global
-# TODO6: add configures
 
+# TODO: Globals on official bingo python file
 # TODO : add space to string that have list so function can work
 # TODO : add space after adding number for function to work
 # ? do these need to be global for bingo button function row_1_b
-#
+
 ### these are where globals are called
+
 B_list_drawn_str = " "
 row_1_B_number = 0
 row_2_B_number = 0
