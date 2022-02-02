@@ -121,6 +121,8 @@ row_2_O_number = str(row_2_O_number)
 # row 4
 
 # row 5
+
+# TODO:keepers: of strings, all globals do first b/c then you find in bingo and make global
 if (
     B_list_drawn_str.find(row_1_B_number) != -1
     and B_list_drawn_str.find(row_2_B_number) != -1
