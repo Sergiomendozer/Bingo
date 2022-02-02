@@ -102,8 +102,25 @@ row_2_I_number = str(row_2_I_number)
 row_2_N_number = str(row_2_N_number)
 row_2_G_number = str(row_2_G_number)
 row_2_O_number = str(row_2_O_number)
+# row 3
+B_list_drawn_str = "1 2"
+I_list_drawn_str = "16 17"
+N_list_drawn_str = "31 32"
+G_list_drawn_str = "46 47"
+O_list_drawn_str = "61 62"
+row_2_B_number = 2
+row_2_I_number = 17
+row_2_N_number = 32
+row_2_G_number = 47
+row_2_O_number = 62
+row_2_B_number = str(row_2_B_number)
+row_2_I_number = str(row_2_I_number)
+row_2_N_number = str(row_2_N_number)
+row_2_G_number = str(row_2_G_number)
+row_2_O_number = str(row_2_O_number)
+# row 4
 
-
+# row 5
 if (
     B_list_drawn_str.find(row_1_B_number) != -1
     and B_list_drawn_str.find(row_2_B_number) != -1
