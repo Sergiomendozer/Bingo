@@ -32,12 +32,12 @@ row_5_I_number = str(row_5_I_number)
 N_list_drawn_str = ""
 row_1_N_number = 0
 row_2_N_number = 0
-row_3_N_number = 0
+row_3_N_number = 0  # Star # !delete
 row_4_N_number = 0
 row_5_N_number = 0
 row_1_N_number = str(row_1_N_number)
 row_2_N_number = str(row_2_N_number)
-row_3_N_number = str(row_3_N_number)
+row_3_N_number = str(row_3_N_number)  # !delete
 row_4_N_number = str(row_4_N_number)
 row_5_N_number = str(row_5_N_number)
 
@@ -115,7 +115,7 @@ row_3_G_number = 0
 row_3_O_number = 0
 row_3_B_number = str(row_3_B_number)
 row_3_I_number = str(row_3_I_number)
-row_3_N_number = str(row_3_N_number)
+row_3_N_number = str(row_3_N_number)  # !delete
 row_3_G_number = str(row_3_G_number)
 row_3_O_number = str(row_3_O_number)
 # row 4
@@ -141,19 +141,47 @@ I_list_drawn_str = " 16 17 18 19 20 21 "  ### add 20 for zero
 N_list_drawn_str = " 31 32 33 34 35 "
 G_list_drawn_str = " 46 47 48 49 51 "  ### add 50 for zero
 O_list_drawn_str = " 61 62 63 64 65 "
-row_5_B_number = 5
-row_5_I_number = 21
-row_5_N_number = 35
-row_5_G_number = 51
-row_5_O_number = 65
+row_5_B_number = 0
+row_5_I_number = 0
+row_5_N_number = 0
+row_5_G_number = 0
+row_5_O_number = 0
 row_5_B_number = str(row_5_B_number)
 row_5_I_number = str(row_5_I_number)
 row_5_N_number = str(row_5_N_number)
 row_5_G_number = str(row_5_G_number)
 row_5_O_number = str(row_5_O_number)
-# TODO2:+ " "
+# right sided diagonal line
+B_list_drawn_str = " 1 2 3 4 5 "
+I_list_drawn_str = " 16 17 18 19 20 21 "  ### add 20 for zero
+N_list_drawn_str = " 31 32 33 34 35 "
+G_list_drawn_str = " 46 47 48 49 51 "  ### add 50 for zero
+O_list_drawn_str = " 61 62 63 64 65 "
+row_1_B_number = 0
+row_2_I_number = 0
+row_4_G_number = 0
+row_5_O_number = 0
+row_1_B_number = str(row_1_B_number)
+row_2_I_number = str(row_2_I_number)
+row_4_G_number = str(row_4_G_number)
+row_5_O_number = str(row_5_O_number)
+
+# left sided diagonal line
+B_list_drawn_str = " 1 2 3 4 5 "
+I_list_drawn_str = " 16 17 18 19 20 21 "  ### add 20 for zero
+N_list_drawn_str = " 31 32 33 34 35 "
+G_list_drawn_str = " 46 47 48 49 51 "  ### add 50 for zero
+O_list_drawn_str = " 61 62 63 64 65 "
+row_5_B_number = 2
+row_4_I_number = 18
+row_2_G_number = 49
+row_1_O_number = 64
+row_5_B_number = str(row_5_B_number)
+row_4_I_number = str(row_4_I_number)
+row_2_G_number = str(row_2_G_number)
+row_1_O_number = str(row_1_O_number)
+
 # TODO3: keepers: of strings, all globals do first b/c then you find in bingo and make global
-# TODO4: get rid of star row: there are two of them!!!
 # TODO5: add notes to the if statements
 # TODO6: add # !delete to prints and add configure
 # TODO7?: add number needs to be exact like 0 cannot count 20, try space0space
@@ -180,10 +208,9 @@ elif (
 elif (
     N_list_drawn_str.find(" " + row_1_N_number + " ") != -1
     and N_list_drawn_str.find(" " + row_2_N_number + " ") != -1
-    and N_list_drawn_str.find(" " + row_3_N_number + " ") != -1
     and N_list_drawn_str.find(" " + row_4_N_number + " ") != -1
     and N_list_drawn_str.find(" " + row_5_N_number + " ") != -1
-):
+):  # no row 3 because that is were free space is
     print("N column pass")
 elif (
     G_list_drawn_str.find(" " + row_1_G_number + " ") != -1
@@ -220,10 +247,9 @@ elif (
 elif (
     B_list_drawn_str.find(" " + row_3_B_number) != -1
     and I_list_drawn_str.find(" " + row_3_I_number + " ") != -1
-    and N_list_drawn_str.find(" " + row_3_N_number + " ") != -1
     and G_list_drawn_str.find(" " + row_3_G_number + " ") != -1
     and O_list_drawn_str.find(" " + row_3_O_number + " ") != -1
-):
+):  # no row 3 for N because that is were free space is
     print("Row 3 of card")
 elif (
     B_list_drawn_str.find(" " + row_4_B_number + " ") != -1
@@ -241,12 +267,19 @@ elif (
     and O_list_drawn_str.find(" " + row_5_O_number + " ") != -1
 ):
     print("Row 5 of card")
+elif (
+    B_list_drawn_str.find(" " + row_1_B_number + " ") != -1
+    and I_list_drawn_str.find(" " + row_2_I_number + " ") != -1
+    and G_list_drawn_str.find(" " + row_4_G_number + " ") != -1
+    and O_list_drawn_str.find(" " + row_5_O_number + " ") != -1
+):  # no N taking into account b/c that is the free space
+    print("Right sided diagonal line")
+elif (
+    B_list_drawn_str.find(" " + row_5_B_number + " ") != -1
+    and I_list_drawn_str.find(" " + row_4_I_number + " ") != -1
+    and G_list_drawn_str.find(" " + row_2_G_number + " ") != -1
+    and O_list_drawn_str.find(" " + row_1_O_number + " ") != -1
+):  # no N taking into account b/c that is the free space
+    print("Left sided diagonal line")
 else:
     print("NO BINGO!!!")
-
-# TODO: do rows B I N G O row 1!!! and through 5
-# row_1_B_number
-# row_2_B_number
-# row_3_B_number
-# row_4_B_number
-# row_5_B_number
