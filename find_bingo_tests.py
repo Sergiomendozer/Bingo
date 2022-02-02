@@ -136,11 +136,11 @@ row_4_G_number = str(row_4_G_number)
 row_4_O_number = str(row_4_O_number)
 
 # row 5
-B_list_drawn_str = "1 2 3 4 5"
-I_list_drawn_str = "16 17 18 19 20 21"  ### add 20 for zero
-N_list_drawn_str = "31 32 33 34 35"
-G_list_drawn_str = "46 47 48 49 51"  ### add 50 for zero
-O_list_drawn_str = "61 62 63 64 65"
+B_list_drawn_str = " 1 2 3 4 5 "
+I_list_drawn_str = " 16 17 18 19 20 21 "  ### add 20 for zero
+N_list_drawn_str = " 31 32 33 34 35 "
+G_list_drawn_str = " 46 47 48 49 51 "  ### add 50 for zero
+O_list_drawn_str = " 61 62 63 64 65 "
 row_5_B_number = 5
 row_5_I_number = 21
 row_5_N_number = 35
@@ -151,90 +151,94 @@ row_5_I_number = str(row_5_I_number)
 row_5_N_number = str(row_5_N_number)
 row_5_G_number = str(row_5_G_number)
 row_5_O_number = str(row_5_O_number)
+# TODO2:+ " "
+# TODO3: keepers: of strings, all globals do first b/c then you find in bingo and make global
+# TODO4: get rid of star row: there are two of them!!!
+# TODO5: add notes to the if statements
+# TODO6: add # !delete to prints and add configure
+# TODO7?: add number needs to be exact like 0 cannot count 20, try space0space
+# TODO x right and left
 
-# TODO: keepers: of strings, all globals do first b/c then you find in bingo and make global
-# TODO: get rid of star row: there are two of them!!!
-# TODO: add notes to the if statements
-# TODO: add # !delete to prints
-# TODO: add number needs to be exact like 0 cannot count 20, try space0space
+# TODO : add space to string that have list so function can work
+# TODO : add space after adding number for function to work
 if (
-    B_list_drawn_str.find(row_1_B_number) != -1
-    and B_list_drawn_str.find(row_2_B_number) != -1
-    and B_list_drawn_str.find(row_3_B_number) != -1
-    and B_list_drawn_str.find(row_4_B_number) != -1
-    and B_list_drawn_str.find(row_5_B_number) != -1
+    B_list_drawn_str.find(" " + row_1_B_number + " ") != -1
+    and B_list_drawn_str.find(" " + row_2_B_number + " ") != -1
+    and B_list_drawn_str.find(" " + row_3_B_number + " ") != -1
+    and B_list_drawn_str.find(" " + row_4_B_number + " ") != -1
+    and B_list_drawn_str.find(" " + row_5_B_number + " ") != -1
 ):
     print("B column pass")
 elif (
-    I_list_drawn_str.find(row_1_I_number) != -1
-    and I_list_drawn_str.find(row_2_I_number) != -1
-    and I_list_drawn_str.find(row_3_I_number) != -1
-    and I_list_drawn_str.find(row_4_I_number) != -1
-    and I_list_drawn_str.find(row_5_I_number) != -1
+    I_list_drawn_str.find(" " + row_1_I_number + " ") != -1
+    and I_list_drawn_str.find(" " + row_2_I_number + " ") != -1
+    and I_list_drawn_str.find(" " + row_3_I_number + " ") != -1
+    and I_list_drawn_str.find(" " + row_4_I_number + " ") != -1
+    and I_list_drawn_str.find(" " + row_5_I_number + " ") != -1
 ):
     print("I column pass")
 elif (
-    N_list_drawn_str.find(row_1_N_number) != -1
-    and N_list_drawn_str.find(row_2_N_number) != -1
-    and N_list_drawn_str.find(row_3_N_number) != -1
-    and N_list_drawn_str.find(row_4_N_number) != -1
-    and N_list_drawn_str.find(row_5_N_number) != -1
+    N_list_drawn_str.find(" " + row_1_N_number + " ") != -1
+    and N_list_drawn_str.find(" " + row_2_N_number + " ") != -1
+    and N_list_drawn_str.find(" " + row_3_N_number + " ") != -1
+    and N_list_drawn_str.find(" " + row_4_N_number + " ") != -1
+    and N_list_drawn_str.find(" " + row_5_N_number + " ") != -1
 ):
     print("N column pass")
 elif (
-    G_list_drawn_str.find(row_1_G_number) != -1
-    and G_list_drawn_str.find(row_2_G_number) != -1
-    and G_list_drawn_str.find(row_3_G_number) != -1
-    and G_list_drawn_str.find(row_4_G_number) != -1
-    and G_list_drawn_str.find(row_5_G_number) != -1
+    G_list_drawn_str.find(" " + row_1_G_number + " ") != -1
+    and G_list_drawn_str.find(" " + row_2_G_number + " ") != -1
+    and G_list_drawn_str.find(" " + row_3_G_number + " ") != -1
+    and G_list_drawn_str.find(" " + row_4_G_number + " ") != -1
+    and G_list_drawn_str.find(" " + row_5_G_number + " ") != -1
 ):
     print("G column pass")
 elif (
-    O_list_drawn_str.find(row_1_O_number) != -1
-    and O_list_drawn_str.find(row_2_O_number) != -1
-    and O_list_drawn_str.find(row_3_O_number) != -1
-    and O_list_drawn_str.find(row_4_O_number) != -1
-    and O_list_drawn_str.find(row_5_O_number) != -1
+    O_list_drawn_str.find(" " + row_1_O_number + " ") != -1
+    and O_list_drawn_str.find(" " + row_2_O_number + " ") != -1
+    and O_list_drawn_str.find(" " + row_3_O_number + " ") != -1
+    and O_list_drawn_str.find(" " + row_4_O_number + " ") != -1
+    and O_list_drawn_str.find(" " + row_5_O_number + " ") != -1
 ):
     print("O column pass")
 elif (
-    B_list_drawn_str.find(row_1_B_number) != -1
-    and I_list_drawn_str.find(row_1_I_number) != -1
-    and N_list_drawn_str.find(row_1_N_number) != -1
-    and G_list_drawn_str.find(row_1_G_number) != -1
-    and O_list_drawn_str.find(row_1_O_number) != -1
+    B_list_drawn_str.find(" " + row_1_B_number + " ") != -1
+    and I_list_drawn_str.find(" " + row_1_I_number + " ") != -1
+    and N_list_drawn_str.find(" " + row_1_N_number + " ") != -1
+    and G_list_drawn_str.find(" " + row_1_G_number + " ") != -1
+    and O_list_drawn_str.find(" " + row_1_O_number + " ") != -1
 ):
     print("Row 1 of card")
 elif (
-    B_list_drawn_str.find(row_2_B_number) != -1
-    and I_list_drawn_str.find(row_2_I_number) != -1
-    and N_list_drawn_str.find(row_2_N_number) != -1
-    and G_list_drawn_str.find(row_2_G_number) != -1
-    and O_list_drawn_str.find(row_2_O_number) != -1
+    B_list_drawn_str.find(" " + row_2_B_number + " ") != -1
+    and I_list_drawn_str.find(" " + row_2_I_number + " ") != -1
+    and N_list_drawn_str.find(" " + row_2_N_number + " ") != -1
+    and G_list_drawn_str.find(" " + row_2_G_number + " ") != -1
+    and O_list_drawn_str.find(" " + row_2_O_number + " ") != -1
 ):
     print("Row 2 of card")
 elif (
-    B_list_drawn_str.find(row_3_B_number) != -1
-    and I_list_drawn_str.find(row_3_I_number) != -1
-    and N_list_drawn_str.find(row_3_N_number) != -1
-    and G_list_drawn_str.find(row_3_G_number) != -1
-    and O_list_drawn_str.find(row_3_O_number) != -1
+    B_list_drawn_str.find(" " + row_3_B_number) != -1
+    and I_list_drawn_str.find(" " + row_3_I_number + " ") != -1
+    and N_list_drawn_str.find(" " + row_3_N_number + " ") != -1
+    and G_list_drawn_str.find(" " + row_3_G_number + " ") != -1
+    and O_list_drawn_str.find(" " + row_3_O_number + " ") != -1
 ):
     print("Row 3 of card")
 elif (
-    B_list_drawn_str.find(row_4_B_number) != -1
-    and I_list_drawn_str.find(row_4_I_number) != -1
-    and N_list_drawn_str.find(row_4_N_number) != -1
-    and G_list_drawn_str.find(row_4_G_number) != -1
-    and O_list_drawn_str.find(row_4_O_number) != -1
+    B_list_drawn_str.find(" " + row_4_B_number + " ") != -1
+    and I_list_drawn_str.find(" " + row_4_I_number + " ") != -1
+    and N_list_drawn_str.find(" " + row_4_N_number + " ") != -1
+    and G_list_drawn_str.find(" " + row_4_G_number + " ") != -1
+    and O_list_drawn_str.find(" " + row_4_O_number + " ") != -1
 ):
     print("Row 4 of card")
 elif (
-    B_list_drawn_str.find(row_5_B_number) != -1
-    and I_list_drawn_str.find(row_5_I_number) != -1
-    and N_list_drawn_str.find(row_5_N_number) != -1
-    and G_list_drawn_str.find(row_5_G_number) != -1
-    and O_list_drawn_str.find(row_5_O_number) != -1
+    B_list_drawn_str.find(" " + row_5_B_number + " ") != -1
+    and I_list_drawn_str.find(" " + row_5_I_number + " ") != -1
+    and N_list_drawn_str.find(" " + row_5_N_number + " ") != -1
+    and G_list_drawn_str.find(" " + row_5_G_number + " ") != -1
+    and O_list_drawn_str.find(" " + row_5_O_number + " ") != -1
 ):
     print("Row 5 of card")
 else:
