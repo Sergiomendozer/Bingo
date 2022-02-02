@@ -15,7 +15,7 @@ row_5_B_number = str(row_5_B_number)
 
 # I column test:
 # I_list_drawn_str = "16 17 18 19 20 21 22 23 24 25 26 27 28 29 30"
-I_list_drawn_str = " "
+I_list_drawn_str = "3 9"
 row_1_I_number = 0
 row_2_I_number = 0
 row_3_I_number = 0
@@ -76,11 +76,11 @@ row_5_O_number = str(row_5_O_number)
 # N_list_drawn_str = "31"
 # G_list_drawn_str = "46"
 # O_list_drawn_str = "61"
-row_1_B_number = ""
-row_1_I_number = ""
-row_1_N_number = ""
-row_1_G_number = ""
-row_1_O_number = ""
+row_1_B_number = 0
+row_1_I_number = 0
+row_1_N_number = 0
+row_1_G_number = 0
+row_1_O_number = 0
 row_1_B_number = str(row_1_B_number)
 row_1_I_number = str(row_1_I_number)
 row_1_N_number = str(row_1_N_number)
@@ -92,11 +92,11 @@ row_1_O_number = str(row_1_O_number)
 # N_list_drawn_str = "31 32"
 # G_list_drawn_str = "46 47"
 # O_list_drawn_str = "61 62"
-row_2_B_number = ""
-row_2_I_number = ""
-row_2_N_number = ""
-row_2_G_number = ""
-row_2_O_number = ""
+row_2_B_number = 0
+row_2_I_number = 0
+row_2_N_number = 0
+row_2_G_number = 0
+row_2_O_number = 0
 row_2_B_number = str(row_2_B_number)
 row_2_I_number = str(row_2_I_number)
 row_2_N_number = str(row_2_N_number)
@@ -120,9 +120,9 @@ row_3_G_number = str(row_3_G_number)
 row_3_O_number = str(row_3_O_number)
 # row 4
 B_list_drawn_str = "1 2 3 4 5"
-I_list_drawn_str = "16 17 18 19 20"
+I_list_drawn_str = "16 17 18 19 21"  ### add 20 for zero
 N_list_drawn_str = "31 32 33 34 35"
-G_list_drawn_str = "46 47 48 49 50"
+G_list_drawn_str = "46 47 48 49 51"  ### add 50 for zero
 O_list_drawn_str = "61 62 63 64 65"
 row_4_B_number = 4
 row_4_I_number = 19
@@ -141,6 +141,7 @@ row_4_O_number = str(row_4_O_number)
 # TODO: get rid of star row: there are two of them!!!
 # TODO: add notes to the if statements
 # TODO: add # !delete to prints
+# TODO: add number needs to be exact like 0 cannot count 20, try space0space
 if (
     B_list_drawn_str.find(row_1_B_number) != -1
     and B_list_drawn_str.find(row_2_B_number) != -1
