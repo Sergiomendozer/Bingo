@@ -103,27 +103,44 @@ row_2_N_number = str(row_2_N_number)
 row_2_G_number = str(row_2_G_number)
 row_2_O_number = str(row_2_O_number)
 # row 3
-B_list_drawn_str = "1 2 3"
-I_list_drawn_str = "16 17 18"
-N_list_drawn_str = "31 32 33"
-G_list_drawn_str = "46 47 48"
-O_list_drawn_str = "61 62 63"
-row_3_B_number = 3
-row_3_I_number = 18
-row_3_N_number = 33
-row_3_G_number = 48
-row_3_O_number = 63
+# B_list_drawn_str = "1 2 3"
+# I_list_drawn_str = "16 17 18"
+# N_list_drawn_str = "31 32 33"
+# G_list_drawn_str = "46 47 48"
+# O_list_drawn_str = "61 62 63"
+# row_3_B_number = 3
+# row_3_I_number = 18
+# row_3_N_number = 33
+# row_3_G_number = 48
+# row_3_O_number = 63
 row_3_B_number = str(row_3_B_number)
 row_3_I_number = str(row_3_I_number)
 row_3_N_number = str(row_3_N_number)
 row_3_G_number = str(row_3_G_number)
 row_3_O_number = str(row_3_O_number)
 # row 4
+B_list_drawn_str = "1 2 3 4 5"
+I_list_drawn_str = "16 17 18 19 20"
+N_list_drawn_str = "31 32 33 34 35"
+G_list_drawn_str = "46 47 48 49 50"
+O_list_drawn_str = "61 62 63 64 65"
+row_4_B_number = 4
+row_4_I_number = 19
+row_4_N_number = 34
+row_4_G_number = 49
+row_4_O_number = 64
+row_4_B_number = str(row_4_B_number)
+row_4_I_number = str(row_4_I_number)
+row_4_N_number = str(row_4_N_number)
+row_4_G_number = str(row_4_G_number)
+row_4_O_number = str(row_4_O_number)
 
 # row 5
 
-# TODO:keepers: of strings, all globals do first b/c then you find in bingo and make global
-# TODO:get rid of star row: there are two of them!!!
+# TODO: keepers: of strings, all globals do first b/c then you find in bingo and make global
+# TODO: get rid of star row: there are two of them!!!
+# TODO: add notes to the if statements
+# TODO: add # !delete to prints
 if (
     B_list_drawn_str.find(row_1_B_number) != -1
     and B_list_drawn_str.find(row_2_B_number) != -1
