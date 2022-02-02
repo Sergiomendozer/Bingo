@@ -87,37 +87,37 @@ row_1_N_number = str(row_1_N_number)
 row_1_G_number = str(row_1_G_number)
 row_1_O_number = str(row_1_O_number)
 # row 2
-B_list_drawn_str = "1 2"
-I_list_drawn_str = "16 17"
-N_list_drawn_str = "31 32"
-G_list_drawn_str = "46 47"
-O_list_drawn_str = "61 62"
-row_2_B_number = 2
-row_2_I_number = 17
-row_2_N_number = 32
-row_2_G_number = 47
-row_2_O_number = 62
+# B_list_drawn_str = "1 2"
+# I_list_drawn_str = "16 17"
+# N_list_drawn_str = "31 32"
+# G_list_drawn_str = "46 47"
+# O_list_drawn_str = "61 62"
+# row_2_B_number = 2
+# row_2_I_number = 17
+# row_2_N_number = 32
+# row_2_G_number = 47
+# row_2_O_number = 62
 row_2_B_number = str(row_2_B_number)
 row_2_I_number = str(row_2_I_number)
 row_2_N_number = str(row_2_N_number)
 row_2_G_number = str(row_2_G_number)
 row_2_O_number = str(row_2_O_number)
 # row 3
-B_list_drawn_str = "1 2"
-I_list_drawn_str = "16 17"
-N_list_drawn_str = "31 32"
-G_list_drawn_str = "46 47"
-O_list_drawn_str = "61 62"
-row_2_B_number = 2
-row_2_I_number = 17
-row_2_N_number = 32
-row_2_G_number = 47
-row_2_O_number = 62
-row_2_B_number = str(row_2_B_number)
-row_2_I_number = str(row_2_I_number)
-row_2_N_number = str(row_2_N_number)
-row_2_G_number = str(row_2_G_number)
-row_2_O_number = str(row_2_O_number)
+B_list_drawn_str = "1 2 3"
+I_list_drawn_str = "16 17 18"
+N_list_drawn_str = "31 32 33"
+G_list_drawn_str = "46 47 48"
+O_list_drawn_str = "61 62 63"
+row_3_B_number = 3
+row_3_I_number = 18
+row_3_N_number = 33
+row_3_G_number = 48
+row_3_O_number = 63
+row_3_B_number = str(row_3_B_number)
+row_3_I_number = str(row_3_I_number)
+row_3_N_number = str(row_3_N_number)
+row_3_G_number = str(row_3_G_number)
+row_3_O_number = str(row_3_O_number)
 # row 4
 
 # row 5
@@ -179,6 +179,14 @@ elif (
     and O_list_drawn_str.find(row_2_O_number) != -1
 ):
     print("Row 2 of card")
+elif (
+    B_list_drawn_str.find(row_3_B_number) != -1
+    and I_list_drawn_str.find(row_3_I_number) != -1
+    and N_list_drawn_str.find(row_3_N_number) != -1
+    and G_list_drawn_str.find(row_3_G_number) != -1
+    and O_list_drawn_str.find(row_3_O_number) != -1
+):
+    print("Row 3 of card")
 else:
     print("NO BINGO!!!")
 
