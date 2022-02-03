@@ -8,7 +8,6 @@
 # TODO : add space after adding number for function to work
 # ? do these need to be global for bingo button function row_1_b
 
-### these are where globals are called
 ##########keep below
 from tkinter import *
 
