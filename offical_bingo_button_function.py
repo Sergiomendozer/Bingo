@@ -1,5 +1,5 @@
 ####first line
-# TODO3: keepers: of strings, all globals do first b/c then you find in bingo and make global
+# TODO: deletes delete
 # TODO: player has won everything pauses function
 
 # TODO: move empty vairbale to global
@@ -105,7 +105,6 @@ if (
     and B_list_drawn_str.find(" " + row_4_B_number + " ") != -1
     and B_list_drawn_str.find(" " + row_5_B_number + " ") != -1
 ):
-    print("B column pass")  # !delete
     Bingo_button.configure(
         text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
     )
@@ -117,7 +116,6 @@ elif (
     and I_list_drawn_str.find(" " + row_4_I_number + " ") != -1
     and I_list_drawn_str.find(" " + row_5_I_number + " ") != -1
 ):
-    print("I column pass")  # !delete
     Bingo_button.configure(
         text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
     )
@@ -128,7 +126,6 @@ elif (
     and N_list_drawn_str.find(" " + row_4_N_number + " ") != -1
     and N_list_drawn_str.find(" " + row_5_N_number + " ") != -1
 ):  # no row 3 because that is were free space is
-    print("N column pass")  # !delete
     Bingo_button.configure(
         text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
     )
@@ -140,7 +137,6 @@ elif (
     and G_list_drawn_str.find(" " + row_4_G_number + " ") != -1
     and G_list_drawn_str.find(" " + row_5_G_number + " ") != -1
 ):
-    print("G column pass")  # !delete
     Bingo_button.configure(
         text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
     )
@@ -152,7 +148,6 @@ elif (
     and O_list_drawn_str.find(" " + row_4_O_number + " ") != -1
     and O_list_drawn_str.find(" " + row_5_O_number + " ") != -1
 ):
-    print("O column pass")  # !delete
     Bingo_button.configure(
         text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
     )
@@ -164,7 +159,6 @@ elif (
     and G_list_drawn_str.find(" " + row_1_G_number + " ") != -1
     and O_list_drawn_str.find(" " + row_1_O_number + " ") != -1
 ):
-    print("Row 1 of card")  # !delete
     Bingo_button.configure(
         text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
     )
@@ -176,7 +170,6 @@ elif (
     and G_list_drawn_str.find(" " + row_2_G_number + " ") != -1
     and O_list_drawn_str.find(" " + row_2_O_number + " ") != -1
 ):
-    print("Row 2 of card")  # !delete
     Bingo_button.configure(
         text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
     )
@@ -187,7 +180,6 @@ elif (
     and G_list_drawn_str.find(" " + row_3_G_number + " ") != -1
     and O_list_drawn_str.find(" " + row_3_O_number + " ") != -1
 ):  # no row 3 for N because that is were free space is
-    print("Row 3 of card")  # !delete
     Bingo_button.configure(
         text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
     )
@@ -199,7 +191,6 @@ elif (
     and G_list_drawn_str.find(" " + row_4_G_number + " ") != -1
     and O_list_drawn_str.find(" " + row_4_O_number + " ") != -1
 ):
-    print("Row 4 of card")  # !delete
     Bingo_button.configure(
         text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
     )
@@ -211,7 +202,6 @@ elif (
     and G_list_drawn_str.find(" " + row_5_G_number + " ") != -1
     and O_list_drawn_str.find(" " + row_5_O_number + " ") != -1
 ):
-    print("Row 5 of card")  # !delete
     Bingo_button.configure(
         text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
     )
@@ -222,7 +212,6 @@ elif (
     and G_list_drawn_str.find(" " + row_4_G_number + " ") != -1
     and O_list_drawn_str.find(" " + row_5_O_number + " ") != -1
 ):  # no N taking into account b/c that is the free space
-    print("Right sided diagonal line")  # !delete
     Bingo_button.configure(
         text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
     )
@@ -233,11 +222,9 @@ elif (
     and G_list_drawn_str.find(" " + row_2_G_number + " ") != -1
     and O_list_drawn_str.find(" " + row_1_O_number + " ") != -1
 ):  # no N taking into account b/c that is the free space
-    print("Left sided diagonal line")  # !delete
     Bingo_button.configure(
         text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
     )
 else:
-    print("NO BINGO!!!")  # !delete
     Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
     Bingo_button.after(3000, reset_bingo_button)
