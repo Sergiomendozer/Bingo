@@ -1836,8 +1836,13 @@ def pause():
 
 
 # last row
+# Bingo_button = Button(root, text="BINGO!", bg="#B900FF", command=click_BINGO, font=("Helvetica", 25))
 Bingo_button = Button(
-    root, text="BINGO!", bg="#B900FF", command=click_BINGO, font=("Helvetica", 25)
+    root,
+    text="You got BINGO!",
+    bg="#B900FF",
+    command=click_BINGO,
+    font=("Helvetica", 25),
 )
 blank = Label(root, bg="#737373")
 New_card = Button(

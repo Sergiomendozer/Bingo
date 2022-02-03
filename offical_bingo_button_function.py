@@ -1,5 +1,5 @@
 ####first line
-# TODO6: add configures #Bingo_button.configure(text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 18))
+# TODO6: add configures #Bingo_button.configure(text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 15))
 ###Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
 ###return Bingo_button.after(3000, reset_bingo_button)
 # TODO3: keepers: of strings, all globals do first b/c then you find in bingo and make global
