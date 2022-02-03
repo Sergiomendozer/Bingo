@@ -1,10 +1,10 @@
 ####first line
-# TODO6: add configures #Bingo_button.configure(text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25))
-###Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
-###return Bingo_button.after(3000, reset_bingo_button)
 # TODO3: keepers: of strings, all globals do first b/c then you find in bingo and make global
+# TODO: player has won everything pauses function
 
+# TODO: move empty vairbale to global
 # TODO: Globals on official bingo python file
+# TODO: global in functions call
 # TODO : add space to string that have list so function can work
 # TODO : add space after adding number for function to work
 # ? do these need to be global for bingo button function row_1_b
@@ -28,6 +28,9 @@ Bingo_button = Button(
     root, text="BINGO!", bg="#B900FF", command=click_BINGO, font=("Helvetica", 25)
 )
 Bingo_button.grid(row=14, column=1, columnspan=3, sticky="nsew")
+##################
+global B_list_drawn_str, row_1_B_number, row_2_B_number, row_3_B_number, row_4_B_number, row_5_B_number, I_list_drawn_str, row_1_I_number, row_2_I_number, row_3_I_number, row_4_I_number, row_5_I_number, N_list_drawn_str, row_1_N_number, row_2_N_number, row_4_N_number, row_5_N_number, G_list_drawn_str, row_1_G_number, row_2_G_number, row_3_G_number, row_4_G_number, row_5_G_number, O_list_drawn_str, row_1_O_number, row_2_O_number, row_3_O_number, row_4_O_number, row_5_O_number
+#####################
 B_list_drawn_str = " "
 row_1_B_number = 0
 row_2_B_number = 0
@@ -42,21 +45,24 @@ row_4_I_number = 0
 row_5_I_number = 0
 N_list_drawn_str = ""
 row_1_N_number = 0
-row_2_N_number = 0
-row_4_N_number = 0
-row_5_N_number = 0
+row_2_N_number,
+row_4_N_number,
+row_5_N_number,
 G_list_drawn_str = ""
-row_1_G_number = 0
-row_2_G_number = 0
-row_3_G_number = 0
-row_4_G_number = 0
-row_5_G_number = 0
+row_1_G_number,
+row_2_G_number,
+row_3_G_number,
+row_4_G_number,
+row_5_G_number,
 O_list_drawn_str = ""
-row_1_O_number = 0
-row_2_O_number = 0
-row_3_O_number = 0
-row_4_O_number = 0
-row_5_O_number = 0
+row_1_O_number,
+row_2_O_number,
+row_3_O_number,
+row_4_O_number,
+row_5_O_number,
+
+#######
+
 # B column str convert:
 row_1_B_number = str(row_1_B_number)
 row_2_B_number = str(row_2_B_number)
