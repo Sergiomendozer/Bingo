@@ -1,5 +1,4 @@
 ####first line
-# TODO: deletes delete
 # TODO: player has won everything pauses function
 
 # TODO: move empty vairbale to global
