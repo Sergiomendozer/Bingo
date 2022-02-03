@@ -45,21 +45,21 @@ row_4_I_number = 0
 row_5_I_number = 0
 N_list_drawn_str = ""
 row_1_N_number = 0
-row_2_N_number,
-row_4_N_number,
-row_5_N_number,
+row_2_N_number = 0
+row_4_N_number = 0
+row_5_N_number = 0
 G_list_drawn_str = ""
-row_1_G_number,
-row_2_G_number,
-row_3_G_number,
-row_4_G_number,
-row_5_G_number,
+row_1_G_number = 0
+row_2_G_number = 0
+row_3_G_number = 0
+row_4_G_number = 0
+row_5_G_number = 0
 O_list_drawn_str = ""
-row_1_O_number,
-row_2_O_number,
-row_3_O_number,
-row_4_O_number,
-row_5_O_number,
+row_1_O_number = 0
+row_2_O_number = 0
+row_3_O_number = 0
+row_4_O_number = 0
+row_5_O_number = 0
 
 #######
 
