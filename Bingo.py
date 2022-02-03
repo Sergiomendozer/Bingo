@@ -262,7 +262,13 @@ def update_drawn_ball(
         Random_number_picked_label.config(
             text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
         )
-        (G_list_drawn_str, O_list_drawn_str,) = bingo_ball_color(
+        (
+            B_list_drawn_str,
+            I_list_drawn_str,
+            N_list_drawn_str,
+            G_list_drawn_str,
+            O_list_drawn_str,
+        ) = bingo_ball_color(
             drawn_bingo_number,
             G_list_drawn_str,
             O_list_drawn_str,
