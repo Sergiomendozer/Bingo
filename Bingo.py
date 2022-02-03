@@ -141,12 +141,11 @@ def sort_string(string):
 # * highlighted bookmark
 def bingo_ball_color(
     drawn_bingo_number,
-    I_list_drawn_str,
     N_list_drawn_str,
     G_list_drawn_str,
     O_list_drawn_str,
 ):
-    global B_list_drawn_str
+    global B_list_drawn_str, I_list_drawn_str
     if drawn_bingo_number.startswith("B"):
         B_list_drawn_list = []
         bingo_ball.config(image=resized_B_ball)
@@ -171,6 +170,7 @@ def bingo_ball_color(
         bingo_ball.config(image=resized_I_ball)
         I_list_drawn_str = I_list_drawn_str + " " + drawn_bingo_number[2:]
         I_list_drawn_str = sort_string(I_list_drawn_str)
+        I_list_drawn_str = I_list_drawn_str + " "  # TODO:add space after
         I_list_drawn.config(
             text="I: " + I_list_drawn_str,
             bg="#FF0000",
@@ -270,7 +270,6 @@ def update_drawn_ball(
             O_list_drawn_str,
         ) = bingo_ball_color(
             drawn_bingo_number,
-            I_list_drawn_str,
             N_list_drawn_str,
             G_list_drawn_str,
             O_list_drawn_str,
