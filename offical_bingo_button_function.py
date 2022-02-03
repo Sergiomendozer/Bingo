@@ -112,6 +112,9 @@ elif (
     and I_list_drawn_str.find(" " + row_5_I_number + " ") != -1
 ):
     print("I column pass")  # !delete
+    Bingo_button.configure(
+        text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
+    )
 # All N column for BINGO card to win
 elif (
     N_list_drawn_str.find(" " + row_1_N_number + " ") != -1
@@ -120,6 +123,9 @@ elif (
     and N_list_drawn_str.find(" " + row_5_N_number + " ") != -1
 ):  # no row 3 because that is were free space is
     print("N column pass")  # !delete
+    Bingo_button.configure(
+        text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
+    )
 # All G column for BINGO card to win
 elif (
     G_list_drawn_str.find(" " + row_1_G_number + " ") != -1
@@ -129,6 +135,9 @@ elif (
     and G_list_drawn_str.find(" " + row_5_G_number + " ") != -1
 ):
     print("G column pass")  # !delete
+    Bingo_button.configure(
+        text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
+    )
 # All O column for BINGO card to win
 elif (
     O_list_drawn_str.find(" " + row_1_O_number + " ") != -1
@@ -138,6 +147,9 @@ elif (
     and O_list_drawn_str.find(" " + row_5_O_number + " ") != -1
 ):
     print("O column pass")  # !delete
+    Bingo_button.configure(
+        text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
+    )
 # all Row 1 for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + row_1_B_number + " ") != -1
@@ -147,6 +159,9 @@ elif (
     and O_list_drawn_str.find(" " + row_1_O_number + " ") != -1
 ):
     print("Row 1 of card")  # !delete
+    Bingo_button.configure(
+        text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
+    )
 # all Row 2 for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + row_2_B_number + " ") != -1
@@ -156,6 +171,9 @@ elif (
     and O_list_drawn_str.find(" " + row_2_O_number + " ") != -1
 ):
     print("Row 2 of card")  # !delete
+    Bingo_button.configure(
+        text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
+    )
 # all Row 3 for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + row_3_B_number) != -1
@@ -164,6 +182,9 @@ elif (
     and O_list_drawn_str.find(" " + row_3_O_number + " ") != -1
 ):  # no row 3 for N because that is were free space is
     print("Row 3 of card")  # !delete
+    Bingo_button.configure(
+        text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
+    )
 # all Row 4 for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + row_4_B_number + " ") != -1
@@ -173,6 +194,9 @@ elif (
     and O_list_drawn_str.find(" " + row_4_O_number + " ") != -1
 ):
     print("Row 4 of card")  # !delete
+    Bingo_button.configure(
+        text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
+    )
 # all Row 5 for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + row_5_B_number + " ") != -1
@@ -182,6 +206,9 @@ elif (
     and O_list_drawn_str.find(" " + row_5_O_number + " ") != -1
 ):
     print("Row 5 of card")  # !delete
+    Bingo_button.configure(
+        text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
+    )
 # right sided diagonal line for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + row_1_B_number + " ") != -1
@@ -190,6 +217,9 @@ elif (
     and O_list_drawn_str.find(" " + row_5_O_number + " ") != -1
 ):  # no N taking into account b/c that is the free space
     print("Right sided diagonal line")  # !delete
+    Bingo_button.configure(
+        text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
+    )
 # left sided diagonal line for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + row_5_B_number + " ") != -1
@@ -198,5 +228,10 @@ elif (
     and O_list_drawn_str.find(" " + row_1_O_number + " ") != -1
 ):  # no N taking into account b/c that is the free space
     print("Left sided diagonal line")  # !delete
+    Bingo_button.configure(
+        text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
+    )
 else:
-    print("NO BINGO!!!")  # TODO: .configure use
+    print("NO BINGO!!!")  # !delete
+    Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
+    Bingo_button.after(3000, reset_bingo_button)
