@@ -10,7 +10,7 @@
 # ? do these need to be global for bingo button function row_1_b
 
 ### these are where globals are called
-
+###keep below
 B_list_drawn_str = " "
 row_1_B_number = 0
 row_2_B_number = 0
