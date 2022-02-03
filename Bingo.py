@@ -47,6 +47,81 @@ original_O_ball = Image.open("O-Bingo-ball.png")  # call image b4 resize
 resized_O = original_O_ball.resize((200, 150), Image.ANTIALIAS)  # resize(sides, height)
 resized_O_ball = ImageTk.PhotoImage(resized_O)
 
+# Global variables:
+flag = True
+B_numbers = empty
+B_list = empty
+I_list = empty
+N_list = empty
+G_list = empty
+O_list = empty
+
+B_list_drawn_str = " "
+I_list_drawn_str = " "
+N_list_drawn_str = " "
+G_list_drawn_str = " "
+O_list_drawn_str = " "
+# Bot strings for cards empty
+bot_row_1_B_number = ""
+bot_row_2_B_number = ""
+bot_row_3_B_number = ""
+bot_row_4_B_number = ""
+bot_row_5_B_number = ""
+
+bot_row_1_I_number = ""
+bot_row_2_I_number = ""
+bot_row_3_I_number = ""
+bot_row_4_I_number = ""
+bot_row_5_I_number = ""
+
+bot_row_1_N_number = ""
+bot_row_2_N_number = ""
+bot_row_3_N_number = ""
+bot_row_4_N_number = ""
+bot_row_5_N_number = ""
+
+bot_row_1_G_number = ""
+bot_row_2_G_number = ""
+bot_row_3_G_number = ""
+bot_row_4_G_number = ""
+bot_row_5_G_number = ""
+
+bot_row_1_O_number = ""
+bot_row_2_O_number = ""
+bot_row_3_O_number = ""
+bot_row_4_O_number = ""
+bot_row_5_O_number = ""
+
+# player strings for cards empty
+row_1_B_number = ""
+row_2_B_number = ""
+row_3_B_number = ""
+row_4_B_number = ""
+row_5_B_number = ""
+
+row_1_I_number = ""
+row_2_I_number = ""
+row_3_I_number = ""
+row_4_I_number = ""
+row_5_I_number = ""
+
+row_1_N_number = ""
+row_2_N_number = ""
+row_3_N_number = ""
+row_4_N_number = ""
+row_5_N_number = ""
+
+row_1_G_number = ""
+row_2_G_number = ""
+row_3_G_number = ""
+row_4_G_number = ""
+row_5_G_number = ""
+
+row_1_O_number = ""
+row_2_O_number = ""
+row_3_O_number = ""
+row_4_O_number = ""
+row_5_O_number = ""
 
 # ROW 1
 bingo_ball = Label(root, image=resized_O_ball)
@@ -63,19 +138,21 @@ def sort_string(string):
     return string
 
 
+# * highlighted bookmark
 def bingo_ball_color(
     drawn_bingo_number,
-    B_list_drawn_str,
     I_list_drawn_str,
     N_list_drawn_str,
     G_list_drawn_str,
     O_list_drawn_str,
 ):
+    global B_list_drawn_str
     if drawn_bingo_number.startswith("B"):
         B_list_drawn_list = []
         bingo_ball.config(image=resized_B_ball)
         B_list_drawn_str = B_list_drawn_str + " " + drawn_bingo_number[2:]
         B_list_drawn_str = sort_string(B_list_drawn_str)
+        B_list_drawn_str = B_list_drawn_str + " "  # TODO:add space after
         B_list_drawn.config(
             text="B: " + B_list_drawn_str,
             bg="#00CCFF",
@@ -168,78 +245,6 @@ def bingo_ball_color(
 
 bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 
-# Global variables:
-flag = True
-B_numbers = empty
-B_list = empty
-I_list = empty
-N_list = empty
-G_list = empty
-O_list = empty
-
-# Bot strings for cards empty
-bot_row_1_B_number = ""
-bot_row_2_B_number = ""
-bot_row_3_B_number = ""
-bot_row_4_B_number = ""
-bot_row_5_B_number = ""
-
-bot_row_1_I_number = ""
-bot_row_2_I_number = ""
-bot_row_3_I_number = ""
-bot_row_4_I_number = ""
-bot_row_5_I_number = ""
-
-bot_row_1_N_number = ""
-bot_row_2_N_number = ""
-bot_row_3_N_number = ""
-bot_row_4_N_number = ""
-bot_row_5_N_number = ""
-
-bot_row_1_G_number = ""
-bot_row_2_G_number = ""
-bot_row_3_G_number = ""
-bot_row_4_G_number = ""
-bot_row_5_G_number = ""
-
-bot_row_1_O_number = ""
-bot_row_2_O_number = ""
-bot_row_3_O_number = ""
-bot_row_4_O_number = ""
-bot_row_5_O_number = ""
-
-# player strings for cards empty
-row_1_B_number = ""
-row_2_B_number = ""
-row_3_B_number = ""
-row_4_B_number = ""
-row_5_B_number = ""
-
-row_1_I_number = ""
-row_2_I_number = ""
-row_3_I_number = ""
-row_4_I_number = ""
-row_5_I_number = ""
-
-row_1_N_number = ""
-row_2_N_number = ""
-row_3_N_number = ""
-row_4_N_number = ""
-row_5_N_number = ""
-
-row_1_G_number = ""
-row_2_G_number = ""
-row_3_G_number = ""
-row_4_G_number = ""
-row_5_G_number = ""
-
-row_1_O_number = ""
-row_2_O_number = ""
-row_3_O_number = ""
-row_4_O_number = ""
-row_5_O_number = ""
-
-
 # drawing ball update label
 # * highlighted bookmark
 # TODO: add flag
@@ -265,7 +270,6 @@ def update_drawn_ball(
             O_list_drawn_str,
         ) = bingo_ball_color(
             drawn_bingo_number,
-            B_list_drawn_str,
             I_list_drawn_str,
             N_list_drawn_str,
             G_list_drawn_str,
@@ -396,7 +400,6 @@ update_drawn_ball(
     O_list_drawn_str,
 )
 
-# flag = True  # !delete
 holder_for_time = 5  # ? change to five permanently
 # timer for next ball
 def update_timer_countdown(n):
