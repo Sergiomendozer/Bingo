@@ -1,5 +1,5 @@
 ####first line
-# TODO6: add configures #Bingo_button.configure(text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 15))
+# TODO6: add configures #Bingo_button.configure(text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25))
 ###Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
 ###return Bingo_button.after(3000, reset_bingo_button)
 # TODO3: keepers: of strings, all globals do first b/c then you find in bingo and make global
@@ -10,7 +10,24 @@
 # ? do these need to be global for bingo button function row_1_b
 
 ### these are where globals are called
-###keep below
+##########keep below
+from tkinter import *
+
+root = Tk()
+
+
+def reset_bingo_button():
+    pass
+
+
+def click_BINGO():
+    pass
+
+
+Bingo_button = Button(
+    root, text="BINGO!", bg="#B900FF", command=click_BINGO, font=("Helvetica", 25)
+)
+Bingo_button.grid(row=14, column=1, columnspan=3, sticky="nsew")
 B_list_drawn_str = " "
 row_1_B_number = 0
 row_2_B_number = 0
@@ -83,6 +100,9 @@ if (
     and B_list_drawn_str.find(" " + row_5_B_number + " ") != -1
 ):
     print("B column pass")  # !delete
+    Bingo_button.configure(
+        text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
+    )
 # All I column for BINGO card to win
 elif (
     I_list_drawn_str.find(" " + row_1_I_number + " ") != -1
