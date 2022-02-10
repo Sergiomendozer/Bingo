@@ -1,7 +1,8 @@
 from tkinter import *
 
 from numpy import empty
-from drawing_numbers import random_bingo_number
+
+# from drawing_numbers import random_bingo_number
 from PIL import ImageTk, Image
 import random
 from threading import Timer
@@ -49,7 +50,6 @@ resized_O_ball = ImageTk.PhotoImage(resized_O)
 
 # Global variables:
 flag = True
-B_numbers = empty
 B_list = empty
 I_list = empty
 N_list = empty
@@ -122,6 +122,58 @@ row_2_O_number = ""
 row_3_O_number = ""
 row_4_O_number = ""
 row_5_O_number = ""
+
+bingo_numbers = empty
+
+
+def all_bingo_numbers():
+    global bingo_numbers
+    bingo_numbers = []
+    bingo_numbers_int = [i for i in range(1, 76)]
+    for e in bingo_numbers_int:
+        if e <= 15:
+            b_string = "B "
+            e = str(e)
+            b_string = b_string + e
+            bingo_numbers.append(b_string)
+        elif e <= 30:
+            I_string = "I "
+            e = str(e)
+            I_string = I_string + e
+            bingo_numbers.append(I_string)
+        elif e <= 45:
+            N_string = "N "
+            e = str(e)
+            N_string = N_string + e
+            bingo_numbers.append(N_string)
+        elif e <= 60:
+            G_string = "G "
+            e = str(e)
+            G_string = G_string + e
+            bingo_numbers.append(G_string)
+        elif e <= 75:
+            O_string = "O "
+            e = str(e)
+            O_string = O_string + e
+            bingo_numbers.append(O_string)
+    return bingo_numbers
+
+
+all_bingo_numbers()
+
+
+def random_bingo_number():
+    global bingo_numbers
+    # add if len -== 1 then bingo number ````break or reset bingo numbers
+    if len(bingo_numbers) >= 1:
+        drawn_bingo_number = random.choice(bingo_numbers)  # list index out of range
+        # takes out drawing number from the list
+        take_out_of_list = bingo_numbers.index(drawn_bingo_number)
+        bingo_numbers.pop(take_out_of_list)
+        return drawn_bingo_number
+    else:
+        drawn_bingo_number = "Empty"
+
 
 # ROW 1
 bingo_ball = Label(root, image=resized_O_ball)
@@ -248,31 +300,24 @@ bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 # drawing ball update label
 # * highlighted bookmark : no str call global, Bingo numbers empty
 # TODO: add flag
-def update_drawn_ball(bingo_numbers):
-    global flag, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
+def update_drawn_ball():
+    global flag, bingo_numbers, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
     if flag == True:
-        (drawn_bingo_number, bingo_numbers) = random_bingo_number(bingo_numbers)
+        (drawn_bingo_number) = random_bingo_number()
         Random_number_picked_label.config(
             text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
         )
         bingo_ball_color(drawn_bingo_number)
         return Random_number_picked_label.after(
-            5000, update_drawn_ball, bingo_numbers
+            5000, update_drawn_ball
         )  # .after(parent, ms, function = None, *args)
         # ? very one sec call another function to check if flag == true
         # TODO:
     else:
-        global B_numbers, B_list, I_list, N_list, G_list, O_list
-        (B_numbers, B_list, I_list, N_list, G_list, O_list) = (
-            bingo_numbers,
-            B_list_drawn_str,
-            I_list_drawn_str,
-            N_list_drawn_str,
-            G_list_drawn_str,
-            O_list_drawn_str,
-        )
-        return
+        bingo_numbers()
 
+
+# update_drawn_ball()
 
 B_list_drawn_str = ""
 B_list_drawn = Label(
@@ -334,38 +379,7 @@ Random_number_picked_label = Label(
 )
 Random_number_picked_label.place(x=259, y=63)
 
-# makes list for all bingo number
-bingo_numbers = []
-bingo_numbers_int = [i for i in range(1, 76)]
-for e in bingo_numbers_int:
-    if e <= 15:
-        b_string = "B "
-        e = str(e)
-        b_string = b_string + e
-        bingo_numbers.append(b_string)
-    elif e <= 30:
-        I_string = "I "
-        e = str(e)
-        I_string = I_string + e
-        bingo_numbers.append(I_string)
-    elif e <= 45:
-        N_string = "N "
-        e = str(e)
-        N_string = N_string + e
-        bingo_numbers.append(N_string)
-    elif e <= 60:
-        G_string = "G "
-        e = str(e)
-        G_string = G_string + e
-        bingo_numbers.append(G_string)
-    elif e <= 75:
-        O_string = "O "
-        e = str(e)
-        O_string = O_string + e
-        bingo_numbers.append(O_string)
-
-
-update_drawn_ball(bingo_numbers)
+update_drawn_ball()
 
 holder_for_time = 5  # ? change to five permanently
 # timer for next ball
@@ -1781,6 +1795,7 @@ def make_a_new_game():
     # call make_a_new_player_card()
     # call make_a_new_bot_card()
     #### globals are reset to empty
+    #### all_bingo_numbers() ### resets all bingo numbers
     make_a_new_player_card()
     make_a_new_bot_card()
 
@@ -1793,7 +1808,7 @@ def play():
     #     return
     flag = True
     update_timer_countdown(holder_for_time)
-    update_drawn_ball(B_numbers)
+    update_drawn_ball
     # TODO: add function drawn ball
 
 
