@@ -162,7 +162,7 @@ def bingo_ball_color(
         #     N_list_drawn_str,
         #     G_list_drawn_str,
         #     O_list_drawn_str,
-        # )
+        # )# !delete
     elif drawn_bingo_number.startswith("I"):
         bingo_ball.config(image=resized_I_ball)
         I_list_drawn_str = I_list_drawn_str + " " + drawn_bingo_number[2:]
@@ -181,7 +181,7 @@ def bingo_ball_color(
         #     N_list_drawn_str,
         #     G_list_drawn_str,
         #     O_list_drawn_str,
-        # )
+        # )# !delete
 
     elif drawn_bingo_number.startswith("N"):
         bingo_ball.config(image=resized_N_ball)
@@ -201,7 +201,7 @@ def bingo_ball_color(
         #     N_list_drawn_str,
         #     G_list_drawn_str,
         #     O_list_drawn_str,
-        # )
+        # )# !delete
 
     elif drawn_bingo_number.startswith("G"):
         bingo_ball.config(image=resized_G_ball)
@@ -221,7 +221,7 @@ def bingo_ball_color(
         #     N_list_drawn_str,
         #     G_list_drawn_str,
         #     O_list_drawn_str,
-        # )
+        # )# !delete
     elif drawn_bingo_number.startswith("O"):
         bingo_ball.config(image=resized_O_ball)
         O_list_drawn_str = O_list_drawn_str + " " + drawn_bingo_number[2:]
@@ -240,7 +240,7 @@ def bingo_ball_color(
         #     N_list_drawn_str,
         #     G_list_drawn_str,
         #     O_list_drawn_str,
-        # )
+        # )# !delete
 
 
 bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
@@ -248,15 +248,8 @@ bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 # drawing ball update label
 # * highlighted bookmark : no str call global, Bingo numbers empty
 # TODO: add flag
-def update_drawn_ball(
-    bingo_numbers,
-    B_list_drawn_str,
-    I_list_drawn_str,
-    N_list_drawn_str,
-    G_list_drawn_str,
-    O_list_drawn_str,
-):
-    global flag
+def update_drawn_ball(bingo_numbers):
+    global flag, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
     if flag == True:
         (drawn_bingo_number, bingo_numbers) = random_bingo_number(bingo_numbers)
         Random_number_picked_label.config(
@@ -264,14 +257,7 @@ def update_drawn_ball(
         )
         bingo_ball_color(drawn_bingo_number)
         return Random_number_picked_label.after(
-            5000,
-            update_drawn_ball,
-            bingo_numbers,
-            B_list_drawn_str,
-            I_list_drawn_str,
-            N_list_drawn_str,
-            G_list_drawn_str,
-            O_list_drawn_str,
+            5000, update_drawn_ball, bingo_numbers
         )  # .after(parent, ms, function = None, *args)
         # ? very one sec call another function to check if flag == true
         # TODO:
@@ -379,14 +365,7 @@ for e in bingo_numbers_int:
         bingo_numbers.append(O_string)
 
 
-update_drawn_ball(
-    bingo_numbers,
-    B_list_drawn_str,
-    I_list_drawn_str,
-    N_list_drawn_str,
-    G_list_drawn_str,
-    O_list_drawn_str,
-)
+update_drawn_ball(bingo_numbers)
 
 holder_for_time = 5  # ? change to five permanently
 # timer for next ball
@@ -1814,7 +1793,7 @@ def play():
     #     return
     flag = True
     update_timer_countdown(holder_for_time)
-    update_drawn_ball(B_numbers, B_list, I_list, N_list, G_list, O_list)
+    update_drawn_ball(B_numbers)
     # TODO: add function drawn ball
 
 
