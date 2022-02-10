@@ -1,8 +1,5 @@
 from tkinter import *
-
 from numpy import empty
-
-# from drawing_numbers import random_bingo_number
 from PIL import ImageTk, Image
 import random
 from threading import Timer
@@ -191,7 +188,6 @@ def sort_string(string):
     return string
 
 
-# * highlighted bookmark
 def bingo_ball_color():
     global drawn_bingo_number, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
     if drawn_bingo_number.startswith("B"):
@@ -207,13 +203,6 @@ def bingo_ball_color():
             padx=2,
             pady=4,
         )
-        # return (
-        #     B_list_drawn_str,
-        #     I_list_drawn_str,
-        #     N_list_drawn_str,
-        #     G_list_drawn_str,
-        #     O_list_drawn_str,
-        # )# !delete
     elif drawn_bingo_number.startswith("I"):
         bingo_ball.config(image=resized_I_ball)
         I_list_drawn_str = I_list_drawn_str + " " + drawn_bingo_number[2:]
@@ -226,14 +215,6 @@ def bingo_ball_color():
             padx=2,
             pady=4,
         )
-        # return (
-        #     B_list_drawn_str,
-        #     I_list_drawn_str,
-        #     N_list_drawn_str,
-        #     G_list_drawn_str,
-        #     O_list_drawn_str,
-        # )# !delete
-
     elif drawn_bingo_number.startswith("N"):
         bingo_ball.config(image=resized_N_ball)
         N_list_drawn_str = N_list_drawn_str + " " + drawn_bingo_number[2:]
@@ -246,14 +227,6 @@ def bingo_ball_color():
             padx=2,
             pady=4,
         )
-        # return (
-        #     B_list_drawn_str,
-        #     I_list_drawn_str,
-        #     N_list_drawn_str,
-        #     G_list_drawn_str,
-        #     O_list_drawn_str,
-        # )# !delete
-
     elif drawn_bingo_number.startswith("G"):
         bingo_ball.config(image=resized_G_ball)
         G_list_drawn_str = G_list_drawn_str + " " + drawn_bingo_number[2:]
@@ -266,13 +239,6 @@ def bingo_ball_color():
             padx=2,
             pady=4,
         )
-        # return (
-        #     B_list_drawn_str,
-        #     I_list_drawn_str,
-        #     N_list_drawn_str,
-        #     G_list_drawn_str,
-        #     O_list_drawn_str,
-        # )# !delete
     elif drawn_bingo_number.startswith("O"):
         bingo_ball.config(image=resized_O_ball)
         O_list_drawn_str = O_list_drawn_str + " " + drawn_bingo_number[2:]
@@ -285,20 +251,11 @@ def bingo_ball_color():
             padx=2,
             pady=4,
         )
-        # return (
-        #     B_list_drawn_str,
-        #     I_list_drawn_str,
-        #     N_list_drawn_str,
-        #     G_list_drawn_str,
-        #     O_list_drawn_str,
-        # )# !delete
 
 
 bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 
 # drawing ball update label
-# * highlighted bookmark : no str call global, Bingo numbers empty
-# TODO: add flag
 def update_drawn_ball():
     global flag, bingo_numbers, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
     if flag == True:
@@ -311,7 +268,7 @@ def update_drawn_ball():
             5000, update_drawn_ball
         )  # .after(parent, ms, function = None, *args)
         # ? very one sec call another function to check if flag == true
-        # TODO:
+        # TODO: look above
     else:
         bingo_numbers()
 
@@ -398,9 +355,6 @@ def update_timer_countdown(n):
     elif flag == True and n == "0":
         return update_timer_countdown(5)
     elif flag == False:
-        # global holder_for_time
-        # holder_for_time = n
-        # print(holder_for_time) # !delete
         return
 
 
@@ -1788,6 +1742,7 @@ def make_a_new_bot_card():
     bot_draw_O_numbers_row_1()
 
 
+# * highlighted bookmark
 def make_a_new_game():
     # call make_a_new_player_card()
     # call make_a_new_bot_card()
@@ -1805,8 +1760,7 @@ def play():
     #     return
     flag = True
     update_timer_countdown(holder_for_time)
-    update_drawn_ball
-    # TODO: add function drawn ball
+    update_drawn_ball()
 
 
 def pause():
