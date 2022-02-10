@@ -141,10 +141,9 @@ def sort_string(string):
 # * highlighted bookmark
 def bingo_ball_color(
     drawn_bingo_number,
-    G_list_drawn_str,
     O_list_drawn_str,
 ):
-    global B_list_drawn_str, I_list_drawn_str, N_list_drawn_str
+    global B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str
     if drawn_bingo_number.startswith("B"):
         B_list_drawn_list = []
         bingo_ball.config(image=resized_B_ball)
@@ -209,6 +208,7 @@ def bingo_ball_color(
         bingo_ball.config(image=resized_G_ball)
         G_list_drawn_str = G_list_drawn_str + " " + drawn_bingo_number[2:]
         G_list_drawn_str = sort_string(G_list_drawn_str)
+        G_list_drawn_str = G_list_drawn_str + " "
         G_list_drawn.config(
             text="G: " + G_list_drawn_str,
             bg="#F96815",
@@ -246,7 +246,7 @@ def bingo_ball_color(
 bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 
 # drawing ball update label
-# * highlighted bookmark
+# * highlighted bookmark this is for color delete
 # TODO: add flag
 def update_drawn_ball(
     bingo_numbers,
@@ -270,7 +270,6 @@ def update_drawn_ball(
             O_list_drawn_str,
         ) = bingo_ball_color(
             drawn_bingo_number,
-            G_list_drawn_str,
             O_list_drawn_str,
         )
         return Random_number_picked_label.after(
