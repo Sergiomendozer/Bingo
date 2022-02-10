@@ -1744,12 +1744,24 @@ def make_a_new_bot_card():
 
 # * highlighted bookmark
 def make_a_new_game():
-    # call make_a_new_player_card()
-    # call make_a_new_bot_card()
+    global B_list, I_list, N_list, G_list, O_list, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
     #### globals are reset to empty
-    #### all_bingo_numbers() ### resets all bingo numbers
+    all_bingo_numbers()
+    print(bingo_numbers)  ### for testing, # !delete
     make_a_new_player_card()
     make_a_new_bot_card()
+    B_list = empty
+    I_list = empty
+    N_list = empty
+    G_list = empty
+    O_list = empty
+
+    B_list_drawn_str = " "
+    I_list_drawn_str = " "
+    N_list_drawn_str = " "
+    G_list_drawn_str = " "
+    O_list_drawn_str = " "
+    # TODO: .configure stiNgs list!!!
 
 
 # * highlighted bookmark
