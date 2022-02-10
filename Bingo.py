@@ -337,6 +337,8 @@ update_drawn_ball()
 
 holder_for_time = 5  # ? change to five permanently
 # timer for next ball
+# * highlighted bookmark
+# TODO: make n global, change name to countdown_number
 def update_timer_countdown(n):
     global flag
     if flag == True and n != "0":
@@ -1793,7 +1795,8 @@ def make_a_new_game():
         pady=4,
     )
     update_drawn_ball()
-    # random_bingo_number()
+    # TODO: global 5
+    update_timer_countdown(5)
 
     # TODO: timer reset to five
 
