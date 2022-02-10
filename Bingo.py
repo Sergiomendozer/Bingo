@@ -1747,7 +1747,6 @@ def make_a_new_game():
     global B_list, I_list, N_list, G_list, O_list, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
     #### globals are reset to empty
     all_bingo_numbers()
-    print(bingo_numbers)  ### for testing, # !delete
     make_a_new_player_card()
     make_a_new_bot_card()
     B_list = empty
@@ -1755,12 +1754,47 @@ def make_a_new_game():
     N_list = empty
     G_list = empty
     O_list = empty
-
     B_list_drawn_str = " "
     I_list_drawn_str = " "
     N_list_drawn_str = " "
     G_list_drawn_str = " "
     O_list_drawn_str = " "
+    B_list_drawn.config(
+        text="B: " + B_list_drawn_str,
+        bg="#00CCFF",
+        font=("Helvetica", 15),
+        padx=2,
+        pady=4,
+    )
+    I_list_drawn.config(
+        text="I: " + I_list_drawn_str,
+        bg="#FF0000",
+        font=("Helvetica", 15),
+        padx=2,
+        pady=4,
+    )
+    N_list_drawn.config(
+        text="N: " + N_list_drawn_str,
+        bg="#E2DF00",
+        font=("Helvetica", 15),
+        padx=2,
+        pady=4,
+    )
+    G_list_drawn.config(
+        text="G: " + G_list_drawn_str,
+        bg="#F96815",
+        font=("Helvetica", 15),
+        padx=2,
+        pady=4,
+    )
+    O_list_drawn.config(
+        text="O: " + O_list_drawn_str,
+        bg="#00FF33",
+        font=("Helvetica", 15),
+        padx=2,
+        pady=4,
+    )
+
     # TODO: .configure stiNgs list!!!
 
 
