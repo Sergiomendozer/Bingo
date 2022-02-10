@@ -262,15 +262,16 @@ def update_drawn_ball(
         Random_number_picked_label.config(
             text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
         )
-        (
-            B_list_drawn_str,
-            I_list_drawn_str,
-            N_list_drawn_str,
-            G_list_drawn_str,
-            O_list_drawn_str,
-        ) = bingo_ball_color(
-            drawn_bingo_number,
-        )
+        # (
+        #     B_list_drawn_str,
+        #     I_list_drawn_str,
+        #     N_list_drawn_str,
+        #     G_list_drawn_str,
+        #     O_list_drawn_str,
+        # ) = bingo_ball_color(
+        #     drawn_bingo_number,
+        # )
+        bingo_ball_color(drawn_bingo_number)
         return Random_number_picked_label.after(
             5000,
             update_drawn_ball,
@@ -1809,6 +1810,7 @@ def make_a_new_bot_card():
 def make_a_new_game():
     # call make_a_new_player_card()
     # call make_a_new_bot_card()
+    #### globals are reset to empty
     make_a_new_player_card()
     make_a_new_bot_card()
 
