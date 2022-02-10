@@ -148,7 +148,7 @@ def bingo_ball_color(
         bingo_ball.config(image=resized_B_ball)
         B_list_drawn_str = B_list_drawn_str + " " + drawn_bingo_number[2:]
         B_list_drawn_str = sort_string(B_list_drawn_str)
-        B_list_drawn_str = B_list_drawn_str + " "  # TODO:add space after
+        B_list_drawn_str = B_list_drawn_str + " "
         B_list_drawn.config(
             text="B: " + B_list_drawn_str,
             bg="#00CCFF",
@@ -156,18 +156,18 @@ def bingo_ball_color(
             padx=2,
             pady=4,
         )
-        return (
-            B_list_drawn_str,
-            I_list_drawn_str,
-            N_list_drawn_str,
-            G_list_drawn_str,
-            O_list_drawn_str,
-        )
+        # return (
+        #     B_list_drawn_str,
+        #     I_list_drawn_str,
+        #     N_list_drawn_str,
+        #     G_list_drawn_str,
+        #     O_list_drawn_str,
+        # )
     elif drawn_bingo_number.startswith("I"):
         bingo_ball.config(image=resized_I_ball)
         I_list_drawn_str = I_list_drawn_str + " " + drawn_bingo_number[2:]
         I_list_drawn_str = sort_string(I_list_drawn_str)
-        I_list_drawn_str = I_list_drawn_str + " "  # TODO:add space after
+        I_list_drawn_str = I_list_drawn_str + " "
         I_list_drawn.config(
             text="I: " + I_list_drawn_str,
             bg="#FF0000",
@@ -175,19 +175,19 @@ def bingo_ball_color(
             padx=2,
             pady=4,
         )
-        return (
-            B_list_drawn_str,
-            I_list_drawn_str,
-            N_list_drawn_str,
-            G_list_drawn_str,
-            O_list_drawn_str,
-        )
+        # return (
+        #     B_list_drawn_str,
+        #     I_list_drawn_str,
+        #     N_list_drawn_str,
+        #     G_list_drawn_str,
+        #     O_list_drawn_str,
+        # )
 
     elif drawn_bingo_number.startswith("N"):
         bingo_ball.config(image=resized_N_ball)
         N_list_drawn_str = N_list_drawn_str + " " + drawn_bingo_number[2:]
         N_list_drawn_str = sort_string(N_list_drawn_str)
-        N_list_drawn_str = N_list_drawn_str + " "  # TODO:add space after
+        N_list_drawn_str = N_list_drawn_str + " "
         N_list_drawn.config(
             text="N: " + N_list_drawn_str,
             bg="#E2DF00",
@@ -195,13 +195,13 @@ def bingo_ball_color(
             padx=2,
             pady=4,
         )
-        return (
-            B_list_drawn_str,
-            I_list_drawn_str,
-            N_list_drawn_str,
-            G_list_drawn_str,
-            O_list_drawn_str,
-        )
+        # return (
+        #     B_list_drawn_str,
+        #     I_list_drawn_str,
+        #     N_list_drawn_str,
+        #     G_list_drawn_str,
+        #     O_list_drawn_str,
+        # )
 
     elif drawn_bingo_number.startswith("G"):
         bingo_ball.config(image=resized_G_ball)
@@ -215,13 +215,13 @@ def bingo_ball_color(
             padx=2,
             pady=4,
         )
-        return (
-            B_list_drawn_str,
-            I_list_drawn_str,
-            N_list_drawn_str,
-            G_list_drawn_str,
-            O_list_drawn_str,
-        )
+        # return (
+        #     B_list_drawn_str,
+        #     I_list_drawn_str,
+        #     N_list_drawn_str,
+        #     G_list_drawn_str,
+        #     O_list_drawn_str,
+        # )
     elif drawn_bingo_number.startswith("O"):
         bingo_ball.config(image=resized_O_ball)
         O_list_drawn_str = O_list_drawn_str + " " + drawn_bingo_number[2:]
@@ -234,19 +234,19 @@ def bingo_ball_color(
             padx=2,
             pady=4,
         )
-        return (
-            B_list_drawn_str,
-            I_list_drawn_str,
-            N_list_drawn_str,
-            G_list_drawn_str,
-            O_list_drawn_str,
-        )
+        # return (
+        #     B_list_drawn_str,
+        #     I_list_drawn_str,
+        #     N_list_drawn_str,
+        #     G_list_drawn_str,
+        #     O_list_drawn_str,
+        # )
 
 
 bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 
 # drawing ball update label
-# * highlighted bookmark this is for color delete
+# * highlighted bookmark : no str call global, Bingo numbers empty
 # TODO: add flag
 def update_drawn_ball(
     bingo_numbers,
@@ -262,15 +262,6 @@ def update_drawn_ball(
         Random_number_picked_label.config(
             text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
         )
-        # (
-        #     B_list_drawn_str,
-        #     I_list_drawn_str,
-        #     N_list_drawn_str,
-        #     G_list_drawn_str,
-        #     O_list_drawn_str,
-        # ) = bingo_ball_color(
-        #     drawn_bingo_number,
-        # )
         bingo_ball_color(drawn_bingo_number)
         return Random_number_picked_label.after(
             5000,
