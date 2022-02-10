@@ -1734,7 +1734,6 @@ def make_a_new_player_card():
 
 
 def make_a_new_bot_card():
-    # .config(text="new bot", bg="#FF0000", font=("Helvetica", 20))
     bot_draw_B_numbers_row_1()
     bot_draw_I_numbers_row_1()
     bot_draw_N_numbers_row_1()
@@ -1745,7 +1744,6 @@ def make_a_new_bot_card():
 # * highlighted bookmark
 def make_a_new_game():
     global B_list, I_list, N_list, G_list, O_list, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
-    #### globals are reset to empty
     all_bingo_numbers()
     make_a_new_player_card()
     make_a_new_bot_card()
@@ -1794,8 +1792,10 @@ def make_a_new_game():
         padx=2,
         pady=4,
     )
+    update_drawn_ball()
+    # random_bingo_number()
 
-    # TODO: .configure stiNgs list!!!
+    # TODO: timer reset to five
 
 
 # * highlighted bookmark
