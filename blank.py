@@ -1,7 +1,8 @@
 # TODO: .configure purple if list = bot card
+# TODO: # * highlighted bookmark
+# TODO: deletes
 # TODO: loop game
 # TODO: new game function restarts ball, list, timer
-# TODO: drawn_bingo_number # next make global
 
 # update_drawn_ball
 

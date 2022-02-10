@@ -124,6 +124,7 @@ row_4_O_number = ""
 row_5_O_number = ""
 
 bingo_numbers = empty
+drawn_bingo_number = empty
 
 
 def all_bingo_numbers():
@@ -163,7 +164,7 @@ all_bingo_numbers()
 
 
 def random_bingo_number():
-    global bingo_numbers
+    global bingo_numbers, drawn_bingo_number
     # add if len -== 1 then bingo number ````break or reset bingo numbers
     if len(bingo_numbers) >= 1:
         drawn_bingo_number = random.choice(bingo_numbers)  # list index out of range
@@ -191,10 +192,8 @@ def sort_string(string):
 
 
 # * highlighted bookmark
-def bingo_ball_color(
-    drawn_bingo_number,
-):
-    global B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
+def bingo_ball_color():
+    global drawn_bingo_number, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
     if drawn_bingo_number.startswith("B"):
         B_list_drawn_list = []
         bingo_ball.config(image=resized_B_ball)
@@ -303,11 +302,11 @@ bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 def update_drawn_ball():
     global flag, bingo_numbers, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
     if flag == True:
-        (drawn_bingo_number) = random_bingo_number()
+        random_bingo_number()
         Random_number_picked_label.config(
             text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
         )
-        bingo_ball_color(drawn_bingo_number)
+        bingo_ball_color()
         return Random_number_picked_label.after(
             5000, update_drawn_ball
         )  # .after(parent, ms, function = None, *args)
@@ -316,8 +315,6 @@ def update_drawn_ball():
     else:
         bingo_numbers()
 
-
-# update_drawn_ball()
 
 B_list_drawn_str = ""
 B_list_drawn = Label(
