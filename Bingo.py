@@ -991,30 +991,32 @@ N_bingo_row_5_bot.grid(row=13, column=8, sticky="nsew")
 G_bingo_row_5_bot.grid(row=13, column=9, sticky="nsew")
 O_bingo_row_5_bot.grid(row=13, column=10, sticky="nsew")
 
-###NEW function does nt take into accoubt letter must do
+###NEW function does nt take into account letter must do
 def was_number_called_for_bot():
     global drawn_bingo_number, bot_row_1_B_number, bot_row_2_B_number, bot_row_3_B_number, bot_row_4_B_number, bot_row_5_B_number, bot_row_1_I_number, bot_row_2_I_number, bot_row_3_I_number, bot_row_4_I_number, bot_row_5_I_number, bot_row_1_N_number, bot_row_2_N_number, bot_row_3_N_number, bot_row_4_N_number, bot_row_5_N_number, bot_row_1_G_number, bot_row_2_G_number, bot_row_3_G_number, bot_row_4_G_number, bot_row_5_G_number, bot_row_1_O_number, bot_row_2_O_number, bot_row_3_O_number, bot_row_4_O_number, bot_row_5_O_number
     # bot_row_1_B_number = "B 7"
     # drawn_bingo_number = "7"
-    drawn_bingo_number = str(drawn_bingo_number)
-    bot_row_1_B_number = str(bot_row_1_B_number)
-    bot_row_2_B_number = str(bot_row_2_B_number)
-    bot_row_3_B_number = str(bot_row_3_B_number)
-    bot_row_4_B_number = str(bot_row_4_B_number)
-    bot_row_5_B_number = str(bot_row_5_B_number)
+    # drawn_bingo_number = str(drawn_bingo_number)
+    # bot_row_1_B_number = str(bot_row_1_B_number)
+    # bot_row_2_B_number = str(bot_row_2_B_number)
+    # bot_row_3_B_number = str(bot_row_3_B_number)
+    # bot_row_4_B_number = str(bot_row_4_B_number)
+    # bot_row_5_B_number = str(bot_row_5_B_number)
+    print(drawn_bingo_number[2:])
+    print(bot_row_1_B_number)
 
 
-drawn_bingo_number[2:]  ## addd # !delete
-if bot_row_1_B_number == drawn_bingo_number:
-    B_bingo_row_1_bot.config(bg="#B900FF")
-elif bot_row_2_B_number == drawn_bingo_number:
-    B_bingo_row_2_bot.config(bg="#B900FF")
-elif bot_row_3_B_number == drawn_bingo_number:
-    B_bingo_row_3_bot.config(bg="#B900FF")
-elif bot_row_4_B_number == drawn_bingo_number:
-    B_bingo_row_4_bot.config(bg="#B900FF")
-elif bot_row_5_B_number == drawn_bingo_number:
-    B_bingo_row_5_bot.config(bg="#B900FF")
+# drawn_bingo_number[2:]  ## add # !delete
+# if bot_row_1_B_number == drawn_bingo_number[2:]:
+#     B_bingo_row_1_bot.config(bg="#B900FF")
+# elif bot_row_2_B_number == drawn_bingo_number[2:]:
+#     B_bingo_row_2_bot.config(bg="#B900FF")
+# elif bot_row_3_B_number == drawn_bingo_number[2:]:
+#     B_bingo_row_3_bot.config(bg="#B900FF")
+# elif bot_row_4_B_number == drawn_bingo_number[2:]:
+#     B_bingo_row_4_bot.config(bg="#B900FF")
+# elif bot_row_5_B_number == drawn_bingo_number[2:]:
+#     B_bingo_row_5_bot.config(bg="#B900FF")
 
 ###NEW
 def random_bingo_number():
