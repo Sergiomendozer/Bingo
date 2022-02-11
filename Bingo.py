@@ -1499,6 +1499,7 @@ def bot_draw_B_numbers_row_2(bot_numbers_for_B_list_out_1):
 
 
 def bot_draw_B_numbers_row_1():
+    global bot_row_1_B_number  # TODO:
     bot_numbers_for_B_list = []
     bot_numbers_for_B_list_int = [i for i in range(1, 16)]
     for e in bot_numbers_for_B_list_int:
