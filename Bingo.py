@@ -1063,7 +1063,7 @@ def random_bingo_number():
         is_number_on_bots_card()
         return drawn_bingo_number
     else:
-        drawn_bingo_number = "Empty"
+        drawn_bingo_number = "all drawn"
 
 
 # drawing ball update label
