@@ -319,6 +319,7 @@ Random_number_picked_label = Label(
 )
 Random_number_picked_label.place(x=259, y=63)
 
+
 holder_for_time = 5  # ? change to five permanently
 # timer for next ball
 # * highlighted bookmark
