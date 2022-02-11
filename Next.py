@@ -1,5 +1,7 @@
 #####
 # TODO: .configure purple if list = bot card
+# TODO: does bot have bingo????
+
 
 # TODO: loop game: GO to # * highlighted bookmark (there are notes)
 # TODO: next drawn number gets funky when called for pause and new game must fix
