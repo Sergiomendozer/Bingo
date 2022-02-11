@@ -991,100 +991,100 @@ N_bingo_row_5_bot.grid(row=13, column=8, sticky="nsew")
 G_bingo_row_5_bot.grid(row=13, column=9, sticky="nsew")
 O_bingo_row_5_bot.grid(row=13, column=10, sticky="nsew")
 
-###NEW function does nt take into account letter must do
-def is_number_on_bots_card():
-    global drawn_bingo_number, bot_row_1_B_number, bot_row_2_B_number, bot_row_3_B_number, bot_row_4_B_number, bot_row_5_B_number, bot_row_1_I_number, bot_row_2_I_number, bot_row_3_I_number, bot_row_4_I_number, bot_row_5_I_number, bot_row_1_N_number, bot_row_2_N_number, bot_row_3_N_number, bot_row_4_N_number, bot_row_5_N_number, bot_row_1_G_number, bot_row_2_G_number, bot_row_3_G_number, bot_row_4_G_number, bot_row_5_G_number, bot_row_1_O_number, bot_row_2_O_number, bot_row_3_O_number, bot_row_4_O_number, bot_row_5_O_number
-    print(drawn_bingo_number[2:])  # !delete used for test
-    print(bot_row_1_B_number)  # !delete for test
-    if bot_row_1_B_number == drawn_bingo_number[2:]:
-        B_bingo_row_1_bot.config(bg="#B900FF")
-    elif bot_row_2_B_number == drawn_bingo_number[2:]:
-        B_bingo_row_2_bot.config(bg="#B900FF")
-    elif bot_row_3_B_number == drawn_bingo_number[2:]:
-        B_bingo_row_3_bot.config(bg="#B900FF")
-    elif bot_row_4_B_number == drawn_bingo_number[2:]:
-        B_bingo_row_4_bot.config(bg="#B900FF")
-    elif bot_row_5_B_number == drawn_bingo_number[2:]:
-        B_bingo_row_5_bot.config(bg="#B900FF")
+###NEW function does nt take into account letter must do # !delete
+# def is_number_on_bots_card():
+#     global drawn_bingo_number, bot_row_1_B_number, bot_row_2_B_number, bot_row_3_B_number, bot_row_4_B_number, bot_row_5_B_number, bot_row_1_I_number, bot_row_2_I_number, bot_row_3_I_number, bot_row_4_I_number, bot_row_5_I_number, bot_row_1_N_number, bot_row_2_N_number, bot_row_3_N_number, bot_row_4_N_number, bot_row_5_N_number, bot_row_1_G_number, bot_row_2_G_number, bot_row_3_G_number, bot_row_4_G_number, bot_row_5_G_number, bot_row_1_O_number, bot_row_2_O_number, bot_row_3_O_number, bot_row_4_O_number, bot_row_5_O_number
+#     print(drawn_bingo_number[2:])  # !delete used for test
+#     print(bot_row_1_B_number)  # !delete for test
+#     if bot_row_1_B_number == drawn_bingo_number[2:]:
+#         B_bingo_row_1_bot.config(bg="#B900FF")
+#     elif bot_row_2_B_number == drawn_bingo_number[2:]:
+#         B_bingo_row_2_bot.config(bg="#B900FF")
+#     elif bot_row_3_B_number == drawn_bingo_number[2:]:
+#         B_bingo_row_3_bot.config(bg="#B900FF")
+#     elif bot_row_4_B_number == drawn_bingo_number[2:]:
+#         B_bingo_row_4_bot.config(bg="#B900FF")
+#     elif bot_row_5_B_number == drawn_bingo_number[2:]:
+#         B_bingo_row_5_bot.config(bg="#B900FF")
 
-    elif bot_row_1_I_number == drawn_bingo_number[2:]:
-        I_bingo_row_1_bot.config(bg="#B900FF")
-    elif bot_row_2_I_number == drawn_bingo_number[2:]:
-        I_bingo_row_2_bot.config(bg="#B900FF")
-    elif bot_row_3_I_number == drawn_bingo_number[2:]:
-        I_bingo_row_3_bot.config(bg="#B900FF")
-    elif bot_row_4_I_number == drawn_bingo_number[2:]:
-        I_bingo_row_4_bot.config(bg="#B900FF")
-    elif bot_row_5_I_number == drawn_bingo_number[2:]:
-        I_bingo_row_5_bot.config(bg="#B900FF")
+#     elif bot_row_1_I_number == drawn_bingo_number[2:]:
+#         I_bingo_row_1_bot.config(bg="#B900FF")
+#     elif bot_row_2_I_number == drawn_bingo_number[2:]:
+#         I_bingo_row_2_bot.config(bg="#B900FF")
+#     elif bot_row_3_I_number == drawn_bingo_number[2:]:
+#         I_bingo_row_3_bot.config(bg="#B900FF")
+#     elif bot_row_4_I_number == drawn_bingo_number[2:]:
+#         I_bingo_row_4_bot.config(bg="#B900FF")
+#     elif bot_row_5_I_number == drawn_bingo_number[2:]:
+#         I_bingo_row_5_bot.config(bg="#B900FF")
 
-    elif bot_row_1_N_number == drawn_bingo_number[2:]:
-        N_bingo_row_1_bot.config(bg="#B900FF")
-    elif bot_row_2_N_number == drawn_bingo_number[2:]:
-        N_bingo_row_2_bot.config(bg="#B900FF")
-    elif bot_row_4_N_number == drawn_bingo_number[2:]:
-        N_bingo_row_4_bot.config(bg="#B900FF")
-    elif bot_row_5_N_number == drawn_bingo_number[2:]:
-        N_bingo_row_5_bot.config(bg="#B900FF")
+#     elif bot_row_1_N_number == drawn_bingo_number[2:]:
+#         N_bingo_row_1_bot.config(bg="#B900FF")
+#     elif bot_row_2_N_number == drawn_bingo_number[2:]:
+#         N_bingo_row_2_bot.config(bg="#B900FF")
+#     elif bot_row_4_N_number == drawn_bingo_number[2:]:
+#         N_bingo_row_4_bot.config(bg="#B900FF")
+#     elif bot_row_5_N_number == drawn_bingo_number[2:]:
+#         N_bingo_row_5_bot.config(bg="#B900FF")
 
-    elif bot_row_1_G_number == drawn_bingo_number[2:]:
-        G_bingo_row_1_bot.config(bg="#B900FF")
-    elif bot_row_2_G_number == drawn_bingo_number[2:]:
-        G_bingo_row_2_bot.config(bg="#B900FF")
-    elif bot_row_3_G_number == drawn_bingo_number[2:]:
-        G_bingo_row_3_bot.config(bg="#B900FF")
-    elif bot_row_4_G_number == drawn_bingo_number[2:]:
-        G_bingo_row_4_bot.config(bg="#B900FF")
-    elif bot_row_5_G_number == drawn_bingo_number[2:]:
-        G_bingo_row_5_bot.config(bg="#B900FF")
+#     elif bot_row_1_G_number == drawn_bingo_number[2:]:
+#         G_bingo_row_1_bot.config(bg="#B900FF")
+#     elif bot_row_2_G_number == drawn_bingo_number[2:]:
+#         G_bingo_row_2_bot.config(bg="#B900FF")
+#     elif bot_row_3_G_number == drawn_bingo_number[2:]:
+#         G_bingo_row_3_bot.config(bg="#B900FF")
+#     elif bot_row_4_G_number == drawn_bingo_number[2:]:
+#         G_bingo_row_4_bot.config(bg="#B900FF")
+#     elif bot_row_5_G_number == drawn_bingo_number[2:]:
+#         G_bingo_row_5_bot.config(bg="#B900FF")
 
-    elif bot_row_1_O_number == drawn_bingo_number[2:]:
-        O_bingo_row_1_bot.config(bg="#B900FF")
-    elif bot_row_2_O_number == drawn_bingo_number[2:]:
-        O_bingo_row_2_bot.config(bg="#B900FF")
-    elif bot_row_3_O_number == drawn_bingo_number[2:]:
-        O_bingo_row_3_bot.config(bg="#B900FF")
-    elif bot_row_4_O_number == drawn_bingo_number[2:]:
-        O_bingo_row_4_bot.config(bg="#B900FF")
-    elif bot_row_5_O_number == drawn_bingo_number[2:]:
-        O_bingo_row_5_bot.config(bg="#B900FF")
-
-
-###NEW
-def random_bingo_number():
-    global bingo_numbers, drawn_bingo_number
-    # add if len -== 1 then bingo number ````break or reset bingo numbers
-    if len(bingo_numbers) >= 1:
-        drawn_bingo_number = random.choice(bingo_numbers)  # list index out of range
-        # takes out drawing number from the list
-        take_out_of_list = bingo_numbers.index(drawn_bingo_number)
-        bingo_numbers.pop(take_out_of_list)
-        # * highlighted bookmark add function for auto bot clicker
-        is_number_on_bots_card()
-        return drawn_bingo_number
-    else:
-        drawn_bingo_number = "all drawn"
+#     elif bot_row_1_O_number == drawn_bingo_number[2:]:
+#         O_bingo_row_1_bot.config(bg="#B900FF")
+#     elif bot_row_2_O_number == drawn_bingo_number[2:]:
+#         O_bingo_row_2_bot.config(bg="#B900FF")
+#     elif bot_row_3_O_number == drawn_bingo_number[2:]:
+#         O_bingo_row_3_bot.config(bg="#B900FF")
+#     elif bot_row_4_O_number == drawn_bingo_number[2:]:
+#         O_bingo_row_4_bot.config(bg="#B900FF")
+#     elif bot_row_5_O_number == drawn_bingo_number[2:]:
+#         O_bingo_row_5_bot.config(bg="#B900FF")
 
 
-# drawing ball update label
-def update_drawn_ball():
-    global flag, bingo_numbers, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
-    if flag == True:
-        random_bingo_number()
-        Random_number_picked_label.config(
-            text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
-        )
-        bingo_ball_color()
-        return Random_number_picked_label.after(
-            5000, update_drawn_ball
-        )  # .after(parent, ms, function = None, *args)
-        # ? very one sec call another function to check if flag == true
-        # TODO: look above
-    else:
-        bingo_numbers()
+# ###NEW
+# def random_bingo_number():
+#     global bingo_numbers, drawn_bingo_number
+#     # add if len -== 1 then bingo number ````break or reset bingo numbers
+#     if len(bingo_numbers) >= 1:
+#         drawn_bingo_number = random.choice(bingo_numbers)  # list index out of range
+#         # takes out drawing number from the list
+#         take_out_of_list = bingo_numbers.index(drawn_bingo_number)
+#         bingo_numbers.pop(take_out_of_list)
+#         # * highlighted bookmark add function for auto bot clicker
+#         is_number_on_bots_card()
+#         return drawn_bingo_number
+#     else:
+#         drawn_bingo_number = "all drawn"
 
 
-update_drawn_ball()
+# # drawing ball update label
+# def update_drawn_ball():
+#     global flag, bingo_numbers, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
+#     if flag == True:
+#         random_bingo_number()
+#         Random_number_picked_label.config(
+#             text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
+#         )
+#         bingo_ball_color()
+#         return Random_number_picked_label.after(
+#             5000, update_drawn_ball
+#         )  # .after(parent, ms, function = None, *args)
+#         # ? very one sec call another function to check if flag == true
+#         # TODO: look above
+#     else:
+#         bingo_numbers()
+
+
+# update_drawn_ball()
 # Player card maker:
 # player card maker for B row:
 def draw_B_numbers_row_5(numbers_for_B_list_out_4):
@@ -1833,6 +1833,100 @@ bot_draw_N_numbers_row_1()
 bot_draw_G_numbers_row_1()
 bot_draw_O_numbers_row_1()
 
+###NEW function
+def is_number_on_bots_card():
+    global drawn_bingo_number, bot_row_1_B_number, bot_row_2_B_number, bot_row_3_B_number, bot_row_4_B_number, bot_row_5_B_number, bot_row_1_I_number, bot_row_2_I_number, bot_row_3_I_number, bot_row_4_I_number, bot_row_5_I_number, bot_row_1_N_number, bot_row_2_N_number, bot_row_3_N_number, bot_row_4_N_number, bot_row_5_N_number, bot_row_1_G_number, bot_row_2_G_number, bot_row_3_G_number, bot_row_4_G_number, bot_row_5_G_number, bot_row_1_O_number, bot_row_2_O_number, bot_row_3_O_number, bot_row_4_O_number, bot_row_5_O_number
+    print(drawn_bingo_number[2:])  # !delete used for test
+    print(bot_row_1_B_number)  # !delete for test
+    if bot_row_1_B_number == drawn_bingo_number[2:]:
+        B_bingo_row_1_bot.config(bg="#B900FF")
+    elif bot_row_2_B_number == drawn_bingo_number[2:]:
+        B_bingo_row_2_bot.config(bg="#B900FF")
+    elif bot_row_3_B_number == drawn_bingo_number[2:]:
+        B_bingo_row_3_bot.config(bg="#B900FF")
+    elif bot_row_4_B_number == drawn_bingo_number[2:]:
+        B_bingo_row_4_bot.config(bg="#B900FF")
+    elif bot_row_5_B_number == drawn_bingo_number[2:]:
+        B_bingo_row_5_bot.config(bg="#B900FF")
+
+    elif bot_row_1_I_number == drawn_bingo_number[2:]:
+        I_bingo_row_1_bot.config(bg="#B900FF")
+    elif bot_row_2_I_number == drawn_bingo_number[2:]:
+        I_bingo_row_2_bot.config(bg="#B900FF")
+    elif bot_row_3_I_number == drawn_bingo_number[2:]:
+        I_bingo_row_3_bot.config(bg="#B900FF")
+    elif bot_row_4_I_number == drawn_bingo_number[2:]:
+        I_bingo_row_4_bot.config(bg="#B900FF")
+    elif bot_row_5_I_number == drawn_bingo_number[2:]:
+        I_bingo_row_5_bot.config(bg="#B900FF")
+
+    elif bot_row_1_N_number == drawn_bingo_number[2:]:
+        N_bingo_row_1_bot.config(bg="#B900FF")
+    elif bot_row_2_N_number == drawn_bingo_number[2:]:
+        N_bingo_row_2_bot.config(bg="#B900FF")
+    elif bot_row_4_N_number == drawn_bingo_number[2:]:
+        N_bingo_row_4_bot.config(bg="#B900FF")
+    elif bot_row_5_N_number == drawn_bingo_number[2:]:
+        N_bingo_row_5_bot.config(bg="#B900FF")
+
+    elif bot_row_1_G_number == drawn_bingo_number[2:]:
+        G_bingo_row_1_bot.config(bg="#B900FF")
+    elif bot_row_2_G_number == drawn_bingo_number[2:]:
+        G_bingo_row_2_bot.config(bg="#B900FF")
+    elif bot_row_3_G_number == drawn_bingo_number[2:]:
+        G_bingo_row_3_bot.config(bg="#B900FF")
+    elif bot_row_4_G_number == drawn_bingo_number[2:]:
+        G_bingo_row_4_bot.config(bg="#B900FF")
+    elif bot_row_5_G_number == drawn_bingo_number[2:]:
+        G_bingo_row_5_bot.config(bg="#B900FF")
+
+    elif bot_row_1_O_number == drawn_bingo_number[2:]:
+        O_bingo_row_1_bot.config(bg="#B900FF")
+    elif bot_row_2_O_number == drawn_bingo_number[2:]:
+        O_bingo_row_2_bot.config(bg="#B900FF")
+    elif bot_row_3_O_number == drawn_bingo_number[2:]:
+        O_bingo_row_3_bot.config(bg="#B900FF")
+    elif bot_row_4_O_number == drawn_bingo_number[2:]:
+        O_bingo_row_4_bot.config(bg="#B900FF")
+    elif bot_row_5_O_number == drawn_bingo_number[2:]:
+        O_bingo_row_5_bot.config(bg="#B900FF")
+
+
+###NEW
+def random_bingo_number():
+    global bingo_numbers, drawn_bingo_number
+    # add if len -== 1 then bingo number ````break or reset bingo numbers
+    if len(bingo_numbers) >= 1:
+        drawn_bingo_number = random.choice(bingo_numbers)  # list index out of range
+        # takes out drawing number from the list
+        take_out_of_list = bingo_numbers.index(drawn_bingo_number)
+        bingo_numbers.pop(take_out_of_list)
+        # * highlighted bookmark add function for auto bot clicker
+        is_number_on_bots_card()
+        return drawn_bingo_number
+    else:
+        drawn_bingo_number = "all drawn"
+
+
+# drawing ball update label
+def update_drawn_ball():
+    global flag, bingo_numbers, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
+    if flag == True:
+        random_bingo_number()
+        Random_number_picked_label.config(
+            text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
+        )
+        bingo_ball_color()
+        return Random_number_picked_label.after(
+            5000, update_drawn_ball
+        )  # .after(parent, ms, function = None, *args)
+        # ? very one sec call another function to check if flag == true
+        # TODO: look above
+    else:
+        bingo_numbers()
+
+
+update_drawn_ball()
 
 # function for BINGO_button:
 def reset_bingo_button():  # resets to original color
