@@ -315,11 +315,9 @@ O_list_drawn = Label(
 O_list_drawn.grid(row=5, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
 Random_number_picked_label = Label(
-    root, text=" fff  ", font=("Helvetica", 24), bg="#FFFFFF"
+    root, text="  ", font=("Helvetica", 24), bg="#FFFFFF"
 )
 Random_number_picked_label.place(x=259, y=63)
-
-# update_drawn_ball()
 
 holder_for_time = 5  # ? change to five permanently
 # timer for next ball
@@ -1724,6 +1722,7 @@ bot_draw_G_numbers_row_1()
 bot_draw_O_numbers_row_1()
 
 ###NEW function
+# function colors card number if drawn bingo number is in card
 def is_number_on_bots_card():
     global drawn_bingo_number, bot_row_1_B_number, bot_row_2_B_number, bot_row_3_B_number, bot_row_4_B_number, bot_row_5_B_number, bot_row_1_I_number, bot_row_2_I_number, bot_row_3_I_number, bot_row_4_I_number, bot_row_5_I_number, bot_row_1_N_number, bot_row_2_N_number, bot_row_3_N_number, bot_row_4_N_number, bot_row_5_N_number, bot_row_1_G_number, bot_row_2_G_number, bot_row_3_G_number, bot_row_4_G_number, bot_row_5_G_number, bot_row_1_O_number, bot_row_2_O_number, bot_row_3_O_number, bot_row_4_O_number, bot_row_5_O_number
     if bot_row_1_B_number == drawn_bingo_number[2:]:
