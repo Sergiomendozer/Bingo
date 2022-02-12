@@ -26,60 +26,47 @@ player_wins_bingo.place(x=180, y=40)
 # )
 
 #### needed for bingo player
-# def reset_bingo_button():
-#     pass
 
-
-# def click_BINGO():
-#     pass
-
-
-# Bingo_button = Button(
-#     root, text="BINGO!", bg="#B900FF", command=click_BINGO, font=("Helvetica", 25)
-# )
-# Bingo_button.grid(row=14, column=1, columnspan=3, sticky="nsew")
 ##################
-global B_list_drawn_str, row_1_B_number, row_2_B_number, row_3_B_number, row_4_B_number, row_5_B_number, I_list_drawn_str, row_1_I_number, row_2_I_number, row_3_I_number, row_4_I_number, row_5_I_number, N_list_drawn_str, row_1_N_number, row_2_N_number, row_4_N_number, row_5_N_number, G_list_drawn_str, row_1_G_number, row_2_G_number, row_3_G_number, row_4_G_number, row_5_G_number, O_list_drawn_str, row_1_O_number, row_2_O_number, row_3_O_number, row_4_O_number, row_5_O_number
-#####################
-B_list_drawn_str = " "
-bot_row_1_B_number = 0
-bot_row_2_B_number = 0
-bot_row_3_B_number = 0
-bot_row_4_B_number = 0
-bot_row_5_B_number = 0
-
-I_list_drawn_str = " "
-bot_row_1_I_number = 0
-bot_row_2_I_number = 0
-bot_row_3_I_number = 0
-bot_row_4_I_number = 0
-bot_row_5_I_number = 0
-
-N_list_drawn_str = " "
-bot_row_1_N_number = 0
-bot_row_2_N_number = 0
-bot_row_3_N_number = 0
-bot_row_4_N_number = 0
-bot_row_5_N_number = 0
-
-G_list_drawn_str = " "
-bot_row_1_G_number = 0
-bot_row_2_G_number = 0
-bot_row_3_G_number = 0
-bot_row_4_G_number = 0
-bot_row_5_G_number = 0
-
-O_list_drawn_str = " "
-bot_row_1_O_number = 0
-bot_row_2_O_number = 0
-bot_row_3_O_number = 0
-bot_row_4_O_number = 0
-bot_row_5_O_number = 0
-##################################
-# global flag,
-# TODO: add all globals!!!!!!!!!!!!!!!!!!
 # global B_list_drawn_str, row_1_B_number, row_2_B_number, row_3_B_number, row_4_B_number, row_5_B_number, I_list_drawn_str, row_1_I_number, row_2_I_number, row_3_I_number, row_4_I_number, row_5_I_number, N_list_drawn_str, row_1_N_number, row_2_N_number, row_4_N_number, row_5_N_number, G_list_drawn_str, row_1_G_number, row_2_G_number, row_3_G_number, row_4_G_number, row_5_G_number, O_list_drawn_str, row_1_O_number, row_2_O_number, row_3_O_number, row_4_O_number, row_5_O_number
-# B column str convert:
+#####################
+# B_list_drawn_str = " "
+# bot_row_1_B_number = 0
+# bot_row_2_B_number = 0
+# bot_row_3_B_number = 0
+# bot_row_4_B_number = 0
+# bot_row_5_B_number = 0
+
+# I_list_drawn_str = " "
+# bot_row_1_I_number = 0
+# bot_row_2_I_number = 0
+# bot_row_3_I_number = 0
+# bot_row_4_I_number = 0
+# bot_row_5_I_number = 0
+
+# N_list_drawn_str = " "
+# bot_row_1_N_number = 0
+# bot_row_2_N_number = 0
+# bot_row_3_N_number = 0
+# bot_row_4_N_number = 0
+# bot_row_5_N_number = 0
+
+# G_list_drawn_str = " "
+# bot_row_1_G_number = 0
+# bot_row_2_G_number = 0
+# bot_row_3_G_number = 0
+# bot_row_4_G_number = 0
+# bot_row_5_G_number = 0
+
+# O_list_drawn_str = " "
+# bot_row_1_O_number = 0
+# bot_row_2_O_number = 0
+# bot_row_3_O_number = 0
+# bot_row_4_O_number = 0
+# bot_row_5_O_number = 0
+##################################
+global flag, B_list_drawn_str, bot_row_1_B_number, bot_row_2_B_number, bot_row_3_B_number, bot_row_4_B_number, bot_row_5_B_number, I_list_drawn_str, bot_row_1_I_number, bot_row_2_I_number, bot_row_3_I_number, bot_row_4_I_number, bot_row_5_I_number, N_list_drawn_str, bot_row_1_N_number, bot_row_2_N_number, bot_row_4_N_number, bot_row_5_N_number, G_list_drawn_str, bot_row_1_G_number, bot_row_2_G_number, bot_row_3_G_number, bot_row_4_G_number, bot_row_5_G_number, O_list_drawn_str, bot_row_1_O_number, bot_row_2_O_number, bot_row_3_O_number, bot_row_4_O_number, bot_row_5_O_number
+# TODO: add all globals!!!!!!!!!!!!!!!!!!
 
 # All B column for BINGO card to win
 if (
