@@ -1,5 +1,6 @@
 from tkinter import *
 
+# !delete file after bingo button
 root = Tk()
 
 ### label used if bot wins
