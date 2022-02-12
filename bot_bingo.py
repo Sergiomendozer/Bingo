@@ -96,7 +96,7 @@ if (
         padx=40,
         pady=40,
     )
-    flag = True
+    flag = False
 
 # All I column for BINGO card to win
 elif (
@@ -113,7 +113,7 @@ elif (
         padx=40,
         pady=40,
     )
-    flag = True
+    flag = False
 
 # All N column for BINGO card to win
 elif (
@@ -129,7 +129,7 @@ elif (
         padx=40,
         pady=40,
     )
-    flag = True
+    flag = False
 # All G column for BINGO card to win
 elif (
     G_list_drawn_str.find(" " + bot_row_1_G_number + " ") != -1
@@ -145,7 +145,7 @@ elif (
         padx=40,
         pady=40,
     )
-    flag = True
+    flag = False
 # All O column for BINGO card to win
 elif (
     O_list_drawn_str.find(" " + bot_row_1_O_number + " ") != -1
@@ -161,7 +161,7 @@ elif (
         padx=40,
         pady=40,
     )
-    flag = True
+    flag = False
 # all Row 1 for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + bot_row_1_B_number + " ") != -1
@@ -177,7 +177,7 @@ elif (
         padx=40,
         pady=40,
     )
-    flag = True
+    flag = False
 # all Row 2 for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + bot_row_2_B_number + " ") != -1
@@ -193,7 +193,7 @@ elif (
         padx=40,
         pady=40,
     )
-    flag = True
+    flag = False
 # all Row 3 for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + bot_row_3_B_number) != -1
@@ -208,7 +208,7 @@ elif (
         padx=40,
         pady=40,
     )
-    flag = True
+    flag = False
 # all Row 4 for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + bot_row_4_B_number + " ") != -1
@@ -224,7 +224,7 @@ elif (
         padx=40,
         pady=40,
     )
-    flag = True
+    flag = False
 # all Row 5 for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + bot_row_5_B_number + " ") != -1
@@ -240,7 +240,7 @@ elif (
         padx=40,
         pady=40,
     )
-    flag = True
+    flag = False
 # right sided diagonal line for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + bot_row_1_B_number + " ") != -1
@@ -255,7 +255,7 @@ elif (
         padx=40,
         pady=40,
     )
-    flag = True
+    flag = False
 # left sided diagonal line for BINGO card to win
 elif (
     B_list_drawn_str.find(" " + bot_row_5_B_number + " ") != -1
@@ -270,6 +270,6 @@ elif (
         padx=40,
         pady=40,
     )
-    flag = True
+    flag = False
 else:
     None
