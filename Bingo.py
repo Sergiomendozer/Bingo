@@ -359,10 +359,10 @@ update_timer_countdown(5)
 ### label used if bot wins
 Bot_wins_bingo = Label(root)
 Bot_wins_bingo.place(x=3000, y=40)
-# Bot_wins_bingo.place(x=180, y=40) # !delete for test
+
 ### label used if player wins
 player_wins_bingo = Label(root)
-player_wins_bingo.place(x=180, y=40)
+player_wins_bingo.place(x=3000, y=40)
 
 # ROW 2
 your_card_Label = Label(

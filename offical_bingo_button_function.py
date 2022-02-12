@@ -1,7 +1,8 @@
 ####first line
 # TODO: move to dos to next .py
 
-# TODO: make bingo button a funciton: one in bingo.py
+# TODO: make bingo button a function: one in bingo.py
+# TODO: when player_wins_bingo.place(x=180, y=40) add to return
 # TODO: global call flag and flag = false once player wins
 # TODO: player has won everything pauses function
 # TODO: move empty vairbale to global
@@ -15,6 +16,17 @@
 from tkinter import *
 
 root = Tk()
+#####
+player_wins_bingo = Label(root)
+player_wins_bingo.place(x=180, y=40)
+
+# Bot_wins_bingo.config(text="You lose, Bot has won Bingo!! ",
+#     font=("Helvetica", 40),
+#     bg="#FF4646",
+#     padx=40,
+#     pady=40
+# )
+# player_wins_bingo.place(x=180, y=40)
 
 
 def reset_bingo_button():
