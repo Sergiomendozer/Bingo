@@ -355,6 +355,9 @@ timer = Label(
 )
 timer.grid(row=1, column=1, columnspan=2, rowspan=5, sticky="nsew")
 update_timer_countdown(5)
+### label used if bot wins
+Bot_wins_bingo = Label(root)
+Bot_wins_bingo.place(x=180, y=40)
 
 # ROW 2
 your_card_Label = Label(
