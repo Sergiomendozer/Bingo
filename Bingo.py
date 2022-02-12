@@ -357,9 +357,9 @@ timer.grid(row=1, column=1, columnspan=2, rowspan=5, sticky="nsew")
 update_timer_countdown(5)
 
 ### label used if bot wins
-Bot_wins_bingo = Label(root, text="called")
-Bot_wins_bingo.place(x=500, y=40)
-
+Bot_wins_bingo = Label(root)
+Bot_wins_bingo.place(x=3000, y=40)
+# Bot_wins_bingo.place(x=180, y=40) # !delete for test
 ### label used if player wins
 player_wins_bingo = Label(root)
 player_wins_bingo.place(x=180, y=40)
@@ -1799,6 +1799,7 @@ def did_bot_win():
         and B_list_drawn_str.find(" " + bot_row_4_B_number + " ") != -1
         and B_list_drawn_str.find(" " + bot_row_5_B_number + " ") != -1
     ):
+
         Bot_wins_bingo.config(
             text="You lose, Bot has won Bingo!! ",
             font=("Helvetica", 40),
@@ -1806,6 +1807,7 @@ def did_bot_win():
             padx=40,
             pady=40,
         )
+        Bot_wins_bingo.place(x=180, y=40)
         flag = False
 
     # All I column for BINGO card to win
@@ -1823,6 +1825,7 @@ def did_bot_win():
             padx=40,
             pady=40,
         )
+        Bot_wins_bingo.place(x=180, y=40)
         flag = False
 
     # All N column for BINGO card to win
@@ -1839,7 +1842,9 @@ def did_bot_win():
             padx=40,
             pady=40,
         )
+        Bot_wins_bingo.place(x=180, y=40)
         flag = False
+        print("called")  # !delete
     # All G column for BINGO card to win
     elif (
         G_list_drawn_str.find(" " + bot_row_1_G_number + " ") != -1
@@ -1855,6 +1860,7 @@ def did_bot_win():
             padx=40,
             pady=40,
         )
+        Bot_wins_bingo.place(x=180, y=40)
         flag = False
     # All O column for BINGO card to win
     elif (
@@ -1871,6 +1877,7 @@ def did_bot_win():
             padx=40,
             pady=40,
         )
+        Bot_wins_bingo.place(x=180, y=40)
         flag = False
     # all Row 1 for BINGO card to win
     elif (
@@ -1887,6 +1894,7 @@ def did_bot_win():
             padx=40,
             pady=40,
         )
+        Bot_wins_bingo.place(x=180, y=40)
         flag = False
     # all Row 2 for BINGO card to win
     elif (
@@ -1903,6 +1911,7 @@ def did_bot_win():
             padx=40,
             pady=40,
         )
+        Bot_wins_bingo.place(x=180, y=40)
         flag = False
     # all Row 3 for BINGO card to win
     elif (
@@ -1918,7 +1927,9 @@ def did_bot_win():
             padx=40,
             pady=40,
         )
+        Bot_wins_bingo.place(x=180, y=40)
         flag = False
+        print("called")  # !delete
     # all Row 4 for BINGO card to win
     elif (
         B_list_drawn_str.find(" " + bot_row_4_B_number + " ") != -1
@@ -1934,6 +1945,7 @@ def did_bot_win():
             padx=40,
             pady=40,
         )
+        Bot_wins_bingo.place(x=180, y=40)
         flag = False
     # all Row 5 for BINGO card to win
     elif (
@@ -1950,6 +1962,7 @@ def did_bot_win():
             padx=40,
             pady=40,
         )
+        Bot_wins_bingo.place(x=180, y=40)
         flag = False
     # right sided diagonal line for BINGO card to win
     elif (
@@ -1965,6 +1978,7 @@ def did_bot_win():
             padx=40,
             pady=40,
         )
+        Bot_wins_bingo.place(x=180, y=40)
         flag = False
     # left sided diagonal line for BINGO card to win
     elif (
@@ -1980,6 +1994,7 @@ def did_bot_win():
             padx=40,
             pady=40,
         )
+        Bot_wins_bingo.place(x=180, y=40)
         flag = False
     else:
         None
@@ -2104,10 +2119,10 @@ def make_a_new_game():
         pady=4,
     )
     # Bot_wins_bingo.config()  ###added new
+    Bot_wins_bingo.place(x=3000, y=40)
     Bot_wins_bingo.config(
-        text="called",
+        text="",
         font=("Helvetica", 40),
-        bg="",
         padx=0,
         pady=0,
     )
