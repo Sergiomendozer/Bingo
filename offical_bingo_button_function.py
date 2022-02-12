@@ -1,18 +1,4 @@
 ####first line
-# TODO: move to dos to next .py
-
-# TODO: make bingo button a function: one in bingo.py
-# TODO: when player_wins_bingo.place(x=180, y=40) add to return
-# TODO: global call flag and flag = false once player wins
-# TODO: player has won everything pauses function
-# TODO: move empty vairbale to global
-# TODO: Globals on official bingo python file
-# TODO: global in functions call
-# TODO : add space to string that have list so function can work
-# TODO : add space after adding number for function to work
-# ? do these need to be global for bingo button function row_1_b
-
-##########keep below
 from tkinter import *
 
 root = Tk()
@@ -111,6 +97,8 @@ row_4_O_number = str(row_4_O_number)
 row_5_O_number = str(row_5_O_number)
 
 # All B column for BINGO card to win
+# def click_BINGO():
+# global
 if (
     B_list_drawn_str.find(" " + row_1_B_number + " ") != -1
     and B_list_drawn_str.find(" " + row_2_B_number + " ") != -1
@@ -121,6 +109,8 @@ if (
     Bingo_button.configure(
         text="YOU got BINGO!", bg="#00FF33", command=click_BINGO, font=("Helvetica", 25)
     )
+    flag = False
+    player_wins_bingo.place(x=180, y=40)
 # All I column for BINGO card to win
 elif (
     I_list_drawn_str.find(" " + row_1_I_number + " ") != -1
