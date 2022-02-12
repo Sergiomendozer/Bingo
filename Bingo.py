@@ -2126,6 +2126,13 @@ def make_a_new_game():
         padx=0,
         pady=0,
     )
+    player_wins_bingo.config(
+        text="",
+        font=("Helvetica", 40),
+        padx=0,
+        pady=0,
+    )
+    player_wins_bingo.place(x=3000, y=40)
     flag = True
     update_drawn_ball()
     # TODO: global 5
