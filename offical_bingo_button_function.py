@@ -1,6 +1,9 @@
 ####first line
-# TODO: player has won everything pauses function
+# TODO: move to dos to next .py
 
+# TODO: make bingo button a funciton: one in bingo.py
+# TODO: global call flag and flag = false once player wins
+# TODO: player has won everything pauses function
 # TODO: move empty vairbale to global
 # TODO: Globals on official bingo python file
 # TODO: global in functions call

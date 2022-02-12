@@ -357,8 +357,8 @@ timer.grid(row=1, column=1, columnspan=2, rowspan=5, sticky="nsew")
 update_timer_countdown(5)
 
 ### label used if bot wins
-Bot_wins_bingo = Label(root)
-Bot_wins_bingo.place(x=180, y=40)
+Bot_wins_bingo = Label(root, text="called")
+Bot_wins_bingo.place(x=500, y=40)
 
 ### label used if player wins
 player_wins_bingo = Label(root)
@@ -1786,6 +1786,8 @@ def is_number_on_bots_card():
         O_bingo_row_4_bot.config(bg="#B900FF")
     elif bot_row_5_O_number == drawn_bingo_number[2:]:
         O_bingo_row_5_bot.config(bg="#B900FF")
+
+
 ### add new here # !delete
 def did_bot_win():
     global flag, B_list_drawn_str, bot_row_1_B_number, bot_row_2_B_number, bot_row_3_B_number, bot_row_4_B_number, bot_row_5_B_number, I_list_drawn_str, bot_row_1_I_number, bot_row_2_I_number, bot_row_3_I_number, bot_row_4_I_number, bot_row_5_I_number, N_list_drawn_str, bot_row_1_N_number, bot_row_2_N_number, bot_row_4_N_number, bot_row_5_N_number, G_list_drawn_str, bot_row_1_G_number, bot_row_2_G_number, bot_row_3_G_number, bot_row_4_G_number, bot_row_5_G_number, O_list_drawn_str, bot_row_1_O_number, bot_row_2_O_number, bot_row_3_O_number, bot_row_4_O_number, bot_row_5_O_number
@@ -2052,7 +2054,7 @@ def make_a_new_bot_card():
 
 # * highlighted bookmark
 def make_a_new_game():
-    global B_list, I_list, N_list, G_list, O_list, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
+    global flag, B_list, I_list, N_list, G_list, O_list, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
     all_bingo_numbers()
     make_a_new_player_card()
     make_a_new_bot_card()
@@ -2101,6 +2103,15 @@ def make_a_new_game():
         padx=2,
         pady=4,
     )
+    # Bot_wins_bingo.config()  ###added new
+    Bot_wins_bingo.config(
+        text="called",
+        font=("Helvetica", 40),
+        bg="",
+        padx=0,
+        pady=0,
+    )
+    flag = True
     update_drawn_ball()
     # TODO: global 5
     update_timer_countdown(5)
