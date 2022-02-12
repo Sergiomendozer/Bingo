@@ -1832,13 +1832,6 @@ def reset_bingo_button():  # resets to original color
 
 
 def click_BINGO():
-    player_wins_bingo.config(
-        text="BINGO!! Congrats, You win",
-        font=("Helvetica", 40),
-        bg="#B900FF",
-        padx=40,
-        pady=40,
-    )
     Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
     return Bingo_button.after(3000, reset_bingo_button)
 
