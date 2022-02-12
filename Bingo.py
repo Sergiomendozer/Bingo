@@ -355,9 +355,14 @@ timer = Label(
 )
 timer.grid(row=1, column=1, columnspan=2, rowspan=5, sticky="nsew")
 update_timer_countdown(5)
+
 ### label used if bot wins
 Bot_wins_bingo = Label(root)
 Bot_wins_bingo.place(x=180, y=40)
+
+### label used if player wins
+player_wins_bingo = Label(root)
+player_wins_bingo.place(x=180, y=40)
 
 # ROW 2
 your_card_Label = Label(
@@ -1827,6 +1832,13 @@ def reset_bingo_button():  # resets to original color
 
 
 def click_BINGO():
+    player_wins_bingo.config(
+        text="BINGO!! Congrats, You win",
+        font=("Helvetica", 40),
+        bg="#B900FF",
+        padx=40,
+        pady=40,
+    )
     Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
     return Bingo_button.after(3000, reset_bingo_button)
 

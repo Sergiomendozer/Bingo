@@ -6,6 +6,9 @@ root = Tk()
 Bot_wins_bingo = Label(root)
 Bot_wins_bingo.place(x=180, y=40)
 
+player_wins_bingo = Label(root)
+player_wins_bingo.place(x=180, y=40)
+
 # Bot_wins_bingo.config(text="You lose, Bot has won Bingo!! ",
 #     font=("Helvetica", 40),
 #     bg="#FF4646",
@@ -13,28 +16,15 @@ Bot_wins_bingo.place(x=180, y=40)
 #     pady=40,
 # )
 
-### indicates that bot won
-# Bot_wins_bingo = Label(
-#     root,
-#     text="You lose, Bot has won Bingo!! ",
-#     font=("Helvetica", 40),
-#     bg="#FF4646",
-#     padx=40,
-#     pady=40,
-# )
-# Bot_wins_bingo.place(x=180, y=40)
-
 #############
 ## indicates that player won
-# Bot_wins_bingo = Label(
-#     root,
+# player_wins_bingo.config(
 #     text="BINGO!! Congrats, You win",
 #     font=("Helvetica", 40),
 #     bg="#B900FF",
 #     padx=40,
 #     pady=40,
 # )
-# Bot_wins_bingo.place(x=180, y=40)
 
 
 def reset_bingo_button():
