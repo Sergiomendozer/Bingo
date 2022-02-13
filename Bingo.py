@@ -2247,12 +2247,10 @@ def click_BINGO():
         flag = False
     else:
         Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
-        Bingo_button.after(3000, reset_bingo_button)
+        Bingo_button.after(2000, reset_bingo_button)
 
 
 def make_a_new_player_card():
-    # game needs to be paused
-    # calls function for row B maker
     draw_B_numbers_row_1()
     draw_I_numbers_row_1()
     draw_N_numbers_row_1()
@@ -2336,7 +2334,7 @@ def make_a_new_game():
     player_wins_bingo.place(x=3000, y=40)
     flag = True
     update_drawn_ball()
-    # TODO: global 5
+    # TODO: global 5 ### globalize countdown timer
     update_timer_countdown(5)
 
     # TODO: timer reset to five
@@ -2364,14 +2362,6 @@ def pause():
 Bingo_button = Button(
     root, text="BINGO!", bg="#B900FF", command=click_BINGO, font=("Helvetica", 25)
 )
-blank = Label(root, bg="#737373")
-New_card = Button(
-    root,
-    text="New Card",
-    bg="#FFFB00",
-    command=make_a_new_player_card,
-    font=("Helvetica", 20),
-)
 New_game = Button(
     root, text="New Game", bg="#29EFD1", command=make_a_new_game, font=("Helvetica", 20)
 )
@@ -2379,10 +2369,8 @@ pause = Button(root, text="Pause", bg="#FF0000", font=("Helvetica", 20), command
 play = Button(root, text="Play", bg="#2AFF00", font=("Helvetica", 20), command=play)
 
 # last row positions # columnspan = 5
-Bingo_button.grid(row=14, column=1, columnspan=3, sticky="nsew")
-blank.grid(row=14, column=4, columnspan=1, sticky="nsew")
-New_card.grid(row=14, column=5, columnspan=2, sticky="nsew")
-New_game.grid(row=14, column=7, columnspan=2, sticky="nsew")
+Bingo_button.grid(row=14, column=1, columnspan=5, sticky="nsew")
+New_game.grid(row=14, column=6, columnspan=3, sticky="nsew")
 pause.grid(row=14, column=10, columnspan=1, sticky="nsew")
 play.grid(row=14, column=9, columnspan=1, sticky="nsew")
 
