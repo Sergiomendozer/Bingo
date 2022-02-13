@@ -1,5 +1,8 @@
 #####
 #############
+# TODO: print out row and .finds
+
+
 # TODO: when player wins stop game!! flag
 # TODO: make bingo button a functiON, look at bingo.py
 
