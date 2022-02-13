@@ -99,7 +99,7 @@ row_5_O_number = str(row_5_O_number)
 
 # All B column for BINGO card to win
 def click_BINGO():
-    # global
+    global flag, B_list_drawn_str, row_1_B_number, row_2_B_number, row_3_B_number, row_4_B_number, row_5_B_number, I_list_drawn_str, row_1_I_number, row_2_I_number, row_3_I_number, row_4_I_number, row_5_I_number, N_list_drawn_str, row_1_N_number, row_2_N_number, row_4_N_number, row_5_N_number, G_list_drawn_str, row_1_G_number, row_2_G_number, row_3_G_number, row_4_G_number, row_5_G_number, O_list_drawn_str, row_1_O_number, row_2_O_number, row_3_O_number, row_4_O_number, row_5_O_number
     if (
         B_list_drawn_str.find(" " + row_1_B_number + " ") != -1
         and B_list_drawn_str.find(" " + row_2_B_number + " ") != -1
