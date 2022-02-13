@@ -2273,15 +2273,16 @@ def click_BINGO():  ###New current # !delete
         player_wins_bingo.place(x=180, y=40)
         flag = False
     else:
-        # !delete # !delete below
+        # !delete # !delete below # * highlighted bookmark
         str1 = B_list_drawn_str.find(" " + row_1_B_number + " ")
         str1 = str(str1)
         print("B_list_drawn_str.find(row_1_B_number):" + str1)
-        row_1_B_number = str(row_1_B_number)
+        # row_1_B_number = str(row_1_B_number)
         print("row_1_B_number:" + row_1_B_number)
         ###delete ends
         Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
         Bingo_button.after(3000, reset_bingo_button)
+        # * highlighted bookmark1
 
         # and B_list_drawn_str.find(" " + row_2_B_number + " ") != -1
         # and B_list_drawn_str.find(" " + row_3_B_number + " ") != -1
