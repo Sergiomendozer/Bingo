@@ -985,6 +985,7 @@ O_bingo_row_5_bot.grid(row=13, column=10, sticky="nsew")
 # Player card maker:
 # player card maker for B row:
 def draw_B_numbers_row_5(numbers_for_B_list_out_4):
+    global row_5_B_number
     row_5_B_number = random.choice(numbers_for_B_list_out_4)
     # takes out drawing number from the list
     take_out_of_list_B = numbers_for_B_list_out_4.index(row_5_B_number)
@@ -998,6 +999,7 @@ def draw_B_numbers_row_5(numbers_for_B_list_out_4):
 
 
 def draw_B_numbers_row_4(numbers_for_B_list_out_3):
+    global row_4_B_number
     row_4_B_number = random.choice(numbers_for_B_list_out_3)
     # takes out drawing number from the list
     take_out_of_list_B = numbers_for_B_list_out_3.index(row_4_B_number)
@@ -1013,6 +1015,7 @@ def draw_B_numbers_row_4(numbers_for_B_list_out_3):
 
 
 def draw_B_numbers_row_3(numbers_for_B_list_out_2):
+    global row_3_B_number
     row_3_B_number = random.choice(numbers_for_B_list_out_2)
     # takes out drawing number from the list
     take_out_of_list_B = numbers_for_B_list_out_2.index(row_3_B_number)
@@ -1028,6 +1031,7 @@ def draw_B_numbers_row_3(numbers_for_B_list_out_2):
 
 
 def draw_B_numbers_row_2(numbers_for_B_list_out_1):
+    global row_2_B_number
     row_2_B_number = random.choice(numbers_for_B_list_out_1)
     # takes out drawing number from the list
     take_out_of_list_B = numbers_for_B_list_out_1.index(row_2_B_number)
@@ -1043,6 +1047,7 @@ def draw_B_numbers_row_2(numbers_for_B_list_out_1):
 
 
 def draw_B_numbers_row_1():
+    global row_1_B_number
     numbers_for_B_list = []
     numbers_for_B_list_int = [i for i in range(1, 16)]
     for e in numbers_for_B_list_int:
@@ -1064,6 +1069,7 @@ def draw_B_numbers_row_1():
 
 # player card maker for I row:
 def draw_I_numbers_row_5(numbers_for_I_list_out_4):
+    global row_5_I_number
     row_5_I_number = random.choice(numbers_for_I_list_out_4)
     # takes out drawing number from the list
     take_out_of_list_I = numbers_for_I_list_out_4.index(row_5_I_number)
@@ -1077,6 +1083,7 @@ def draw_I_numbers_row_5(numbers_for_I_list_out_4):
 
 
 def draw_I_numbers_row_4(numbers_for_I_list_out_3):
+    global row_4_I_number
     row_4_I_number = random.choice(numbers_for_I_list_out_3)
     # takes out drawing number from the list
     take_out_of_list_I = numbers_for_I_list_out_3.index(row_4_I_number)
@@ -1092,6 +1099,7 @@ def draw_I_numbers_row_4(numbers_for_I_list_out_3):
 
 
 def draw_I_numbers_row_3(numbers_for_I_list_out_2):
+    global row_3_I_number
     row_3_I_number = random.choice(numbers_for_I_list_out_2)
     # takes out drawing number from the list
     take_out_of_list_I = numbers_for_I_list_out_2.index(row_3_I_number)
@@ -1107,6 +1115,7 @@ def draw_I_numbers_row_3(numbers_for_I_list_out_2):
 
 
 def draw_I_numbers_row_2(numbers_for_I_list_out_1):
+    global row_2_I_number
     row_2_I_number = random.choice(numbers_for_I_list_out_1)
     # takes out drawing number from the list
     take_out_of_list_I = numbers_for_I_list_out_1.index(row_2_I_number)
@@ -1122,6 +1131,7 @@ def draw_I_numbers_row_2(numbers_for_I_list_out_1):
 
 
 def draw_I_numbers_row_1():
+    global row_1_I_number
     numbers_for_I_list = []
     numbers_for_I_list_int = [i for i in range(16, 31)]
     for e in numbers_for_I_list_int:
@@ -1143,6 +1153,7 @@ def draw_I_numbers_row_1():
 
 # player card maker for N row:
 def draw_N_numbers_row_5(numbers_for_N_list_out_4):
+    global row_5_N_number
     row_5_N_number = random.choice(numbers_for_N_list_out_4)
     # takes out drawing number from the list
     take_out_of_list_N = numbers_for_N_list_out_4.index(row_5_N_number)
@@ -1156,6 +1167,7 @@ def draw_N_numbers_row_5(numbers_for_N_list_out_4):
 
 
 def draw_N_numbers_row_4(numbers_for_N_list_out_3):
+    global row_4_N_number
     row_4_N_number = random.choice(numbers_for_N_list_out_3)
     # takes out drawing number from the list
     take_out_of_list_N = numbers_for_N_list_out_3.index(row_4_N_number)
@@ -1171,6 +1183,7 @@ def draw_N_numbers_row_4(numbers_for_N_list_out_3):
 
 
 def draw_N_numbers_row_3(numbers_for_N_list_out_2):
+    global row_3_N_number
     row_3_N_number = random.choice(numbers_for_N_list_out_2)
     # takes out drawing number from the list
     take_out_of_list_N = numbers_for_N_list_out_2.index(row_3_N_number)
@@ -1180,6 +1193,7 @@ def draw_N_numbers_row_3(numbers_for_N_list_out_2):
 
 
 def draw_N_numbers_row_2(numbers_for_N_list_out_1):
+    global row_2_N_number
     row_2_N_number = random.choice(numbers_for_N_list_out_1)
     # takes out drawing number from the list
     take_out_of_list_I = numbers_for_N_list_out_1.index(row_2_N_number)
@@ -1195,6 +1209,7 @@ def draw_N_numbers_row_2(numbers_for_N_list_out_1):
 
 
 def draw_N_numbers_row_1():
+    global row_1_N_number
     numbers_for_N_list = []
     numbers_for_N_list_int = [i for i in range(31, 46)]
     for e in numbers_for_N_list_int:
@@ -1216,6 +1231,7 @@ def draw_N_numbers_row_1():
 
 # player card maker for G row:
 def draw_G_numbers_row_5(numbers_for_G_list_out_4):
+    global row_5_G_number
     row_5_G_number = random.choice(numbers_for_G_list_out_4)
     # takes out drawing number from the list
     take_out_of_list_G = numbers_for_G_list_out_4.index(row_5_G_number)
@@ -1229,6 +1245,7 @@ def draw_G_numbers_row_5(numbers_for_G_list_out_4):
 
 
 def draw_G_numbers_row_4(numbers_for_G_list_out_3):
+    global row_4_G_number
     row_4_G_number = random.choice(numbers_for_G_list_out_3)
     # takes out drawing number from the list
     take_out_of_list_G = numbers_for_G_list_out_3.index(row_4_G_number)
@@ -1244,6 +1261,7 @@ def draw_G_numbers_row_4(numbers_for_G_list_out_3):
 
 
 def draw_G_numbers_row_3(numbers_for_G_list_out_2):
+    global row_3_G_number
     row_3_G_number = random.choice(numbers_for_G_list_out_2)
     # takes out drawing number from the list
     take_out_of_list_G = numbers_for_G_list_out_2.index(row_3_G_number)
@@ -1259,6 +1277,7 @@ def draw_G_numbers_row_3(numbers_for_G_list_out_2):
 
 
 def draw_G_numbers_row_2(numbers_for_G_list_out_1):
+    global row_2_G_number
     row_2_G_number = random.choice(numbers_for_G_list_out_1)
     # takes out drawing number from the list
     take_out_of_list_G = numbers_for_G_list_out_1.index(row_2_G_number)
@@ -1274,6 +1293,7 @@ def draw_G_numbers_row_2(numbers_for_G_list_out_1):
 
 
 def draw_G_numbers_row_1():
+    global row_1_G_number
     numbers_for_G_list = []
     numbers_for_G_list_int = [i for i in range(46, 61)]
     for e in numbers_for_G_list_int:
@@ -1295,6 +1315,7 @@ def draw_G_numbers_row_1():
 
 # player card maker for O row:
 def draw_O_numbers_row_5(numbers_for_O_list_out_4):
+    global row_5_O_number
     row_5_O_number = random.choice(numbers_for_O_list_out_4)
     # takes out drawing number from the list
     take_out_of_list_O = numbers_for_O_list_out_4.index(row_5_O_number)
@@ -1308,6 +1329,7 @@ def draw_O_numbers_row_5(numbers_for_O_list_out_4):
 
 
 def draw_O_numbers_row_4(numbers_for_O_list_out_3):
+    global row_4_O_number
     row_4_O_number = random.choice(numbers_for_O_list_out_3)
     # takes out drawing number from the list
     take_out_of_list_O = numbers_for_O_list_out_3.index(row_4_O_number)
@@ -1323,6 +1345,7 @@ def draw_O_numbers_row_4(numbers_for_O_list_out_3):
 
 
 def draw_O_numbers_row_3(numbers_for_O_list_out_2):
+    global row_3_O_number
     row_3_O_number = random.choice(numbers_for_O_list_out_2)
     # takes out drawing number from the list
     take_out_of_list_O = numbers_for_O_list_out_2.index(row_3_O_number)
@@ -1338,6 +1361,7 @@ def draw_O_numbers_row_3(numbers_for_O_list_out_2):
 
 
 def draw_O_numbers_row_2(numbers_for_O_list_out_1):
+    global row_2_O_number
     row_2_O_number = random.choice(numbers_for_O_list_out_1)
     # takes out drawing number from the list
     take_out_of_list_O = numbers_for_O_list_out_1.index(row_2_O_number)
@@ -1353,6 +1377,7 @@ def draw_O_numbers_row_2(numbers_for_O_list_out_1):
 
 
 def draw_O_numbers_row_1():
+    global row_1_O_number
     numbers_for_O_list = []
     numbers_for_O_list_int = [i for i in range(61, 76)]
     for e in numbers_for_O_list_int:
@@ -2248,8 +2273,20 @@ def click_BINGO():  ###New current # !delete
         player_wins_bingo.place(x=180, y=40)
         flag = False
     else:
+        # !delete # !delete below
+        str1 = B_list_drawn_str.find(" " + row_1_B_number + " ")
+        str1 = str(str1)
+        print("B_list_drawn_str.find(row_1_B_number):" + str1)
+        row_1_B_number = str(row_1_B_number)
+        print("row_1_B_number:" + row_1_B_number)
+        ###delete ends
         Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
         Bingo_button.after(3000, reset_bingo_button)
+
+        # and B_list_drawn_str.find(" " + row_2_B_number + " ") != -1
+        # and B_list_drawn_str.find(" " + row_3_B_number + " ") != -1
+        # and B_list_drawn_str.find(" " + row_4_B_number + " ") != -1
+        # and B_list_drawn_str.find(" " + row_5_B_number + " ") != -1
 
 
 def make_a_new_player_card():
