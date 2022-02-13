@@ -163,7 +163,7 @@ all_bingo_numbers()
 # ROW 1
 bingo_ball = Label(root, image=resized_O_ball)
 
-### sorts list for B:, I:, N:, G:, O:, in ascending order
+# sorts list for B:, I:, N:, G:, O:, in ascending order
 def sort_string(string):
     sorted_list = []
     now_str_is_a_list = string.split()
@@ -241,24 +241,6 @@ def bingo_ball_color():
 
 bingo_ball.grid(row=1, column=3, columnspan=2, rowspan=6, sticky="nsew")
 
-# # drawing ball update label
-# def update_drawn_ball():
-#     global flag, bingo_numbers, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
-#     if flag == True:
-#         random_bingo_number()
-#         Random_number_picked_label.config(
-#             text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
-#         )
-#         bingo_ball_color()
-#         return Random_number_picked_label.after(
-#             5000, update_drawn_ball
-#         )  # .after(parent, ms, function = None, *args)
-#         # ? very one sec call another function to check if flag == true
-#         # TODO: look above
-#     else:
-#         bingo_numbers()
-
-
 B_list_drawn_str = ""
 B_list_drawn = Label(
     root,
@@ -322,7 +304,6 @@ Random_number_picked_label.place(x=259, y=63)
 
 holder_for_time = 5  # ? change to five permanently
 # timer for next ball
-# * highlighted bookmark
 # TODO: make n global, change name to countdown_number
 def update_timer_countdown(n):
     global flag
@@ -356,11 +337,11 @@ timer = Label(
 timer.grid(row=1, column=1, columnspan=2, rowspan=5, sticky="nsew")
 update_timer_countdown(5)
 
-### label used if bot wins
+# label used if bot wins
 Bot_wins_bingo = Label(root)
 Bot_wins_bingo.place(x=3000, y=40)
 
-### label used if player wins
+# label used if player wins
 player_wins_bingo = Label(root)
 player_wins_bingo.place(x=3000, y=40)
 
@@ -1457,7 +1438,7 @@ def bot_draw_B_numbers_row_2(bot_numbers_for_B_list_out_1):
 
 
 def bot_draw_B_numbers_row_1():
-    global bot_row_1_B_number  # TODO:
+    global bot_row_1_B_number
     bot_numbers_for_B_list = []
     bot_numbers_for_B_list_int = [i for i in range(1, 16)]
     for e in bot_numbers_for_B_list_int:
@@ -1755,7 +1736,6 @@ bot_draw_N_numbers_row_1()
 bot_draw_G_numbers_row_1()
 bot_draw_O_numbers_row_1()
 
-###NEW function # !delete
 # function colors card number if drawn bingo number is in card
 def is_number_on_bots_card():
     global drawn_bingo_number, bot_row_1_B_number, bot_row_2_B_number, bot_row_3_B_number, bot_row_4_B_number, bot_row_5_B_number, bot_row_1_I_number, bot_row_2_I_number, bot_row_3_I_number, bot_row_4_I_number, bot_row_5_I_number, bot_row_1_N_number, bot_row_2_N_number, bot_row_3_N_number, bot_row_4_N_number, bot_row_5_N_number, bot_row_1_G_number, bot_row_2_G_number, bot_row_3_G_number, bot_row_4_G_number, bot_row_5_G_number, bot_row_1_O_number, bot_row_2_O_number, bot_row_3_O_number, bot_row_4_O_number, bot_row_5_O_number
@@ -1813,7 +1793,6 @@ def is_number_on_bots_card():
         O_bingo_row_5_bot.config(bg="#B900FF")
 
 
-### add new here # !delete
 def did_bot_win():
     global flag, B_list_drawn_str, bot_row_1_B_number, bot_row_2_B_number, bot_row_3_B_number, bot_row_4_B_number, bot_row_5_B_number, I_list_drawn_str, bot_row_1_I_number, bot_row_2_I_number, bot_row_3_I_number, bot_row_4_I_number, bot_row_5_I_number, N_list_drawn_str, bot_row_1_N_number, bot_row_2_N_number, bot_row_4_N_number, bot_row_5_N_number, G_list_drawn_str, bot_row_1_G_number, bot_row_2_G_number, bot_row_3_G_number, bot_row_4_G_number, bot_row_5_G_number, O_list_drawn_str, bot_row_1_O_number, bot_row_2_O_number, bot_row_3_O_number, bot_row_4_O_number, bot_row_5_O_number
     # All B column for BINGO card to win
@@ -1869,7 +1848,6 @@ def did_bot_win():
         )
         Bot_wins_bingo.place(x=180, y=40)
         flag = False
-        print("called")  # !delete
     # All G column for BINGO card to win
     elif (
         G_list_drawn_str.find(" " + bot_row_1_G_number + " ") != -1
@@ -1954,7 +1932,6 @@ def did_bot_win():
         )
         Bot_wins_bingo.place(x=180, y=40)
         flag = False
-        print("called")  # !delete
     # all Row 4 for BINGO card to win
     elif (
         B_list_drawn_str.find(" " + bot_row_4_B_number + " ") != -1
@@ -2025,7 +2002,6 @@ def did_bot_win():
         None
 
 
-###NEW # !delete
 def random_bingo_number():
     global bingo_numbers, drawn_bingo_number
     # add if len -== 1 then bingo number ````break or reset bingo numbers
@@ -2034,7 +2010,6 @@ def random_bingo_number():
         # takes out drawing number from the list
         take_out_of_list = bingo_numbers.index(drawn_bingo_number)
         bingo_numbers.pop(take_out_of_list)
-        # * highlighted bookmark add function for auto bot bingo
         is_number_on_bots_card()
         did_bot_win()
         return drawn_bingo_number
@@ -2069,9 +2044,7 @@ def reset_bingo_button():  # resets to original color
     )
 
 
-def click_BINGO():  ###New current # !delete
-    # Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25)) # !delete
-    # return Bingo_button.after(3000, reset_bingo_button) # !delete
+def click_BINGO():
     global flag, B_list_drawn_str, row_1_B_number, row_2_B_number, row_3_B_number, row_4_B_number, row_5_B_number, I_list_drawn_str, row_1_I_number, row_2_I_number, row_3_I_number, row_4_I_number, row_5_I_number, N_list_drawn_str, row_1_N_number, row_2_N_number, row_4_N_number, row_5_N_number, G_list_drawn_str, row_1_G_number, row_2_G_number, row_3_G_number, row_4_G_number, row_5_G_number, O_list_drawn_str, row_1_O_number, row_2_O_number, row_3_O_number, row_4_O_number, row_5_O_number
     if (
         B_list_drawn_str.find(" " + row_1_B_number + " ") != -1
@@ -2273,83 +2246,8 @@ def click_BINGO():  ###New current # !delete
         player_wins_bingo.place(x=180, y=40)
         flag = False
     else:
-        # !delete # !delete below # * highlighted bookmark
-        # str1 = B_list_drawn_str.find(" " + row_1_B_number + " ")
-        # str1 = str(str1)
-        # print("B_list_drawn_str.find(row_1_B_number):" + str1)
-        # # row_1_B_number = str(row_1_B_number)
-        # print("row_1_B_number:" + row_1_B_number)
-        # print("row_2_B_number:" + row_2_B_number)
-        # print("row_3_B_number:" + row_3_B_number)
-        # print("row_4_B_number:" + row_4_B_number)
-        # print("row_5_B_number:" + row_5_B_number)
-        # ##I
-        # print("row_1_I_number:" + row_1_I_number)
-        # print("row_2_I_number:" + row_2_I_number)
-        # print("row_3_I_number:" + row_3_I_number)
-        # print("row_4_I_number:" + row_4_I_number)
-        # print("row_5_I_number:" + row_5_I_number)
-        # ##N
-        # print("row_1_N_number:" + row_1_N_number)
-        # print("row_2_N_number:" + row_2_N_number)
-        # print("row_3_N_number:" + row_3_N_number)
-        # print("row_4_N_number:" + row_4_N_number)
-        # print("row_5_N_number:" + row_5_N_number)
-        # ##G
-        # print("row_1_G_number:" + row_1_G_number)
-        # print("row_2_G_number:" + row_2_G_number)
-        # print("row_3_G_number:" + row_3_G_number)
-        # print("row_4_G_number:" + row_4_G_number)
-        # print("row_5_G_number:" + row_5_G_number)
-
-        # ##O
-        # print("row_1_O_number:" + row_1_O_number)
-        # print("row_2_O_number:" + row_2_O_number)
-        # print("row_3_O_number:" + row_3_O_number)
-        # print("row_4_O_number:" + row_4_O_number)
-        # print("row_5_O_number:" + row_5_O_number)
-
-        # ### bots checker
-        # global bot_row_1_B_number, bot_row_2_B_number, bot_row_3_B_number, bot_row_4_B_number, bot_row_5_B_number, bot_row_1_I_number, bot_row_2_I_number, bot_row_3_I_number, bot_row_4_I_number, bot_row_5_I_number, bot_row_1_N_number, bot_row_2_N_number, bot_row_4_N_number, bot_row_5_N_number, bot_row_1_G_number, bot_row_2_G_number, bot_row_3_G_number, bot_row_4_G_number, bot_row_5_G_number, bot_row_1_O_number, bot_row_2_O_number, bot_row_3_O_number, bot_row_4_O_number, bot_row_5_O_number
-        # print("bot_row_1_B_number:" + bot_row_1_B_number)
-        # print("bot_row_2_B_number:" + bot_row_2_B_number)
-        # print("bot_row_3_B_number:" + bot_row_3_B_number)
-        # print("bot_row_4_B_number:" + bot_row_4_B_number)
-        # print("bot_row_5_B_number:" + bot_row_5_B_number)
-        # ##I
-        # print("bot_row_1_I_number:" + bot_row_1_I_number)
-        # print("bot_row_2_I_number:" + bot_row_2_I_number)
-        # print("bot_row_3_I_number:" + bot_row_3_I_number)
-        # print("bot_row_4_I_number:" + bot_row_4_I_number)
-        # print("bot_row_5_I_number:" + bot_row_5_I_number)
-        # ##N
-        # print("bot_row_1_N_number:" + bot_row_1_N_number)
-        # print("bot_row_2_N_number:" + bot_row_2_N_number)
-        # print("bot_row_3_N_number:" + bot_row_3_N_number)
-        # print("bot_row_4_N_number:" + bot_row_4_N_number)
-        # print("bot_row_5_N_number:" + bot_row_5_N_number)
-        # ##G
-        # print("bot_row_1_G_number:" + bot_row_1_G_number)
-        # print("bot_row_2_G_number:" + bot_row_2_G_number)
-        # print("bot_row_3_G_number:" + bot_row_3_G_number)
-        # print("bot_row_4_G_number:" + bot_row_4_G_number)
-        # print("bot_row_5_G_number:" + bot_row_5_G_number)
-
-        # ##O
-        # print("bot_row_1_O_number:" + bot_row_1_O_number)
-        # print("bot_row_2_O_number:" + bot_row_2_O_number)
-        # print("bot_row_3_O_number:" + bot_row_3_O_number)
-        # print("bot_row_4_O_number:" + bot_row_4_O_number)
-        # print("bot_row_5_O_number:" + bot_row_5_O_number)
-        ###delete ends # !delete above
         Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
         Bingo_button.after(3000, reset_bingo_button)
-        # * highlighted bookmark1
-
-        # and B_list_drawn_str.find(" " + row_2_B_number + " ") != -1
-        # and B_list_drawn_str.find(" " + row_3_B_number + " ") != -1
-        # and B_list_drawn_str.find(" " + row_4_B_number + " ") != -1
-        # and B_list_drawn_str.find(" " + row_5_B_number + " ") != -1
 
 
 def make_a_new_player_card():
@@ -2370,7 +2268,6 @@ def make_a_new_bot_card():
     bot_draw_O_numbers_row_1()
 
 
-# * highlighted bookmark
 def make_a_new_game():
     global flag, B_list, I_list, N_list, G_list, O_list, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
     all_bingo_numbers()
@@ -2421,7 +2318,7 @@ def make_a_new_game():
         padx=2,
         pady=4,
     )
-    # moves label out of view  ###added new
+    # moves label out of view
     Bot_wins_bingo.place(x=3000, y=40)
     Bot_wins_bingo.config(
         text="",
@@ -2445,7 +2342,6 @@ def make_a_new_game():
     # TODO: timer reset to five
 
 
-# * highlighted bookmark
 def play():
     global flag, holder_for_time, B_numbers, B_list, I_list, N_list, G_list, O_list
     # TODO: add list/string globals
