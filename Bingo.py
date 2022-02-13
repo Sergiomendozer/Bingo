@@ -2118,7 +2118,7 @@ def make_a_new_game():
         padx=2,
         pady=4,
     )
-    # Bot_wins_bingo.config()  ###added new
+    #moves label out of view  ###added new
     Bot_wins_bingo.place(x=3000, y=40)
     Bot_wins_bingo.config(
         text="",
@@ -2126,6 +2126,7 @@ def make_a_new_game():
         padx=0,
         pady=0,
     )
+    #moves label out of view
     player_wins_bingo.config(
         text="",
         font=("Helvetica", 40),
