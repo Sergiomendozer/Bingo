@@ -2274,12 +2274,74 @@ def click_BINGO():  ###New current # !delete
         flag = False
     else:
         # !delete # !delete below # * highlighted bookmark
-        str1 = B_list_drawn_str.find(" " + row_1_B_number + " ")
-        str1 = str(str1)
-        print("B_list_drawn_str.find(row_1_B_number):" + str1)
-        # row_1_B_number = str(row_1_B_number)
-        print("row_1_B_number:" + row_1_B_number)
-        ###delete ends
+        # str1 = B_list_drawn_str.find(" " + row_1_B_number + " ")
+        # str1 = str(str1)
+        # print("B_list_drawn_str.find(row_1_B_number):" + str1)
+        # # row_1_B_number = str(row_1_B_number)
+        # print("row_1_B_number:" + row_1_B_number)
+        # print("row_2_B_number:" + row_2_B_number)
+        # print("row_3_B_number:" + row_3_B_number)
+        # print("row_4_B_number:" + row_4_B_number)
+        # print("row_5_B_number:" + row_5_B_number)
+        # ##I
+        # print("row_1_I_number:" + row_1_I_number)
+        # print("row_2_I_number:" + row_2_I_number)
+        # print("row_3_I_number:" + row_3_I_number)
+        # print("row_4_I_number:" + row_4_I_number)
+        # print("row_5_I_number:" + row_5_I_number)
+        # ##N
+        # print("row_1_N_number:" + row_1_N_number)
+        # print("row_2_N_number:" + row_2_N_number)
+        # print("row_3_N_number:" + row_3_N_number)
+        # print("row_4_N_number:" + row_4_N_number)
+        # print("row_5_N_number:" + row_5_N_number)
+        # ##G
+        # print("row_1_G_number:" + row_1_G_number)
+        # print("row_2_G_number:" + row_2_G_number)
+        # print("row_3_G_number:" + row_3_G_number)
+        # print("row_4_G_number:" + row_4_G_number)
+        # print("row_5_G_number:" + row_5_G_number)
+
+        # ##O
+        # print("row_1_O_number:" + row_1_O_number)
+        # print("row_2_O_number:" + row_2_O_number)
+        # print("row_3_O_number:" + row_3_O_number)
+        # print("row_4_O_number:" + row_4_O_number)
+        # print("row_5_O_number:" + row_5_O_number)
+
+        # ### bots checker
+        # global bot_row_1_B_number, bot_row_2_B_number, bot_row_3_B_number, bot_row_4_B_number, bot_row_5_B_number, bot_row_1_I_number, bot_row_2_I_number, bot_row_3_I_number, bot_row_4_I_number, bot_row_5_I_number, bot_row_1_N_number, bot_row_2_N_number, bot_row_4_N_number, bot_row_5_N_number, bot_row_1_G_number, bot_row_2_G_number, bot_row_3_G_number, bot_row_4_G_number, bot_row_5_G_number, bot_row_1_O_number, bot_row_2_O_number, bot_row_3_O_number, bot_row_4_O_number, bot_row_5_O_number
+        # print("bot_row_1_B_number:" + bot_row_1_B_number)
+        # print("bot_row_2_B_number:" + bot_row_2_B_number)
+        # print("bot_row_3_B_number:" + bot_row_3_B_number)
+        # print("bot_row_4_B_number:" + bot_row_4_B_number)
+        # print("bot_row_5_B_number:" + bot_row_5_B_number)
+        # ##I
+        # print("bot_row_1_I_number:" + bot_row_1_I_number)
+        # print("bot_row_2_I_number:" + bot_row_2_I_number)
+        # print("bot_row_3_I_number:" + bot_row_3_I_number)
+        # print("bot_row_4_I_number:" + bot_row_4_I_number)
+        # print("bot_row_5_I_number:" + bot_row_5_I_number)
+        # ##N
+        # print("bot_row_1_N_number:" + bot_row_1_N_number)
+        # print("bot_row_2_N_number:" + bot_row_2_N_number)
+        # print("bot_row_3_N_number:" + bot_row_3_N_number)
+        # print("bot_row_4_N_number:" + bot_row_4_N_number)
+        # print("bot_row_5_N_number:" + bot_row_5_N_number)
+        # ##G
+        # print("bot_row_1_G_number:" + bot_row_1_G_number)
+        # print("bot_row_2_G_number:" + bot_row_2_G_number)
+        # print("bot_row_3_G_number:" + bot_row_3_G_number)
+        # print("bot_row_4_G_number:" + bot_row_4_G_number)
+        # print("bot_row_5_G_number:" + bot_row_5_G_number)
+
+        # ##O
+        # print("bot_row_1_O_number:" + bot_row_1_O_number)
+        # print("bot_row_2_O_number:" + bot_row_2_O_number)
+        # print("bot_row_3_O_number:" + bot_row_3_O_number)
+        # print("bot_row_4_O_number:" + bot_row_4_O_number)
+        # print("bot_row_5_O_number:" + bot_row_5_O_number)
+        ###delete ends # !delete above
         Bingo_button.config(text="NO BINGO!!!", bg="#FF0000", font=("Helvetica", 25))
         Bingo_button.after(3000, reset_bingo_button)
         # * highlighted bookmark1
