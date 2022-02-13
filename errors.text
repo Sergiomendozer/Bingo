@@ -1,0 +1,18 @@
+  File "C:\Program Files (x86)\Python39-32\lib\tkinter\__init__.py", line 1885, in __call__
+    return self.func(*args)
+  File "C:\Program Files (x86)\Python39-32\lib\tkinter\__init__.py", line 806, 
+in callit
+    func(*args)
+  File "c:\Users\X2\OneDrive\Documents\GITHUB\Bingo-1\Bingo.py", line 2035, in 
+update_drawn_ball
+TypeError: 'list' object is not callable
+Exception in Tkinter callback
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python39-32\lib\tkinter\__init__.py", line 1885,    return self.func(*args)
+  File "C:\Program Files (x86)\Python39-32\lib\tkinter\__init__.py", line 806, 
+in callit
+    func(*args)
+  File "c:\Users\X2\OneDrive\Documents\GITHUB\Bingo-1\Bingo.py", line 2035, in 
+update_drawn_ball
+    bingo_numbers()
+TypeError: 'list' object is not callable

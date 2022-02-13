@@ -2019,7 +2019,7 @@ def random_bingo_number():
 
 # drawing ball update label
 def update_drawn_ball():
-    global flag, bingo_numbers, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
+    global flag, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
     if flag == True:
         random_bingo_number()
         Random_number_picked_label.config(
@@ -2032,7 +2032,6 @@ def update_drawn_ball():
         # ? very one sec call another function to check if flag == true
         # TODO: look above
     else:
-        # bingo_numbers() # !delete
         None
 
 
