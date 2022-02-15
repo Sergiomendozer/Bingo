@@ -1,4 +1,5 @@
 from tkinter import *
+from click import pass_context
 from numpy import empty
 from PIL import ImageTk, Image
 import random
@@ -11,8 +12,8 @@ root.title("BINGO")
 root.geometry("1015x590")
 
 
-class window_functions:
-    # Center window
+class Window_Functions:
+    # Center's window
     app_width = 1015
     app_height = 590
     screen_width = root.winfo_screenwidth()
@@ -22,6 +23,7 @@ class window_functions:
     root.geometry(f"{app_width}x{app_height}+{int(x_coordinate)}+{int(y_coordinate)}")
 
 
+# class All_Bingo_Ball_images_sized_and_grabbed:
 # opens png and resizes for use
 ##B BINGO ball
 original_B_ball = Image.open("B-Bingo-ball.png")  # call image b4 resize
@@ -45,7 +47,12 @@ original_O_ball = Image.open("O-Bingo-ball.png")  # call image b4 resize
 resized_O = original_O_ball.resize((200, 150), Image.ANTIALIAS)  # resize(sides, height)
 resized_O_ball = ImageTk.PhotoImage(resized_O)
 
-# Global variables:
+
+class Global_Variables:
+    pass
+
+
+# ALL globals
 flag = True
 B_list = empty
 I_list = empty
@@ -158,7 +165,6 @@ def all_bingo_numbers():
 
 
 all_bingo_numbers()
-
 
 # ROW 1
 bingo_ball = Label(root, image=resized_O_ball)
