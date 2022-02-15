@@ -306,7 +306,7 @@ holder_for_time = 5  # ? change to five permanently
 # timer for next ball
 # TODO: make n global, change name to countdown_number
 def update_timer_countdown(n):
-    global flag
+    global flag, holder_for_time
     if flag == True and n != "0":
         n = str(n)
         timer.config(
@@ -323,6 +323,7 @@ def update_timer_countdown(n):
     elif flag == True and n == "0":
         return update_timer_countdown(5)
     elif flag == False:
+        holder_for_time = n
         return
 
 
@@ -2017,6 +2018,17 @@ def random_bingo_number():
         drawn_bingo_number = "all drawn"
 
 
+def syn_timer_with_pause(n):
+    global holder_for_time
+    if flag == False:
+        holder_for_time = n
+    elif flag == TRUE and n != 0:
+        n = n - 1
+        return Random_number_picked_label.after(1000, syn_timer_with_pause, n)
+    elif flag == TRUE and n == 0:
+        update_drawn_ball()
+
+
 # drawing ball update label
 def update_drawn_ball():
     global flag, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
@@ -2026,9 +2038,11 @@ def update_drawn_ball():
             text=drawn_bingo_number, font=("Helvetica", 24), bg="#FFFFFF"
         )
         bingo_ball_color()
-        return Random_number_picked_label.after(
-            5000, update_drawn_ball
-        )  # .after(parent, ms, function = None, *args)
+        n = 5
+        return syn_timer_with_pause(n)
+        # return Random_number_picked_label.after(
+        #     5000, update_drawn_ball
+        # )  # .after(parent, ms, function = None, *args)
         # ? very one sec call another function to check if flag == true
         # TODO: look above
     else:
@@ -2342,12 +2356,10 @@ def make_a_new_game():
 
 def play():
     global flag, holder_for_time, B_numbers, B_list, I_list, N_list, G_list, O_list
-    # TODO: add list/string globals
-    # if holder_for_time == 10:
-    #     return
     flag = True
     update_timer_countdown(holder_for_time)
-    update_drawn_ball()
+    # update_drawn_ball()
+    syn_timer_with_pause(holder_for_time)
 
 
 def pause():
