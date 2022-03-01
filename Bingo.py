@@ -26,24 +26,24 @@ class Window_Functions:
 # class All_Bingo_Ball_images_sized_and_grabbed:
 # opens png and resizes for use
 ##B BINGO ball
-original_B_ball = Image.open("B-Bingo-ball.png")  # call image b4 resize
+original_B_ball = Image.open("B-I-N-G-O_balls/B-Bingo-ball.png")  # call image b4 resize
 # resizing image
 resized_B = original_B_ball.resize((200, 150), Image.ANTIALIAS)  # resize(sides, height)
 resized_B_ball = ImageTk.PhotoImage(resized_B)
 ## I BINGO ball
-original_I_ball = Image.open("I-Bingo-ball.png")  # call image b4 resize
+original_I_ball = Image.open("B-I-N-G-O_balls/I-Bingo-ball.png")  # call image b4 resize
 resized_I = original_I_ball.resize((200, 150), Image.ANTIALIAS)  # resize(sides, height)
 resized_I_ball = ImageTk.PhotoImage(resized_I)
 ##N BINGO ball
-original_N_ball = Image.open("N-Bingo-ball.png")  # call image b4 resize
+original_N_ball = Image.open("B-I-N-G-O_balls/N-Bingo-ball.png")  # call image b4 resize
 resized_N = original_N_ball.resize((200, 150), Image.ANTIALIAS)  # resize(sides, height)
 resized_N_ball = ImageTk.PhotoImage(resized_N)
 ##G BINGO ball
-original_G_ball = Image.open("G-Bingo-ball.png")  # call image b4 resize
+original_G_ball = Image.open("B-I-N-G-O_balls/G-Bingo-ball.png")  # call image b4 resize
 resized_G = original_G_ball.resize((200, 150), Image.ANTIALIAS)  # resize(sides, height)
 resized_G_ball = ImageTk.PhotoImage(resized_G)
 ##O BINGO ball
-original_O_ball = Image.open("O-Bingo-ball.png")  # call image b4 resize
+original_O_ball = Image.open("B-I-N-G-O_balls/O-Bingo-ball.png")  # call image b4 resize
 resized_O = original_O_ball.resize((200, 150), Image.ANTIALIAS)  # resize(sides, height)
 resized_O_ball = ImageTk.PhotoImage(resized_O)
 
@@ -772,7 +772,7 @@ O_bingo_row_2_bot.grid(row=10, column=10, sticky="nsew")
 
 # STAR image formant
 # call image b4 resize
-original_star = Image.open("STAR.png")
+original_star = Image.open("B-I-N-G-O_balls/STAR.png")
 # resizing image
 resized = original_star.resize((95, 52), Image.ANTIALIAS)  # resize(sides, height)
 star = ImageTk.PhotoImage(resized)
