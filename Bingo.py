@@ -7,6 +7,8 @@ from threading import Timer
 import time
 import datetime
 
+from sympy import false
+
 root = Tk()
 root.title("BINGO")
 root.geometry("1015x590")
@@ -2287,7 +2289,8 @@ def make_a_new_bot_card():
 
 
 def make_a_new_game():
-    global flag, B_list, I_list, N_list, G_list, O_list, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str
+    global flag, B_list, I_list, N_list, G_list, O_list, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str, holder_for_time
+    flag = False
     all_bingo_numbers()
     make_a_new_player_card()
     make_a_new_bot_card()
@@ -2353,10 +2356,11 @@ def make_a_new_game():
     )
     player_wins_bingo.place(x=3000, y=40)
     flag = True
+    holder_for_time = 5
     update_drawn_ball()
     # TODO: global 5 ### globalize countdown timer
     # update_timer_countdown(5)
-    syn_timer_with_pause(5)
+    # syn_timer_with_pause(5) # neot nesscary as bingo calls it
 
     # TODO: timer reset to five
 
@@ -2365,7 +2369,6 @@ def play():
     global flag, holder_for_time, B_numbers, B_list, I_list, N_list, G_list, O_list
     flag = True
     update_timer_countdown(holder_for_time)
-    # update_drawn_ball()
     syn_timer_with_pause(holder_for_time)
 
 
