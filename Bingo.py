@@ -330,7 +330,7 @@ def update_timer_countdown(n):
         return update_timer_countdown(5)
     elif flag == False:
         holder_for_time = n
-        return
+        return 
 
 
 timer = Label(
@@ -791,7 +791,7 @@ I_bingo_row_3 = Button(
     font=("Helvetica", 20),
     command=click_row_3_I,
 )
-N_bingo = Label(root, image=star)  # FREE SPACE
+N_bingo = Label(root, text="Free \n Space",bg= "#B900FF", font=("Helvetica", 17),)  # FREE SPACE
 
 G_bingo_row_3 = Button(
     root,
@@ -822,7 +822,7 @@ B_bingo_row_3_bot = Label(
 I_bingo_row_3_bot = Label(
     root, text=bot_row_3_I_number, bg="#FF0000", font=("Helvetica", 20)
 )
-N_bingo = Label(root, image=star)  # FREE SPACE
+N_bingo = Label(root, text="Free \n Space",bg= "#B900FF", font=("Helvetica", 17),)  # FREE SPACE 
 G_bingo_row_3_bot = Label(
     root, text=bot_row_3_G_number, bg="#F96815", font=("Helvetica", 20)
 )
@@ -2355,7 +2355,8 @@ def make_a_new_game():
     flag = True
     update_drawn_ball()
     # TODO: global 5 ### globalize countdown timer
-    update_timer_countdown(5)
+    # update_timer_countdown(5)
+    syn_timer_with_pause(5)
 
     # TODO: timer reset to five
 
