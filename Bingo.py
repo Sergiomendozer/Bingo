@@ -1,4 +1,5 @@
 from tkinter import *
+from webbrowser import BackgroundBrowser
 from click import pass_context
 from numpy import empty
 from PIL import ImageTk, Image
@@ -12,6 +13,8 @@ from sympy import false
 root = Tk()
 root.title("BINGO")
 root.geometry("1015x590")
+root.configure(bg='green')
+
 
 
 class Window_Functions:
@@ -30,7 +33,7 @@ class Window_Functions:
 ##B BINGO ball
 original_B_ball = Image.open("B-I-N-G-O_balls/B-Bingo-ball.png")  # call image b4 resize
 # resizing image
-resized_B = original_B_ball.resize((200, 150), Image.ANTIALIAS)  # resize(sides, height)
+resized_B = original_B_ball.resize((200, 100), Image.ANTIALIAS)  # resize(sides, height)
 resized_B_ball = ImageTk.PhotoImage(resized_B)
 ## I BINGO ball
 original_I_ball = Image.open("B-I-N-G-O_balls/I-Bingo-ball.png")  # call image b4 resize
@@ -169,7 +172,7 @@ def all_bingo_numbers():
 all_bingo_numbers()
 
 # ROW 1
-bingo_ball = Label(root, image=resized_O_ball)
+bingo_ball = Label(root, image=resized_O_ball, bg="#FFFFFF")
 
 # sorts list for B:, I:, N:, G:, O:, in ascending order
 def sort_string(string):
@@ -305,10 +308,9 @@ O_list_drawn = Label(
 O_list_drawn.grid(row=5, column=5, columnspan=6, rowspan=1, sticky="nsew")
 
 Random_number_picked_label = Label(
-    root, text="  ", font=("Helvetica", 24), bg="#FFFFFF"
+    root, text="  ", font=("Helvetica", 24)
 )
 Random_number_picked_label.place(x=259, y=63)
-
 
 holder_for_time = 5  # ? change to five permanently
 # timer for next ball
