@@ -33,7 +33,7 @@ class Window_Functions:
 ##B BINGO ball
 original_B_ball = Image.open("B-I-N-G-O_balls/B-Bingo-ball.png")  # call image b4 resize
 # resizing image
-resized_B = original_B_ball.resize((200, 100), Image.ANTIALIAS)  # resize(sides, height)
+resized_B = original_B_ball.resize((200, 150), Image.ANTIALIAS)  # resize(sides, height)
 resized_B_ball = ImageTk.PhotoImage(resized_B)
 ## I BINGO ball
 original_I_ball = Image.open("B-I-N-G-O_balls/I-Bingo-ball.png")  # call image b4 resize
@@ -2292,7 +2292,6 @@ def make_a_new_bot_card():
 
 def make_a_new_game():
     global flag, B_list, I_list, N_list, G_list, O_list, B_list_drawn_str, I_list_drawn_str, N_list_drawn_str, G_list_drawn_str, O_list_drawn_str, holder_for_time
-    flag = False
     all_bingo_numbers()
     make_a_new_player_card()
     make_a_new_bot_card()
@@ -2357,14 +2356,13 @@ def make_a_new_game():
         pady=0,
     )
     player_wins_bingo.place(x=3000, y=40)
-    flag = True
-    holder_for_time = 5
     update_drawn_ball()
-    # TODO: global 5 ### globalize countdown timer
-    # update_timer_countdown(5)
-    # syn_timer_with_pause(5) # neot nesscary as bingo calls it
+    global flag
+    flag = False
+    timer.config(
+        text="New game \n press play\n to start", bg="#2AFF00", padx=5, pady=45, font=("Helvetica", 17)
+    )
 
-    # TODO: timer reset to five
 
 
 def play():
