@@ -1,10 +1,7 @@
 from tkinter import *
-from webbrowser import BackgroundBrowser
-from click import pass_context
 from numpy import empty
 from PIL import ImageTk, Image
 import random
-from threading import Timer
 
 root = Tk()
 root.title("BINGO")
