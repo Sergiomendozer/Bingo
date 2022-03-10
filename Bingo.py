@@ -306,9 +306,8 @@ Random_number_picked_label = Label(
 )
 Random_number_picked_label.place(x=259, y=63)
 
-holder_for_time = 5  # ? change to five permanently
+holder_for_time = 5  
 # timer for next ball
-# TODO: make n global, change name to countdown_number
 def update_timer_countdown(n):
     global flag, holder_for_time
     if flag == True and n != "0":
@@ -399,8 +398,6 @@ def click_row_1_B():
     # set background to "click % colorLen" index in color list
     B_bingo_row_1.config(bg=click_row_1_B.colors[click_row_1_B.click % colorLen])
 
-
-# put properties on the function - do it before you use them (avoid NameError)
 # colors will be cycled in order with each click, wrapping around
 click_row_1_B.click = 0
 click_row_1_B.colors = ["#00ccff", "#B900ff"]
@@ -2044,11 +2041,6 @@ def update_drawn_ball():
         bingo_ball_color()
         n = 5
         return syn_timer_with_pause(n)
-        # return Random_number_picked_label.after(
-        #     5000, update_drawn_ball
-        # )  # .after(parent, ms, function = None, *args)
-        # ? very one sec call another function to check if flag == true
-        # TODO: look above
     else:
         None
 
