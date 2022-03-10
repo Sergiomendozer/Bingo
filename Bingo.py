@@ -5,17 +5,11 @@ from numpy import empty
 from PIL import ImageTk, Image
 import random
 from threading import Timer
-import time
-import datetime
-
-from sympy import false
 
 root = Tk()
 root.title("BINGO")
 root.geometry("1015x590")
 root.configure(bg='green')
-
-
 
 class Window_Functions:
     # Center's window
