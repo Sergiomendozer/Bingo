@@ -6,7 +6,7 @@ import random
 root = Tk()
 root.title("BINGO")
 root.geometry("1015x590")
-root.configure(bg='green')
+root.configure()
 
 class Window_Functions:
     # Center's window
