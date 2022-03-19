@@ -2350,9 +2350,10 @@ def make_a_new_game():
 
 def play():
     global flag, holder_for_time, B_numbers, B_list, I_list, N_list, G_list, O_list
-    flag = True
-    update_timer_countdown(holder_for_time)
-    syn_timer_with_pause(holder_for_time)
+    if flag == False:
+        flag = True
+        update_timer_countdown(holder_for_time)
+        syn_timer_with_pause(holder_for_time)
 
 
 def pause():
