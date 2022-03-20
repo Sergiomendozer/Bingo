@@ -1,10 +1,15 @@
 
-![Logo]<a href="url"><img src="/images/Bingo_Logo.png" align="left" height="300" width="300" ></a>
+<a href="url"><img src="/images/Bingo_Logo.png" align="left" height="300" width="300" ></a>
 
 
 # Bingo
 
 User can play Bingo against a bot. Bingo is a game in which players mark off numbers on cards as the numbers are drawn randomly,, the winner being the first person to mark off five numbers in a row
+
+
+
+
+
 
 
 ## Notable features: 
