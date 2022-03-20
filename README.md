@@ -1,5 +1,5 @@
 
-![Logo](Bingo_Logo.png)
+![Logo](/images/Bingo_Logo.png)
 
 
 # Bingo
