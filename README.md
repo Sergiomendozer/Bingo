@@ -1,5 +1,5 @@
 
-![Logo](/images/Bingo_Logo.png)
+![Logo]<a href="url"><img src="/images/Bingo_Logo.png" align="left" height="150" width="300" ></a>
 
 
 # Bingo
