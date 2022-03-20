@@ -1,5 +1,5 @@
 
-![Logo](/images/Bingo_Logo.png)
+![Logo](/images/Bingo_Logo.png = 250x250)
 
 
 # Bingo
