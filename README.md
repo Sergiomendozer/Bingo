@@ -26,6 +26,9 @@ Python and Tkinter
 
 
 ## Images
-<a href="url"><img src="/images/player_wins.png" align="left" height="240" width="400" ></a>
+<a href="url"><img src="/images/player_wins.png" align="left" height="230" width="400" ></a>
+<a href="url"><img src="/images/playing_bingo.png" align="left" height="230" width="400" ></a>
+<a href="url"><img src="/images/Paused.png" align="left" height="230" width="400" ></a>
+<a href="url"><img src="/images/bot_loses.png" align="left" height="230" width="400" ></a>
 
 
