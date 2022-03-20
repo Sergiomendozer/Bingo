@@ -1,5 +1,5 @@
 
-<a href="url"><img src="/images/Bingo_Logo.png" align="left" height="230" width="230" ></a>
+<a href="url"><img src="/images/Bingo_Logo.png" align="left" height="240" width="240" ></a>
 
 
 # Bingo
@@ -26,3 +26,6 @@ Python and Tkinter
 
 
 ## Images
+<a href="url"><img src="/images/player_wins.png" align="left" height="240" width="400" ></a>
+
+
