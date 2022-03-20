@@ -19,17 +19,15 @@ Python and Tkinter
 - Timer for next ball drawn display
 - Players card has buttons to indicate if number has been called
 
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherinempeterson.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sergio-mendoza-software-developer/)
-[Demo](https://replit.com/@sergiomendozer/Bingo?v=1)
-
-
 ## Images
 <a href="url"><img src="/images/player_wins.png" align="left" height="230" width="400" ></a>
 <a href="url"><img src="/images/bot_loses.png" align="left" height="230" width="400" ></a>
 <a href="url"><img src="/images/playing_bingo.png" align="left" height="230" width="400" ></a>
 <a href="url"><img src="/images/Paused.png" align="left" height="230" width="400" ></a>
 
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherinempeterson.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sergio-mendoza-software-developer/)
+[Demo](https://replit.com/@sergiomendozer/Bingo?v=1)
 
 
