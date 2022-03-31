@@ -20,10 +20,10 @@ Python and Tkinter
 - Players card has buttons to indicate if number has been called
 
 ## Images
-<a href="url"><img src="/images/player_wins.png" align="left" height="230" width="400" ></a>
-<a href="url"><img src="/images/bot_loses.png" align="left" height="230" width="400" ></a>
-<a href="url"><img src="/images/playing_bingo.png" align="left" height="230" width="400" ></a>
-<a href="url"><img src="/images/Paused.png" align="left" height="230" width="400" ></a>
+<a href="url"><img src="/images/player_wins.png" height="230" width="400" ></a>
+<a href="url"><img src="/images/bot_loses.png"  height="230" width="400" ></a>
+<a href="url"><img src="/images/playing_bingo.png"  height="230" width="400" ></a>
+<a href="url"><img src="/images/Paused.png" height="230" width="400" ></a>
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://sergiomendozer.github.io/Portfolio/)
